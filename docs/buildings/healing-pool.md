@@ -1,0 +1,71 @@
+---
+title: "治疗池 / Healing Pool"
+description: "提供付费或条件式治疗，比单次治疗包更像一个可交互恢复建筑。"
+---
+
+
+<section class="dq-profession-hero dq-feature-hero">
+  <div>
+    <p class="dq-kicker">Dungeon Feature · 回复</p>
+    <h1>治疗池</h1>
+    <p class="dq-lede">提供付费或条件式治疗，比单次治疗包更像一个可交互恢复建筑。</p>
+    <p class="dq-original">原名：Healing Pool · 类名：HealingPool</p>
+    <div class="dq-tag-row"><span>回复</span><span>随机奖励名 5%；治疗分支可能加入 1 个；Kitten 难度后处理也会加入 1 个。</span></div>
+  </div>
+  <div class="dq-profession-portrait dq-feature-portrait">
+    <img src="/assets/extracted/textures/by_container/resources/HealingPool__702.png" alt="Healing Pool" loading="lazy">
+  </div>
+</section>
+
+<section class="dq-wide-panel">
+  <h2>Metadata</h2>
+  <div class="dq-meta-grid">
+<span title="wiki 中使用的中文名称。"><strong>中文名</strong><em>治疗池</em></span>
+<span title="游戏原始名称或代码中对应名称。"><strong>英文名</strong><em>Healing Pool</em></span>
+<span title="反编译类型或创建 feature 时使用的内部名称。"><strong>类名</strong><em>HealingPool</em></span>
+<span title="用于图鉴分组。"><strong>类别</strong><em>回复</em></span>
+<span title="从地牢生成和奖励分配中恢复出的生成入口。"><strong>生成方式</strong><em>随机奖励名 5%；治疗分支可能加入 1 个；Kitten 难度后处理也会加入 1 个。</em></span>
+</div>
+</section>
+
+<section class="dq-section-block">
+  <h2>机制说明</h2>
+  <div class="dq-mechanic-list">
+<p>HealingPool 有 FirstText、Heal、FullHeal、HealCost、FullHealCost 等入口。</p>
+<p>Kitten 难度会在每层额外加入 HealingPool 和 TreasureChest。</p>
+<p>首次全治疗免费；之后每恢复 1 点生命花费 1 金币。</p>
+<p>单点治疗固定为 1 金币回复 1 HP；全治疗会按缺失生命和当前金币取可支付上限。</p>
+  </div>
+</section>
+
+<section class="dq-section-block">
+  <h2>费用与回血</h2>
+  
+  <table class="dq-data-table">
+    <thead><tr><th>入口</th><th>费用</th><th>治疗量</th></tr></thead>
+    <tbody>
+<tr><td>Heal</td><td>1 金币</td><td>1 HP。</td></tr>
+<tr><td>FullHeal，首次</td><td>0 金币</td><td>恢复全部缺失生命。</td></tr>
+<tr><td>FullHeal，之后</td><td>每点生命 1 金币</td><td>min(缺失生命, 当前金币)。</td></tr>
+<tr><td>FullHeal 按钮</td><td>首次显示 Free!；之后显示 FullHealCost() Gold。</td><td>FullHealCost = FullHealAmount * HealCost。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+<section class="dq-section-block">
+  <h2>随机奖励权重</h2>
+  <table class="dq-data-table">
+    <thead><tr><th>楼层组</th><th>概率</th><th>说明</th></tr></thead>
+    <tbody>
+<tr><td>第 1 层</td><td>5%</td><td>来自 DungeonBoard.GenerateRewardName。</td></tr>
+<tr><td>第 2 层以后</td><td>5%</td><td>来自 DungeonBoard.GenerateRewardName。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="dq-action-row">
+  <a class="dq-button" href="/buildings">回到地牢建筑图鉴</a>
+  <a class="dq-button dq-button-secondary" href="/mechanics/dungeon-generation">查看地牢生成</a>
+</section>

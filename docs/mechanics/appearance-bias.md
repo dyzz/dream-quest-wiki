@@ -1,0 +1,240 @@
+---
+title: "卡牌出现权重"
+description: "解释 Dream Quest 卡牌权重和职业权重 ID 的关系。"
+---
+
+
+# 卡牌出现权重
+
+卡牌出现权重是宝箱、商店和地图随机奖励用来决定“哪些牌进入候选池、哪些牌更容易被抽中”的系统。职业升级的随机卡也会受职业影响，但它不是同一套加权池，而是职业自己的升级卡表里等概率抽取。
+
+## 1. 职业 ID 与基础权重算法 {#profession-bias}
+
+计算宝箱、商店和地图随机卡奖励时，职业侧主要看两件事：职业权重 ID 和职业基础权重算法。职业权重 ID 决定哪些卡牌 ID 修正会命中；基础权重算法决定这个职业如何读取卡牌 metadata 里的盗贼、牧师、战士、法师四个基础权重。
+
+<table class="dq-data-table">
+  <thead><tr><th>职业</th><th>职业权重 ID</th><th>基础权重算法</th><th>说明</th></tr></thead>
+  <tbody>
+<tr><td><a href="/professions/assassin">刺客</a></td><td>8、16</td><td>max(盗贼, 法师)</td><td>低阶魔力牌（ManaCard 且基础阶级 &lt; 5）权重为 0。</td></tr>
+<tr><td><a href="/professions/bard">吟游诗人</a></td><td>9、14</td><td>10</td><td>所有卡使用固定基础权重。</td></tr>
+<tr><td><a href="/professions/paladin">圣骑士</a></td><td>4、15</td><td>max(牧师, 战士)</td><td>用更高的一侧作为基础权重。</td></tr>
+<tr><td><a href="/professions/druid">德鲁伊</a></td><td>12、14</td><td>max(法师, 0.75 × 战士)</td><td>偏向法术，同时保留一部分战士权重。</td></tr>
+<tr><td><a href="/professions/warrior">战士</a></td><td>1、17</td><td>战士</td><td>直接读取卡牌的战士权重。</td></tr>
+<tr><td><a href="/professions/professor">教授</a></td><td>10</td><td>10</td><td>所有卡使用固定基础权重。</td></tr>
+<tr><td><a href="/professions/monk">武僧</a></td><td>8、16</td><td>max(盗贼, 牧师)</td><td>用更高的一侧作为基础权重。</td></tr>
+<tr><td><a href="/professions/samurai">武士</a></td><td>5、14</td><td>max(战士, 法师)</td><td>用更高的一侧作为基础权重。</td></tr>
+<tr><td><a href="/professions/necromancer">死灵法师</a></td><td>6、16</td><td>max(牧师, 法师)</td><td>用更高的一侧作为基础权重。</td></tr>
+<tr><td><a href="/professions/wizard">法师</a></td><td>0、14</td><td>法师</td><td>通常读取法师权重；Mana Surge 固定按 20 计算。</td></tr>
+<tr><td><a href="/professions/ranger">游侠</a></td><td>7、14</td><td>max(盗贼, 战士)</td><td>用更高的一侧作为基础权重。</td></tr>
+<tr><td><a href="/professions/priest">牧师</a></td><td>2、15</td><td>牧师</td><td>直接读取卡牌的牧师权重。</td></tr>
+<tr><td><a href="/professions/thief">盗贼</a></td><td>3、16</td><td>盗贼</td><td>直接读取卡牌的盗贼权重。</td></tr>
+<tr><td><a href="/professions/dragon">龙</a></td><td>14</td><td>max(战士, 法师)</td><td>用更高的一侧作为基础权重。</td></tr>
+  </tbody>
+</table>
+
+<section class="dq-callout">
+  <strong>读法</strong>
+  <span>如果职业拥有 ID 17，而某张牌写着“ID 17：出现频率 +1”，这张牌只会在拥有 ID 17 的职业上获得这个额外修正。职业没有这个 ID，就不会吃到这条修正。</span>
+</section>
+
+## 2. 职业基础数据与升级成长 {#profession-growth}
+
+生命、法力、行动点和装备槽会影响职业实际选牌方向，但它们不是宝箱和商店里单张卡的直接权重。它们属于职业基础数据和升级奖励结构：升级时如果出现生命、法力、行动点或装备槽奖励，玩家选择后会改变后续战斗节奏；宝箱和商店的卡牌概率仍按 CardFinder 的候选池与总权重计算。
+
+<table class="dq-data-table">
+  <thead><tr><th>职业</th><th>开局资源</th><th>升级成长选项</th><th>固定奖励节点</th></tr></thead>
+  <tbody>
+<tr><td><a href="/professions/assassin">刺客</a></td><td>生命 15 / 法力 1 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、金币、卡牌奖励、升级牌</td><td>3 级 行动点增加</td></tr>
+<tr><td><a href="/professions/bard">吟游诗人</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、金币、卡牌奖励、升级牌</td><td>无额外固定节点</td></tr>
+<tr><td><a href="/professions/paladin">圣骑士</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、装备槽增加、卡牌奖励、升级牌、删除牌</td><td>3 级 法力增加</td></tr>
+<tr><td><a href="/professions/druid">德鲁伊</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、卡牌奖励、升级牌、删除牌</td><td>通用 1 张低阶卡</td></tr>
+<tr><td><a href="/professions/warrior">战士</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +3、法力增加、行动点增加、装备槽增加、卡牌奖励、升级牌、删除牌</td><td>5 级 装备槽增加</td></tr>
+<tr><td><a href="/professions/professor">教授</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、装备槽增加、删除牌</td><td>3 级 行动点增加</td></tr>
+<tr><td><a href="/professions/monk">武僧</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、卡牌奖励、删除牌</td><td>3 级 行动点增加</td></tr>
+<tr><td><a href="/professions/samurai">武士</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、装备槽增加、卡牌奖励、升级牌、删除牌</td><td>无额外固定节点</td></tr>
+<tr><td><a href="/professions/necromancer">死灵法师</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +1、法力增加、卡牌奖励、删除牌</td><td>5 级 法力成长</td></tr>
+<tr><td><a href="/professions/wizard">法师</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、卡牌奖励、升级牌、删除牌</td><td>5 级 法力成长、6 级 法力激涌</td></tr>
+<tr><td><a href="/professions/ranger">游侠</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +3、法力增加、行动点增加、装备槽增加、卡牌奖励、升级牌</td><td>3 级 行动点增加、5 级 装备槽增加</td></tr>
+<tr><td><a href="/professions/priest">牧师</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、卡牌奖励、升级牌、删除牌</td><td>5 级 灵感</td></tr>
+<tr><td><a href="/professions/thief">盗贼</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、金币、卡牌奖励、升级牌、删除牌</td><td>3 级 行动点增加</td></tr>
+<tr><td><a href="/professions/dragon">龙</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、装备槽增加、卡牌奖励、删除牌</td><td>3 级 龙之智慧、5 级 龙之点心、7 级 龙之智慧</td></tr>
+  </tbody>
+</table>
+
+## 3. 卡牌权重数据 {#card-bias}
+
+卡牌自己有两类权重数据。
+
+<section class="dq-two-column">
+  <div>
+    <h3>基础职业权重</h3>
+    <p>卡牌直接写着盗贼、牧师、战士、法师这些基础权重。数值越高，代表这张牌对该基础职业方向越容易被奖励选中。</p>
+  </div>
+  <div>
+    <h3>ID 修正</h3>
+    <p>卡牌还可以写“某个职业权重 ID 命中时，改变有效阶级或出现频率”。这一步只在职业 ID 与卡牌 ID 对上时生效。</p>
+  </div>
+</section>
+
+<table class="dq-data-table">
+  <thead><tr><th>卡牌</th><th>基础阶级</th><th>基础职业权重</th><th>ID 修正</th></tr></thead>
+  <tbody>
+<tr><td><a href="/cards/berserker-strike">狂战打击</a></td><td>5 阶</td><td>战士 10、牧师 2、盗贼 1、法师 1</td><td>ID 1：有效阶级 -1</td></tr>
+<tr><td><a href="/cards/storm-slash1">风暴斩（1）</a></td><td>1 阶</td><td>战士 6、盗贼 3、牧师 2、法师 1</td><td>ID 17：出现频率 +1</td></tr>
+<tr><td><a href="/cards/flame-slash1">火焰斩（1）</a></td><td>1 阶</td><td>盗贼 3、战士 3、牧师 1、法师 1</td><td>ID 14：出现频率 +1</td></tr>
+<tr><td><a href="/cards/absorb-vis">吸收魔力</a></td><td>10 阶</td><td>牧师 3、法师 3、盗贼 1、战士 1</td><td>ID 6：有效阶级 +10</td></tr>
+<tr><td><a href="/cards/accelerate">加速</a></td><td>10 阶</td><td>盗贼 10、战士 4、牧师 1、法师 1</td><td>无 ID 修正</td></tr>
+<tr><td><a href="/cards/venom">毒液</a></td><td>1 阶</td><td>盗贼 6、牧师 6、法师 3、战士 1</td><td>无 ID 修正</td></tr>
+  </tbody>
+</table>
+
+## 4. 所有职业 ID 修正卡
+
+下面这张表列出所有会对职业 ID 生效的卡牌修正。没有出现在这里的职业 ID，目前没有卡牌写针对它的阶级或频率修正。
+
+<table class="dq-data-table">
+  <thead><tr><th>ID</th><th>命中职业</th><th>卡牌</th><th>类型</th><th>具体修正</th><th>直观含义</th></tr></thead>
+  <tbody>
+<tr><td>ID 1<br><span>战士基础权重</span></td><td><a href="/professions/warrior">战士</a></td><td><a href="/cards/collosus-smash">巨像重击</a></td><td>阶级修正</td><td>有效阶级 -1</td><td>更早进入低阶奖励范围</td></tr>
+<tr><td>ID 1<br><span>战士基础权重</span></td><td><a href="/professions/warrior">战士</a></td><td><a href="/cards/berserker-strike">狂战打击</a></td><td>阶级修正</td><td>有效阶级 -1</td><td>更早进入低阶奖励范围</td></tr>
+<tr><td>ID 4<br><span>圣骑士权重</span></td><td><a href="/professions/paladin">圣骑士</a></td><td><a href="/cards/wisdom">智慧</a></td><td>阶级修正</td><td>有效阶级 -1</td><td>更早进入低阶奖励范围</td></tr>
+<tr><td>ID 4<br><span>圣骑士权重</span></td><td><a href="/professions/paladin">圣骑士</a></td><td><a href="/cards/holy-strike1">神圣打击（1）</a></td><td>阶级修正</td><td>有效阶级 -1</td><td>更早进入低阶奖励范围</td></tr>
+<tr><td>ID 4<br><span>圣骑士权重</span></td><td><a href="/professions/paladin">圣骑士</a></td><td><a href="/cards/holy-strike2">神圣打击（2）</a></td><td>阶级修正</td><td>有效阶级 -1</td><td>更早进入低阶奖励范围</td></tr>
+<tr><td>ID 4<br><span>圣骑士权重</span></td><td><a href="/professions/paladin">圣骑士</a></td><td><a href="/cards/holy-strike3">神圣打击（3）</a></td><td>阶级修正</td><td>有效阶级 -1</td><td>更早进入低阶奖励范围</td></tr>
+<tr><td>ID 4<br><span>圣骑士权重</span></td><td><a href="/professions/paladin">圣骑士</a></td><td><a href="/cards/wrath-of-god">神怒</a></td><td>频率修正</td><td>最终权重 +5</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 5<br><span>武士权重</span></td><td><a href="/professions/samurai">武士</a></td><td><a href="/cards/sorcerous-strike1">巫术打击（1）</a></td><td>频率修正</td><td>最终权重 +7</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 5<br><span>武士权重</span></td><td><a href="/professions/samurai">武士</a></td><td><a href="/cards/sorcerous-strike2">巫术打击（2）</a></td><td>频率修正</td><td>最终权重 +7</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 5<br><span>武士权重</span></td><td><a href="/professions/samurai">武士</a></td><td><a href="/cards/sorcerous-strike3">巫术打击（3）</a></td><td>频率修正</td><td>最终权重 +7</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 6<br><span>死灵法师权重</span></td><td><a href="/professions/necromancer">死灵法师</a></td><td><a href="/cards/absorb-vis">吸收魔力</a></td><td>阶级修正</td><td>有效阶级 +10</td><td>推迟到更高阶奖励范围</td></tr>
+<tr><td>ID 14<br><span>元素/斩击权重</span></td><td><a href="/professions/bard">吟游诗人</a>、<a href="/professions/druid">德鲁伊</a>、<a href="/professions/samurai">武士</a>、<a href="/professions/wizard">法师</a>、<a href="/professions/ranger">游侠</a>、<a href="/professions/dragon">龙</a></td><td><a href="/cards/flame-slash1">火焰斩（1）</a></td><td>频率修正</td><td>最终权重 +1</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 14<br><span>元素/斩击权重</span></td><td><a href="/professions/bard">吟游诗人</a>、<a href="/professions/druid">德鲁伊</a>、<a href="/professions/samurai">武士</a>、<a href="/professions/wizard">法师</a>、<a href="/professions/ranger">游侠</a>、<a href="/professions/dragon">龙</a></td><td><a href="/cards/flame-slash2">火焰斩（2）</a></td><td>频率修正</td><td>最终权重 +1</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 14<br><span>元素/斩击权重</span></td><td><a href="/professions/bard">吟游诗人</a>、<a href="/professions/druid">德鲁伊</a>、<a href="/professions/samurai">武士</a>、<a href="/professions/wizard">法师</a>、<a href="/professions/ranger">游侠</a>、<a href="/professions/dragon">龙</a></td><td><a href="/cards/flame-slash3">火焰斩（3）</a></td><td>频率修正</td><td>最终权重 +1</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 15<br><span>神圣/冰霜权重</span></td><td><a href="/professions/paladin">圣骑士</a>、<a href="/professions/priest">牧师</a></td><td><a href="/cards/frost-slash1">冰霜斩（1）</a></td><td>频率修正</td><td>最终权重 +1</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 15<br><span>神圣/冰霜权重</span></td><td><a href="/professions/paladin">圣骑士</a>、<a href="/professions/priest">牧师</a></td><td><a href="/cards/frost-slash2">冰霜斩（2）</a></td><td>频率修正</td><td>最终权重 +1</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 15<br><span>神圣/冰霜权重</span></td><td><a href="/professions/paladin">圣骑士</a>、<a href="/professions/priest">牧师</a></td><td><a href="/cards/frost-slash3">冰霜斩（3）</a></td><td>频率修正</td><td>最终权重 +1</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 16<br><span>腐蚀/暗影权重</span></td><td><a href="/professions/assassin">刺客</a>、<a href="/professions/monk">武僧</a>、<a href="/professions/necromancer">死灵法师</a>、<a href="/professions/thief">盗贼</a></td><td><a href="/cards/corrosive-slash1">腐蚀斩（1）</a></td><td>频率修正</td><td>最终权重 +1</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 16<br><span>腐蚀/暗影权重</span></td><td><a href="/professions/assassin">刺客</a>、<a href="/professions/monk">武僧</a>、<a href="/professions/necromancer">死灵法师</a>、<a href="/professions/thief">盗贼</a></td><td><a href="/cards/corrosive-slash2">腐蚀斩（2）</a></td><td>频率修正</td><td>最终权重 +1</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 16<br><span>腐蚀/暗影权重</span></td><td><a href="/professions/assassin">刺客</a>、<a href="/professions/monk">武僧</a>、<a href="/professions/necromancer">死灵法师</a>、<a href="/professions/thief">盗贼</a></td><td><a href="/cards/corrosive-slash3">腐蚀斩（3）</a></td><td>频率修正</td><td>最终权重 +1</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 17<br><span>风暴权重</span></td><td><a href="/professions/warrior">战士</a></td><td><a href="/cards/storm-slash1">风暴斩（1）</a></td><td>频率修正</td><td>最终权重 +1</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 17<br><span>风暴权重</span></td><td><a href="/professions/warrior">战士</a></td><td><a href="/cards/storm-slash2">风暴斩（2）</a></td><td>频率修正</td><td>最终权重 +1</td><td>提高被抽中的权重</td></tr>
+<tr><td>ID 17<br><span>风暴权重</span></td><td><a href="/professions/warrior">战士</a></td><td><a href="/cards/storm-slash3">风暴斩（3）</a></td><td>频率修正</td><td>最终权重 +1</td><td>提高被抽中的权重</td></tr>
+  </tbody>
+</table>
+
+## 5. 总权重与概率公式
+
+宝箱、商店和地图随机卡奖励都会进入同一个核心流程：先过滤候选池，再给每张候选牌算权重，最后按权重抽取。
+
+<section class="dq-callout">
+  <strong>核心公式</strong>
+  <span>总权重 = 所有通过筛选的候选牌权重相加；卡牌概率 = 这张牌的抽取权重 / 总权重。</span>
+</section>
+
+候选牌需要同时通过这些条件：
+
+1. 卡牌已经解锁，且不是永不出现的卡。
+2. 同名基础牌没有超过本轮地牢的最大出现次数，例如 StormSlash1 和 StormSlash2 会共享 StormSlash 计数。
+3. 卡牌的有效阶级落在当前入口允许的阶级参数里。
+4. 若入口设置了最低亲和度，最终权重必须达到最低值且不能为负数。
+5. 只抽卡牌的入口会排除动态金币类候选。
+
+有效阶级先从卡牌基础阶级开始，再叠加命中的 ID 阶级修正：
+
+<section class="dq-formula-card">
+  <code>有效阶级 = 基础阶级 + 命中职业 ID 的阶级修正之和</code>
+</section>
+
+最终权重这样计算：
+
+<section class="dq-formula-card">
+  <code>单卡原始权重 = 职业基础权重 + 命中职业 ID 的频率修正 + 当前牌组元素修正</code>
+</section>
+
+入口会用最低亲和度过滤这个原始权重。常见宝箱要求至少 1，商店要求至少 0；如果入口传入 -1，则所有候选牌按 1 点权重处理。
+
+<section class="dq-formula-card">
+  <code>抽取权重 = 原始权重；如果 minAffinity = -1，则抽取权重 = 1</code>
+</section>
+
+<section class="dq-formula-card">
+  <code>总权重 = Σ 每张通过筛选的抽取权重</code>
+</section>
+
+<section class="dq-formula-card">
+  <code>单卡概率 = 这张牌的抽取权重 / 总权重</code>
+</section>
+
+元素修正只影响带元素亲和的牌。它会看当前牌组里同元素牌有多少，再和全部元素牌数量比较；没有元素亲和的牌，这一项就是 0。
+
+<table class="dq-data-table">
+  <thead><tr><th>入口</th><th>什么时候抽卡</th><th>阶级和额外规则</th></tr></thead>
+  <tbody>
+<tr><td>宝箱</td><td>先决定掉落 1/2/3 件：约 85% / 13% / 2%。第一件必定抽卡；后续每件 45% 是金币、55% 再抽一张卡。</td><td>使用当前地牢奖励阶级范围，把上限下调 1、最低夹到 1；minAffinity 为 1。每次抽到卡后，同名基础牌出现计数会影响后续抽卡。</td></tr>
+<tr><td>商店</td><td>Shop.GenerateItems 固定构造 1、3、5 三个商品档位，每个档位调用一次 CardFinder。</td><td>每个商品档位按对应阶级抽取，minAffinity 为 0；重复商品会重抽，最后对商品列表洗牌。</td></tr>
+<tr><td>地图随机卡奖励</td><td>直接调用 CardFinder 的奖励入口。</td><td>入口传入的阶级参数不同，但候选过滤和权重公式相同。</td></tr>
+  </tbody>
+</table>
+
+抽取时，游戏会把所有候选牌按原卡牌列表顺序排好，用权重累加成连续区间，然后掷一个 1 到总权重的随机数。随机数落在哪个区间，就得到哪张牌。
+
+## 6. 职业升级里的卡片概率
+
+职业升级不是直接调用 CardFinder 全局候选池。升级奖励先由职业自己的方法决定奖励结构：主奖励、固定奖励、随机卡奖励。固定给牌就是 100% 给那张牌，没有给牌就是 0%；只有当这次升级需要“随机卡”时，才会进入该职业自己的升级卡表。
+
+<table class="dq-data-table">
+  <thead><tr><th>目标等级</th><th>使用卡表</th><th>含义</th></tr></thead>
+  <tbody>
+<tr><td>1-4 级</td><td>LowCards</td><td>职业的低阶升级卡表</td></tr>
+<tr><td>5-7 级</td><td>MidCards</td><td>职业的中阶升级卡表</td></tr>
+<tr><td>8 级及以上</td><td>HighCards</td><td>职业的高阶升级卡表</td></tr>
+  </tbody>
+</table>
+
+升级卡表内部是职业硬编码的卡牌清单或卡牌系列，例如战士会围绕攻击、斩击、武器和战斗行动构建自己的卡表。这里不再按卡牌 metadata 的盗贼/牧师/战士/法师权重加权；抽取规则是等概率：
+
+<section class="dq-formula-card">
+  <code>单张随机升级卡概率 = 1 / 当前职业卡表数量</code>
+</section>
+
+如果一次升级要给“两张不同随机卡”，则先等概率抽第一张，再从剩余卡里等概率抽第二张。某张牌出现在这两张里的概率可以按 <code>2 / 当前职业卡表数量</code> 理解。
+
+所以升级、宝箱、商店的区别是：
+
+1. 职业升级：职业卡表决定候选，候选内等概率抽。
+2. 宝箱/商店/地图随机卡：CardFinder 决定候选，候选内按最终权重抽。
+3. 卡牌 metadata 的四基础职业权重主要影响 CardFinder，不直接给升级卡表排序。
+
+## 7. 三者怎么一起工作
+
+职业基础数据、职业 ID 和卡牌权重数据会按入口不同组合起来：
+
+1. 如果入口是职业升级，先看这个职业在目标等级有没有固定主奖励或 FixedBonus。命中固定卡牌、行动点、法力或装备槽时，该奖励直接出现。
+2. 如果升级入口需要随机卡，再进入该职业自己的 LowCards / MidCards / HighCards 卡表，卡表内等概率抽取。
+3. 如果入口是宝箱、商店或地图随机卡奖励，先从全量卡牌列表开始，排除未解锁、不可出现、超过最大出现次数，或不满足需求的卡牌。
+4. 读取当前职业的 RewardWeight 规则和职业权重 ID。RewardWeight 决定四种基础权重怎么合成，职业 ID 决定哪些卡牌修正会命中。
+5. 读取每张卡的基础阶级。如果卡牌有“阶级修正”，并且 ID 命中当前职业，就用修正后的有效阶级参与筛选。
+6. 读取每张卡的基础职业权重。如果卡牌有“频率修正”，并且 ID 命中当前职业，就把这个修正加入权重计算。
+7. 加上当前牌组的元素修正，得到最终权重。
+8. 通过阶级筛选和权重计算后的牌进入候选池，再按权重占比随机给出奖励。
+
+所以职业不是只有一套固定奖励卡池。更准确地说：升级有职业自己的固定节点和升级卡表；宝箱、商店、地图奖励则用职业基础权重算法和职业权重 ID 去“改写”全量卡牌列表，让合适的牌更早、更常或更稳定地出现。
+
+## 8. 实际例子：战士与 Storm Slash
+
+<section class="dq-example-panel">
+  <div>
+    <h3><a href="/professions/warrior">Warrior</a></h3>
+    <p>职业权重 ID：1、17</p>
+    <p>基础权重算法：战士，直接读取卡牌 metadata 的战士权重。</p>
+  </div>
+  <div>
+    <h3><a href="/cards/storm-slash1">Storm Slash (1)</a></h3>
+    <p>在战士 1 层宝箱卡牌分支中，它的有效阶级是 1，战士基础权重是 6。</p>
+    <p>战士拥有 ID 17，Storm Slash (1) 命中“ID 17：出现频率 +1”。</p>
+    <p>当前牌组没有元素修正时，最终权重就是 6 + 1 + 0 = 7。</p>
+  </div>
+</section>
+
+这个具体池子里共有 31 张基础解锁候选牌，总权重 75。Storm Slash (1) 的概率是 <code>7 / 75 = 9.33%</code>。如果玩家已经解锁更多卡，或同名基础牌已经达到最大出现次数，候选池和总权重会改变，概率也会随之改变。
+
+再看阶级修正：Berserker Strike 原本是 5 阶牌，但在战士身上因为 ID 1 命中，实际进入奖励筛选时会更接近 4 阶。它的战士基础权重是 10，明显高于法师权重 1；所以战士更早、更容易看到这张牌，而法师不是完全不能看到，只是没有这套职业 ID 与权重优势。

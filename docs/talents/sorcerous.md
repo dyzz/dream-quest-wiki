@@ -1,0 +1,70 @@
+---
+title: "Sorcerous"
+description: "将 Mana Surge、Fireball 和 Charm 加入牌组。"
+---
+
+
+<section class="dq-profession-hero dq-feature-hero">
+  <div>
+    <p class="dq-kicker">Talent · 2 阶</p>
+    <h1>Sorcerous</h1>
+    <p class="dq-lede">将 Mana Surge、Fireball 和 Charm 加入牌组。</p>
+    <p class="dq-original">原文：Add the Mana Surge, Fireball, and Charm cards to your deck</p>
+    <div class="dq-tag-row">
+      <span>地牢/立即生效</span>
+      <span>不可重复</span>
+      <span>需要 WINWIZARD2</span>
+    </div>
+  </div>
+  <div class="dq-profession-portrait dq-feature-portrait">
+    <img src="/assets/extracted/textures/by_container/resources/Sorcerous__782.png" alt="Sorcerous" loading="lazy">
+  </div>
+</section>
+
+<section class="dq-wide-panel">
+  <h2>Metadata</h2>
+  <div class="dq-meta-grid">
+<span title="DungeonTalentList 中的内部名称。"><strong>内部名称</strong><em>Sorcerous</em></span>
+<span title="游戏内显示名称。"><strong>显示名</strong><em>Sorcerous</em></span>
+<span title="天赋选择时使用的阶级。"><strong>阶级</strong><em>2</em></span>
+<span title="是否可以重复选择同一项天赋。"><strong>可重复</strong><em>否</em></span>
+<span title="立即/地牢层面生效，或进入战斗后作为玩家被动生效。"><strong>作用域</strong><em>地牢/立即生效</em></span>
+<span title="需要先完成的 UserAttribute / 成就。"><strong>需求</strong><em>WINWIZARD2</em></span>
+</div>
+</section>
+
+<section class="dq-section-block">
+  <h2>解锁要求</h2>
+  <table class="dq-data-table">
+    <thead><tr><th>成就</th><th>要求</th><th>奖励</th></tr></thead>
+    <tbody>
+<tr><td>Sorcerous Champion<br><code>WINWIZARD2</code></td><td>使用 Wizard 将最终 Boss 生命降低到 850 以下</td><td>解锁 Sorcerous 天赋</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="dq-section-block">
+  <h2>实际效果</h2>
+  <div class="dq-mechanic-list">
+    <p>向牌组加入：ManaSurge、Fireball、Charm。</p>
+  </div>
+</section>
+
+<section class="dq-section-block">
+  <h2>解析效果</h2>
+  <table class="dq-data-table">
+  <thead><tr><th>入口</th><th>操作</th><th>目标</th><th>参数</th></tr></thead>
+  <tbody>
+<tr>
+  <td>ApplyTo</td>
+  <td>向牌组加入牌</td>
+  <td>DungeonPlayer.AddCard</td>
+  <td>卡牌：ManaSurge、Fireball、Charm</td>
+</tr>
+  </tbody>
+</table>
+</section>
+
+<section class="dq-action-row">
+  <a class="dq-button" href="/talents">回到天赋图鉴</a>
+</section>

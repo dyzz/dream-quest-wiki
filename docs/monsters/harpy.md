@@ -1,0 +1,219 @@
+---
+title: "鹰身女妖"
+description: "普通怪物，出现在 地牢、森林、山脉。等级范围 4-7 级。基础牌组 12 张。主要依靠牌组行动。等级提升没有解析到额外牌组改动。"
+---
+
+
+<section class="dq-profession-hero dq-monster-hero">
+  <div>
+    <p class="dq-kicker">Monster · 4-7 级</p>
+    <h1>鹰身女妖</h1>
+    <span class="dq-original">原名：Harpy</span>
+    <p class="dq-lede">普通怪物，出现在 地牢、森林、山脉。等级范围 4-7 级。基础牌组 12 张。主要依靠牌组行动。等级提升没有解析到额外牌组改动。</p>
+    <div class="dq-tag-row">
+      <span>普通怪物</span>
+      <span>基础资料</span>
+      <span>地牢</span>
+<span>森林</span>
+<span>山脉</span>
+    </div>
+  </div>
+  <div class="dq-profession-portrait dq-monster-portrait">
+    <img src="/assets/extracted/textures/by_container/resources/harpy__986.png" alt="鹰身女妖" loading="lazy">
+  </div>
+</section>
+
+<section class="dq-wide-panel">
+  <h2>后台信息</h2>
+  <div class="dq-meta-grid">
+<span title="wiki 中使用的统一中文名称。"><strong>中文名</strong><em>鹰身女妖</em></span>
+<span title="游戏原始显示名。"><strong>英文名</strong><em>Harpy</em></span>
+<span title="怪物在解析数据中的内部引用名称。"><strong>怪物 ID</strong><em>Harpy</em></span>
+<span title="反编译类名，通常用于和代码中的怪物实现对应。"><strong>类名</strong><em>Harpy</em></span>
+<span title="Boss 通常有更高金币、经验或生命倍率，也会使用更高等级段。"><strong>类型</strong><em>普通怪物</em></span>
+<span title="地牢生成时可能出现的怪物等级范围；某些怪物在不同等级有不同牌组或属性。"><strong>等级范围</strong><em>4-7 级</em></span>
+<span title="怪物可在这些地形环境中生成。"><strong>生成地形</strong><em>地牢、森林、山脉</em></span>
+<span title="不同地形中的生成权重；0 表示通常不在该环境自然生成。"><strong>地形权重</strong><em>墓穴: 0、森林: 3、地牢: 0、水域: 0、火山: 0、山脉: 10</em></span>
+<span title="龙职业吞噬机制读取的怪物类型；后半段注明吞噬该类怪物时触发的奖励。"><strong>Devour 类型</strong><em>1 · 基础生物；吞噬收益：完全回复生命；不增加最大生命。</em></span>
+<span title="怪物开局或基础配置中的法力值。"><strong>基础法力</strong><em>0</em></span>
+<span title="BuildAttributes 里写入的基础等级，实际生成仍受地牢等级范围影响。"><strong>基础等级</strong><em>4</em></span>
+<span title="怪物初始化里的牌组/行动稀释参数，用于控制其节奏表现。"><strong>稀释值</strong><em>0</em></span>
+<span title="怪物初始化里的行动点修正。"><strong>行动点修正</strong><em>1</em></span>
+<span title="怪物初始化里的抽牌/手牌修正。"><strong>手牌修正</strong><em>1</em></span>
+<span title="怪物生命倍率，Boss 常高于普通怪物。"><strong>生命倍率</strong><em>1</em></span>
+<span title="击败后金币奖励倍率。"><strong>金币倍率</strong><em>1</em></span>
+<span title="击败后经验奖励倍率。"><strong>经验倍率</strong><em>1</em></span>
+<span title="解析出的怪物机制覆盖程度。"><strong>机制状态</strong><em>基础资料</em></span>
+<span title="等级变化解析状态；详情在等级变化表中展示。"><strong>等级规则</strong><em>structured_level_up</em></span>
+</div>
+</section>
+
+<section class="dq-section-block">
+  <h2>关键机制</h2>
+  <div class="dq-mechanic-list dq-core-mechanics">
+<p><a class="dq-card-chip" href="/cards/screech">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Screech__439.png" alt="尖啸" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>尖啸</strong><small>Screech</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Screech__439.png" alt="尖啸" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>尖啸</strong>
+      <small>Screech · 反应 · 2 阶 · 0 行动点 / 0 法力</small>
+      <em>触发：对手打出法术牌时。效果：该法术无效果。抽 1 张牌。</em>
+    </span>
+  </span>
+</a> 会让法术无效；牌组同时包含高毒性伤害。</p>
+<p>起手优先牌：<a class="dq-card-chip" href="/cards/sting">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Sting__174.png" alt="蛰刺" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>蛰刺</strong><small>Sting</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Sting__174.png" alt="蛰刺" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>蛰刺</strong>
+      <small>Sting · 行动牌 · 3 阶 · 1 行动点 / 0 法力</small>
+      <em>对手获得 &lt;中毒 2&gt;。</em>
+    </span>
+  </span>
+</a>。</p>
+</div>
+</section>
+
+
+
+<section class="dq-section-block">
+  <h2>等级变化</h2>
+  <p class="dq-note">没有解析到等级提升后的牌组或属性变化。</p>
+</section>
+
+<section class="dq-section-block">
+  <h2>卡牌</h2>
+  <div class="dq-monster-card-summary">
+  <span>基础牌组 12 张</span>
+  <span>唯一卡牌 4 张</span>
+</div>
+<h3>牌型比例</h3>
+<table class="dq-data-table">
+  <thead><tr><th>牌型</th><th>数量</th><th>代表牌</th></tr></thead>
+  <tbody>
+<tr>
+  <td>攻击</td>
+  <td>3</td>
+  <td><a class="dq-card-chip" href="/cards/infect2">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Infect2__650.png" alt="感染（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>感染（2）</strong><small>Infect (2)</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Infect2__650.png" alt="感染（2）" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>感染（2）</strong>
+      <small>Infect (2) · 攻击 · 3 阶 · 0 行动点 / 0 法力</small>
+      <em>对手获得 &lt;中毒 2&gt;。</em>
+    </span>
+  </span>
+</a></td>
+</tr>
+<tr>
+  <td>行动牌</td>
+  <td>4</td>
+  <td><a class="dq-card-chip" href="/cards/sting">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Sting__174.png" alt="蛰刺" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>蛰刺</strong><small>Sting</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Sting__174.png" alt="蛰刺" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>蛰刺</strong>
+      <small>Sting · 行动牌 · 3 阶 · 1 行动点 / 0 法力</small>
+      <em>对手获得 &lt;中毒 2&gt;。</em>
+    </span>
+  </span>
+</a></td>
+</tr>
+<tr>
+  <td>反应</td>
+  <td>5</td>
+  <td><a class="dq-card-chip" href="/cards/screech">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Screech__439.png" alt="尖啸" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>尖啸</strong><small>Screech</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Screech__439.png" alt="尖啸" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>尖啸</strong>
+      <small>Screech · 反应 · 2 阶 · 0 行动点 / 0 法力</small>
+      <em>触发：对手打出法术牌时。效果：该法术无效果。抽 1 张牌。</em>
+    </span>
+  </span>
+</a>、<a class="dq-card-chip" href="/cards/disorient">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Disorient__390.png" alt="迷失方向" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>迷失方向</strong><small>Disorient</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Disorient__390.png" alt="迷失方向" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>迷失方向</strong>
+      <small>Disorient · 反应 · 6 阶 · 0 行动点 / 0 法力</small>
+      <em>触发：对手打出行动牌时。效果：该牌视为由你打出。</em>
+    </span>
+  </span>
+</a></td>
+</tr>
+  </tbody>
+</table>
+<h3>关联卡牌</h3>
+<div class="dq-profession-card-grid dq-monster-card-grid">
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/screech">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Screech__439.png" alt="尖啸" loading="eager"></span></span>
+  <strong>尖啸</strong>
+  <span class="dq-profession-card-meta">Screech · 基础牌组 x2 / 关键行为 / 机制引用 / 机制参数</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Screech__439.png" alt="尖啸" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>尖啸</strong>
+      <small>Screech · 反应 · 2 阶 · 0 行动点 / 0 法力</small>
+      <em>触发：对手打出法术牌时。效果：该法术无效果。抽 1 张牌。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/infect2">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Infect2__650.png" alt="感染（2）" loading="eager"></span></span>
+  <strong>感染（2）</strong>
+  <span class="dq-profession-card-meta">Infect (2) · 基础牌组 x3 / 关键行为 / 机制引用 / 机制参数</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Infect2__650.png" alt="感染（2）" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>感染（2）</strong>
+      <small>Infect (2) · 攻击 · 3 阶 · 0 行动点 / 0 法力</small>
+      <em>对手获得 &lt;中毒 2&gt;。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/sting">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Sting__174.png" alt="蛰刺" loading="eager"></span></span>
+  <strong>蛰刺</strong>
+  <span class="dq-profession-card-meta">Sting · 基础牌组 x4 / 优先起手 / 关键行为 / 机制引用 / 机制参数</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Sting__174.png" alt="蛰刺" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>蛰刺</strong>
+      <small>Sting · 行动牌 · 3 阶 · 1 行动点 / 0 法力</small>
+      <em>对手获得 &lt;中毒 2&gt;。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/disorient">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Disorient__390.png" alt="迷失方向" loading="eager"></span></span>
+  <strong>迷失方向</strong>
+  <span class="dq-profession-card-meta">Disorient · 基础牌组 x3 / 关键行为 / 机制引用 / 机制参数</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Disorient__390.png" alt="迷失方向" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>迷失方向</strong>
+      <small>Disorient · 反应 · 6 阶 · 0 行动点 / 0 法力</small>
+      <em>触发：对手打出行动牌时。效果：该牌视为由你打出。</em>
+    </span>
+  </span>
+</a>
+</div>
+</section>
+
+<section class="dq-action-row">
+  <a class="dq-button" href="/monsters">回到怪物图鉴</a>
+  <a class="dq-button dq-button-secondary" href="/cards">查看卡牌图鉴</a>
+</section>

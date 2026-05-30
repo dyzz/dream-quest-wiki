@@ -1,0 +1,1973 @@
+{
+  "source": "extracted/disassembly/AchievementList_GetAchievementList.txt",
+  "count": 109,
+  "notes": [
+    "Recovered from inline Achievement field writes in AchievementList.GetAchievementList.",
+    "Field offsets are confirmed by Achievement..ctor/model order: attribute=0x10, internalName/name=0x18, requirements/reward=0x28, cost/flavor=0x38.",
+    "attribute is a UserAttribute enum value; CardData.requirements uses the same numeric IDs for achievement-gated card unlocks."
+  ],
+  "achievements": [
+    {
+      "source_address": "0x010003769c",
+      "attribute": 0,
+      "attribute_name": "DEATH1",
+      "internal_name": "Death1",
+      "display_name": "If At First",
+      "requirements_text": "Die once",
+      "reward_text": "Gain access to a talent on the first floor",
+      "cost": 20,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3395,
+        "display_name": 3478,
+        "requirements_text": 3479,
+        "reward_text": 3480
+      }
+    },
+    {
+      "source_address": "0x0100037728",
+      "attribute": 1,
+      "attribute_name": "DEATH2",
+      "internal_name": "Death2",
+      "display_name": "Not Dead Yet",
+      "requirements_text": "Die ten times",
+      "reward_text": "Gain access to the Flee talent",
+      "cost": 250,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3396,
+        "display_name": 3481,
+        "requirements_text": 3482,
+        "reward_text": 3483
+      }
+    },
+    {
+      "source_address": "0x01000377b8",
+      "attribute": 2,
+      "attribute_name": "DEATH3",
+      "internal_name": "Death3",
+      "display_name": "A Little Nap",
+      "requirements_text": "Die fifty times",
+      "reward_text": "Gain access to the Sixth Sense talent",
+      "cost": 500,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3397,
+        "display_name": 3484,
+        "requirements_text": 3485,
+        "reward_text": 3486
+      }
+    },
+    {
+      "source_address": "0x0100037844",
+      "attribute": 3,
+      "attribute_name": "DEATH4",
+      "internal_name": "Death4",
+      "display_name": "Immortal",
+      "requirements_text": "Die one hundred times",
+      "reward_text": "Gain access to the Polymorph Talent",
+      "cost": 1000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3398,
+        "display_name": 3487,
+        "requirements_text": 3488,
+        "reward_text": 3489
+      }
+    },
+    {
+      "source_address": "0x01000378d0",
+      "attribute": 4,
+      "attribute_name": "MANA1",
+      "internal_name": "Mana1",
+      "display_name": "Magically Yummy",
+      "requirements_text": "Gain 100 mana",
+      "reward_text": "Your characters have 1 additional starting mana",
+      "cost": 150,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3399,
+        "display_name": 3490,
+        "requirements_text": 3491,
+        "reward_text": 3492
+      }
+    },
+    {
+      "source_address": "0x010003795c",
+      "attribute": 5,
+      "attribute_name": "MANA2",
+      "internal_name": "Mana2",
+      "display_name": "Magically Tasty",
+      "requirements_text": "Gain 500 mana",
+      "reward_text": "Gain access to the Force of Will card",
+      "cost": 350,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3400,
+        "display_name": 3493,
+        "requirements_text": 3494,
+        "reward_text": 3495
+      }
+    },
+    {
+      "source_address": "0x01000379ec",
+      "attribute": 6,
+      "attribute_name": "MANA3",
+      "internal_name": "Mana3",
+      "display_name": "Magically Delicious",
+      "requirements_text": "Gain 2,000 mana",
+      "reward_text": "Gain access to the Elusive Power card",
+      "cost": 700,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3401,
+        "display_name": 3496,
+        "requirements_text": 3497,
+        "reward_text": 3498
+      }
+    },
+    {
+      "source_address": "0x0100037a78",
+      "attribute": 7,
+      "attribute_name": "MANA4",
+      "internal_name": "Mana4",
+      "display_name": "Magically Scrumptious",
+      "requirements_text": "Gain 10,000 mana",
+      "reward_text": "Gain access to the Kinetic Charge card",
+      "cost": 1000,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3402,
+        "display_name": 3499,
+        "requirements_text": 3500,
+        "reward_text": 3501
+      }
+    },
+    {
+      "source_address": "0x0100037b08",
+      "attribute": 11,
+      "attribute_name": "DAMAGE1",
+      "internal_name": "Damage1",
+      "display_name": "Carry a Big Stick",
+      "requirements_text": "Deal 200 damage",
+      "reward_text": "Your characters start with 3 additional gold",
+      "cost": 150,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3406,
+        "display_name": 3502,
+        "requirements_text": 3503,
+        "reward_text": 3504
+      }
+    },
+    {
+      "source_address": "0x0100037b94",
+      "attribute": 12,
+      "attribute_name": "DAMAGE2",
+      "internal_name": "Damage2",
+      "display_name": "Carry a Really Big Stick",
+      "requirements_text": "Deal 1,000 damage",
+      "reward_text": "Gain access to the Execute card",
+      "cost": 350,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3407,
+        "display_name": 3505,
+        "requirements_text": 3506,
+        "reward_text": 3507
+      }
+    },
+    {
+      "source_address": "0x0100037c24",
+      "attribute": 13,
+      "attribute_name": "DAMAGE3",
+      "internal_name": "Damage3",
+      "display_name": "Carry a Bludgeon",
+      "requirements_text": "Deal 5,000 damage",
+      "reward_text": "Gain access to the Skull Crack card",
+      "cost": 700,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3408,
+        "display_name": 3508,
+        "requirements_text": 3509,
+        "reward_text": 3510
+      }
+    },
+    {
+      "source_address": "0x0100037cb0",
+      "attribute": 14,
+      "attribute_name": "DAMAGE4",
+      "internal_name": "Damage4",
+      "display_name": "Carry a Sledgehammer",
+      "requirements_text": "Deal 20,000 damage",
+      "reward_text": "Gain access to the Battle Cry card",
+      "cost": 1000,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3409,
+        "display_name": 3511,
+        "requirements_text": 3512,
+        "reward_text": 3513
+      }
+    },
+    {
+      "source_address": "0x0100037d40",
+      "attribute": 19,
+      "attribute_name": "STEPS1",
+      "internal_name": "Steps1",
+      "display_name": "Walk in the Dungeon",
+      "requirements_text": "Walk 500 steps",
+      "reward_text": "Your characters will find one additional health pack on each floor",
+      "cost": 150,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3414,
+        "display_name": 3514,
+        "requirements_text": 3515,
+        "reward_text": 3516
+      }
+    },
+    {
+      "source_address": "0x0100037dcc",
+      "attribute": 20,
+      "attribute_name": "STEPS2",
+      "internal_name": "Steps2",
+      "display_name": "5K",
+      "requirements_text": "Walk 5,000 steps",
+      "reward_text": "Gain access to the Dodge card",
+      "cost": 350,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3415,
+        "display_name": 3517,
+        "requirements_text": 3518,
+        "reward_text": 3519
+      }
+    },
+    {
+      "source_address": "0x0100037e60",
+      "attribute": 21,
+      "attribute_name": "STEPS3",
+      "internal_name": "Steps3",
+      "display_name": "Amazing Race",
+      "requirements_text": "Walk 12,000 steps",
+      "reward_text": "Gain access to the Evasion card",
+      "cost": 700,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3416,
+        "display_name": 3520,
+        "requirements_text": 3521,
+        "reward_text": 3522
+      }
+    },
+    {
+      "source_address": "0x0100037ee8",
+      "attribute": 22,
+      "attribute_name": "STEPS4",
+      "internal_name": "Steps4",
+      "display_name": "Marathon",
+      "requirements_text": "Walk 26,219 steps",
+      "reward_text": "Gain access to the Exhaustion card",
+      "cost": 1000,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3417,
+        "display_name": 3523,
+        "requirements_text": 3524,
+        "reward_text": 3525
+      }
+    },
+    {
+      "source_address": "0x0100037f78",
+      "attribute": 46,
+      "attribute_name": "KILL1",
+      "internal_name": "Kill1",
+      "display_name": "Murder",
+      "requirements_text": "Kill 20 creatures",
+      "reward_text": "Your characters have 1 additional health",
+      "cost": 150,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3421,
+        "display_name": 3526,
+        "requirements_text": 3527,
+        "reward_text": 3528
+      }
+    },
+    {
+      "source_address": "0x0100038004",
+      "attribute": 47,
+      "attribute_name": "KILL2",
+      "internal_name": "Kill2",
+      "display_name": "Killing Spree",
+      "requirements_text": "Kill 100 creatures",
+      "reward_text": "Gain access to the Second Thoughts card",
+      "cost": 350,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3422,
+        "display_name": 3529,
+        "requirements_text": 3530,
+        "reward_text": 3531
+      }
+    },
+    {
+      "source_address": "0x0100038094",
+      "attribute": 48,
+      "attribute_name": "KILL3",
+      "internal_name": "Kill3",
+      "display_name": "Slaughter",
+      "requirements_text": "Kill 500 creatures",
+      "reward_text": "Gain access to the Second Strike card",
+      "cost": 700,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3423,
+        "display_name": 3532,
+        "requirements_text": 3533,
+        "reward_text": 3534
+      }
+    },
+    {
+      "source_address": "0x0100038120",
+      "attribute": 49,
+      "attribute_name": "KILL4",
+      "internal_name": "Kill4",
+      "display_name": "Devastation",
+      "requirements_text": "Kill 1,000 creatures",
+      "reward_text": "Gain access to the Last Chance card",
+      "cost": 1000,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3424,
+        "display_name": 3535,
+        "requirements_text": 3536,
+        "reward_text": 3537
+      }
+    },
+    {
+      "source_address": "0x01000381a8",
+      "attribute": 94,
+      "attribute_name": "CARDS1",
+      "internal_name": "Cards1",
+      "display_name": "Big Deck",
+      "requirements_text": "Add 30 cards to your deck",
+      "reward_text": "Your characters have 1 additional health",
+      "cost": 150,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3471,
+        "display_name": 3538,
+        "requirements_text": 3539,
+        "reward_text": 3528
+      }
+    },
+    {
+      "source_address": "0x0100038234",
+      "attribute": 95,
+      "attribute_name": "CARDS2",
+      "internal_name": "Cards2",
+      "display_name": "Well-Stocked",
+      "requirements_text": "Add 200 cards to your deck",
+      "reward_text": "Gain access to the Recycle card",
+      "cost": 350,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3472,
+        "display_name": 3540,
+        "requirements_text": 3541,
+        "reward_text": 3542
+      }
+    },
+    {
+      "source_address": "0x01000382c4",
+      "attribute": 96,
+      "attribute_name": "CARDS3",
+      "internal_name": "Cards3",
+      "display_name": "Mastermind",
+      "requirements_text": "Add 500 cards to your deck",
+      "reward_text": "Gain access to the Pilfer card",
+      "cost": 700,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3473,
+        "display_name": 3543,
+        "requirements_text": 3544,
+        "reward_text": 3545
+      }
+    },
+    {
+      "source_address": "0x0100038350",
+      "attribute": 97,
+      "attribute_name": "CARDS4",
+      "internal_name": "Cards4",
+      "display_name": "Power Overwhelming",
+      "requirements_text": "Add 1000 cards to your deck",
+      "reward_text": "Gain access to the Overpower card",
+      "cost": 1000,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3474,
+        "display_name": 3546,
+        "requirements_text": 3547,
+        "reward_text": 3548
+      }
+    },
+    {
+      "source_address": "0x01000383e0",
+      "attribute": 69,
+      "attribute_name": "ADVENTURERS1",
+      "internal_name": "Adventurers1",
+      "display_name": "Unfriendly",
+      "requirements_text": "Kill 5 adventurers",
+      "reward_text": "Your characters start with 3 additional gold",
+      "cost": 200,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3444,
+        "display_name": 3549,
+        "requirements_text": 3550,
+        "reward_text": 3504
+      }
+    },
+    {
+      "source_address": "0x010003846c",
+      "attribute": 70,
+      "attribute_name": "ADVENTURERS2",
+      "internal_name": "Adventurers2",
+      "display_name": "Bully",
+      "requirements_text": "Kill 20 adventurers",
+      "reward_text": "Gain access to the Resilience card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3445,
+        "display_name": 3551,
+        "requirements_text": 3552,
+        "reward_text": 3553
+      }
+    },
+    {
+      "source_address": "0x01000384f4",
+      "attribute": 9,
+      "attribute_name": "GOBLIN1",
+      "internal_name": "Goblin1",
+      "display_name": "Goblin Smasher",
+      "requirements_text": "Kill 5 Goblins",
+      "reward_text": "Your characters start with 3 additional gold",
+      "cost": 200,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3404,
+        "display_name": 3554,
+        "requirements_text": 3555,
+        "reward_text": 3504
+      }
+    },
+    {
+      "source_address": "0x0100038580",
+      "attribute": 10,
+      "attribute_name": "GOBLIN2",
+      "internal_name": "Goblin2",
+      "display_name": "Goblin Bane",
+      "requirements_text": "Kill 20 Goblins",
+      "reward_text": "Gain access to the Pickpocket card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3405,
+        "display_name": 3556,
+        "requirements_text": 3557,
+        "reward_text": 3558
+      }
+    },
+    {
+      "source_address": "0x0100038608",
+      "attribute": 74,
+      "attribute_name": "CATS1",
+      "internal_name": "Cats1",
+      "display_name": "Dodge This",
+      "requirements_text": "Kill 5 Ussuri",
+      "reward_text": "Your characters start with 3 additional gold",
+      "cost": 200,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3446,
+        "display_name": 3559,
+        "requirements_text": 3560,
+        "reward_text": 3504
+      }
+    },
+    {
+      "source_address": "0x0100038694",
+      "attribute": 75,
+      "attribute_name": "CATS2",
+      "internal_name": "Cats2",
+      "display_name": "Nine Fewer Lives",
+      "requirements_text": "Kill 20 Ussuri",
+      "reward_text": "Gain access to the Invisibility card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3447,
+        "display_name": 3561,
+        "requirements_text": 3562,
+        "reward_text": 3563
+      }
+    },
+    {
+      "source_address": "0x010003871c",
+      "attribute": 76,
+      "attribute_name": "LIZARDS1",
+      "internal_name": "Lizards1",
+      "display_name": "Lizard Losses",
+      "requirements_text": "Kill 5 Akami",
+      "reward_text": "Your characters have 1 additional health",
+      "cost": 200,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3448,
+        "display_name": 3564,
+        "requirements_text": 3565,
+        "reward_text": 3528
+      }
+    },
+    {
+      "source_address": "0x01000387a8",
+      "attribute": 77,
+      "attribute_name": "LIZARDS2",
+      "internal_name": "Lizards2",
+      "display_name": "Totem Crusher",
+      "requirements_text": "Kill 20 Akami",
+      "reward_text": "Gain access to the Bewitch card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3449,
+        "display_name": 3566,
+        "requirements_text": 3567,
+        "reward_text": 3568
+      }
+    },
+    {
+      "source_address": "0x0100038830",
+      "attribute": 78,
+      "attribute_name": "UNDEAD1",
+      "internal_name": "Undead1",
+      "display_name": "Unclean Cleanser",
+      "requirements_text": "Kill 5 Undead",
+      "reward_text": "Your characters have 1 additional health",
+      "cost": 200,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3450,
+        "display_name": 3569,
+        "requirements_text": 3570,
+        "reward_text": 3528
+      }
+    },
+    {
+      "source_address": "0x01000388bc",
+      "attribute": 79,
+      "attribute_name": "UNDEAD2",
+      "internal_name": "Undead2",
+      "display_name": "Crusader",
+      "requirements_text": "Kill 20 Undead",
+      "reward_text": "Gain access to the Infect card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3451,
+        "display_name": 3571,
+        "requirements_text": 3572,
+        "reward_text": 3573
+      }
+    },
+    {
+      "source_address": "0x0100038944",
+      "attribute": 80,
+      "attribute_name": "FAERIES1",
+      "internal_name": "Faeries1",
+      "display_name": "Lights Out",
+      "requirements_text": "Kill 5 faeries",
+      "reward_text": "Your characters start with 3 additional gold",
+      "cost": 200,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3452,
+        "display_name": 3574,
+        "requirements_text": 3575,
+        "reward_text": 3504
+      }
+    },
+    {
+      "source_address": "0x01000389d0",
+      "attribute": 81,
+      "attribute_name": "FAERIES2",
+      "internal_name": "Faeries2",
+      "display_name": "Faerie-Free",
+      "requirements_text": "Kill 20 faeries",
+      "reward_text": "Gain access to the Quicken card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3453,
+        "display_name": 3576,
+        "requirements_text": 3577,
+        "reward_text": 3578
+      }
+    },
+    {
+      "source_address": "0x0100038a60",
+      "attribute": 82,
+      "attribute_name": "ELEMENTALS1",
+      "internal_name": "Elementals1",
+      "display_name": "Elementary",
+      "requirements_text": "Kill 5 elementals",
+      "reward_text": "Your characters have 1 additional starting mana",
+      "cost": 200,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3454,
+        "display_name": 3579,
+        "requirements_text": 3580,
+        "reward_text": 3492
+      }
+    },
+    {
+      "source_address": "0x0100038aec",
+      "attribute": 83,
+      "attribute_name": "ELEMENTALS2",
+      "internal_name": "Elementals2",
+      "display_name": "Aperiodic",
+      "requirements_text": "Kill 20 elementals",
+      "reward_text": "Gain access to the Channel card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3455,
+        "display_name": 3581,
+        "requirements_text": 3582,
+        "reward_text": 3583
+      }
+    },
+    {
+      "source_address": "0x0100038b7c",
+      "attribute": 84,
+      "attribute_name": "DRAGON1",
+      "internal_name": "Dragon1",
+      "display_name": "Dragon Tamer",
+      "requirements_text": "Kill 5 dragons",
+      "reward_text": "Your characters find an additional Treasure Chest on each floor",
+      "cost": 200,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3456,
+        "display_name": 3584,
+        "requirements_text": 3585,
+        "reward_text": 3586
+      }
+    },
+    {
+      "source_address": "0x0100038c08",
+      "attribute": 85,
+      "attribute_name": "DRAGON2",
+      "internal_name": "Dragon2",
+      "display_name": "Silkworm Size or Immense",
+      "requirements_text": "Kill 20 dragons",
+      "reward_text": "Gain access to the Obliterate card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3457,
+        "display_name": 3587,
+        "requirements_text": 3588,
+        "reward_text": 3589
+      }
+    },
+    {
+      "source_address": "0x0100038c98",
+      "attribute": 50,
+      "attribute_name": "BOSSGOBLINKING",
+      "internal_name": "BossGoblinKing",
+      "display_name": "Goblin King",
+      "requirements_text": "Defeat the Goblin King",
+      "reward_text": "Gain access to the Scimitars card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3425,
+        "display_name": 3590,
+        "requirements_text": 3591,
+        "reward_text": 3592
+      }
+    },
+    {
+      "source_address": "0x0100038d20",
+      "attribute": 59,
+      "attribute_name": "BOSSUNICORN",
+      "internal_name": "BossUnicorn",
+      "display_name": "Magic-Proof",
+      "requirements_text": "Defeat the Unicorn",
+      "reward_text": "Gain access to the Second Wind card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3434,
+        "display_name": 3593,
+        "requirements_text": 3594,
+        "reward_text": 3595
+      }
+    },
+    {
+      "source_address": "0x0100038db0",
+      "attribute": 63,
+      "attribute_name": "BOSSGENIE",
+      "internal_name": "BossGenie",
+      "display_name": "More Wishes",
+      "requirements_text": "Defeat the Genie",
+      "reward_text": "Gain access to the Mahamat card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3438,
+        "display_name": 3596,
+        "requirements_text": 3597,
+        "reward_text": 3598
+      }
+    },
+    {
+      "source_address": "0x0100038e38",
+      "attribute": 64,
+      "attribute_name": "BOSSCUMULONIMBUS",
+      "internal_name": "BossCumuloNimbus",
+      "display_name": "Clear Skies",
+      "requirements_text": "Defeat Cumulo Nimbus",
+      "reward_text": "Gain access to the Meditation card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3439,
+        "display_name": 3599,
+        "requirements_text": 3600,
+        "reward_text": 3601
+      }
+    },
+    {
+      "source_address": "0x0100038ec8",
+      "attribute": 58,
+      "attribute_name": "BOSSGELATINOUSCUBE",
+      "internal_name": "BossGelatinousCube",
+      "display_name": "Slurp No More",
+      "requirements_text": "Defeat the Gelatinous Cube",
+      "reward_text": "Gain access to the Sift card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3433,
+        "display_name": 3602,
+        "requirements_text": 3603,
+        "reward_text": 3604
+      }
+    },
+    {
+      "source_address": "0x0100038f50",
+      "attribute": 61,
+      "attribute_name": "BOSSVAMPIRE",
+      "internal_name": "BossVampire",
+      "display_name": "Vampire Slayer",
+      "requirements_text": "Defeat the Vampire",
+      "reward_text": "Gain access to the Anticipate card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3436,
+        "display_name": 3605,
+        "requirements_text": 3606,
+        "reward_text": 3607
+      }
+    },
+    {
+      "source_address": "0x0100038fe0",
+      "attribute": 62,
+      "attribute_name": "BOSSGIANTSHARK",
+      "internal_name": "BossGiantShark",
+      "display_name": "Duh Nuh Duh Nuh Duh Nuh",
+      "requirements_text": "Defeat the Giant Shark",
+      "reward_text": "Gain access to the Sundering Strike card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3437,
+        "display_name": 3608,
+        "requirements_text": 3609,
+        "reward_text": 3610
+      }
+    },
+    {
+      "source_address": "0x0100039068",
+      "attribute": 55,
+      "attribute_name": "BOSSAKAMIASCENDENT",
+      "internal_name": "BossAkamiAscendent",
+      "display_name": "Lizard Master",
+      "requirements_text": "Defeat the Akami Ascendent",
+      "reward_text": "Gain access to the Desperate Strike card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3430,
+        "display_name": 3611,
+        "requirements_text": 3612,
+        "reward_text": 3613
+      }
+    },
+    {
+      "source_address": "0x01000390f8",
+      "attribute": 56,
+      "attribute_name": "BOSSUSSURIWARQUEEN",
+      "internal_name": "BossUssuriWarQueen",
+      "display_name": "Cat Killer",
+      "requirements_text": "Defeat the Ussuri War Queen",
+      "reward_text": "Gain access to the Avoid card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3431,
+        "display_name": 3614,
+        "requirements_text": 3615,
+        "reward_text": 3616
+      }
+    },
+    {
+      "source_address": "0x0100039180",
+      "attribute": 60,
+      "attribute_name": "BOSSMAGMADON",
+      "internal_name": "BossMagmadon",
+      "display_name": "Flame-Free",
+      "requirements_text": "Defeat the Magmadon",
+      "reward_text": "Gain access to the Cloak of Flame card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3435,
+        "display_name": 3617,
+        "requirements_text": 3618,
+        "reward_text": 3619
+      }
+    },
+    {
+      "source_address": "0x0100039210",
+      "attribute": 57,
+      "attribute_name": "BOSSMIME",
+      "internal_name": "BossMime",
+      "display_name": "Mirror Breaker",
+      "requirements_text": "Defeat the Mime",
+      "reward_text": "Gain access to the Mimic card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3432,
+        "display_name": 3620,
+        "requirements_text": 3621,
+        "reward_text": 3622
+      }
+    },
+    {
+      "source_address": "0x0100039298",
+      "attribute": 51,
+      "attribute_name": "BOSSICEQUEEN",
+      "internal_name": "BossIceQueen",
+      "display_name": "Faerie Queen",
+      "requirements_text": "Defeat the Ice Queen",
+      "reward_text": "Gain access to the Gauss' Hourglass card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3426,
+        "display_name": 3623,
+        "requirements_text": 3624,
+        "reward_text": 3625
+      }
+    },
+    {
+      "source_address": "0x0100039328",
+      "attribute": 52,
+      "attribute_name": "BOSSLICH",
+      "internal_name": "BossLich",
+      "display_name": "No Lich",
+      "requirements_text": "Defeat the Lich",
+      "reward_text": "Gain access to the Divine Inspiration card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3427,
+        "display_name": 3626,
+        "requirements_text": 3627,
+        "reward_text": 3628
+      }
+    },
+    {
+      "source_address": "0x01000393b0",
+      "attribute": 53,
+      "attribute_name": "BOSSCHROMATICDEMON",
+      "internal_name": "BossChromaticDemon",
+      "display_name": "Exorcist",
+      "requirements_text": "Defeat the Chromatic Demon",
+      "reward_text": "Gain access to the Elemental Fortitude card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3428,
+        "display_name": 3629,
+        "requirements_text": 3630,
+        "reward_text": 3631
+      }
+    },
+    {
+      "source_address": "0x0100039440",
+      "attribute": 54,
+      "attribute_name": "BOSSTITAN",
+      "internal_name": "BossTitan",
+      "display_name": "Giant Killer",
+      "requirements_text": "Defeat the Titan",
+      "reward_text": "Gain access to the Donnerschwert card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3429,
+        "display_name": 3632,
+        "requirements_text": 3633,
+        "reward_text": 3634
+      }
+    },
+    {
+      "source_address": "0x01000394c8",
+      "attribute": 65,
+      "attribute_name": "BOSSHYDRA",
+      "internal_name": "BossHydra",
+      "display_name": "So Many Heads",
+      "requirements_text": "Defeat the Hydra",
+      "reward_text": "Gain access to the Troll Blood Charm card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3440,
+        "display_name": 3635,
+        "requirements_text": 3636,
+        "reward_text": 3637
+      }
+    },
+    {
+      "source_address": "0x0100039558",
+      "attribute": 66,
+      "attribute_name": "BOSSPHOENIX",
+      "internal_name": "BossPhoenix",
+      "display_name": "Cold Turkey",
+      "requirements_text": "Defeat the Phoenix",
+      "reward_text": "Gain access to the Wall of Swords card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3441,
+        "display_name": 3638,
+        "requirements_text": 3639,
+        "reward_text": 3640
+      }
+    },
+    {
+      "source_address": "0x01000395e0",
+      "attribute": 67,
+      "attribute_name": "BOSSGIANTSQUID",
+      "internal_name": "BossGiantSquid",
+      "display_name": "Cracked the Kraken",
+      "requirements_text": "Defeat the Kraken",
+      "reward_text": "Gain access to the Bloody Knuckles card",
+      "cost": 500,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3442,
+        "display_name": 3641,
+        "requirements_text": 3642,
+        "reward_text": 3643
+      }
+    },
+    {
+      "source_address": "0x0100039670",
+      "attribute": 68,
+      "attribute_name": "BOSSALL",
+      "internal_name": "BossAll",
+      "display_name": "New Boss",
+      "requirements_text": "Defeat each of the eighteen bosses",
+      "reward_text": "Unlock the Professor class",
+      "cost": 10000,
+      "flavor": 1,
+      "flavor_name": "CLASS",
+      "literal_indices": {
+        "internal_name": 3443,
+        "display_name": 3644,
+        "requirements_text": 3645,
+        "reward_text": 3646
+      }
+    },
+    {
+      "source_address": "0x0100039700",
+      "attribute": 23,
+      "attribute_name": "WINWIZARD",
+      "internal_name": "WinWizard",
+      "display_name": "Sorcerous Savior",
+      "requirements_text": "Clear the dungeon as a wizard",
+      "reward_text": "Gain access to the Teleport talent",
+      "cost": 2000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3647,
+        "display_name": 3648,
+        "requirements_text": 3649,
+        "reward_text": 3650
+      }
+    },
+    {
+      "source_address": "0x0100039790",
+      "attribute": 24,
+      "attribute_name": "WINPALADIN",
+      "internal_name": "WinPaladin",
+      "display_name": "Sanctimonious Savior",
+      "requirements_text": "Clear the dungeon as a paladin",
+      "reward_text": "Gain access to the Well-Armed talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3651,
+        "display_name": 3652,
+        "requirements_text": 3653,
+        "reward_text": 3654
+      }
+    },
+    {
+      "source_address": "0x010003981c",
+      "attribute": 25,
+      "attribute_name": "WINTHIEF",
+      "internal_name": "WinThief",
+      "display_name": "Sneaky Savior",
+      "requirements_text": "Clear the dungeon as a thief",
+      "reward_text": "Gain access to the Preparation talent",
+      "cost": 2000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3655,
+        "display_name": 3656,
+        "requirements_text": 3657,
+        "reward_text": 3658
+      }
+    },
+    {
+      "source_address": "0x01000398ac",
+      "attribute": 26,
+      "attribute_name": "WINWARRIOR",
+      "internal_name": "WinWarrior",
+      "display_name": "Strong Savior",
+      "requirements_text": "Clear the dungeon as a warrior",
+      "reward_text": "Gain access to the Smash talent",
+      "cost": 2000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3659,
+        "display_name": 3660,
+        "requirements_text": 3661,
+        "reward_text": 3662
+      }
+    },
+    {
+      "source_address": "0x0100039934",
+      "attribute": 27,
+      "attribute_name": "WINPRIEST",
+      "internal_name": "WinPriest",
+      "display_name": "Holy Savior",
+      "requirements_text": "Clear the dungeon as a priest",
+      "reward_text": "Gain access to the Heal talent",
+      "cost": 2000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3663,
+        "display_name": 3664,
+        "requirements_text": 3665,
+        "reward_text": 3666
+      }
+    },
+    {
+      "source_address": "0x01000399c4",
+      "attribute": 28,
+      "attribute_name": "WINASSASSIN",
+      "internal_name": "WinAssassin",
+      "display_name": "Poisonous Savior",
+      "requirements_text": "Clear the dungeon as an assassin",
+      "reward_text": "Gain access to the Poisonous talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3667,
+        "display_name": 3668,
+        "requirements_text": 3669,
+        "reward_text": 3670
+      }
+    },
+    {
+      "source_address": "0x0100039a50",
+      "attribute": 29,
+      "attribute_name": "WINMONK",
+      "internal_name": "WinMonk",
+      "display_name": "Ascetic Savior",
+      "requirements_text": "Clear the dungeon as a monk",
+      "reward_text": "Gain access to the Fluid talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3671,
+        "display_name": 3672,
+        "requirements_text": 3673,
+        "reward_text": 3674
+      }
+    },
+    {
+      "source_address": "0x0100039adc",
+      "attribute": 30,
+      "attribute_name": "WINNECROMANCER",
+      "internal_name": "WinNecromancer",
+      "display_name": "Undying Savior",
+      "requirements_text": "Clear the dungeon as a necromancer",
+      "reward_text": "Gain access to the Vampiric talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3675,
+        "display_name": 3676,
+        "requirements_text": 3677,
+        "reward_text": 3678
+      }
+    },
+    {
+      "source_address": "0x0100039b68",
+      "attribute": 31,
+      "attribute_name": "WINSAMURAI",
+      "internal_name": "WinSamurai",
+      "display_name": "Disciplined Savior",
+      "requirements_text": "Clear the dungeon as a samurai",
+      "reward_text": "Gain access to the Fiery talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3679,
+        "display_name": 3680,
+        "requirements_text": 3681,
+        "reward_text": 3682
+      }
+    },
+    {
+      "source_address": "0x0100039bf4",
+      "attribute": 32,
+      "attribute_name": "WINRANGER",
+      "internal_name": "WinRanger",
+      "display_name": "Wild Savior",
+      "requirements_text": "Clear the dungeon as a ranger",
+      "reward_text": "Gain access to the Invisibility talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3683,
+        "display_name": 3684,
+        "requirements_text": 3685,
+        "reward_text": 3686
+      }
+    },
+    {
+      "source_address": "0x0100039c80",
+      "attribute": 162,
+      "attribute_name": "WINDRUID",
+      "internal_name": "WinDruid",
+      "display_name": "Natural Savior",
+      "requirements_text": "Clear the dungeon as a druid",
+      "reward_text": "Gain access to the Harry card",
+      "cost": 3000,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3687,
+        "display_name": 3688,
+        "requirements_text": 3689,
+        "reward_text": 3690
+      }
+    },
+    {
+      "source_address": "0x0100039d0c",
+      "attribute": 146,
+      "attribute_name": "WINBARD",
+      "internal_name": "WinBard",
+      "display_name": "Musical Savior",
+      "requirements_text": "Clear the dungeon as a bard",
+      "reward_text": "Gain access to the Clear Mind talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3691,
+        "display_name": 3692,
+        "requirements_text": 3693,
+        "reward_text": 3694
+      }
+    },
+    {
+      "source_address": "0x0100039d9c",
+      "attribute": 148,
+      "attribute_name": "WINDRAGON",
+      "internal_name": "WinDragon",
+      "display_name": "Unlikely Savior",
+      "requirements_text": "Clear the dungeon as a dragon",
+      "reward_text": "Gain access to the Hoard talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3695,
+        "display_name": 3696,
+        "requirements_text": 3697,
+        "reward_text": 3698
+      }
+    },
+    {
+      "source_address": "0x0100039e24",
+      "attribute": 147,
+      "attribute_name": "WINPROFESSOR",
+      "internal_name": "WinProfessor",
+      "display_name": "Academic Savior",
+      "requirements_text": "Clear the dungeon as a professor",
+      "reward_text": "Gain access to the Portent talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3699,
+        "display_name": 3700,
+        "requirements_text": 3701,
+        "reward_text": 3702
+      }
+    },
+    {
+      "source_address": "0x0100039eb4",
+      "attribute": 15,
+      "attribute_name": "WIN1",
+      "internal_name": "Win1",
+      "display_name": "Dungeon Sweeper",
+      "requirements_text": "Clear the dungeon once",
+      "reward_text": "Unlock the Paladin class",
+      "cost": 2000,
+      "flavor": 1,
+      "flavor_name": "CLASS",
+      "literal_indices": {
+        "internal_name": 3410,
+        "display_name": 3703,
+        "requirements_text": 3704,
+        "reward_text": 3705
+      }
+    },
+    {
+      "source_address": "0x0100039f44",
+      "attribute": 17,
+      "attribute_name": "WIN3",
+      "internal_name": "Win3",
+      "display_name": "Dream Team",
+      "requirements_text": "Clear the dungeon as each of the base classes",
+      "reward_text": "Unlock the Assassin class",
+      "cost": 4000,
+      "flavor": 1,
+      "flavor_name": "CLASS",
+      "literal_indices": {
+        "internal_name": 3412,
+        "display_name": 3706,
+        "requirements_text": 3707,
+        "reward_text": 3708
+      }
+    },
+    {
+      "source_address": "0x0100039fd0",
+      "attribute": 18,
+      "attribute_name": "WIN30",
+      "internal_name": "Win30",
+      "display_name": "Dreamiest Team",
+      "requirements_text": "Clear the dungeon as each of the advanced classes",
+      "reward_text": "Unlock the Dragon class",
+      "cost": 10000,
+      "flavor": 1,
+      "flavor_name": "CLASS",
+      "literal_indices": {
+        "internal_name": 3413,
+        "display_name": 3709,
+        "requirements_text": 3710,
+        "reward_text": 3711
+      }
+    },
+    {
+      "source_address": "0x010003a060",
+      "attribute": 33,
+      "attribute_name": "WINWIZARD2",
+      "internal_name": "WinWizard2",
+      "display_name": "Sorcerous Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a wizard",
+      "reward_text": "Gain access to the Sorcerous talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3712,
+        "display_name": 3713,
+        "requirements_text": 3714,
+        "reward_text": 3715
+      }
+    },
+    {
+      "source_address": "0x010003a0f0",
+      "attribute": 34,
+      "attribute_name": "WINPALADIN2",
+      "internal_name": "WinPaladin2",
+      "display_name": "Sanctimonious Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a paladin",
+      "reward_text": "Gain access to the Heroic talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3716,
+        "display_name": 3717,
+        "requirements_text": 3718,
+        "reward_text": 3719
+      }
+    },
+    {
+      "source_address": "0x010003a178",
+      "attribute": 35,
+      "attribute_name": "WINTHIEF2",
+      "internal_name": "WinThief2",
+      "display_name": "Sneaky Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a thief",
+      "reward_text": "Gain access to the Sneaky talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3720,
+        "display_name": 3721,
+        "requirements_text": 3722,
+        "reward_text": 3723
+      }
+    },
+    {
+      "source_address": "0x010003a208",
+      "attribute": 36,
+      "attribute_name": "WINWARRIOR2",
+      "internal_name": "WinWarrior2",
+      "display_name": "Strong Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a warrior",
+      "reward_text": "Gain access to the Warlike talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3724,
+        "display_name": 3725,
+        "requirements_text": 3726,
+        "reward_text": 3727
+      }
+    },
+    {
+      "source_address": "0x010003a290",
+      "attribute": 37,
+      "attribute_name": "WINPRIEST2",
+      "internal_name": "WinPriest2",
+      "display_name": "Holy Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a priest",
+      "reward_text": "Gain access to the Pious talent",
+      "cost": 3000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3728,
+        "display_name": 3729,
+        "requirements_text": 3730,
+        "reward_text": 3731
+      }
+    },
+    {
+      "source_address": "0x010003a320",
+      "attribute": 38,
+      "attribute_name": "WINASSASSIN2",
+      "internal_name": "WinAssassin2",
+      "display_name": "Poisonous Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as an assassin",
+      "reward_text": "Gain access to the Jasra's Emerald card",
+      "cost": 3000,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3732,
+        "display_name": 3733,
+        "requirements_text": 3734,
+        "reward_text": 3735
+      }
+    },
+    {
+      "source_address": "0x010003a3ac",
+      "attribute": 39,
+      "attribute_name": "WINMONK2",
+      "internal_name": "WinMonk2",
+      "display_name": "Ascetic Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a monk",
+      "reward_text": "Gain access to the Phoenix Feather card",
+      "cost": 3000,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3736,
+        "display_name": 3737,
+        "requirements_text": 3738,
+        "reward_text": 3739
+      }
+    },
+    {
+      "source_address": "0x010003a438",
+      "attribute": 40,
+      "attribute_name": "WINNECROMANCER2",
+      "internal_name": "WinNecromancer2",
+      "display_name": "Undying Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a necromancer",
+      "reward_text": "Gain access to the Soulforge card",
+      "cost": 3000,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3740,
+        "display_name": 3741,
+        "requirements_text": 3742,
+        "reward_text": 3743
+      }
+    },
+    {
+      "source_address": "0x010003a4c4",
+      "attribute": 41,
+      "attribute_name": "WINSAMURAI2",
+      "internal_name": "WinSamurai2",
+      "display_name": "Disciplined Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a samurai",
+      "reward_text": "Gain access to the Flamebrand card",
+      "cost": 3000,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3744,
+        "display_name": 3745,
+        "requirements_text": 3746,
+        "reward_text": 3747
+      }
+    },
+    {
+      "source_address": "0x010003a550",
+      "attribute": 42,
+      "attribute_name": "WINRANGER2",
+      "internal_name": "WinRanger2",
+      "display_name": "Wild Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a ranger",
+      "reward_text": "Gain access to the card The Bleeder",
+      "cost": 3000,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3748,
+        "display_name": 3749,
+        "requirements_text": 3750,
+        "reward_text": 3751
+      }
+    },
+    {
+      "source_address": "0x010003a5dc",
+      "attribute": 163,
+      "attribute_name": "WINDRUID2",
+      "internal_name": "WinDruid2",
+      "display_name": "Natural Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a druid",
+      "reward_text": "Gain access to the Elemental Surge card",
+      "cost": 3000,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3752,
+        "display_name": 3753,
+        "requirements_text": 3754,
+        "reward_text": 3755
+      }
+    },
+    {
+      "source_address": "0x010003a668",
+      "attribute": 149,
+      "attribute_name": "WINBARD2",
+      "internal_name": "WinBard2",
+      "display_name": "Musical Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a bard",
+      "reward_text": "Find an additional tavern as the bard",
+      "cost": 3000,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3756,
+        "display_name": 3757,
+        "requirements_text": 3758,
+        "reward_text": 3759
+      }
+    },
+    {
+      "source_address": "0x010003a6f0",
+      "attribute": 151,
+      "attribute_name": "WINDRAGON2",
+      "internal_name": "WinDragon2",
+      "display_name": "Unlikely Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a dragon",
+      "reward_text": "Your Hoard ability is more effective",
+      "cost": 3000,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3760,
+        "display_name": 3761,
+        "requirements_text": 3762,
+        "reward_text": 3763
+      }
+    },
+    {
+      "source_address": "0x010003a77c",
+      "attribute": 150,
+      "attribute_name": "WINPROFESSOR2",
+      "internal_name": "WinProfessor2",
+      "display_name": "Academic Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a professor",
+      "reward_text": "Reduce the cooldown on your Research ability",
+      "cost": 3000,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3764,
+        "display_name": 3765,
+        "requirements_text": 3766,
+        "reward_text": 3767
+      }
+    },
+    {
+      "source_address": "0x010003a804",
+      "attribute": 90,
+      "attribute_name": "ALTAR",
+      "internal_name": "Altar",
+      "display_name": "Altered Reality",
+      "requirements_text": "Pray at an altar",
+      "reward_text": "Gain access to the Desperate talent",
+      "cost": 100,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3465,
+        "display_name": 3768,
+        "requirements_text": 3769,
+        "reward_text": 3770
+      }
+    },
+    {
+      "source_address": "0x010003a894",
+      "attribute": 91,
+      "attribute_name": "ALTAR2",
+      "internal_name": "Altar2",
+      "display_name": "Fickle",
+      "requirements_text": "Pray at all 6 altars",
+      "reward_text": "Unlock the Necromancer class",
+      "cost": 3000,
+      "flavor": 1,
+      "flavor_name": "CLASS",
+      "literal_indices": {
+        "internal_name": 3466,
+        "display_name": 3771,
+        "requirements_text": 3772,
+        "reward_text": 3773
+      }
+    },
+    {
+      "source_address": "0x010003a924",
+      "attribute": 92,
+      "attribute_name": "MUSHROOM",
+      "internal_name": "Mushroom",
+      "display_name": "A Little Trip",
+      "requirements_text": "Complete the mushroom patch quest",
+      "reward_text": "Gain access to the Impervious talent",
+      "cost": 100,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3467,
+        "display_name": 3774,
+        "requirements_text": 3775,
+        "reward_text": 3776
+      }
+    },
+    {
+      "source_address": "0x010003a9b4",
+      "attribute": 98,
+      "attribute_name": "SHOP",
+      "internal_name": "Shop",
+      "display_name": "Big Spender",
+      "requirements_text": "Buy all the items in a shop",
+      "reward_text": "Gain access to the Deck of Wonders card",
+      "cost": 100,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3468,
+        "display_name": 3777,
+        "requirements_text": 3778,
+        "reward_text": 3779
+      }
+    },
+    {
+      "source_address": "0x010003aa40",
+      "attribute": 99,
+      "attribute_name": "DELETE1",
+      "internal_name": "Delete1",
+      "display_name": "Pious",
+      "requirements_text": "Delete a card from your deck",
+      "reward_text": "Gain access to the Crumble talent",
+      "cost": 100,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3469,
+        "display_name": 3780,
+        "requirements_text": 3781,
+        "reward_text": 3782
+      }
+    },
+    {
+      "source_address": "0x010003aad0",
+      "attribute": 71,
+      "attribute_name": "FLOOR1",
+      "internal_name": "Floor1",
+      "display_name": "Down the Rabbit Hole",
+      "requirements_text": "Reach the second floor",
+      "reward_text": "Your characters gain one additional health on level up",
+      "cost": 300,
+      "flavor": 0,
+      "flavor_name": "PASSIVE",
+      "literal_indices": {
+        "internal_name": 3458,
+        "display_name": 3783,
+        "requirements_text": 3784,
+        "reward_text": 3785
+      }
+    },
+    {
+      "source_address": "0x010003ab5c",
+      "attribute": 72,
+      "attribute_name": "FLOOR2",
+      "internal_name": "Floor2",
+      "display_name": "Deeper and Deeper",
+      "requirements_text": "Reach the third floor",
+      "reward_text": "Unlock the Monk class",
+      "cost": 600,
+      "flavor": 1,
+      "flavor_name": "CLASS",
+      "literal_indices": {
+        "internal_name": 3459,
+        "display_name": 3786,
+        "requirements_text": 3787,
+        "reward_text": 3788
+      }
+    },
+    {
+      "source_address": "0x010003abec",
+      "attribute": 73,
+      "attribute_name": "LEVELUP",
+      "internal_name": "LevelUp",
+      "display_name": "Ding!",
+      "requirements_text": "Reach level 10",
+      "reward_text": "Gain access to the Ding! talent",
+      "cost": 500,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3460,
+        "display_name": 3789,
+        "requirements_text": 3790,
+        "reward_text": 3791
+      }
+    },
+    {
+      "source_address": "0x010003ac7c",
+      "attribute": 8,
+      "attribute_name": "CARDSPERTURN1",
+      "internal_name": "CardsPerTurn1",
+      "display_name": "Still My Turn",
+      "requirements_text": "End a turn with 10 cards in play",
+      "reward_text": "Gain access to the Copy talent",
+      "cost": 2000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3403,
+        "display_name": 3792,
+        "requirements_text": 3793,
+        "reward_text": 3794
+      }
+    },
+    {
+      "source_address": "0x010003ad08",
+      "attribute": 86,
+      "attribute_name": "NOCARDS",
+      "internal_name": "NoCards",
+      "display_name": "Pure",
+      "requirements_text": "Begin a combat with no cards in your deck",
+      "reward_text": "Gain access to the Sublime talent",
+      "cost": 5000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3461,
+        "display_name": 3795,
+        "requirements_text": 3796,
+        "reward_text": 3797
+      }
+    },
+    {
+      "source_address": "0x010003ad98",
+      "attribute": 87,
+      "attribute_name": "MERCY",
+      "internal_name": "Mercy",
+      "display_name": "Merciful",
+      "requirements_text": "Defeat a boss without killing any monsters on that floor",
+      "reward_text": "Gain access to the Charismatic talent",
+      "cost": 5000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3462,
+        "display_name": 3798,
+        "requirements_text": 3799,
+        "reward_text": 3800
+      }
+    },
+    {
+      "source_address": "0x010003ae14",
+      "attribute": 88,
+      "attribute_name": "RICH",
+      "internal_name": "Rich",
+      "display_name": "Rich",
+      "requirements_text": "Have 300 gold at once",
+      "reward_text": "Gain access to the Tiltowait talent",
+      "cost": 5000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3463,
+        "display_name": 3463,
+        "requirements_text": 3801,
+        "reward_text": 3802
+      }
+    },
+    {
+      "source_address": "0x010003ae98",
+      "attribute": 89,
+      "attribute_name": "CLARITY",
+      "internal_name": "Clarity",
+      "display_name": "Clarity",
+      "requirements_text": "Have 50 base mana",
+      "reward_text": "Gain access to the Archmage talent",
+      "cost": 2000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3464,
+        "display_name": 3464,
+        "requirements_text": 3803,
+        "reward_text": 3804
+      }
+    },
+    {
+      "source_address": "0x010003af24",
+      "attribute": 164,
+      "attribute_name": "IMPIOUS",
+      "internal_name": "Impious",
+      "display_name": "All Natural",
+      "requirements_text": "Clear the dungeon without deleting cards from your deck",
+      "reward_text": "Unlock the Druid class",
+      "cost": 3000,
+      "flavor": 1,
+      "flavor_name": "CLASS",
+      "literal_indices": {
+        "internal_name": 3418,
+        "display_name": 3805,
+        "requirements_text": 3806,
+        "reward_text": 3807
+      }
+    },
+    {
+      "source_address": "0x010003afb4",
+      "attribute": 93,
+      "attribute_name": "BASECLASSESFLOOR1",
+      "internal_name": "BaseClassesFloor1",
+      "display_name": "Well Begun",
+      "requirements_text": "Complete the first floor with all four base classes",
+      "reward_text": "Unlock the Samurai class",
+      "cost": 3000,
+      "flavor": 1,
+      "flavor_name": "CLASS",
+      "literal_indices": {
+        "internal_name": 3470,
+        "display_name": 3808,
+        "requirements_text": 3809,
+        "reward_text": 3810
+      }
+    },
+    {
+      "source_address": "0x010003b03c",
+      "attribute": 43,
+      "attribute_name": "FINALBOSS1",
+      "internal_name": "FinalBoss1",
+      "display_name": "Lord of the Dream",
+      "requirements_text": "Reduce the final boss to under 750 health",
+      "reward_text": "Unlock the Bard class",
+      "cost": 10000,
+      "flavor": 1,
+      "flavor_name": "CLASS",
+      "literal_indices": {
+        "internal_name": 3419,
+        "display_name": 3811,
+        "requirements_text": 3812,
+        "reward_text": 3813
+      }
+    },
+    {
+      "source_address": "0x010003b0cc",
+      "attribute": 44,
+      "attribute_name": "FINALBOSS2",
+      "internal_name": "FinalBoss2",
+      "display_name": "Dream Master",
+      "requirements_text": "Defeat the final boss by reducing its health to 0",
+      "reward_text": "Gain access to the Master Thief talent",
+      "cost": 20000,
+      "flavor": 3,
+      "flavor_name": "TALENT",
+      "literal_indices": {
+        "internal_name": 3420,
+        "display_name": 3814,
+        "requirements_text": 3815,
+        "reward_text": 3816
+      }
+    },
+    {
+      "source_address": "0x010003b150",
+      "attribute": 100,
+      "attribute_name": "EXPLORER",
+      "internal_name": "Explorer",
+      "display_name": "Explorer",
+      "requirements_text": "See all 6 environments",
+      "reward_text": "Gain access to the Protean card",
+      "cost": 300,
+      "flavor": 2,
+      "flavor_name": "CARD",
+      "literal_indices": {
+        "internal_name": 3475,
+        "display_name": 3475,
+        "requirements_text": 3817,
+        "reward_text": 3818
+      }
+    },
+    {
+      "source_address": "0x010003b1e0",
+      "attribute": 101,
+      "attribute_name": "ALLMONSTERS",
+      "internal_name": "AllMonsters",
+      "display_name": "Beast Master",
+      "requirements_text": "Start combat with each of the different types of non-boss monsters",
+      "reward_text": "Unlock the Ranger class",
+      "cost": 4000,
+      "flavor": 1,
+      "flavor_name": "CLASS",
+      "literal_indices": {
+        "internal_name": 3476,
+        "display_name": 3819,
+        "requirements_text": 3820,
+        "reward_text": 3821
+      }
+    }
+  ]
+}

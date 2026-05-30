@@ -1,0 +1,679 @@
+---
+title: "战士"
+description: "普通怪物，出现在 地牢、水域、火山、森林、墓穴、山脉。等级范围 1-10 级。基础牌组 3 张。主要依靠牌组行动。等级提升会改动牌组或属性。"
+---
+
+
+<section class="dq-profession-hero dq-monster-hero">
+  <div>
+    <p class="dq-kicker">Monster · 1-10 级</p>
+    <h1>战士</h1>
+    <span class="dq-original">原名：Warrior</span>
+    <p class="dq-lede">普通怪物，出现在 地牢、水域、火山、森林、墓穴、山脉。等级范围 1-10 级。基础牌组 3 张。主要依靠牌组行动。等级提升会改动牌组或属性。</p>
+    <div class="dq-tag-row">
+      <span>普通怪物</span>
+      <span>有等级变化</span>
+      <span>地牢</span>
+<span>水域</span>
+<span>火山</span>
+<span>森林</span>
+<span>墓穴</span>
+<span>山脉</span>
+    </div>
+  </div>
+  <div class="dq-profession-portrait dq-monster-portrait">
+    <img src="/assets/extracted/textures/by_container/resources/Warrior__308.png" alt="战士" loading="lazy">
+  </div>
+</section>
+
+<section class="dq-wide-panel">
+  <h2>后台信息</h2>
+  <div class="dq-meta-grid">
+<span title="wiki 中使用的统一中文名称。"><strong>中文名</strong><em>战士</em></span>
+<span title="游戏原始显示名。"><strong>英文名</strong><em>Warrior</em></span>
+<span title="怪物在解析数据中的内部引用名称。"><strong>怪物 ID</strong><em>Warrior</em></span>
+<span title="反编译类名，通常用于和代码中的怪物实现对应。"><strong>类名</strong><em>Warrior</em></span>
+<span title="Boss 通常有更高金币、经验或生命倍率，也会使用更高等级段。"><strong>类型</strong><em>普通怪物</em></span>
+<span title="地牢生成时可能出现的怪物等级范围；某些怪物在不同等级有不同牌组或属性。"><strong>等级范围</strong><em>1-10 级</em></span>
+<span title="怪物可在这些地形环境中生成。"><strong>生成地形</strong><em>地牢、水域、火山、森林、墓穴、山脉</em></span>
+<span title="不同地形中的生成权重；0 表示通常不在该环境自然生成。"><strong>地形权重</strong><em>墓穴: 2、森林: 2、地牢: 2、水域: 2、火山: 2、山脉: 2</em></span>
+<span title="龙职业吞噬机制读取的怪物类型；后半段注明吞噬该类怪物时触发的奖励。"><strong>Devour 类型</strong><em>4 · 装备型；吞噬收益：获得 +1 Equipment Slot，也就是装备槽 +1。</em></span>
+<span title="怪物开局或基础配置中的法力值。"><strong>基础法力</strong><em>0</em></span>
+<span title="BuildAttributes 里写入的基础等级，实际生成仍受地牢等级范围影响。"><strong>基础等级</strong><em>1</em></span>
+<span title="怪物初始化里的牌组/行动稀释参数，用于控制其节奏表现。"><strong>稀释值</strong><em>6</em></span>
+<span title="怪物初始化里的行动点修正。"><strong>行动点修正</strong><em>0</em></span>
+<span title="怪物初始化里的抽牌/手牌修正。"><strong>手牌修正</strong><em>0</em></span>
+<span title="怪物生命倍率，Boss 常高于普通怪物。"><strong>生命倍率</strong><em>1.25</em></span>
+<span title="击败后金币奖励倍率。"><strong>金币倍率</strong><em>1</em></span>
+<span title="击败后经验奖励倍率。"><strong>经验倍率</strong><em>1</em></span>
+<span title="解析出的怪物机制覆盖程度。"><strong>机制状态</strong><em>有等级变化</em></span>
+<span title="等级变化解析状态；详情在等级变化表中展示。"><strong>等级规则</strong><em>structured_level_up</em></span>
+</div>
+</section>
+
+<section class="dq-section-block">
+  <h2>关键机制</h2>
+  <div class="dq-mechanic-list dq-core-mechanics">
+<p>核心行为主要由 <a class="dq-card-chip" href="/cards/shield">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shield__704.png" alt="盾牌" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>盾牌</strong><small>Shield</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Shield__704.png" alt="盾牌" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>盾牌</strong>
+      <small>Shield · 装备 · 1 阶 · 0 行动点 / 0 法力</small>
+      <em>你有 20% 概率闪避对手的攻击牌。</em>
+    </span>
+  </span>
+</a>、<a class="dq-card-chip" href="/cards/hamstring">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Hamstring__1038.png" alt="断筋" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>断筋</strong><small>Hamstring</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Hamstring__1038.png" alt="断筋" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>断筋</strong>
+      <small>Hamstring · 行动牌 · 4 阶 · 1 行动点 / 0 法力</small>
+      <em>对手弃掉手牌中的所有行动牌。造成 3 点攻击伤害。</em>
+    </span>
+  </span>
+</a>、<a class="dq-card-chip" href="/cards/gag">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Gag__608.png" alt="封口" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>封口</strong><small>Gag</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Gag__608.png" alt="封口" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>封口</strong>
+      <small>Gag · 行动牌 · 4 阶 · 1 行动点 / 0 法力</small>
+      <em>对手弃掉手牌中的所有法术牌。造成 3 点攻击伤害。</em>
+    </span>
+  </span>
+</a>、<a class="dq-card-chip" href="/cards/sword">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Sword__825.png" alt="长剑" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>长剑</strong><small>Sword</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Sword__825.png" alt="长剑" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>长剑</strong>
+      <small>Sword · 装备 · 3 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 1 点攻击伤害 每有 2 个攻击牌 你 打出 在一张回合。</em>
+    </span>
+  </span>
+</a>、<a class="dq-card-chip" href="/cards/scimitars">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Scimitars__684.png" alt="弯刀" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>弯刀</strong><small>Scimitars</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Scimitars__684.png" alt="弯刀" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>弯刀</strong>
+      <small>Scimitars · 装备 · 6 阶 · 0 行动点 / 0 法力</small>
+      <em>每当你打出 1 张名为“攻击”的非临时牌（任意等级），抽取该牌的临时复制。</em>
+    </span>
+  </span>
+</a>、<a class="dq-card-chip" href="/cards/sundering-strike">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SunderingStrike__899.png" alt="破甲打击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>破甲打击</strong><small>Sundering Strike</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/SunderingStrike__899.png" alt="破甲打击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>破甲打击</strong>
+      <small>Sundering Strike · 攻击 · 8 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 2 点攻击伤害并对手获得 &lt;虚弱 2&gt; 本回合。</em>
+    </span>
+  </span>
+</a>、<a class="dq-card-chip" href="/cards/armor">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Armor__991.png" alt="护甲" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>护甲</strong><small>Armor</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Armor__991.png" alt="护甲" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>护甲</strong>
+      <small>Armor · 装备 · 5 阶 · 0 行动点 / 0 法力</small>
+      <em>每回合防止你受到的前 3 点攻击伤害。</em>
+    </span>
+  </span>
+</a> 承载。</p>
+<p>起手优先牌：<a class="dq-card-chip" href="/cards/sword">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Sword__825.png" alt="长剑" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>长剑</strong><small>Sword</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Sword__825.png" alt="长剑" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>长剑</strong>
+      <small>Sword · 装备 · 3 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 1 点攻击伤害 每有 2 个攻击牌 你 打出 在一张回合。</em>
+    </span>
+  </span>
+</a>、<a class="dq-card-chip" href="/cards/sundering-strike">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SunderingStrike__899.png" alt="破甲打击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>破甲打击</strong><small>Sundering Strike</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/SunderingStrike__899.png" alt="破甲打击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>破甲打击</strong>
+      <small>Sundering Strike · 攻击 · 8 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 2 点攻击伤害并对手获得 &lt;虚弱 2&gt; 本回合。</em>
+    </span>
+  </span>
+</a>、<a class="dq-card-chip" href="/cards/armor">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Armor__991.png" alt="护甲" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>护甲</strong><small>Armor</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Armor__991.png" alt="护甲" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>护甲</strong>
+      <small>Armor · 装备 · 5 阶 · 0 行动点 / 0 法力</small>
+      <em>每回合防止你受到的前 3 点攻击伤害。</em>
+    </span>
+  </span>
+</a>。</p>
+</div>
+</section>
+
+
+
+<section class="dq-section-block">
+  <h2>等级变化</h2>
+  <table class="dq-data-table">
+  <thead><tr><th>等级</th><th>变化</th><th>次数</th><th>条件说明</th></tr></thead>
+  <tbody>
+<tr>
+  <td>3+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/sword">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Sword__825.png" alt="长剑" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>长剑</strong><small>Sword</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Sword__825.png" alt="长剑" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>长剑</strong>
+      <small>Sword · 装备 · 3 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 1 点攻击伤害 每有 2 个攻击牌 你 打出 在一张回合。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>4+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/hamstring">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Hamstring__1038.png" alt="断筋" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>断筋</strong><small>Hamstring</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Hamstring__1038.png" alt="断筋" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>断筋</strong>
+      <small>Hamstring · 行动牌 · 4 阶 · 1 行动点 / 0 法力</small>
+      <em>对手弃掉手牌中的所有行动牌。造成 3 点攻击伤害。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>4+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/crush">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Crush__623.png" alt="碾碎" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>碾碎</strong><small>Crush</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Crush__623.png" alt="碾碎" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>碾碎</strong>
+      <small>Crush · 行动牌 · 5 阶 · 1 行动点 / 0 法力</small>
+      <em>摧毁 1 张装备牌。如果如此，造成 3 点攻击伤害。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>5+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/disorient">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Disorient__390.png" alt="迷失方向" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>迷失方向</strong><small>Disorient</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Disorient__390.png" alt="迷失方向" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>迷失方向</strong>
+      <small>Disorient · 反应 · 6 阶 · 0 行动点 / 0 法力</small>
+      <em>触发：对手打出行动牌时。效果：该牌视为由你打出。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>5+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/riposte">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Riposte__309.png" alt="还击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>还击</strong><small>Riposte</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Riposte__309.png" alt="还击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>还击</strong>
+      <small>Riposte · 反应 · 5 阶 · 0 行动点 / 0 法力</small>
+      <em>触发：对手打出攻击牌时。效果：该攻击牌无效果。造成 2 点攻击伤害。抽 1 张牌。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>6+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/battle-cry">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/BattleCry__759.png" alt="战吼" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>战吼</strong><small>Battle Cry</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/BattleCry__759.png" alt="战吼" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>战吼</strong>
+      <small>Battle Cry · 行动牌 · 10 阶 · 1 行动点 / 0 法力</small>
+      <em>抽 1 张牌 每有攻击牌 在场。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>6+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/armor">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Armor__991.png" alt="护甲" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>护甲</strong><small>Armor</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Armor__991.png" alt="护甲" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>护甲</strong>
+      <small>Armor · 装备 · 5 阶 · 0 行动点 / 0 法力</small>
+      <em>每回合防止你受到的前 3 点攻击伤害。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>7+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/overpower">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Overpower__282.png" alt="压制" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>压制</strong><small>Overpower</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Overpower__282.png" alt="压制" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>压制</strong>
+      <small>Overpower · 行动牌 · 10 阶 · 1 行动点 / 0 法力</small>
+      <em>抽 1 张牌 每有你控制的装备。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>7+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/pierce2">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pierce2__643.png" alt="穿刺（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>穿刺（2）</strong><small>Pierce (2)</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Pierce2__643.png" alt="穿刺（2）" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>穿刺（2）</strong>
+      <small>Pierce (2) · 攻击 · 6 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 8 点&lt;穿透&gt;伤害。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>8+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/scimitars">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Scimitars__684.png" alt="弯刀" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>弯刀</strong><small>Scimitars</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Scimitars__684.png" alt="弯刀" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>弯刀</strong>
+      <small>Scimitars · 装备 · 6 阶 · 0 行动点 / 0 法力</small>
+      <em>每当你打出 1 张名为“攻击”的非临时牌（任意等级），抽取该牌的临时复制。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>8+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/pierce2">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pierce2__643.png" alt="穿刺（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>穿刺（2）</strong><small>Pierce (2)</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Pierce2__643.png" alt="穿刺（2）" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>穿刺（2）</strong>
+      <small>Pierce (2) · 攻击 · 6 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 8 点&lt;穿透&gt;伤害。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>9+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/sundering-strike">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SunderingStrike__899.png" alt="破甲打击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>破甲打击</strong><small>Sundering Strike</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/SunderingStrike__899.png" alt="破甲打击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>破甲打击</strong>
+      <small>Sundering Strike · 攻击 · 8 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 2 点攻击伤害并对手获得 &lt;虚弱 2&gt; 本回合。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>9+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/shield-bash">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ShieldBash__201.png" alt="盾击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>盾击</strong><small>Shield Bash</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/ShieldBash__201.png" alt="盾击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>盾击</strong>
+      <small>Shield Bash · 攻击 · 8 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 5 点攻击伤害。获得&lt;减伤 2&gt; 直到你的下个回合。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>10+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/pierce3">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pierce3__877.png" alt="穿刺（3）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>穿刺（3）</strong><small>Pierce (3)</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Pierce3__877.png" alt="穿刺（3）" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>穿刺（3）</strong>
+      <small>Pierce (3) · 攻击 · 7 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 10 点&lt;穿透&gt;伤害。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+  </tbody>
+</table>
+</section>
+
+<section class="dq-section-block">
+  <h2>卡牌</h2>
+  <div class="dq-monster-card-summary">
+  <span>基础牌组 3 张</span>
+  <span>唯一卡牌 3 张</span>
+</div>
+<h3>牌型比例</h3>
+<table class="dq-data-table">
+  <thead><tr><th>牌型</th><th>数量</th><th>代表牌</th></tr></thead>
+  <tbody>
+<tr>
+  <td>行动牌</td>
+  <td>2</td>
+  <td><a class="dq-card-chip" href="/cards/hamstring">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Hamstring__1038.png" alt="断筋" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>断筋</strong><small>Hamstring</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Hamstring__1038.png" alt="断筋" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>断筋</strong>
+      <small>Hamstring · 行动牌 · 4 阶 · 1 行动点 / 0 法力</small>
+      <em>对手弃掉手牌中的所有行动牌。造成 3 点攻击伤害。</em>
+    </span>
+  </span>
+</a>、<a class="dq-card-chip" href="/cards/gag">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Gag__608.png" alt="封口" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>封口</strong><small>Gag</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Gag__608.png" alt="封口" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>封口</strong>
+      <small>Gag · 行动牌 · 4 阶 · 1 行动点 / 0 法力</small>
+      <em>对手弃掉手牌中的所有法术牌。造成 3 点攻击伤害。</em>
+    </span>
+  </span>
+</a></td>
+</tr>
+<tr>
+  <td>装备</td>
+  <td>1</td>
+  <td><a class="dq-card-chip" href="/cards/shield">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shield__704.png" alt="盾牌" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>盾牌</strong><small>Shield</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Shield__704.png" alt="盾牌" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>盾牌</strong>
+      <small>Shield · 装备 · 1 阶 · 0 行动点 / 0 法力</small>
+      <em>你有 20% 概率闪避对手的攻击牌。</em>
+    </span>
+  </span>
+</a></td>
+</tr>
+  </tbody>
+</table>
+<h3>关联卡牌</h3>
+<div class="dq-profession-card-grid dq-monster-card-grid">
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/shield">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shield__704.png" alt="盾牌" loading="eager"></span></span>
+  <strong>盾牌</strong>
+  <span class="dq-profession-card-meta">Shield · 基础牌组 x1 / 起手装备 / 关键行为 / 机制引用 / 机制参数</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Shield__704.png" alt="盾牌" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>盾牌</strong>
+      <small>Shield · 装备 · 1 阶 · 0 行动点 / 0 法力</small>
+      <em>你有 20% 概率闪避对手的攻击牌。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/sword">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Sword__825.png" alt="长剑" loading="eager"></span></span>
+  <strong>长剑</strong>
+  <span class="dq-profession-card-meta">Sword · 起手装备 / 优先起手 / 关键行为 / 等级变化 / 机制引用 / 等级加入 / 机制参数</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Sword__825.png" alt="长剑" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>长剑</strong>
+      <small>Sword · 装备 · 3 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 1 点攻击伤害 每有 2 个攻击牌 你 打出 在一张回合。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/gag">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Gag__608.png" alt="封口" loading="eager"></span></span>
+  <strong>封口</strong>
+  <span class="dq-profession-card-meta">Gag · 基础牌组 x1 / 关键行为 / 机制引用 / 机制参数</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Gag__608.png" alt="封口" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>封口</strong>
+      <small>Gag · 行动牌 · 4 阶 · 1 行动点 / 0 法力</small>
+      <em>对手弃掉手牌中的所有法术牌。造成 3 点攻击伤害。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/hamstring">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Hamstring__1038.png" alt="断筋" loading="eager"></span></span>
+  <strong>断筋</strong>
+  <span class="dq-profession-card-meta">Hamstring · 基础牌组 x1 / 关键行为 / 等级变化 / 机制引用 / 等级加入 / 机制参数</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Hamstring__1038.png" alt="断筋" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>断筋</strong>
+      <small>Hamstring · 行动牌 · 4 阶 · 1 行动点 / 0 法力</small>
+      <em>对手弃掉手牌中的所有行动牌。造成 3 点攻击伤害。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/armor">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Armor__991.png" alt="护甲" loading="eager"></span></span>
+  <strong>护甲</strong>
+  <span class="dq-profession-card-meta">Armor · 优先起手 / 关键行为 / 等级变化 / 机制引用 / 等级加入 / 机制参数</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Armor__991.png" alt="护甲" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>护甲</strong>
+      <small>Armor · 装备 · 5 阶 · 0 行动点 / 0 法力</small>
+      <em>每回合防止你受到的前 3 点攻击伤害。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/crush">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Crush__623.png" alt="碾碎" loading="eager"></span></span>
+  <strong>碾碎</strong>
+  <span class="dq-profession-card-meta">Crush · 等级变化 / 机制引用 / 等级加入</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Crush__623.png" alt="碾碎" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>碾碎</strong>
+      <small>Crush · 行动牌 · 5 阶 · 1 行动点 / 0 法力</small>
+      <em>摧毁 1 张装备牌。如果如此，造成 3 点攻击伤害。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/riposte">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Riposte__309.png" alt="还击" loading="eager"></span></span>
+  <strong>还击</strong>
+  <span class="dq-profession-card-meta">Riposte · 等级变化 / 机制引用 / 等级加入</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Riposte__309.png" alt="还击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>还击</strong>
+      <small>Riposte · 反应 · 5 阶 · 0 行动点 / 0 法力</small>
+      <em>触发：对手打出攻击牌时。效果：该攻击牌无效果。造成 2 点攻击伤害。抽 1 张牌。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/scimitars">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Scimitars__684.png" alt="弯刀" loading="eager"></span></span>
+  <strong>弯刀</strong>
+  <span class="dq-profession-card-meta">Scimitars · 起手装备 / 关键行为 / 等级变化 / 机制引用 / 等级加入 / 机制参数</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Scimitars__684.png" alt="弯刀" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>弯刀</strong>
+      <small>Scimitars · 装备 · 6 阶 · 0 行动点 / 0 法力</small>
+      <em>每当你打出 1 张名为“攻击”的非临时牌（任意等级），抽取该牌的临时复制。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/pierce2">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pierce2__643.png" alt="穿刺（2）" loading="eager"></span></span>
+  <strong>穿刺（2）</strong>
+  <span class="dq-profession-card-meta">Pierce (2) · 等级变化 / 机制引用 / 等级加入</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Pierce2__643.png" alt="穿刺（2）" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>穿刺（2）</strong>
+      <small>Pierce (2) · 攻击 · 6 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 8 点&lt;穿透&gt;伤害。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/disorient">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Disorient__390.png" alt="迷失方向" loading="eager"></span></span>
+  <strong>迷失方向</strong>
+  <span class="dq-profession-card-meta">Disorient · 等级变化 / 机制引用 / 等级加入</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Disorient__390.png" alt="迷失方向" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>迷失方向</strong>
+      <small>Disorient · 反应 · 6 阶 · 0 行动点 / 0 法力</small>
+      <em>触发：对手打出行动牌时。效果：该牌视为由你打出。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/pierce3">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pierce3__877.png" alt="穿刺（3）" loading="eager"></span></span>
+  <strong>穿刺（3）</strong>
+  <span class="dq-profession-card-meta">Pierce (3) · 等级变化 / 机制引用 / 等级加入</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Pierce3__877.png" alt="穿刺（3）" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>穿刺（3）</strong>
+      <small>Pierce (3) · 攻击 · 7 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 10 点&lt;穿透&gt;伤害。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/shield-bash">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ShieldBash__201.png" alt="盾击" loading="eager"></span></span>
+  <strong>盾击</strong>
+  <span class="dq-profession-card-meta">Shield Bash · 等级变化 / 机制引用 / 等级加入</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/ShieldBash__201.png" alt="盾击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>盾击</strong>
+      <small>Shield Bash · 攻击 · 8 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 5 点攻击伤害。获得&lt;减伤 2&gt; 直到你的下个回合。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/sundering-strike">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SunderingStrike__899.png" alt="破甲打击" loading="eager"></span></span>
+  <strong>破甲打击</strong>
+  <span class="dq-profession-card-meta">Sundering Strike · 优先起手 / 关键行为 / 等级变化 / 机制引用 / 等级加入 / 机制参数</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/SunderingStrike__899.png" alt="破甲打击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>破甲打击</strong>
+      <small>Sundering Strike · 攻击 · 8 阶 · 0 行动点 / 0 法力</small>
+      <em>造成 2 点攻击伤害并对手获得 &lt;虚弱 2&gt; 本回合。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/overpower">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Overpower__282.png" alt="压制" loading="eager"></span></span>
+  <strong>压制</strong>
+  <span class="dq-profession-card-meta">Overpower · 等级变化 / 机制引用 / 等级加入</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Overpower__282.png" alt="压制" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>压制</strong>
+      <small>Overpower · 行动牌 · 10 阶 · 1 行动点 / 0 法力</small>
+      <em>抽 1 张牌 每有你控制的装备。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/battle-cry">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/BattleCry__759.png" alt="战吼" loading="eager"></span></span>
+  <strong>战吼</strong>
+  <span class="dq-profession-card-meta">Battle Cry · 等级变化 / 机制引用 / 等级加入</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/BattleCry__759.png" alt="战吼" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>战吼</strong>
+      <small>Battle Cry · 行动牌 · 10 阶 · 1 行动点 / 0 法力</small>
+      <em>抽 1 张牌 每有攻击牌 在场。</em>
+    </span>
+  </span>
+</a>
+</div>
+</section>
+
+<section class="dq-action-row">
+  <a class="dq-button" href="/monsters">回到怪物图鉴</a>
+  <a class="dq-button dq-button-secondary" href="/cards">查看卡牌图鉴</a>
+</section>

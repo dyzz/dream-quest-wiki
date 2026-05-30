@@ -1,0 +1,3376 @@
+{
+  "source": "original/DreamQuest",
+  "field_offsets": {
+    "DungeonBoard.board": "0x78",
+    "DungeonBoard.allTiles": "0x80",
+    "DungeonBoard.physical": "0x88",
+    "DungeonBoard.playerSprite": "0x90",
+    "DungeonBoard.depth": "0x98",
+    "DungeonBoard.environment": "0x9c",
+    "DungeonBoard.done": "0xa0",
+    "DungeonBoard.bossName": "0xa8",
+    "Dungeon.difficulty": "0x11c",
+    "Dungeon.floorBoss": "0x150",
+    "Dungeon.floorEnvironments": "0x158",
+    "Tile.x": "0x74",
+    "Tile.y": "0x78",
+    "Tile.board": "0x80",
+    "Tile.physical": "0x88",
+    "Tile.impassable": "0x90"
+  },
+  "method_indices": {
+    "TilePlusInt.ctor": 19416,
+    "DungeonBoard.FindDeletableSquares": 19426,
+    "DungeonBoard.CanDelete": 19427,
+    "DungeonBoard.IsConnected": 19428,
+    "DungeonBoard.GetComponent": 19429,
+    "DungeonBoard.AllTiles": 19430,
+    "DungeonBoard.GetDimensions": 19431,
+    "DungeonBoard.TileAt": 19433,
+    "DungeonBoard.InDungeon": 19434,
+    "DungeonBoard.GetAllTilesList": 19441,
+    "DungeonBoard.RandomUnusedTile": 19447,
+    "DungeonBoard.RandomUnusedTileList": 19448,
+    "DungeonBoard.RandomUnusedNeighbor": 19449,
+    "DungeonBoard.Initialize": 19445,
+    "DungeonBoard.PlayerTile": 19454,
+    "DungeonBoard.MonsterLevels": 19456,
+    "DungeonBoard.GenerateMonsterLevels": 19457,
+    "DungeonBoard.TotalGoldTarget": 19458,
+    "DungeonBoard.GoldTarget": 19459,
+    "DungeonBoard.GoldByTier": 19460,
+    "DungeonBoard.MinRewardTier": 19461,
+    "DungeonBoard.MaxRewardTier": 19462,
+    "DungeonBoard.RewardTiers": 19463,
+    "DungeonBoard.RewardTier": 19464,
+    "DungeonBoard.RandomGoldByTier": 19465,
+    "DungeonBoard.RandomGoldTarget": 19466,
+    "DungeonBoard.CreateNamedMonsterAtLevel": 19472,
+    "DungeonBoard.CreateBoss": 19473,
+    "DungeonBoard.TileDistanceSort": 19474,
+    "DungeonBoard.GenerateReward": 19475,
+    "DungeonBoard.GenerateRewardName": 19476,
+    "DungeonBoard.GenerateRewardByName": 19477,
+    "DungeonBoard.GenerateRewards": 19478,
+    "DungeonBoard.GenerateShop": 19479,
+    "DungeonBoard.GenerateChest": 19480,
+    "DungeonBoard.GenerateMonsterChest": 19481,
+    "DungeonBoard.GenerateRandomRewardTier": 19482,
+    "DungeonBoard.GenerateChests": 19483,
+    "DungeonBoard.GenerateRandomReward": 19484,
+    "DungeonBoard.AddRewards": 19486,
+    "DungeonBoard.AddTraps": 19492,
+    "DungeonBoard.BuildMaze": 19493,
+    "DungeonBoard.CreateFeature": 19494,
+    "DungeonBoard.PathBetweenTryNumber": 19495,
+    "DungeonBoard.PathBetween": 19496,
+    "DungeonBoard.TryMoveTo": 19497,
+    "DungeonBoard.ScaleFactor": 19498,
+    "DungeonBoard.BaseTileSize": 19499,
+    "DungeonBoard.CVCompare": 19503,
+    "DungeonBoard.FindCutVertexInfos": 19504,
+    "DungeonBoard.FindBestCutVertex": 19505,
+    "DungeonBoard.AddTaverns": 19506,
+    "DungeonBoard.AddMonsters": 19507,
+    "Dungeon.Initialize": 19096,
+    "Dungeon.BuildFakeBoard": 19098,
+    "Dungeon.BuildBoard": 19099,
+    "Dungeon.PopulateFromString": 19109,
+    "Dungeon.OutputToString": 19110,
+    "Dungeon.BonusMonsterLevel": 19169,
+    "DungeonUser.GetAttribute": 20451,
+    "DungeonUser.SetDifficulty": 20478,
+    "DungeonUser.GetDifficulty": 20479,
+    "Game.RandomRange": 20902,
+    "Game.RandomFloat": 20903,
+    "Game.RandomNormal": 20905,
+    "GameManager.LoadCurrentUser": 20954,
+    "GameManager.Difficulty": 20966,
+    "MonsterData.Frequency": 22000,
+    "MonsterData.CanFit": 22001,
+    "MonsterFinder.ChooseBoss": 22008,
+    "MonsterFinder.ChooseBossWithExclude": 22009,
+    "MonsterFinder.ChooseMonsterBossFlag": 22010,
+    "MonsterFinder.ChooseMonsterSeen": 22011,
+    "MonsterFinder.ChooseMonsterFull": 22012,
+    "MonsterList.GetMonsterList": 22020,
+    "Tile.IsUnused": 24355,
+    "Tile.MonsterPercent": 24356,
+    "Tile.CanBeACut": 24367,
+    "Tile.BlocksMovement": 24340,
+    "Tile.PrimeFeature": 24347,
+    "Tile.PrimeBlockingFeature": 24348,
+    "Tile.GetMonster": 24358,
+    "Tile.HasMonster": 24360,
+    "TreasureChest.GenerateLoot": 20077,
+    "TreasureChest.GenerateLoot(itemCount)": 20078,
+    "CardFinder.ChooseReward(tiers,minAffinity)": 15974,
+    "CardFinder.ChooseReward(tiers,minAffinity,onlyCards)": 15977,
+    "CardFinder.AllAvailableCards": 15978,
+    "CardFinder.AllAvailableNonBonusCardDatas": 15982,
+    "CardFinder.AllNonBonusCardData": 15989,
+    "CardList.GetCardList": 15999,
+    "RewardWrapper.ctor": 15956,
+    "CardData.HasAccess": 15951,
+    "CardData.GetTier": 15954,
+    "CardData.FrequencyMod": 15955,
+    "ProfessionBase.ClassBiases": 22780,
+    "ProfessionBase.RewardWeight": 22804,
+    "Dungeon.SpawnCount": 19123,
+    "Dungeon.SpawnCard": 19121,
+    "DungeonPlayer.FrequencyMod": 20234,
+    "MimicChest.Open": 19783,
+    "MimicChest.SetLevel": 19784,
+    "VirtualObject.get_dungeon": 24554,
+    "VirtualObject.Parent": 24573,
+    "VirtualObject.Destroy": 24601,
+    "Monster.DisplayInMini": 19833,
+    "PlayerSprite.RefreshNoWipe": 22744
+  },
+  "random_helpers": {
+    "Game.RandomRange": {
+      "method_index": 20902,
+      "semantics": "inclusive integer range; implementation increments the upper argument before calling Random.Next"
+    },
+    "Game.RandomFloat": {
+      "method_index": 20903,
+      "semantics": "uniform float from the shared System.Random instance"
+    },
+    "Game.RandomNormal": {
+      "method_index": 20905,
+      "semantics": "normal distribution helper with mean and deviation float arguments"
+    }
+  },
+  "float_constants": {
+    "random_gold_stddev_multiplier": {
+      "vmaddr": "0x100f54920",
+      "file_offset": "0xf54920",
+      "bits": "0x3dcccccd",
+      "value": 0.100000001
+    },
+    "reward_tier_split_333": {
+      "vmaddr": "0x100f55bbc",
+      "file_offset": "0xf55bbc",
+      "bits": "0x3eaa7efa",
+      "value": 0.333000004
+    },
+    "reward_tier_split_666": {
+      "vmaddr": "0x100f55bc0",
+      "file_offset": "0xf55bc0",
+      "bits": "0x3f2a7efa",
+      "value": 0.666000009
+    },
+    "reward_tier_depth3_first": {
+      "vmaddr": "0x100f5495c",
+      "file_offset": "0xf5495c",
+      "bits": "0x3ecccccd",
+      "value": 0.400000006
+    },
+    "threshold_800": {
+      "vmaddr": "0x100f548a4",
+      "file_offset": "0xf548a4",
+      "bits": "0x3f4ccccd",
+      "value": 0.800000012
+    },
+    "reward_name_health_pack": {
+      "vmaddr": "0x100f55bc8",
+      "file_offset": "0xf55bc8",
+      "bits": "0x3f0ccccd",
+      "value": 0.550000012
+    },
+    "reward_name_shop": {
+      "vmaddr": "0x100f54934",
+      "file_offset": "0xf54934",
+      "bits": "0x3f333333",
+      "value": 0.699999988
+    },
+    "reward_name_smoothie_shack": {
+      "vmaddr": "0x100f55bcc",
+      "file_offset": "0xf55bcc",
+      "bits": "0x3f59999a",
+      "value": 0.850000024
+    },
+    "reward_name_healing_pool": {
+      "vmaddr": "0x100f551a4",
+      "file_offset": "0xf551a4",
+      "bits": "0x3f666666",
+      "value": 0.899999976
+    },
+    "reward_name_depth_split": {
+      "vmaddr": "0x100f54958",
+      "file_offset": "0xf54958",
+      "bits": "0x3f733333",
+      "value": 0.949999988
+    },
+    "service_split_blacksmith": {
+      "vmaddr": "0x100f55bd0",
+      "file_offset": "0xf55bd0",
+      "bits": "0x3f2aa64c",
+      "value": 0.666599989
+    },
+    "treasure_chest_one_item_threshold": {
+      "vmaddr": "0x100f55bcc",
+      "file_offset": "0xf55bcc",
+      "bits": "0x3f59999a",
+      "value": 0.850000024
+    },
+    "treasure_chest_two_item_threshold": {
+      "vmaddr": "0x100f55be4",
+      "file_offset": "0xf55be4",
+      "bits": "0x3f7ae148",
+      "value": 0.980000019
+    },
+    "treasure_chest_extra_gold_threshold": {
+      "vmaddr": "0x100f55be8",
+      "file_offset": "0xf55be8",
+      "bits": "0x3ee66666",
+      "value": 0.449999988
+    },
+    "add_rewards_gold_start_per_reward_factor": {
+      "vmaddr": "0x100f55bd4",
+      "file_offset": "0xf55bd4",
+      "bits": "0x3ccccccd",
+      "value": 0.025
+    },
+    "add_rewards_gold_multiplier_step": {
+      "vmaddr": "0x100f55448",
+      "file_offset": "0xf55448",
+      "bits": "0xbd4ccccd",
+      "value": -0.050000001
+    },
+    "threat_component_pick_half_weight_drop": {
+      "vmaddr": "0x100f55154",
+      "file_offset": "0xf55154",
+      "bits": "0x3eb33333",
+      "value": 0.349999994
+    },
+    "threat_component_pick_low_weight": {
+      "vmaddr": "0x100f55200",
+      "file_offset": "0xf55200",
+      "bits": "0x3e19999a",
+      "value": 0.150000006
+    },
+    "monster_level_early_bias_step": {
+      "vmaddr": "0x100f55448",
+      "file_offset": "0xf55448",
+      "bits": "0xbd4ccccd",
+      "value": -0.050000001
+    },
+    "base_tile_size_xy": {
+      "vmaddr": "0x100f55bdc",
+      "file_offset": "0xf55bdc",
+      "bits": "0x3ef5c28f",
+      "value": 0.479999989
+    },
+    "base_tile_size_z": {
+      "vmaddr": "0x100f54940",
+      "file_offset": "0xf54940",
+      "bits": "0x3c23d70a",
+      "value": 0.01
+    },
+    "tile_monster_percent_straight": {
+      "vmaddr": "0x100f54904",
+      "file_offset": "0xf54904",
+      "bits": "0x3e99999a",
+      "value": 0.300000012
+    },
+    "tile_monster_percent_cross": {
+      "vmaddr": "0x100f55200",
+      "file_offset": "0xf55200",
+      "bits": "0x3e19999a",
+      "value": 0.150000006
+    },
+    "tile_monster_percent_corner_or_t": {
+      "vmaddr": "0x100f54920",
+      "file_offset": "0xf54920",
+      "bits": "0x3dcccccd",
+      "value": 0.100000001
+    },
+    "tile_monster_percent_dead_end": {
+      "vmaddr": "0x100f5523c",
+      "file_offset": "0xf5523c",
+      "bits": "0x3d4ccccd",
+      "value": 0.050000001
+    }
+  },
+  "gold": {
+    "gold_target_by_depth": {
+      "1": 10,
+      "2": 15,
+      "3": 23,
+      "4": 36,
+      "5": 54,
+      "6": 80,
+      "default": 10
+    },
+    "total_gold_target_formula": "GoldTarget(depth) * 9",
+    "total_gold_target_by_depth": [
+      {
+        "depth": 1,
+        "gold_target": 10,
+        "total_gold_target": 90
+      },
+      {
+        "depth": 2,
+        "gold_target": 15,
+        "total_gold_target": 135
+      },
+      {
+        "depth": 3,
+        "gold_target": 23,
+        "total_gold_target": 207
+      },
+      {
+        "depth": 4,
+        "gold_target": 36,
+        "total_gold_target": 324
+      },
+      {
+        "depth": 5,
+        "gold_target": 54,
+        "total_gold_target": 486
+      },
+      {
+        "depth": 6,
+        "gold_target": 80,
+        "total_gold_target": 720
+      }
+    ],
+    "gold_by_tier": {
+      "1": 3,
+      "2": 5,
+      "3": 8,
+      "4": 12,
+      "5": 15,
+      "6": 18,
+      "7": 21,
+      "8": 24,
+      "9": 27,
+      "10": 30,
+      "default": 10
+    },
+    "random_gold": {
+      "by_tier": "int(Game.RandomNormal(GoldByTier(tier), GoldByTier(tier) * 0.1))",
+      "by_floor": "int(Game.RandomNormal(GoldTarget(depth), GoldTarget(depth) * 0.1))",
+      "stddev_multiplier_constant": {
+        "vmaddr": "0x100f54920",
+        "file_offset": "0xf54920",
+        "bits": "0x3dcccccd",
+        "value": 0.100000001
+      }
+    }
+  },
+  "reward_tier_ranges": {
+    "min_by_depth": {
+      "1": 1,
+      "2": 4,
+      "3": 7,
+      "4": 0,
+      "default": 7
+    },
+    "max_by_depth": {
+      "1": 4,
+      "2": 7,
+      "3": 10,
+      "4": 0,
+      "default": 10
+    }
+  },
+  "reward_tier_roll": {
+    "source_method": "DungeonBoard.RewardTier",
+    "random_source": "Game.RandomFloat()",
+    "by_depth": {
+      "1": [
+        {
+          "tier": 1,
+          "random_min_inclusive": 0.0,
+          "random_max_exclusive": 0.333,
+          "probability": 0.333
+        },
+        {
+          "tier": 2,
+          "random_min_inclusive": 0.333,
+          "random_max_exclusive": 0.666,
+          "probability": 0.333
+        },
+        {
+          "tier": 3,
+          "random_min_inclusive": 0.666,
+          "random_max_exclusive": 1.0,
+          "probability": 0.334
+        }
+      ],
+      "2": [
+        {
+          "tier": 4,
+          "random_min_inclusive": 0.0,
+          "random_max_exclusive": 0.333,
+          "probability": 0.333
+        },
+        {
+          "tier": 5,
+          "random_min_inclusive": 0.333,
+          "random_max_exclusive": 0.666,
+          "probability": 0.333
+        },
+        {
+          "tier": 6,
+          "random_min_inclusive": 0.666,
+          "random_max_exclusive": 1.0,
+          "probability": 0.334
+        }
+      ],
+      "3": [
+        {
+          "tier": 7,
+          "random_min_inclusive": 0.0,
+          "random_max_exclusive": 0.4,
+          "probability": 0.4
+        },
+        {
+          "tier": 8,
+          "random_min_inclusive": 0.4,
+          "random_max_exclusive": 0.8,
+          "probability": 0.4
+        },
+        {
+          "tier": 9,
+          "random_min_inclusive": 0.8,
+          "random_max_exclusive": 1.0,
+          "probability": 0.2
+        }
+      ],
+      "4_or_other": [
+        {
+          "tier": 10,
+          "random_min_inclusive": 0.0,
+          "random_max_exclusive": 1.0,
+          "probability": 1.0
+        }
+      ]
+    }
+  },
+  "generate_reward_name": {
+    "source_method": "DungeonBoard.GenerateRewardName",
+    "random_source": "Game.RandomFloat()",
+    "cumulative_branches": [
+      {
+        "random_min_inclusive": 0.0,
+        "random_max_exclusive": 0.4,
+        "probability": 0.4,
+        "reward": "TreasureChest"
+      },
+      {
+        "random_min_inclusive": 0.4,
+        "random_max_exclusive": 0.55,
+        "probability": 0.15,
+        "reward": "HealthPack"
+      },
+      {
+        "random_min_inclusive": 0.55,
+        "random_max_exclusive": 0.7,
+        "probability": 0.15,
+        "reward": "Shop"
+      },
+      {
+        "random_min_inclusive": 0.7,
+        "random_max_exclusive": 0.75,
+        "probability": 0.05,
+        "reward": "Monastery"
+      },
+      {
+        "random_min_inclusive": 0.75,
+        "random_max_exclusive": 0.8,
+        "probability": 0.05,
+        "reward": "Blacksmith"
+      },
+      {
+        "random_min_inclusive": 0.8,
+        "random_max_exclusive": 0.85,
+        "probability": 0.05,
+        "reward": "SmoothieShack"
+      },
+      {
+        "random_min_inclusive": 0.85,
+        "random_max_exclusive": 0.9,
+        "probability": 0.05,
+        "reward": "HealingPool"
+      },
+      {
+        "random_min_inclusive": 0.9,
+        "random_max_exclusive": 0.95,
+        "probability": 0.05,
+        "reward": {
+          "depth_1": "GoblinHoarder",
+          "depth_gt_1": "MimicChest"
+        }
+      },
+      {
+        "random_min_inclusive": 0.95,
+        "random_max_exclusive": 1.0,
+        "probability": 0.05,
+        "reward": "GoblinHoarder"
+      }
+    ],
+    "probabilities": {
+      "depth_1": [
+        {
+          "reward": "TreasureChest",
+          "probability": 0.4
+        },
+        {
+          "reward": "HealthPack",
+          "probability": 0.15
+        },
+        {
+          "reward": "Shop",
+          "probability": 0.15
+        },
+        {
+          "reward": "GoblinHoarder",
+          "probability": 0.1
+        },
+        {
+          "reward": "Blacksmith",
+          "probability": 0.05
+        },
+        {
+          "reward": "HealingPool",
+          "probability": 0.05
+        },
+        {
+          "reward": "Monastery",
+          "probability": 0.05
+        },
+        {
+          "reward": "SmoothieShack",
+          "probability": 0.05
+        }
+      ],
+      "depth_gt_1": [
+        {
+          "reward": "TreasureChest",
+          "probability": 0.4
+        },
+        {
+          "reward": "HealthPack",
+          "probability": 0.15
+        },
+        {
+          "reward": "Shop",
+          "probability": 0.15
+        },
+        {
+          "reward": "Blacksmith",
+          "probability": 0.05
+        },
+        {
+          "reward": "GoblinHoarder",
+          "probability": 0.05
+        },
+        {
+          "reward": "HealingPool",
+          "probability": 0.05
+        },
+        {
+          "reward": "MimicChest",
+          "probability": 0.05
+        },
+        {
+          "reward": "Monastery",
+          "probability": 0.05
+        },
+        {
+          "reward": "SmoothieShack",
+          "probability": 0.05
+        }
+      ]
+    }
+  },
+  "generate_rewards": {
+    "source_method": "DungeonBoard.GenerateRewards",
+    "disassembly": {
+      "GenerateRewards": "extracted/disassembly/DungeonBoard_GenerateRewards.txt",
+      "GameManagerDifficulty": "extracted/disassembly/GameManager_Difficulty.txt",
+      "DungeonUserGetDifficulty": "extracted/disassembly/DungeonUser_GetDifficulty.txt",
+      "DifficultyDefaultFallback": "extracted/disassembly/DifficultyFactory_21561.txt",
+      "DifficultyKittenFactory": "extracted/disassembly/DifficultyFactory_21562.txt",
+      "DifficultyGrizzlyBearFactory": "extracted/disassembly/DifficultyFactory_21563.txt",
+      "DifficultyVelociraptorFactory": "extracted/disassembly/DifficultyFactory_21564.txt"
+    },
+    "base_list": [
+      {
+        "reward": "Shop",
+        "count": 3
+      }
+    ],
+    "health_branch": {
+      "random_source": "Game.RandomFloat()",
+      "if_random_gt_0_5": [
+        {
+          "reward": "HealingPool",
+          "count": 1
+        },
+        {
+          "reward": "HealthPack",
+          "count": "depth + Game.RandomRange(1, 2)"
+        }
+      ],
+      "otherwise": [
+        {
+          "reward": "HealthPack",
+          "count": "depth * 2 + Game.RandomRange(2, 4)"
+        }
+      ]
+    },
+    "service_reward_roll": [
+      {
+        "reward": "Monastery",
+        "random_min_inclusive": 0.0,
+        "random_max_exclusive": 0.333,
+        "probability": 0.333
+      },
+      {
+        "reward": "Blacksmith",
+        "random_min_inclusive": 0.333,
+        "random_max_exclusive": 0.6666,
+        "probability": 0.3336
+      },
+      {
+        "reward": "SmoothieShack",
+        "random_min_inclusive": 0.6666,
+        "random_max_exclusive": 1.0,
+        "probability": 0.3334
+      }
+    ],
+    "additional_random_rewards": {
+      "count": "Game.RandomRange(2, 4)",
+      "generator": "DungeonBoard.GenerateRewardName"
+    },
+    "user_attribute_post_processing": [
+      {
+        "condition": "GameManager.LoadCurrentUser().GetAttribute(UserAttribute.DRAGON1) != 0",
+        "attribute_id": 84,
+        "attribute_name": "DRAGON1",
+        "adds": [
+          {
+            "reward": "TreasureChest",
+            "count": 1
+          }
+        ],
+        "achievement_text": "Your characters find an additional Treasure Chest on each floor"
+      },
+      {
+        "condition": "GameManager.LoadCurrentUser().GetAttribute(UserAttribute.STEPS1) != 0",
+        "attribute_id": 19,
+        "attribute_name": "STEPS1",
+        "adds": [
+          {
+            "reward": "HealthPack",
+            "count": 1
+          }
+        ],
+        "achievement_text": "Your characters will find one additional health pack on each floor"
+      }
+    ],
+    "difficulty": {
+      "stored_field": "Dungeon.difficulty",
+      "stored_field_offset": "0x11c",
+      "source": "Dungeon.Initialize stores GameManager.Difficulty() into Dungeon.difficulty.",
+      "user_attribute": {
+        "attribute_id": 161,
+        "attribute_name": "DIFFICULTY",
+        "read_path": "GameManager.Difficulty() -> GameManager.LoadCurrentUser() -> DungeonUser.GetDifficulty()"
+      },
+      "options": [
+        {
+          "name": "Kitten",
+          "static_field_offset": "0x0",
+          "description": "You receive significant bonuses but are unable to earn achievements or achievement points.",
+          "source_factory_pointer_index": 21562
+        },
+        {
+          "name": "Grizzly Bear",
+          "static_field_offset": "0x4",
+          "description": "The default difficulty for the game.",
+          "source_factory_pointer_index": 21563
+        },
+        {
+          "name": "Velociraptor",
+          "static_field_offset": "0x8",
+          "description": "The game is much more difficult, but you receive double the number of achievement points and find additional content at the end of the game.",
+          "source_factory_pointer_index": 21564
+        }
+      ],
+      "default_static_field_offset": "0xc",
+      "inferred_default_name": "Grizzly Bear",
+      "default_note": "DungeonUser.GetDifficulty uses the difficulty table offset 0xc as its fallback. The Grizzly Bear UI description names that option as the default, but the raw integer stored at offset 0xc has not been dumped separately.",
+      "post_processing": [
+        {
+          "condition": "Dungeon.difficulty == difficulty static field offset 0x4",
+          "difficulty_name": "Grizzly Bear",
+          "adds": [
+            {
+              "reward": "HealthPack",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "condition": "Dungeon.difficulty == difficulty static field offset 0x0",
+          "difficulty_name": "Kitten",
+          "adds": [
+            {
+              "reward": "HealingPool",
+              "count": 1
+            },
+            {
+              "reward": "TreasureChest",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "no_extra_reward_condition_observed_for": [
+        "Velociraptor"
+      ]
+    }
+  },
+  "add_rewards_allocation": {
+    "status": "structured from DungeonBoard.AddRewards and ThreatComponent helpers",
+    "source_methods": [
+      "DungeonBoard.AddRewards",
+      "DungeonBoard.ThreatSort",
+      "DungeonBoard.GetThreatComponents",
+      "DungeonBoard.GetToPlayerThreats",
+      "Tile.GetThreat",
+      "DungeonFeature.Threat",
+      "Monster.Threat",
+      "ThreatComponent..ctor",
+      "ThreatComponent.Pick",
+      "DungeonBoard.RandomUnusedTile(list)",
+      "DungeonBoard.GenerateRewardByName",
+      "DungeonBoard.CreateBoss",
+      "DungeonBoard.CreateFeature",
+      "DungeonFeature.AtTile",
+      "DungeonFeature.Away",
+      "VirtualObject.SetParent",
+      "VirtualObject.ChildChange"
+    ],
+    "disassembly": {
+      "AddRewards": "extracted/disassembly/DungeonBoard_AddRewards.txt",
+      "ThreatComponentCtor": "extracted/disassembly/ThreatComponent__ctor.txt",
+      "ThreatComponentPick": "extracted/disassembly/ThreatComponent_Pick.txt",
+      "ThreatSort": "extracted/disassembly/DungeonBoard_ThreatSort.txt",
+      "GetThreatComponents": "extracted/disassembly/DungeonBoard_GetThreatComponents.txt",
+      "GetToPlayerThreats": "extracted/disassembly/DungeonBoard_GetToPlayerThreats.txt",
+      "TileGetThreat": "extracted/disassembly/Tile_GetThreat.txt",
+      "DungeonFeatureThreat": "extracted/disassembly/DungeonFeature_Threat.txt",
+      "MonsterThreat": "extracted/disassembly/Monster_Threat.txt",
+      "RandomUnusedTileList": "extracted/disassembly/DungeonBoard_RandomUnusedTile_list.txt",
+      "GenerateRewardByName": "extracted/disassembly/DungeonBoard_GenerateRewardByName.txt",
+      "CreateBoss": "extracted/disassembly/DungeonBoard_CreateBoss.txt",
+      "CreateFeature": "extracted/disassembly/DungeonBoard_CreateFeature.txt",
+      "DungeonFeatureAtTile": "extracted/disassembly/DungeonFeature_AtTile.txt",
+      "DungeonFeatureAway": "extracted/disassembly/DungeonFeature_Away.txt",
+      "DungeonFeatureMoveToTile": "extracted/disassembly/DungeonFeature_MoveToTile.txt",
+      "VirtualObjectSetParent": "extracted/disassembly/VirtualObject_SetParent.txt",
+      "VirtualObjectSetParentMaybeTrigger": "extracted/disassembly/VirtualObject_SetParentMaybeTrigger.txt",
+      "VirtualObjectChildChange": "extracted/disassembly/VirtualObject_ChildChange.txt",
+      "VirtualObjectChildren": "extracted/disassembly/VirtualObject_Children.txt"
+    },
+    "threat_component_fields": {
+      "board": "0x10",
+      "component": "0x18",
+      "threat": "0x20",
+      "weight": "0x24",
+      "picks": "0x28",
+      "openSquares": "0x2c"
+    },
+    "component_preparation": [
+      "AddRewards calls GetToPlayerThreats() and GetThreatComponents().",
+      "For each non-empty component returned by GetThreatComponents(), it constructs ThreatComponent(component, board, threats).",
+      "ThreatComponent stores the component threat from the threats[,] grid at the first tile's coordinates.",
+      "ThreatComponent counts tiles whose Tile.IsUnused() is true as openSquares.",
+      "Tile.GetThreat sums DungeonFeature.Threat over tile children; base DungeonFeature.Threat returns 0, and Monster.Threat returns Monster.level from offset 0xb8.",
+      "CreateFeature and reward creation paths attach DungeonFeature instances to tiles through DungeonFeature.AtTile, which calls VirtualObject.SetParent(tile).",
+      "VirtualObject.SetParentMaybeTrigger updates the parent relation and triggers ParentChange/ChildChange paths; Tile.Children() then observes the new child list.",
+      "Components with weight 0 are skipped; weight becomes 0 when openSquares is 0.",
+      "The surviving ThreatComponent list is sorted with DungeonBoard.ThreatSort, which compares the threat field and negates the comparison result, producing descending threat order."
+    ],
+    "component_pick_rule": {
+      "initial_weight": 1.0,
+      "selection_total": "Starts as the number of surviving ThreatComponents and is reduced by ThreatComponent.Pick()'s returned consumed weight after each selected reward assignment.",
+      "selection_roll": "Game.RandomFloat() * currentSelectionTotal; AddRewards subtracts component.weight in sorted-list order until the roll is <= 0.",
+      "pick_side_effects": [
+        "picks += 1",
+        "openSquares -= 1",
+        "weight -= consumedWeight"
+      ],
+      "consumed_weight": [
+        {
+          "condition": "old openSquares < 2",
+          "value": "current weight",
+          "effect": "depletes the component"
+        },
+        {
+          "condition": "old openSquares >= 2 and current weight == 1.0",
+          "value": 0.5
+        },
+        {
+          "condition": "old openSquares >= 2 and current weight == 0.5",
+          "value": 0.349999994,
+          "constant": {
+            "vmaddr": "0x100f55154",
+            "file_offset": "0xf55154",
+            "bits": "0x3eb33333",
+            "value": 0.349999994
+          }
+        },
+        {
+          "condition": "old openSquares >= 2 and current weight == 0.15",
+          "value": 0.100000001,
+          "constant": {
+            "vmaddr": "0x100f54920",
+            "file_offset": "0xf54920",
+            "bits": "0x3dcccccd",
+            "value": 0.100000001
+          }
+        },
+        {
+          "condition": "old openSquares >= 2 and current weight is any other value",
+          "value": "current weight",
+          "effect": "depletes the component"
+        }
+      ],
+      "low_weight_comparison_constant": {
+        "vmaddr": "0x100f55200",
+        "file_offset": "0xf55200",
+        "bits": "0x3e19999a",
+        "value": 0.150000006
+      }
+    },
+    "reward_name_order": [
+      "AddRewards calls GenerateRewards() after component preparation.",
+      "It shuffles the generated reward-name list with Utility.Shuffle.",
+      "Reward names are consumed sequentially while iterating the sorted ThreatComponent list.",
+      "For each component, AddRewards places exactly component.picks rewards, each on RandomUnusedTile(component.component).",
+      "Each placement calls GenerateRewardByName(rewardName, tile, goldTarget)."
+    ],
+    "gold_target_schedule": {
+      "total_gold_target": "DungeonBoard.TotalGoldTarget()",
+      "average_formula": "TotalGoldTarget() / shuffledRewardCount",
+      "initial_multiplier_formula": "1.0 + shuffledRewardCount * 0.025",
+      "initial_multiplier_constant": {
+        "vmaddr": "0x100f55bd4",
+        "file_offset": "0xf55bd4",
+        "bits": "0x3ccccccd",
+        "value": 0.025
+      },
+      "per_reward_multiplier_step": {
+        "vmaddr": "0x100f55448",
+        "file_offset": "0xf55448",
+        "bits": "0xbd4ccccd",
+        "value": -0.050000001
+      },
+      "per_reward_gold_target_formula": "int((TotalGoldTarget() / shuffledRewardCount) * multiplier)",
+      "multiplier_update_after_each_reward": "multiplier += -0.05"
+    },
+    "boss_tile_selection_after_rewards": [
+      "After reward placement, AddRewards searches the sorted ThreatComponent list for a component with deletable candidate tiles.",
+      "It builds a candidate list of tiles where DungeonBoard.CanDelete(tile) is true.",
+      "If that list is non-empty, it chooses RandomUnusedTile(candidateList); otherwise it scans AllTiles() for a non-impassable CanDelete tile.",
+      "If a chosen boss tile contains DungeonFeature children, it moves those features to RandomUnusedTile() by calling DungeonFeature.AtTile(newTile) before creating the boss.",
+      "The method tail-calls DungeonBoard.CreateBoss(tile), using RandomUnusedTile() as the final fallback when no deletable candidate was found."
+    ],
+    "unresolved": [
+      "The VirtualObject parent/child trigger path is identified, but Unity physical object construction and visual-side effects are still modeled at a higher level.",
+      "GetThreatComponents/GetToPlayerThreats have recovered grid semantics, but the harness does not yet replay every Unity object side effect and random-list ordering byte-for-byte.",
+      "TreasureChest and MimicChest creation side effects, MimicChest.Open spawn/display linkage, and CardFinder chest candidate filtering/weighting are structurally decoded, but exact CardFinder list/RNG replay and downstream Unity visual work remain incomplete."
+    ]
+  },
+  "reward_feature_creation": {
+    "status": "partially structured from GenerateReward, GenerateRewardByName, GenerateShop, GenerateChest, GenerateMonsterChest, and helper methods",
+    "source_methods": [
+      "DungeonBoard.GenerateReward",
+      "DungeonBoard.GenerateRewardByName",
+      "DungeonBoard.GenerateShop",
+      "DungeonBoard.GenerateChest",
+      "DungeonBoard.GenerateMonsterChest",
+      "TreasureChest.GenerateLoot",
+      "TreasureChest.GenerateLoot(itemCount)",
+      "DungeonBoard.RewardTiers",
+      "DungeonBoard.RewardTier",
+      "DungeonBoard.RandomGoldByTier",
+      "CardFinder.ChooseReward(tiers,minAffinity)",
+      "CardFinder.ChooseReward(tiers,minAffinity,onlyCards)",
+      "CardList.GetCardList",
+      "RewardWrapper.ctor",
+      "CardData.HasAccess",
+      "CardData.GetTier",
+      "CardData.FrequencyMod",
+      "ProfessionBase.RewardWeight",
+      "Dungeon.SpawnCount",
+      "Dungeon.SpawnCard",
+      "DungeonPlayer.FrequencyMod",
+      "MimicChest.SetLevel",
+      "MimicChest.Open",
+      "VirtualObject.get_dungeon",
+      "VirtualObject.Parent",
+      "VirtualObject.Destroy",
+      "Monster.DisplayInMini",
+      "PlayerSprite.RefreshNoWipe",
+      "DungeonBoard.GenerateRandomReward(tier)",
+      "DungeonBoard.GenerateChests",
+      "DungeonBoard.GenerateRandomReward()",
+      "DungeonBoard.AddRewards"
+    ],
+    "disassembly": {
+      "GenerateReward": "extracted/disassembly/DungeonBoard_GenerateReward.txt",
+      "GenerateRewardByName": "extracted/disassembly/DungeonBoard_GenerateRewardByName.txt",
+      "GenerateShop": "extracted/disassembly/DungeonBoard_GenerateShop.txt",
+      "GenerateChest": "extracted/disassembly/DungeonBoard_GenerateChest.txt",
+      "GenerateMonsterChest": "extracted/disassembly/DungeonBoard_GenerateMonsterChest.txt",
+      "TreasureChestGenerateLoot": "extracted/disassembly/TreasureChest_GenerateLoot.txt",
+      "TreasureChestGenerateLootCount": "extracted/disassembly/TreasureChest_GenerateLoot_count.txt",
+      "CardFinderChooseRewardTiersMinAffinity": "extracted/disassembly/CardFinder_ChooseReward_tiers_minAffinity.txt",
+      "CardFinderChooseRewardTiersMinAffinityOnlyCards": "extracted/disassembly/CardFinder_ChooseReward_tiers_minAffinity_onlyCards.txt",
+      "CardFinderAllAvailableCards": "extracted/disassembly/CardFinder_AllAvailableCards.txt",
+      "CardFinderAllAvailableNonBonusCardDatas": "extracted/disassembly/CardFinder_AllAvailableNonBonusCardDatas.txt",
+      "CardFinderAllNonBonusCardData": "extracted/disassembly/CardFinder_AllNonBonusCardData.txt",
+      "RewardWrapperCtor": "extracted/disassembly/RewardWrapper__ctor.txt",
+      "MimicChestSetLevel": "extracted/disassembly/MimicChest_SetLevel.txt",
+      "MimicChestOpen": "extracted/disassembly/MimicChest_Open.txt",
+      "MonsterDisplayInMini": "extracted/disassembly/Monster_DisplayInMini.txt",
+      "PlayerSpriteRefreshNoWipe": "extracted/disassembly/PlayerSprite_RefreshNoWipe.txt",
+      "VirtualObjectDestroy": "extracted/disassembly/VirtualObject_Destroy.txt",
+      "GenerateRandomRewardTier": "extracted/disassembly/DungeonBoard_GenerateRandomReward_tier.txt",
+      "GenerateChests": "extracted/disassembly/DungeonBoard_GenerateChests.txt",
+      "GenerateRandomReward": "extracted/disassembly/DungeonBoard_GenerateRandomReward.txt",
+      "AddRewards": "extracted/disassembly/DungeonBoard_AddRewards.txt",
+      "CreateFeature": "extracted/disassembly/DungeonBoard_CreateFeature.txt",
+      "ThreatComponentPick": "extracted/disassembly/ThreatComponent_Pick.txt"
+    },
+    "dispatch": {
+      "GenerateReward": [
+        "Calls DungeonBoard.GenerateRewardName().",
+        "Passes the sampled reward name, target tile, and goldTarget argument to DungeonBoard.GenerateRewardByName(s, t, goldTarget)."
+      ],
+      "GenerateRewardByName": [
+        "If s equals Shop, dispatches to DungeonBoard.GenerateShop(t, goldTarget).",
+        "If s equals TreasureChest, dispatches to DungeonBoard.GenerateChest(t, goldTarget).",
+        "If s equals MimicChest, creates the feature by name, calls DungeonBoard.GetMonsterLevel(t), and passes that level to MimicChest.SetLevel(level).",
+        "Otherwise, creates the feature directly with DungeonBoard.CreateFeature(t, s); if the created feature is a Monster, the method calls GetMonsterLevel(t) and Monster.LevelTo(level)."
+      ],
+      "GenerateChests": "Loops x times, each time choosing RandomUnusedTile(), RandomGoldTarget(), then GenerateChest(tile, goldTarget).",
+      "GenerateRandomReward(tier)": "Loops tier times and calls the no-argument GenerateRandomReward helper.",
+      "GenerateRandomReward()": "Chooses RandomUnusedTile(), samples RandomGoldTarget(), then calls GenerateReward(tile, goldTarget)."
+    },
+    "gold_behavior": {
+      "GenerateShop": [
+        "Receives goldTarget as an int argument.",
+        "Samples int(Game.RandomNormal(goldTarget, goldTarget * 0.1)); the 0.1 multiplier uses the recovered random_gold_stddev_multiplier constant.",
+        "If the sampled amount is negative, returns before creating the shop.",
+        "Otherwise creates a Shop feature and calls a Shop virtual slot with the sampled amount; this is high-confidence shop gold/budget assignment."
+      ],
+      "GenerateChest": [
+        "Creates a TreasureChest feature at the target tile through DungeonBoard.CreateFeature(t, \"TreasureChest\").",
+        "After type-checking the created object, calls TreasureChest.GenerateLoot().",
+        "The goldTarget argument is not visibly transformed in the recovered GenerateChest body."
+      ],
+      "GenerateMonsterChest": [
+        "Creates a TreasureChest feature at the target tile through DungeonBoard.CreateFeature(t, \"TreasureChest\").",
+        "After type-checking the created object, calls TreasureChest.GenerateLoot(1)."
+      ],
+      "RandomGoldTarget": "int(Game.RandomNormal(GoldTarget(depth), GoldTarget(depth) * 0.1))",
+      "stddev_multiplier_constant": {
+        "vmaddr": "0x100f54920",
+        "file_offset": "0xf54920",
+        "bits": "0x3dcccccd",
+        "value": 0.100000001
+      }
+    },
+    "special_reward_side_effects": {
+      "TreasureChest": {
+        "source_methods": [
+          "DungeonBoard.GenerateChest",
+          "DungeonBoard.GenerateMonsterChest",
+          "TreasureChest.GenerateLoot",
+          "TreasureChest.GenerateLoot(itemCount)",
+          "DungeonBoard.RewardTiers",
+          "DungeonBoard.RewardTier",
+          "DungeonBoard.RandomGoldByTier",
+          "CardFinder.ChooseReward(tiers,minAffinity)"
+        ],
+        "field_offsets": {
+          "loot": "0x88",
+          "gold": "0x90",
+          "takenLoot": "0x94",
+          "maxLoot": "0x98",
+          "internalName": "0xa0"
+        },
+        "item_count_roll": {
+          "random_source": "Game.RandomFloat()",
+          "one_item_if_roll_lt": {
+            "vmaddr": "0x100f55bcc",
+            "file_offset": "0xf55bcc",
+            "bits": "0x3f59999a",
+            "value": 0.850000024
+          },
+          "two_items_if_roll_lt": {
+            "vmaddr": "0x100f55be4",
+            "file_offset": "0xf55be4",
+            "bits": "0x3f7ae148",
+            "value": 0.980000019
+          },
+          "three_items_otherwise": true,
+          "call_target": "TreasureChest.GenerateLoot(itemCount)"
+        },
+        "loot_branch_rules": [
+          "TreasureChest.GenerateLoot(itemCount) calls DungeonBoard.RewardTiers() once before the item loop; RewardTiers() returns a min/max tier pair from MinRewardTier() and MaxRewardTier().",
+          "The first loop iteration always takes the card branch because the extra-gold branch is gated on item index >= 1.",
+          "For item index >= 1, Game.RandomFloat() < 0.45 takes the gold branch; otherwise the card branch runs.",
+          "The gold branch calls DungeonBoard.RewardTier(), then DungeonBoard.RandomGoldByTier(tier), and adds that amount to TreasureChest.gold at offset 0x90.",
+          "The card branch loads dungeon.player.profession, calls ProfessionBase.ClassBiases(), adjusts the current reward tier range upper component down by 1 with a lower clamp of 1, then calls CardFinder.ChooseReward(classBiases, rewardTiers, dungeon, minAffinity).",
+          "The minAffinity argument comes from a three-entry integer array initialized to 1, 1, 1 and indexed by the item loop.",
+          "The returned card is appended to TreasureChest.loot through the list Add virtual slot."
+        ],
+        "loot_generation": [
+          "TreasureChest.GenerateLoot(itemCount) initializes/replaces the chest loot list at offset 0x88.",
+          "The method builds a three-entry integer weight/counter array initialized to 1, 1, 1 before looping itemCount times.",
+          "The gold branch reads the current TreasureChest.gold at offset 0x90 and writes the accumulated result back to offset 0x90.",
+          "The card branch calls through the current dungeon/player/profession context and appends generated card loot to the chest loot list.",
+          "At loop exit, the method calls the same list shuffle/helper path at 0x1001cb21c and stores the returned list back to TreasureChest.loot."
+        ],
+        "final_loot_shuffle_helper": {
+          "vmaddr": "0x1001cb21c",
+          "call_site": "TreasureChest.GenerateLoot(itemCount) 0x1002a1df4",
+          "algorithm": "for i in 0..Count-1: randomIndex = Game.RandomRange(i, Count - 1); swap list[i] and list[randomIndex]",
+          "random_range_inclusive": true,
+          "evidence": [
+            "0x1001cb260/0x1001cb288/0x1001cb364 call list Count through virtual slot 0x14.",
+            "0x1001cb2b8-0x1001cb2c8 calls Game.RandomRange with lower=i and upper=Count-1.",
+            "0x1001cb2d0 and 0x1001cb2f4 read list entries through virtual slot 0x1f.",
+            "0x1001cb318 and 0x1001cb33c write swapped entries through virtual slot 0x20.",
+            "0x1001cb380 returns the same list pointer for storage back into TreasureChest.loot."
+          ]
+        },
+        "extra_gold_threshold": {
+          "vmaddr": "0x100f55be8",
+          "file_offset": "0xf55be8",
+          "bits": "0x3ee66666",
+          "value": 0.449999988
+        },
+        "cardfinder_reward_selection": {
+          "status": "candidate filtering and weighted selection are structurally recovered; exact list iteration helpers and RNG replay are still represented as data, not executed by the dungeon seed harness",
+          "source_methods": [
+            "CardFinder.ChooseReward(b, tiers, d, minAffinity)",
+            "CardFinder.ChooseReward(b, tiers, d, minAffinity, onlyCards)",
+            "CardList.GetCardList",
+            "CardData.HasAccess",
+            "CardData.GetTier",
+            "CardData.FrequencyMod",
+            "ProfessionBase.ClassBiases",
+            "ProfessionBase.RewardWeight",
+            "Dungeon.SpawnCount",
+            "Dungeon.SpawnCard",
+            "DungeonPlayer.FrequencyMod",
+            "RewardWrapper..ctor",
+            "Game.RandomRange"
+          ],
+          "related_candidate_pool_helpers": [
+            "CardFinder.AllAvailableCards",
+            "CardFinder.AllAvailableNonBonusCardDatas",
+            "CardFinder.AllNonBonusCardData"
+          ],
+          "disassembly": {
+            "ChooseRewardTiersMinAffinity": "extracted/disassembly/CardFinder_ChooseReward_tiers_minAffinity.txt",
+            "ChooseRewardTiersMinAffinityOnlyCards": "extracted/disassembly/CardFinder_ChooseReward_tiers_minAffinity_onlyCards.txt",
+            "CardFinderAllAvailableCards": "extracted/disassembly/CardFinder_AllAvailableCards.txt",
+            "CardFinderAllAvailableNonBonusCardDatas": "extracted/disassembly/CardFinder_AllAvailableNonBonusCardDatas.txt",
+            "CardFinderAllNonBonusCardData": "extracted/disassembly/CardFinder_AllNonBonusCardData.txt",
+            "RewardWrapperCtor": "extracted/disassembly/RewardWrapper__ctor.txt",
+            "CardDataGetTier": "extracted/disassembly/CardData_GetTier.txt",
+            "CardDataFrequencyMod": "extracted/disassembly/CardData_FrequencyMod.txt",
+            "CardDataCanFit": "extracted/disassembly/CardData_CanFit.txt"
+          },
+          "field_offsets": {
+            "CardData.internalName": "0x10",
+            "CardData.biases": "0x18",
+            "CardData.gold": "0x20",
+            "CardData.requirements": "0x28",
+            "CardData.hasDynamicGold": "0x30",
+            "CardData.dynamicGoldFunction": "0x38",
+            "CardData.tier": "0x50",
+            "CardData.maxSpawns": "0x54",
+            "CardData.cardType": "0x58",
+            "CardData.elementalAffinity": "0x60",
+            "CardData.realName": "0x68",
+            "RewardWrapper.c": "0x10",
+            "RewardWrapper.f": "0x18",
+            "Dungeon.player": "0x80",
+            "DungeonPlayer.profession": "0xd8"
+          },
+          "overload_rules": [
+            "The four-argument ChooseReward(b, tiers, d, minAffinity) overload is a tail-call shim into the five-argument overload with onlyCards=false.",
+            "The five-argument overload reads the tier range from the incoming two-float value, preserving the first component as the lower bound and the second component as the upper bound.",
+            "The primary candidate source is CardList.GetCardList(); the related AllAvailable* helpers use the same source list and apply HasAccess/non-bonus/non-dynamic filters for other callers."
+          ],
+          "candidate_filters": [
+            "Iterate CardList.GetCardList() and keep entries that cast to CardData.",
+            "Reject a candidate unless CardData.HasAccess() returns true.",
+            "Read CardData.internalName and call Dungeon.SpawnCount(internalName); if the spawn count is greater than or equal to CardData.maxSpawns, reject the card unless CardData.hasDynamicGold is true.",
+            "Call CardData.GetTier(d), which starts from CardData.tier and applies profession ClassBiases entries whose bias object has applies_to_tier=true.",
+            "Reject the candidate when the effective tier is outside the inclusive lower/upper tier range.",
+            "If minAffinity is not -1, compute a frequency score as ProfessionBase.RewardWeight(card) + CardData.FrequencyMod(ProfessionBase.ClassBiases()) + DungeonPlayer.FrequencyMod(card).",
+            "Reject the candidate when that score is below minAffinity or negative.",
+            "If minAffinity is -1, the candidate receives base frequency 1.",
+            "If onlyCards is true, candidates with CardData.hasDynamicGold set are rejected."
+          ],
+          "weight_record": {
+            "type": "RewardWrapper",
+            "card_field": "c at offset 0x10",
+            "frequency_field": "f at offset 0x18",
+            "construction": "Accepted candidates are wrapped as RewardWrapper(card, frequency), appended to a list, and their frequency is added to totalWeight."
+          },
+          "weighted_selection": [
+            "If the weighted candidate list is non-empty, call Game.RandomRange(1, totalWeight).",
+            "Iterate the RewardWrapper list, subtracting each wrapper frequency from the roll.",
+            "The first wrapper that drives the roll to zero or below wins.",
+            "Before returning, call Dungeon.SpawnCard(selectedCard.internalName), then return selectedCard.internalName."
+          ],
+          "fallback": [
+            "If no candidates survive and the lower tier bound is greater than 1, recurse with the lower bound reduced by 1 and the same upper bound, class-bias list, dungeon, minAffinity, and onlyCards flag.",
+            "If no candidates survive once the lower tier bound is 1 or lower, call Dungeon.SpawnCard(\"Attack3\") and return the literal Attack3."
+          ],
+          "remaster_gap": "The exact original List<T>/enumerator helper side effects and Game.RandomRange stream position are not yet replayed in tools/run_remaster_dungeon_seed.py."
+        },
+        "remaster_status": "card-vs-gold branch structure, CardFinder candidate filtering, weighting, and fallback are named; exact CardFinder list/RNG replay remains data-only, not an executable remaster implementation."
+      },
+      "MimicChest": {
+        "source_methods": [
+          "DungeonBoard.GenerateRewardByName",
+          "MimicChest.SetLevel",
+          "MimicChest.Open"
+        ],
+        "field_offsets": {
+          "internalLevel": "0xa8",
+          "Dungeon.board": "0x88",
+          "Dungeon.displayedInMini": "0xe8",
+          "DungeonBoard.playerSprite": "0x90"
+        },
+        "creation_rules": [
+          "GenerateRewardByName compares the reward name to literal MimicChest after Shop and TreasureChest checks.",
+          "It creates the feature through DungeonBoard.CreateFeature(t, s).",
+          "It calls DungeonBoard.GetMonsterLevel(t), type-checks the created object as MimicChest, then calls MimicChest.SetLevel(level).",
+          "MimicChest.SetLevel is a direct store of the incoming int to offset 0xa8."
+        ],
+        "open_rules": [
+          "MimicChest.Open uses literal MimicMonster.",
+          "It calls VirtualObject.get_dungeon() on the MimicChest and reads Dungeon.board at offset 0x88.",
+          "It calls VirtualObject.Parent() and type-checks the parent as Tile before using it as the spawn tile.",
+          "It reads internalLevel from offset 0xa8.",
+          "It calls DungeonBoard.CreateNamedMonsterAtLevel(tile, internalLevel, \"MimicMonster\") and stores the returned Monster.",
+          "It calls VirtualObject.Destroy() on the MimicChest after creating the monster.",
+          "It calls Monster.DisplayInMini(showButton=false) on the created MimicMonster.",
+          "It writes the created monster to Dungeon.displayedInMini at offset 0xe8.",
+          "It then reads Dungeon.board.playerSprite at DungeonBoard offset 0x90 and calls PlayerSprite.RefreshNoWipe()."
+        ],
+        "remaster_status": "level assignment and open/spawn/display linkage are structurally named; exact Unity visual side effects inside DisplayInMini/RefreshNoWipe are not replayed by the seed harness."
+      },
+      "MonsterRewardFeature": {
+        "source_methods": [
+          "DungeonBoard.GenerateRewardByName",
+          "Monster.LevelTo"
+        ],
+        "rules": [
+          "For non-Mimic reward names, GenerateRewardByName returns after CreateFeature unless the created object type-checks as Monster.",
+          "If the created feature is a Monster, it calls DungeonBoard.GetMonsterLevel(t) and then Monster.LevelTo(level)."
+        ]
+      }
+    },
+    "add_rewards_budget": {
+      "source": "See top-level add_rewards_allocation.gold_target_schedule.",
+      "summary": "AddRewards divides TotalGoldTarget by the shuffled reward count, starts the multiplier at 1 + count * 0.025, then applies -0.05 after each generated reward."
+    },
+    "literal_feature_names": [
+      "Shop",
+      "TreasureChest",
+      "HealthPack",
+      "Monastery",
+      "Blacksmith",
+      "SmoothieShack",
+      "HealingPool",
+      "MimicChest",
+      "GoblinHoarder",
+      "AltarToJeremiad",
+      "AltarToAlcoran",
+      "AltarToCairn",
+      "AltarToGauss",
+      "AltarToLiara",
+      "AltarToAston",
+      "MushroomPatch",
+      "Brainsucker"
+    ],
+    "unresolved": [
+      "CreateFeature side effects beyond object selection/creation are still not fully translated.",
+      "CardFinder filtering/weighting inside TreasureChest.GenerateLoot(itemCount) is structurally decoded but not replayed byte-for-byte by the seed harness.",
+      "MimicChest.Open's high-level spawn/display calls are named, but the downstream Unity visual work inside Monster.DisplayInMini and PlayerSprite.RefreshNoWipe is still not replayed."
+    ]
+  },
+  "board_layout": {
+    "status": "structured from DungeonBoard.Initialize, TileAt, AllTiles, ScaleFactor, and BaseTileSize",
+    "source_methods": [
+      "DungeonBoard.Initialize",
+      "DungeonBoard.TileAt",
+      "DungeonBoard.InDungeon",
+      "DungeonBoard.AllTiles",
+      "DungeonBoard.GetAllTilesList",
+      "DungeonBoard.GetDimensions",
+      "DungeonBoard.ScaleFactor",
+      "DungeonBoard.BaseTileSize"
+    ],
+    "disassembly": {
+      "Initialize": "extracted/disassembly/DungeonBoard_Initialize.txt",
+      "TileAt": "extracted/disassembly/DungeonBoard_TileAt.txt",
+      "InDungeon": "extracted/disassembly/DungeonBoard_InDungeon.txt",
+      "AllTiles": "extracted/disassembly/DungeonBoard_AllTiles.txt",
+      "GetAllTilesList": "extracted/disassembly/DungeonBoard_GetAllTilesList.txt",
+      "GetDimensions": "extracted/disassembly/DungeonBoard_GetDimensions.txt",
+      "ScaleFactor": "extracted/disassembly/DungeonBoard_ScaleFactor.txt",
+      "BaseTileSize": "extracted/disassembly/DungeonBoard_BaseTileSize.txt"
+    },
+    "grid_size": {
+      "depth_1": {
+        "width": 8,
+        "height": 8
+      },
+      "other_depths": {
+        "width": 10,
+        "height": 10
+      },
+      "shape": "square Tile[,] array; Initialize uses the same size for both dimensions"
+    },
+    "tile_creation": [
+      "Initialize allocates a Tile[,] board of size 8x8 on depth 1, otherwise 10x10.",
+      "It loops x and y from 0 up to size - 1, constructs a Tile for each coordinate, stores Tile.x/Tile.y, attaches the board reference, writes board[x, y], and appends the Tile to allTiles.",
+      "TileAt(i, j) first calls InDungeon(i, j); if false it returns null, otherwise it indexes DungeonBoard.board at [i, j].",
+      "InDungeon rejects negative coordinates and requires x < board.GetLength(0), y < board.GetLength(1).",
+      "GetDimensions returns Vector2(board.GetLength(0), board.GetLength(1)).",
+      "AllTiles returns the flattened allTiles list."
+    ],
+    "base_tile_size": {
+      "formula": "Vector3(base_tile_size_xy, base_tile_size_xy, base_tile_size_z)",
+      "x": 0.479999989,
+      "y": 0.479999989,
+      "z": 0.01,
+      "x_y_constant": {
+        "vmaddr": "0x100f55bdc",
+        "file_offset": "0xf55bdc",
+        "bits": "0x3ef5c28f",
+        "value": 0.479999989
+      },
+      "z_constant": {
+        "vmaddr": "0x100f54940",
+        "file_offset": "0xf54940",
+        "bits": "0x3c23d70a",
+        "value": 0.01
+      }
+    },
+    "scale_factor": {
+      "formula": "Vector2(20.0 / board_width, 20.0 / board_height)",
+      "depth_1": {
+        "x": 2.5,
+        "y": 2.5
+      },
+      "other_depths": {
+        "x": 2.0,
+        "y": 2.0
+      }
+    }
+  },
+  "monster_generation": {
+    "source_methods": [
+      "DungeonBoard.MonsterLevels",
+      "DungeonBoard.GenerateMonsterLevels",
+      "DungeonBoard.AddMonsters"
+    ],
+    "monster_count": {
+      "depth_1": 6,
+      "other_depths": "Game.RandomRange(9, 11)"
+    },
+    "base_levels_by_depth": {
+      "1": [
+        1,
+        2,
+        3
+      ],
+      "2": [
+        4,
+        5,
+        6
+      ],
+      "3": [
+        7,
+        8,
+        9
+      ]
+    },
+    "level_sum_target_by_depth": {
+      "1": 13,
+      "2": 54,
+      "3": 70
+    },
+    "generate_monster_levels": {
+      "weight_roll": "for each base level, weight = Game.RandomFloat() + 0.5; weights are normalized, multiplied by monster count, and truncated to counts",
+      "base_level_assignment": "after truncating weighted counts, the original walks the current base-level bucket in MonsterLevels order, decrements that bucket after each generated entry, advances when the remaining count drops below 1, and repeats the final bucket after all buckets are exhausted",
+      "base_level_assignment_source": "DungeonBoard.GenerateMonsterLevels 0x100272824-0x1002728a0",
+      "per_monster_level_jitter": [
+        {
+          "condition": "roll < 0.1",
+          "delta": -1
+        },
+        {
+          "condition": "0.8 < roll <= 0.95",
+          "delta": 1
+        },
+        {
+          "condition": "roll > 0.95",
+          "delta": 2
+        }
+      ],
+      "early_roll_bias": "the first three jitter rolls add -0.15, -0.10, and -0.05 respectively",
+      "clamp": "levels are clamped between the floor's low bound and high bound + 1, with absolute max 10",
+      "sum_adjustment": "if the generated level sum is below the floor target, random entries below the cap are incremented until the target is reached"
+    },
+    "add_monsters_final_creation": {
+      "level_source": "DungeonBoard.GenerateMonsterLevels(number_of_selected_placement_tiles)",
+      "distance_source": "DungeonBoard.GetStartDistances()[tile.x, tile.y]",
+      "sort_record": "TilePlusInt(tile, distance_from_start)",
+      "sort_comparison": "DungeonBoard.TileDistanceSort via __DungeonBoard_AddMonsters$callable38$1423_46__",
+      "creation_call": "DungeonBoard.CreateMonsterAtLevel(tile, generated_level, seen)",
+      "seen_argument": "A System.Collections.Generic.Dictionary<string, int>-style working map tracks created monster internalName counts; AddMonsters passes it through CreateMonsterAtLevel and increments the count after each creation.",
+      "evidence": [
+        "AddMonsters calls GenerateMonsterLevels after placement selection, constructs one TilePlusInt per selected tile, sorts the records, then calls virtual slot 110/CreateMonsterAtLevel(t,x,seen).",
+        "The generated level list and sorted TilePlusInt list are iterated with the same index, so level assignment follows the sorted tile order.",
+        "The seen map uses Dictionary-like virtual slots: ContainsKey at slot 0x1d, Add at slot 0x1c, get_Item at slot 0x1a, and set_Item at slot 0x1b."
+      ]
+    }
+  },
+  "boss_generation": {
+    "status": "partially structured from DungeonBoard.CreateBoss plus MonsterFinder/MonsterData methods",
+    "source_methods": [
+      "DungeonBoard.CreateBoss",
+      "DungeonBoard.CreateNamedMonsterAtLevel",
+      "DungeonBoard.CreateFeature",
+      "Dungeon.BonusMonsterLevel",
+      "MonsterFinder.ChooseBoss(e, level)",
+      "MonsterFinder.ChooseBoss(e, level, exclude)",
+      "MonsterFinder.ChooseMonster(e, level, boss)",
+      "MonsterFinder.ChooseMonster(e, level, boss, seen)",
+      "MonsterFinder.ChooseMonster(e, level, boss, seen, exclude)",
+      "MonsterData.Frequency",
+      "MonsterData.CanFit",
+      "MonsterList.GetMonsterList"
+    ],
+    "disassembly": {
+      "DungeonInitialize": "extracted/disassembly/Dungeon_Initialize.txt",
+      "DungeonBuildFakeBoard": "extracted/disassembly/Dungeon_BuildFakeBoard.txt",
+      "DungeonBuildBoard": "extracted/disassembly/Dungeon_BuildBoard.txt",
+      "DungeonPopulateFromString": "extracted/disassembly/Dungeon_PopulateFromString.txt",
+      "DungeonOutputToString": "extracted/disassembly/Dungeon_OutputToString.txt",
+      "CreateBoss": "extracted/disassembly/DungeonBoard_CreateBoss.txt",
+      "CreateNamedMonsterAtLevel": "extracted/disassembly/DungeonBoard_CreateNamedMonsterAtLevel.txt",
+      "CreateFeature": "extracted/disassembly/DungeonBoard_CreateFeature.txt",
+      "ChooseBoss": "extracted/disassembly/MonsterFinder_ChooseBoss_exclude.txt",
+      "ChooseMonsterFull": "extracted/disassembly/MonsterFinder_ChooseMonster_full.txt",
+      "MonsterDataFrequency": "extracted/disassembly/MonsterData_Frequency.txt",
+      "MonsterDataCanFit": "extracted/disassembly/MonsterData_CanFit.txt"
+    },
+    "base_boss_level_formula": "min(last(DungeonBoard.MonsterLevels()) + 1, 10)",
+    "base_boss_level_by_depth": {
+      "1": 4,
+      "2": 7,
+      "3": 10
+    },
+    "floor_boss_lifecycle": [
+      "Dungeon.Initialize allocates floorBoss as a string array of length 3 and floorEnvironments as an int array of length 3.",
+      "Initialize fills each floorBoss slot with the empty string and each floorEnvironments slot with NONE (enum value 7).",
+      "CreateBoss treats a non-empty floorBoss[depth - 1] as a fixed boss override; on first generation these slots are empty.",
+      "Dungeon.BuildBoard and BuildFakeBoard store board.bossName back into floorBoss[depth - 1] after the board is generated.",
+      "The same methods store board.environment into floorEnvironments[depth - 1].",
+      "Dungeon.PopulateFromString writes floorBoss during save/seed restoration, so loaded dungeons can enter CreateBoss through the fixed-boss branch."
+    ],
+    "floor_boss_serialization": {
+      "status": "decoded from Dungeon.PopulateFromString and Dungeon.OutputToString",
+      "source_methods": [
+        "Dungeon.PopulateFromString",
+        "Dungeon.OutputToString"
+      ],
+      "separator": "|",
+      "read_behavior": [
+        "PopulateFromString reads the tail tokens in the same order emitted by OutputToString.",
+        "floorBoss entries are type-checked as strings before being stored into the string array at Dungeon.floorBoss.",
+        "floorEnvironments entries are parsed as ints before being stored into the int array at Dungeon.floorEnvironments."
+      ],
+      "tail_token_order": [
+        {
+          "field": "Dungeon.difficulty",
+          "offset": "0x11c",
+          "type": "int"
+        },
+        {
+          "field": "Dungeon.initialseed",
+          "offset": "0x124",
+          "type": "int"
+        },
+        {
+          "field": "Dungeon.floor1seed",
+          "offset": "0x128",
+          "type": "int"
+        },
+        {
+          "field": "Dungeon.floor2seed",
+          "offset": "0x12c",
+          "type": "int"
+        },
+        {
+          "field": "Dungeon.floor3seed",
+          "offset": "0x130",
+          "type": "int"
+        },
+        {
+          "field": "Dungeon.seedName",
+          "offset": "0x138",
+          "type": "string"
+        },
+        {
+          "field": "Dungeon.savedUserAttributes",
+          "offset": "0x140",
+          "type": "int[]",
+          "format": "count token followed by that many int tokens"
+        },
+        {
+          "field": "Dungeon.levelUpSeed",
+          "offset": "0x148",
+          "type": "int"
+        },
+        {
+          "field": "Dungeon.builtFromSeed",
+          "offset": "0x14c",
+          "type": "bool"
+        },
+        {
+          "field": "Dungeon.floorBoss[0]",
+          "offset": "0x150",
+          "type": "string"
+        },
+        {
+          "field": "Dungeon.floorBoss[1]",
+          "offset": "0x150",
+          "type": "string"
+        },
+        {
+          "field": "Dungeon.floorBoss[2]",
+          "offset": "0x150",
+          "type": "string"
+        },
+        {
+          "field": "Dungeon.floorEnvironments[0]",
+          "offset": "0x158",
+          "type": "int"
+        },
+        {
+          "field": "Dungeon.floorEnvironments[1]",
+          "offset": "0x158",
+          "type": "int"
+        },
+        {
+          "field": "Dungeon.floorEnvironments[2]",
+          "offset": "0x158",
+          "type": "int"
+        }
+      ]
+    },
+    "fixed_floor_boss_logic": "Dungeon.floorBoss[DungeonBoard.depth - 1] is used directly when it is not the empty string.",
+    "random_boss_logic": [
+      "If the current floorBoss entry is empty, CreateBoss builds an exclude list from floorBoss entries on earlier depths.",
+      "It calls MonsterFinder.ChooseBoss(board.environment, baseBossLevel, exclude).",
+      "ChooseBoss repeatedly calls ChooseMonster(environment, level, boss=true) until the returned name is neither empty nor contained in the exclude list.",
+      "CreateBoss then creates the selected monster by name through the same CreateFeature path used by CreateNamedMonsterAtLevel.",
+      "Final monster level is clamp(baseBossLevel + Dungeon.BonusMonsterLevel(), 1, 10), then Monster.LevelTo is called.",
+      "DungeonBoard.bossName stores the spawned monster internalName after creation."
+    ],
+    "monster_data_frequency": {
+      "environment_enum_to_weight_field": {
+        "DUNGEON": "dungeon",
+        "WATER": "water",
+        "VOLCANO": "volcano",
+        "FOREST": "forest",
+        "CRYPT": "crypt",
+        "MOUNTAIN": "mountain"
+      },
+      "field_offsets": {
+        "DUNGEON": "0x34",
+        "WATER": "0x38",
+        "VOLCANO": "0x3c",
+        "FOREST": "0x30",
+        "CRYPT": "0x2c",
+        "MOUNTAIN": "0x40"
+      },
+      "none_environment": "MonsterData.Frequency returns 1 for environment NONE (enum value 7)."
+    },
+    "choose_monster_filters": [
+      "MonsterData.boss must equal the requested boss flag.",
+      "MonsterData.internalName must not equal the seen string.",
+      "In the full ChooseMonster overload, MonsterData.internalName must not equal the single exclude string.",
+      "MonsterData.CanFit(environment, level) must be true.",
+      "CanFit requires Frequency(environment) >= 1 and minLevel <= level <= maxLevel."
+    ],
+    "weighted_selection": [
+      "For each eligible MonsterData, MonsterData.Frequency(environment) is converted to a float weight.",
+      "The full ChooseMonster overload checks a seen collection with Contains(internalName). If present, it calls Remove(internalName) and divides the candidate weight by pow(3, removeResult). Because Remove returns true immediately after Contains, the practical penalty is /3 and one seen occurrence is consumed.",
+      "The boss overload used by ChooseBoss calls the simpler ChooseMonster path with an empty internal exclude list, then rejects earlier floor bosses in the outer ChooseBoss loop.",
+      "Game.RandomFloat() * totalWeight selects a candidate by subtracting weights in MonsterList order.",
+      "If no candidate is eligible, ChooseMonster returns the empty string."
+    ],
+    "special_cases": [
+      "CreateBoss contains a checked-type branch inferred as Lich. The branch temporarily marks the boss tile impassable, gets PlayerTile(), computes GetComponent(playerTile), chooses RandomUnusedTile(component), creates LichHunter on that tile, then restores the boss tile."
+    ],
+    "special_case_details": {
+      "lich_hunter": {
+        "checked_type_token": "0x79b",
+        "checked_type_inferred": "Lich",
+        "confidence": "high",
+        "created_internal_name": "LichHunter",
+        "sequence": [
+          "CreateBoss creates the selected boss feature and casts it to Monster.",
+          "It applies LevelTo(clamp(baseBossLevel + Dungeon.BonusMonsterLevel(), 1, 10)).",
+          "It then runtime-checks the Monster object against token 0x79b, inferred as the Lich class.",
+          "If the check passes, the boss tile is temporarily marked Tile.impassable=true.",
+          "The branch takes PlayerTile(), computes GetComponent(playerTile), chooses RandomUnusedTile(component), and creates a LichHunter feature there.",
+          "The boss tile's impassable flag is restored before returning the boss monster."
+        ],
+        "evidence": [
+          "DungeonBoard.CreateBoss resolves literal LichHunter before the branch and calls CreateFeature(tile, \"LichHunter\") only inside this runtime type-check path.",
+          "The monster model contains a boss monster class and MonsterData row named Lich, with matching internal name Lich and boss=true.",
+          "The branch is reached after the generic Monster cast and LevelTo call, so the checked receiver is the generated boss monster object."
+        ]
+      }
+    },
+    "candidate_pools": {
+      "status": "computed from MonsterData rows using MonsterData.Frequency and CanFit semantics",
+      "boss_candidate_count": 18,
+      "candidate_probability_note": "Base probabilities are weight / total_weight before fixed floorBoss overrides and before removing bosses already used on earlier floors.",
+      "boss_candidates": [
+        {
+          "internal_name": "GoblinKing",
+          "display_name": "Goblin King",
+          "level_range": [
+            4,
+            7
+          ],
+          "environment_weights": {
+            "crypt": 0,
+            "forest": 0,
+            "dungeon": 10,
+            "water": 0,
+            "volcano": 5,
+            "mountain": 0
+          },
+          "sequence": 55
+        },
+        {
+          "internal_name": "IceQueen",
+          "display_name": "Ice Queen",
+          "level_range": [
+            7,
+            10
+          ],
+          "environment_weights": {
+            "crypt": 0,
+            "forest": 10,
+            "dungeon": 0,
+            "water": 5,
+            "volcano": 0,
+            "mountain": 0
+          },
+          "sequence": 56
+        },
+        {
+          "internal_name": "Lich",
+          "display_name": "Lich",
+          "level_range": [
+            7,
+            10
+          ],
+          "environment_weights": {
+            "crypt": 10,
+            "forest": 0,
+            "dungeon": 3,
+            "water": 0,
+            "volcano": 0,
+            "mountain": 0
+          },
+          "sequence": 57
+        },
+        {
+          "internal_name": "Mime",
+          "display_name": "Mime",
+          "level_range": [
+            4,
+            7
+          ],
+          "environment_weights": {
+            "crypt": 2,
+            "forest": 2,
+            "dungeon": 2,
+            "water": 2,
+            "volcano": 2,
+            "mountain": 2
+          },
+          "sequence": 58
+        },
+        {
+          "internal_name": "ChromaticDemon",
+          "display_name": "Chromatic Demon",
+          "level_range": [
+            7,
+            10
+          ],
+          "environment_weights": {
+            "crypt": 0,
+            "forest": 5,
+            "dungeon": 0,
+            "water": 5,
+            "volcano": 5,
+            "mountain": 5
+          },
+          "sequence": 59
+        },
+        {
+          "internal_name": "Titan",
+          "display_name": "Titan",
+          "level_range": [
+            7,
+            10
+          ],
+          "environment_weights": {
+            "crypt": 0,
+            "forest": 0,
+            "dungeon": 5,
+            "water": 0,
+            "volcano": 5,
+            "mountain": 10
+          },
+          "sequence": 60
+        },
+        {
+          "internal_name": "AkamiAscendent",
+          "display_name": "Akami Ascendant",
+          "level_range": [
+            4,
+            7
+          ],
+          "environment_weights": {
+            "crypt": 0,
+            "forest": 5,
+            "dungeon": 0,
+            "water": 10,
+            "volcano": 0,
+            "mountain": 0
+          },
+          "sequence": 61
+        },
+        {
+          "internal_name": "UssuriWarQueen",
+          "display_name": "Ussuri War Queen",
+          "level_range": [
+            4,
+            7
+          ],
+          "environment_weights": {
+            "crypt": 0,
+            "forest": 10,
+            "dungeon": 0,
+            "water": 0,
+            "volcano": 0,
+            "mountain": 5
+          },
+          "sequence": 62
+        },
+        {
+          "internal_name": "GelatinousCube",
+          "display_name": "Gelatinous Cube",
+          "level_range": [
+            4,
+            7
+          ],
+          "environment_weights": {
+            "crypt": 3,
+            "forest": 0,
+            "dungeon": 10,
+            "water": 3,
+            "volcano": 0,
+            "mountain": 0
+          },
+          "sequence": 63
+        },
+        {
+          "internal_name": "Unicorn",
+          "display_name": "Unicorn",
+          "level_range": [
+            4,
+            7
+          ],
+          "environment_weights": {
+            "crypt": 0,
+            "forest": 10,
+            "dungeon": 0,
+            "water": 0,
+            "volcano": 0,
+            "mountain": 0
+          },
+          "sequence": 64
+        },
+        {
+          "internal_name": "Magmadon",
+          "display_name": "Magmadon",
+          "level_range": [
+            4,
+            10
+          ],
+          "environment_weights": {
+            "crypt": 0,
+            "forest": 0,
+            "dungeon": 0,
+            "water": 0,
+            "volcano": 10,
+            "mountain": 0
+          },
+          "sequence": 65
+        },
+        {
+          "internal_name": "Vampire",
+          "display_name": "Vampire",
+          "level_range": [
+            4,
+            7
+          ],
+          "environment_weights": {
+            "crypt": 10,
+            "forest": 0,
+            "dungeon": 3,
+            "water": 0,
+            "volcano": 0,
+            "mountain": 0
+          },
+          "sequence": 66
+        },
+        {
+          "internal_name": "GiantShark",
+          "display_name": "Giant Shark",
+          "level_range": [
+            4,
+            10
+          ],
+          "environment_weights": {
+            "crypt": 0,
+            "forest": 0,
+            "dungeon": 0,
+            "water": 10,
+            "volcano": 0,
+            "mountain": 0
+          },
+          "sequence": 67
+        },
+        {
+          "internal_name": "Genie",
+          "display_name": "Genie",
+          "level_range": [
+            4,
+            7
+          ],
+          "environment_weights": {
+            "crypt": 0,
+            "forest": 0,
+            "dungeon": 0,
+            "water": 3,
+            "volcano": 5,
+            "mountain": 10
+          },
+          "sequence": 68
+        },
+        {
+          "internal_name": "CumuloNimbus",
+          "display_name": "Cumulo Nimbus",
+          "level_range": [
+            4,
+            7
+          ],
+          "environment_weights": {
+            "crypt": 0,
+            "forest": 0,
+            "dungeon": 0,
+            "water": 0,
+            "volcano": 0,
+            "mountain": 10
+          },
+          "sequence": 69
+        },
+        {
+          "internal_name": "Hydra",
+          "display_name": "Hydra",
+          "level_range": [
+            7,
+            10
+          ],
+          "environment_weights": {
+            "crypt": 5,
+            "forest": 5,
+            "dungeon": 0,
+            "water": 5,
+            "volcano": 0,
+            "mountain": 0
+          },
+          "sequence": 70
+        },
+        {
+          "internal_name": "Phoenix",
+          "display_name": "Phoenix",
+          "level_range": [
+            7,
+            10
+          ],
+          "environment_weights": {
+            "crypt": 0,
+            "forest": 0,
+            "dungeon": 5,
+            "water": 0,
+            "volcano": 10,
+            "mountain": 10
+          },
+          "sequence": 71
+        },
+        {
+          "internal_name": "GiantSquid",
+          "display_name": "Kraken",
+          "level_range": [
+            7,
+            10
+          ],
+          "environment_weights": {
+            "crypt": 0,
+            "forest": 5,
+            "dungeon": 0,
+            "water": 10,
+            "volcano": 0,
+            "mountain": 0
+          },
+          "sequence": 72
+        }
+      ],
+      "by_depth": {
+        "1": {
+          "boss_level": 4,
+          "environments": {
+            "DUNGEON": {
+              "total_weight": 25,
+              "candidates": [
+                {
+                  "internal_name": "GoblinKing",
+                  "display_name": "Goblin King",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 55,
+                  "base_probability": 0.4
+                },
+                {
+                  "internal_name": "Mime",
+                  "display_name": "Mime",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 2,
+                  "sequence": 58,
+                  "base_probability": 0.08
+                },
+                {
+                  "internal_name": "GelatinousCube",
+                  "display_name": "Gelatinous Cube",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 63,
+                  "base_probability": 0.4
+                },
+                {
+                  "internal_name": "Vampire",
+                  "display_name": "Vampire",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 3,
+                  "sequence": 66,
+                  "base_probability": 0.12
+                }
+              ]
+            },
+            "WATER": {
+              "total_weight": 28,
+              "candidates": [
+                {
+                  "internal_name": "Mime",
+                  "display_name": "Mime",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 2,
+                  "sequence": 58,
+                  "base_probability": 0.071429
+                },
+                {
+                  "internal_name": "AkamiAscendent",
+                  "display_name": "Akami Ascendant",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 61,
+                  "base_probability": 0.357143
+                },
+                {
+                  "internal_name": "GelatinousCube",
+                  "display_name": "Gelatinous Cube",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 3,
+                  "sequence": 63,
+                  "base_probability": 0.107143
+                },
+                {
+                  "internal_name": "GiantShark",
+                  "display_name": "Giant Shark",
+                  "level_range": [
+                    4,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 67,
+                  "base_probability": 0.357143
+                },
+                {
+                  "internal_name": "Genie",
+                  "display_name": "Genie",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 3,
+                  "sequence": 68,
+                  "base_probability": 0.107143
+                }
+              ]
+            },
+            "VOLCANO": {
+              "total_weight": 22,
+              "candidates": [
+                {
+                  "internal_name": "GoblinKing",
+                  "display_name": "Goblin King",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 5,
+                  "sequence": 55,
+                  "base_probability": 0.227273
+                },
+                {
+                  "internal_name": "Mime",
+                  "display_name": "Mime",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 2,
+                  "sequence": 58,
+                  "base_probability": 0.090909
+                },
+                {
+                  "internal_name": "Magmadon",
+                  "display_name": "Magmadon",
+                  "level_range": [
+                    4,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 65,
+                  "base_probability": 0.454545
+                },
+                {
+                  "internal_name": "Genie",
+                  "display_name": "Genie",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 5,
+                  "sequence": 68,
+                  "base_probability": 0.227273
+                }
+              ]
+            },
+            "FOREST": {
+              "total_weight": 27,
+              "candidates": [
+                {
+                  "internal_name": "Mime",
+                  "display_name": "Mime",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 2,
+                  "sequence": 58,
+                  "base_probability": 0.074074
+                },
+                {
+                  "internal_name": "AkamiAscendent",
+                  "display_name": "Akami Ascendant",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 5,
+                  "sequence": 61,
+                  "base_probability": 0.185185
+                },
+                {
+                  "internal_name": "UssuriWarQueen",
+                  "display_name": "Ussuri War Queen",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 62,
+                  "base_probability": 0.37037
+                },
+                {
+                  "internal_name": "Unicorn",
+                  "display_name": "Unicorn",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 64,
+                  "base_probability": 0.37037
+                }
+              ]
+            },
+            "CRYPT": {
+              "total_weight": 15,
+              "candidates": [
+                {
+                  "internal_name": "Mime",
+                  "display_name": "Mime",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 2,
+                  "sequence": 58,
+                  "base_probability": 0.133333
+                },
+                {
+                  "internal_name": "GelatinousCube",
+                  "display_name": "Gelatinous Cube",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 3,
+                  "sequence": 63,
+                  "base_probability": 0.2
+                },
+                {
+                  "internal_name": "Vampire",
+                  "display_name": "Vampire",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 66,
+                  "base_probability": 0.666667
+                }
+              ]
+            },
+            "MOUNTAIN": {
+              "total_weight": 27,
+              "candidates": [
+                {
+                  "internal_name": "Mime",
+                  "display_name": "Mime",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 2,
+                  "sequence": 58,
+                  "base_probability": 0.074074
+                },
+                {
+                  "internal_name": "UssuriWarQueen",
+                  "display_name": "Ussuri War Queen",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 5,
+                  "sequence": 62,
+                  "base_probability": 0.185185
+                },
+                {
+                  "internal_name": "Genie",
+                  "display_name": "Genie",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 68,
+                  "base_probability": 0.37037
+                },
+                {
+                  "internal_name": "CumuloNimbus",
+                  "display_name": "Cumulo Nimbus",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 69,
+                  "base_probability": 0.37037
+                }
+              ]
+            }
+          }
+        },
+        "2": {
+          "boss_level": 7,
+          "environments": {
+            "DUNGEON": {
+              "total_weight": 38,
+              "candidates": [
+                {
+                  "internal_name": "GoblinKing",
+                  "display_name": "Goblin King",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 55,
+                  "base_probability": 0.263158
+                },
+                {
+                  "internal_name": "Lich",
+                  "display_name": "Lich",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 3,
+                  "sequence": 57,
+                  "base_probability": 0.078947
+                },
+                {
+                  "internal_name": "Mime",
+                  "display_name": "Mime",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 2,
+                  "sequence": 58,
+                  "base_probability": 0.052632
+                },
+                {
+                  "internal_name": "Titan",
+                  "display_name": "Titan",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 60,
+                  "base_probability": 0.131579
+                },
+                {
+                  "internal_name": "GelatinousCube",
+                  "display_name": "Gelatinous Cube",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 63,
+                  "base_probability": 0.263158
+                },
+                {
+                  "internal_name": "Vampire",
+                  "display_name": "Vampire",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 3,
+                  "sequence": 66,
+                  "base_probability": 0.078947
+                },
+                {
+                  "internal_name": "Phoenix",
+                  "display_name": "Phoenix",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 71,
+                  "base_probability": 0.131579
+                }
+              ]
+            },
+            "WATER": {
+              "total_weight": 53,
+              "candidates": [
+                {
+                  "internal_name": "IceQueen",
+                  "display_name": "Ice Queen",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 56,
+                  "base_probability": 0.09434
+                },
+                {
+                  "internal_name": "Mime",
+                  "display_name": "Mime",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 2,
+                  "sequence": 58,
+                  "base_probability": 0.037736
+                },
+                {
+                  "internal_name": "ChromaticDemon",
+                  "display_name": "Chromatic Demon",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 59,
+                  "base_probability": 0.09434
+                },
+                {
+                  "internal_name": "AkamiAscendent",
+                  "display_name": "Akami Ascendant",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 61,
+                  "base_probability": 0.188679
+                },
+                {
+                  "internal_name": "GelatinousCube",
+                  "display_name": "Gelatinous Cube",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 3,
+                  "sequence": 63,
+                  "base_probability": 0.056604
+                },
+                {
+                  "internal_name": "GiantShark",
+                  "display_name": "Giant Shark",
+                  "level_range": [
+                    4,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 67,
+                  "base_probability": 0.188679
+                },
+                {
+                  "internal_name": "Genie",
+                  "display_name": "Genie",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 3,
+                  "sequence": 68,
+                  "base_probability": 0.056604
+                },
+                {
+                  "internal_name": "Hydra",
+                  "display_name": "Hydra",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 70,
+                  "base_probability": 0.09434
+                },
+                {
+                  "internal_name": "GiantSquid",
+                  "display_name": "Kraken",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 72,
+                  "base_probability": 0.188679
+                }
+              ]
+            },
+            "VOLCANO": {
+              "total_weight": 42,
+              "candidates": [
+                {
+                  "internal_name": "GoblinKing",
+                  "display_name": "Goblin King",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 5,
+                  "sequence": 55,
+                  "base_probability": 0.119048
+                },
+                {
+                  "internal_name": "Mime",
+                  "display_name": "Mime",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 2,
+                  "sequence": 58,
+                  "base_probability": 0.047619
+                },
+                {
+                  "internal_name": "ChromaticDemon",
+                  "display_name": "Chromatic Demon",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 59,
+                  "base_probability": 0.119048
+                },
+                {
+                  "internal_name": "Titan",
+                  "display_name": "Titan",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 60,
+                  "base_probability": 0.119048
+                },
+                {
+                  "internal_name": "Magmadon",
+                  "display_name": "Magmadon",
+                  "level_range": [
+                    4,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 65,
+                  "base_probability": 0.238095
+                },
+                {
+                  "internal_name": "Genie",
+                  "display_name": "Genie",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 5,
+                  "sequence": 68,
+                  "base_probability": 0.119048
+                },
+                {
+                  "internal_name": "Phoenix",
+                  "display_name": "Phoenix",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 71,
+                  "base_probability": 0.238095
+                }
+              ]
+            },
+            "FOREST": {
+              "total_weight": 52,
+              "candidates": [
+                {
+                  "internal_name": "IceQueen",
+                  "display_name": "Ice Queen",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 56,
+                  "base_probability": 0.192308
+                },
+                {
+                  "internal_name": "Mime",
+                  "display_name": "Mime",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 2,
+                  "sequence": 58,
+                  "base_probability": 0.038462
+                },
+                {
+                  "internal_name": "ChromaticDemon",
+                  "display_name": "Chromatic Demon",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 59,
+                  "base_probability": 0.096154
+                },
+                {
+                  "internal_name": "AkamiAscendent",
+                  "display_name": "Akami Ascendant",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 5,
+                  "sequence": 61,
+                  "base_probability": 0.096154
+                },
+                {
+                  "internal_name": "UssuriWarQueen",
+                  "display_name": "Ussuri War Queen",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 62,
+                  "base_probability": 0.192308
+                },
+                {
+                  "internal_name": "Unicorn",
+                  "display_name": "Unicorn",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 64,
+                  "base_probability": 0.192308
+                },
+                {
+                  "internal_name": "Hydra",
+                  "display_name": "Hydra",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 70,
+                  "base_probability": 0.096154
+                },
+                {
+                  "internal_name": "GiantSquid",
+                  "display_name": "Kraken",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 72,
+                  "base_probability": 0.096154
+                }
+              ]
+            },
+            "CRYPT": {
+              "total_weight": 30,
+              "candidates": [
+                {
+                  "internal_name": "Lich",
+                  "display_name": "Lich",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 57,
+                  "base_probability": 0.333333
+                },
+                {
+                  "internal_name": "Mime",
+                  "display_name": "Mime",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 2,
+                  "sequence": 58,
+                  "base_probability": 0.066667
+                },
+                {
+                  "internal_name": "GelatinousCube",
+                  "display_name": "Gelatinous Cube",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 3,
+                  "sequence": 63,
+                  "base_probability": 0.1
+                },
+                {
+                  "internal_name": "Vampire",
+                  "display_name": "Vampire",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 66,
+                  "base_probability": 0.333333
+                },
+                {
+                  "internal_name": "Hydra",
+                  "display_name": "Hydra",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 70,
+                  "base_probability": 0.166667
+                }
+              ]
+            },
+            "MOUNTAIN": {
+              "total_weight": 52,
+              "candidates": [
+                {
+                  "internal_name": "Mime",
+                  "display_name": "Mime",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 2,
+                  "sequence": 58,
+                  "base_probability": 0.038462
+                },
+                {
+                  "internal_name": "ChromaticDemon",
+                  "display_name": "Chromatic Demon",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 59,
+                  "base_probability": 0.096154
+                },
+                {
+                  "internal_name": "Titan",
+                  "display_name": "Titan",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 60,
+                  "base_probability": 0.192308
+                },
+                {
+                  "internal_name": "UssuriWarQueen",
+                  "display_name": "Ussuri War Queen",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 5,
+                  "sequence": 62,
+                  "base_probability": 0.096154
+                },
+                {
+                  "internal_name": "Genie",
+                  "display_name": "Genie",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 68,
+                  "base_probability": 0.192308
+                },
+                {
+                  "internal_name": "CumuloNimbus",
+                  "display_name": "Cumulo Nimbus",
+                  "level_range": [
+                    4,
+                    7
+                  ],
+                  "weight": 10,
+                  "sequence": 69,
+                  "base_probability": 0.192308
+                },
+                {
+                  "internal_name": "Phoenix",
+                  "display_name": "Phoenix",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 71,
+                  "base_probability": 0.192308
+                }
+              ]
+            }
+          }
+        },
+        "3": {
+          "boss_level": 10,
+          "environments": {
+            "DUNGEON": {
+              "total_weight": 13,
+              "candidates": [
+                {
+                  "internal_name": "Lich",
+                  "display_name": "Lich",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 3,
+                  "sequence": 57,
+                  "base_probability": 0.230769
+                },
+                {
+                  "internal_name": "Titan",
+                  "display_name": "Titan",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 60,
+                  "base_probability": 0.384615
+                },
+                {
+                  "internal_name": "Phoenix",
+                  "display_name": "Phoenix",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 71,
+                  "base_probability": 0.384615
+                }
+              ]
+            },
+            "WATER": {
+              "total_weight": 35,
+              "candidates": [
+                {
+                  "internal_name": "IceQueen",
+                  "display_name": "Ice Queen",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 56,
+                  "base_probability": 0.142857
+                },
+                {
+                  "internal_name": "ChromaticDemon",
+                  "display_name": "Chromatic Demon",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 59,
+                  "base_probability": 0.142857
+                },
+                {
+                  "internal_name": "GiantShark",
+                  "display_name": "Giant Shark",
+                  "level_range": [
+                    4,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 67,
+                  "base_probability": 0.285714
+                },
+                {
+                  "internal_name": "Hydra",
+                  "display_name": "Hydra",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 70,
+                  "base_probability": 0.142857
+                },
+                {
+                  "internal_name": "GiantSquid",
+                  "display_name": "Kraken",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 72,
+                  "base_probability": 0.285714
+                }
+              ]
+            },
+            "VOLCANO": {
+              "total_weight": 30,
+              "candidates": [
+                {
+                  "internal_name": "ChromaticDemon",
+                  "display_name": "Chromatic Demon",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 59,
+                  "base_probability": 0.166667
+                },
+                {
+                  "internal_name": "Titan",
+                  "display_name": "Titan",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 60,
+                  "base_probability": 0.166667
+                },
+                {
+                  "internal_name": "Magmadon",
+                  "display_name": "Magmadon",
+                  "level_range": [
+                    4,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 65,
+                  "base_probability": 0.333333
+                },
+                {
+                  "internal_name": "Phoenix",
+                  "display_name": "Phoenix",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 71,
+                  "base_probability": 0.333333
+                }
+              ]
+            },
+            "FOREST": {
+              "total_weight": 25,
+              "candidates": [
+                {
+                  "internal_name": "IceQueen",
+                  "display_name": "Ice Queen",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 56,
+                  "base_probability": 0.4
+                },
+                {
+                  "internal_name": "ChromaticDemon",
+                  "display_name": "Chromatic Demon",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 59,
+                  "base_probability": 0.2
+                },
+                {
+                  "internal_name": "Hydra",
+                  "display_name": "Hydra",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 70,
+                  "base_probability": 0.2
+                },
+                {
+                  "internal_name": "GiantSquid",
+                  "display_name": "Kraken",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 72,
+                  "base_probability": 0.2
+                }
+              ]
+            },
+            "CRYPT": {
+              "total_weight": 15,
+              "candidates": [
+                {
+                  "internal_name": "Lich",
+                  "display_name": "Lich",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 57,
+                  "base_probability": 0.666667
+                },
+                {
+                  "internal_name": "Hydra",
+                  "display_name": "Hydra",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 70,
+                  "base_probability": 0.333333
+                }
+              ]
+            },
+            "MOUNTAIN": {
+              "total_weight": 25,
+              "candidates": [
+                {
+                  "internal_name": "ChromaticDemon",
+                  "display_name": "Chromatic Demon",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 5,
+                  "sequence": 59,
+                  "base_probability": 0.2
+                },
+                {
+                  "internal_name": "Titan",
+                  "display_name": "Titan",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 60,
+                  "base_probability": 0.4
+                },
+                {
+                  "internal_name": "Phoenix",
+                  "display_name": "Phoenix",
+                  "level_range": [
+                    7,
+                    10
+                  ],
+                  "weight": 10,
+                  "sequence": 71,
+                  "base_probability": 0.4
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "unresolved": []
+  },
+  "special_rewards_from_add_rewards": [
+    "AltarToJeremiad",
+    "AltarToAlcoran",
+    "AltarToCairn",
+    "AltarToGauss",
+    "AltarToLiara",
+    "AltarToAston",
+    "MushroomPatch",
+    "Brainsucker"
+  ],
+  "traps": {
+    "DungeonBoard.AddTraps": "empty method body in this build; disassembly is ret only"
+  },
+  "build_maze": {
+    "status": "structured from DungeonBoard.BuildMaze, CanDelete, FindDeletableSquares, and IsConnected",
+    "source_methods": [
+      "DungeonBoard.BuildMaze",
+      "DungeonBoard.CanDelete",
+      "DungeonBoard.FindDeletableSquares",
+      "DungeonBoard.IsConnected",
+      "DungeonBoard.GetComponent",
+      "DungeonBoard.AllTiles"
+    ],
+    "disassembly": {
+      "BuildMaze": "extracted/disassembly/DungeonBoard_BuildMaze.txt",
+      "CanDelete": "extracted/disassembly/DungeonBoard_CanDelete.txt",
+      "FindDeletableSquares": "extracted/disassembly/DungeonBoard_FindDeletableSquares.txt",
+      "IsConnected": "extracted/disassembly/DungeonBoard_IsConnected.txt"
+    },
+    "tile_wall_field": {
+      "field": "Tile.impassable",
+      "offset": "0x90",
+      "evidence": [
+        "Tile.BlocksMovement returns true immediately when [tile + 0x90] is set.",
+        "DungeonBoard.CanDelete temporarily sets [tile + 0x90] to 1, calls IsConnected, then restores it to 0.",
+        "DungeonBoard.BuildMaze permanently sets [tile + 0x90] to 1 when the deletion check and 50% random roll pass."
+      ]
+    },
+    "algorithm": [
+      "Get all board tiles with DungeonBoard.AllTiles().",
+      "Shuffle that list with Utility.Shuffle.",
+      "For each shuffled tile, call DungeonBoard.CanDelete(tile).",
+      "CanDelete rejects tiles already marked impassable; otherwise it temporarily marks Tile.impassable=true, returns IsConnected(), then restores Tile.impassable=false.",
+      "IsConnected counts every non-impassable tile, finds the first non-impassable tile, computes its connected component, and returns true if component size equals the total open-tile count. If there are no open tiles, it returns true.",
+      "If CanDelete(tile) is true and Game.RandomFloat() < 0.5, BuildMaze marks Tile.impassable=true.",
+      "If the board has a physical representation, BuildMaze refreshes the affected tile physical after changing the wall state."
+    ],
+    "wall_probability_per_candidate": 0.5,
+    "connectivity_invariant": "BuildMaze only converts a tile into a wall when all remaining passable tiles stay connected."
+  },
+  "pathing_and_cut_vertices": {
+    "status": "structured from PathBetween, cut-vertex helpers, AddTaverns, and AddMonsters",
+    "source_methods": [
+      "DungeonBoard.PathBetweenTryNumber",
+      "DungeonBoard.PathBetween",
+      "DungeonBoard.TryMoveTo",
+      "DungeonBoard.FindCutVertexInfos",
+      "DungeonBoard.FindBestCutVertex",
+      "DungeonBoard.CVCompare",
+      "DungeonBoard.AddTaverns",
+      "DungeonBoard.AddMonsters",
+      "TilePlusInt.ctor",
+      "Tile.IsUnused",
+      "Tile.CanBeACut",
+      "Tile.BlocksMovement",
+      "Tile.PrimeFeature",
+      "Tile.PrimeBlockingFeature",
+      "Tile.GetMonster",
+      "Tile.HasMonster"
+    ],
+    "disassembly": {
+      "PathBetweenTryNumber": "extracted/disassembly/DungeonBoard_PathBetweenTryNumber.txt",
+      "PathBetween": "extracted/disassembly/DungeonBoard_PathBetween.txt",
+      "TryMoveTo": "extracted/disassembly/DungeonBoard_TryMoveTo.txt",
+      "FindCutVertexInfos": "extracted/disassembly/DungeonBoard_FindCutVertexInfos.txt",
+      "FindBestCutVertex": "extracted/disassembly/DungeonBoard_FindBestCutVertex.txt",
+      "CVCompare": "extracted/disassembly/DungeonBoard_CVCompare.txt",
+      "TileDistanceSort": "extracted/disassembly/DungeonBoard_TileDistanceSort.txt",
+      "AddTaverns": "extracted/disassembly/DungeonBoard_AddTaverns.txt",
+      "AddMonsters": "extracted/disassembly/DungeonBoard_AddMonsters.txt",
+      "RandomUnusedTile": "extracted/disassembly/DungeonBoard_RandomUnusedTile.txt",
+      "RandomUnusedTileList": "extracted/disassembly/DungeonBoard_RandomUnusedTile_list.txt",
+      "RandomUnusedNeighbor": "extracted/disassembly/DungeonBoard_RandomUnusedNeighbor.txt",
+      "TileIsUnused": "extracted/disassembly/Tile_IsUnused.txt",
+      "TileMonsterPercent": "extracted/disassembly/Tile_MonsterPercent.txt",
+      "TileCanBeACut": "extracted/disassembly/Tile_CanBeACut.txt",
+      "TileBlocksMovement": "extracted/disassembly/Tile_BlocksMovement.txt",
+      "TilePrimeFeature": "extracted/disassembly/Tile_PrimeFeature.txt",
+      "TilePrimeBlockingFeature": "extracted/disassembly/Tile_PrimeBlockingFeature.txt",
+      "TileGetMonster": "extracted/disassembly/Tile_GetMonster.txt",
+      "TileHasMonster": "extracted/disassembly/Tile_HasMonster.txt",
+      "TileUp": "extracted/disassembly/Tile_Up.txt",
+      "TileDown": "extracted/disassembly/Tile_Down.txt",
+      "TileRight": "extracted/disassembly/Tile_Right.txt",
+      "TileLeft": "extracted/disassembly/Tile_Left.txt",
+      "TilePlusIntCtor": "extracted/disassembly/TilePlusInt__ctor.txt"
+    },
+    "path_between": {
+      "wrapper": [
+        "DungeonBoard.PathBetween(a, b) calls PathBetweenTryNumber(a, b, 1).",
+        "If the first attempt returns null, PathBetween retries with PathBetweenTryNumber(a, b, 2)."
+      ],
+      "try_number_algorithm": [
+        "Allocates a board-sized predecessor grid using the dimensions of DungeonBoard.board.",
+        "Seeds the frontier with the start tile and stores predecessor[start.x, start.y] = start.",
+        "While the frontier is non-empty, it reads the first tile, shuffles that tile's Neighbors(), and considers each neighbor.",
+        "A neighbor is only accepted if it has not already been written into the predecessor grid and passes the movement/avoidance predicates for the current tryNumber.",
+        "Accepted neighbors are written as predecessor[neighbor.x, neighbor.y] = current and appended to the frontier.",
+        "When the destination is reached, the method reconstructs the path by walking the predecessor grid backward from destination to start.",
+        "If no destination predecessor is found, it returns null."
+      ],
+      "neighbor_acceptance_predicates": {
+        "shared_gate": [
+          "The neighbor must either pass Tile.OpenAndVisible(), or be the destination tile and pass Tile.MoveNextTo().",
+          "The predecessor grid entry for the neighbor must still be null, so each tile is visited at most once."
+        ],
+        "try_number_0": [
+          "Code path exists even though PathBetween() does not use it directly.",
+          "Reject Tile.AvoidIfPossible() neighbors unless the neighbor is the destination.",
+          "Reject Tile.WillRevealDark() neighbors unless the neighbor is the destination."
+        ],
+        "try_number_1": [
+          "This is the first PathBetween() attempt.",
+          "Reject Tile.AvoidIfPossible() neighbors unless the neighbor is the destination.",
+          "Tile.WillRevealDark() is not checked in this attempt."
+        ],
+        "try_number_2": [
+          "This is the PathBetween() retry when try_number_1 returns null.",
+          "The retry ignores Tile.AvoidIfPossible() and Tile.WillRevealDark(), keeping only the shared visibility/destination and unvisited checks."
+        ]
+      },
+      "try_number_note": "PathBetween() uses tryNumber 1 first and retry tryNumber 2 only after a null result; tryNumber 0 is present in PathBetweenTryNumber but is not used by the wrapper."
+    },
+    "cut_vertex_detection": {
+      "candidate_source": "DungeonBoard.FindDeletableSquares()",
+      "candidate_filters": [
+        "Tile.IsUnused()",
+        "Tile.CanBeACut()"
+      ],
+      "component_test": [
+        "FindCutVertexInfos records the baseline GetThreatComponents().Count.",
+        "For each candidate, it temporarily sets Tile.impassable at offset 0x90 to true.",
+        "It recomputes GetThreatComponents(), restores Tile.impassable to false, and keeps the candidate only if the component count increased."
+      ],
+      "record_layout": [
+        {
+          "offset": "0x10",
+          "meaning": "component list after temporarily cutting the tile"
+        },
+        {
+          "offset": "0x18",
+          "meaning": "candidate Tile pointer returned by FindBestCutVertex"
+        }
+      ],
+      "selection": [
+        "FindBestCutVertex returns null when FindCutVertexInfos returns no candidates.",
+        "Otherwise it scans the candidate records with CVCompare-style ordering and returns the record's tile pointer from offset 0x18."
+      ]
+    },
+    "tile_is_unused": {
+      "source_method": "Tile.IsUnused",
+      "disassembly": "extracted/disassembly/Tile_IsUnused.txt",
+      "status": "child filter recovered; feature registration side effects still modeled approximately",
+      "rules": [
+        "If Tile.impassable at offset 0x90 is true, return false immediately.",
+        "Otherwise call VirtualObject.Children() through slot 0x1e and iterate the child object list.",
+        "Each child is resolved through the same generic cast/helper sequence used by Tile.PrimeFeature, Tile.PrimeBlockingFeature, Tile.BlocksMovement, Tile.GetMonster, and Tile.HasMonster.",
+        "If the resolved object is runtime type token 0x7a2, inferred as DungeonFeature, return false.",
+        "If the loop finishes without finding a DungeonFeature, return true."
+      ],
+      "type_evidence": [
+        "The same token 0x7a2 is used by Tile.PrimeFeature immediately before virtual slot 0x43, which maps to DungeonFeature.Priority.",
+        "Tile.BlocksMovement uses token 0x7a2 before virtual slot 0x4a, which maps to DungeonFeature.BlocksMovement.",
+        "Tile.GetMonster and Tile.HasMonster use token 0x77e for Monster; Monster's raw parent type is the DungeonFeature type, so monster children are covered by the DungeonFeature check."
+      ],
+      "remaining_modeling_gap": [
+        "The exact names of the compiler-generated iterator/cast helpers are not recovered.",
+        "The seed harness represents child registration through occupied placement sets rather than the original VirtualObject parent/child graph."
+      ]
+    },
+    "tile_can_be_a_cut": {
+      "source_method": "Tile.CanBeACut",
+      "disassembly": "extracted/disassembly/Tile_CanBeACut.txt",
+      "neighbor_slots": {
+        "up": 69,
+        "down": 70,
+        "right": 71,
+        "left": 72
+      },
+      "neighbor_accessors": {
+        "up": "TileAt(x, y + 1)",
+        "down": "TileAt(x, y - 1)",
+        "right": "TileAt(x + 1, y)",
+        "left": "TileAt(x - 1, y)"
+      },
+      "formula": [
+        "Initialize neighbor_count = 0 and gap_count = 0.",
+        "If Left() exists, increment neighbor_count; increment gap_count unless Left().Up() and Up() both exist.",
+        "If Up() exists, increment neighbor_count; increment gap_count unless Up().Right() and Right() both exist.",
+        "If Right() exists, increment neighbor_count; increment gap_count unless Right().Down() and Down() both exist.",
+        "If Down() exists, increment neighbor_count; increment gap_count unless Down().Left() and Left() both exist.",
+        "Return true iff neighbor_count >= 2 and gap_count > 1."
+      ],
+      "notes": [
+        "The neighbor accessors delegate to DungeonBoard.TileAt, which bounds-checks coordinates; this helper is geometric and does not read Tile.impassable directly.",
+        "FindCutVertexInfos still applies Tile.IsUnused and the component-count test after this geometric prefilter."
+      ]
+    },
+    "tile_monster_percent": {
+      "source_method": "Tile.MonsterPercent",
+      "disassembly": "extracted/disassembly/Tile_MonsterPercent.txt",
+      "neighbor_slots": {
+        "left": 72,
+        "right": 71,
+        "up": 69,
+        "down": 70
+      },
+      "formula": [
+        "Count open horizontal neighbors as !Left.impassable + !Right.impassable; missing neighbors count as 0.",
+        "Count open vertical neighbors as !Up.impassable + !Down.impassable; missing neighbors count as 0.",
+        "If exactly two total neighbors are open and they form a straight horizontal or vertical corridor, return 0.30.",
+        "If all four neighbors are open, return 0.15.",
+        "If two or three total neighbors are open but not the straight-corridor case, return 0.10.",
+        "Otherwise return 0.05."
+      ],
+      "probabilities": {
+        "straight_two_way": {
+          "vmaddr": "0x100f54904",
+          "file_offset": "0xf54904",
+          "bits": "0x3e99999a",
+          "value": 0.300000012
+        },
+        "four_way_cross": {
+          "vmaddr": "0x100f55200",
+          "file_offset": "0xf55200",
+          "bits": "0x3e19999a",
+          "value": 0.150000006
+        },
+        "corner_or_t_junction": {
+          "vmaddr": "0x100f54920",
+          "file_offset": "0xf54920",
+          "bits": "0x3dcccccd",
+          "value": 0.100000001
+        },
+        "dead_end_or_isolated": {
+          "vmaddr": "0x100f5523c",
+          "file_offset": "0xf5523c",
+          "bits": "0x3d4ccccd",
+          "value": 0.050000001
+        }
+      }
+    },
+    "tile_distance_sort": {
+      "source_method": "DungeonBoard.TileDistanceSort",
+      "disassembly": "extracted/disassembly/DungeonBoard_TileDistanceSort.txt",
+      "record_layout": {
+        "TilePlusInt.tile": "0x10",
+        "TilePlusInt.n": "0x18"
+      },
+      "comparison": "a.n.CompareTo(b.n); selected monster tiles are sorted by ascending GetStartDistances()[tile.x, tile.y]."
+    },
+    "random_unused_tile": {
+      "source_methods": [
+        "DungeonBoard.RandomUnusedTile()",
+        "DungeonBoard.RandomUnusedTile(List<Tile>)",
+        "DungeonBoard.RandomUnusedNeighbor(Tile)"
+      ],
+      "disassembly": {
+        "RandomUnusedTile": "extracted/disassembly/DungeonBoard_RandomUnusedTile.txt",
+        "RandomUnusedTileList": "extracted/disassembly/DungeonBoard_RandomUnusedTile_list.txt",
+        "RandomUnusedNeighbor": "extracted/disassembly/DungeonBoard_RandomUnusedNeighbor.txt"
+      },
+      "rules": [
+        "RandomUnusedTile() calls FindDeletableSquares(), then delegates to RandomUnusedTile(list).",
+        "RandomUnusedTile(list) shuffles the input list and returns the first tile whose Tile.IsUnused() is true; if none match, it returns null.",
+        "RandomUnusedNeighbor(tile) delegates through the same list-based logic over the source tile's neighbors."
+      ]
+    },
+    "add_monsters_placement": {
+      "monster_count": {
+        "depth_1": 6,
+        "other_depths": "Game.RandomRange(9, 11)"
+      },
+      "working_lists": [
+        {
+          "name": "selected_tiles",
+          "type": "System.Collections.Generic.List<Tile>",
+          "role": "final monster placement tiles; initially receives selected cut vertices and later receives ordinary candidates/backfill tiles",
+          "evidence": [
+            "Add uses virtual slot 0x16, Contains uses slot 0x18, and indexed reads use slot 0x1f, matching Generic.List<T> slots.",
+            "This list is stored at stack offset 0x28 and is used for final TilePlusInt construction."
+          ]
+        },
+        {
+          "name": "temporary_neighbor_blockers",
+          "type": "System.Collections.Generic.List<Tile>",
+          "role": "tiles whose impassable flag is temporarily set while selecting monster locations",
+          "evidence": [
+            "The list receives unblocked neighbors of selected placement tiles, writes Tile.impassable=true, and is released at address 0x100279cf0."
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "name": "cut_vertex_reservation",
+          "algorithm": [
+            "Loop calls DungeonBoard.FindBestCutVertex() until it has selected five tiles or the helper returns null.",
+            "Each returned tile is appended to selected_tiles and immediately marked Tile.impassable=true.",
+            "The placement counter starts at the number of reserved cut-vertex tiles."
+          ]
+        },
+        {
+          "name": "neighbor_blocking_for_reserved_tiles",
+          "algorithm": [
+            "Iterate selected_tiles.",
+            "For each selected tile, iterate Tile.Neighbors().",
+            "If a neighbor is not already impassable, append it to temporary_neighbor_blockers and mark Tile.impassable=true."
+          ]
+        },
+        {
+          "name": "probabilistic_pass",
+          "algorithm": [
+            "Compute all_tiles = Utility.Shuffle(DungeonBoard.AllTiles()).",
+            "Iterate all_tiles in shuffled order while selected_tiles.Count is below the floor monster target.",
+            "A tile is accepted when Tile.IsUnused() is true and Game.RandomFloat() < Tile.MonsterPercent().",
+            "Accepted tiles are appended to selected_tiles.",
+            "Each accepted tile's unblocked neighbors are added to temporary_neighbor_blockers and temporarily marked impassable."
+          ]
+        },
+        {
+          "name": "release_neighbor_blockers",
+          "algorithm": [
+            "Iterate temporary_neighbor_blockers.",
+            "Clear Tile.impassable=false for each entry at AddMonsters address 0x100279cf0."
+          ]
+        },
+        {
+          "name": "deterministic_backfill",
+          "algorithm": [
+            "If the placement counter is still below the floor monster target, iterate the same shuffled all_tiles list again.",
+            "Append each Tile.IsUnused() tile that is not already in selected_tiles.",
+            "Stop when selected_tiles reaches the target or the shuffled list is exhausted."
+          ]
+        },
+        {
+          "name": "release_selected_tiles",
+          "algorithm": [
+            "Iterate selected_tiles.",
+            "Clear Tile.impassable=false for each entry at AddMonsters address 0x10027a000 before final monster construction."
+          ]
+        }
+      ],
+      "notes": [
+        "AddMonsters does not call PathBetween; the recovered repair behavior is temporary neighbor blocking plus explicit release.",
+        "Temporary neighbor blocking prevents immediately adjacent candidate choices while the probabilistic pass is running.",
+        "The final selected tile list, not the temporary blocker list, drives GenerateMonsterLevels and CreateMonsterAtLevel.",
+        "Tile.MonsterPercent and TileDistanceSort are now separately structured in this artifact."
+      ]
+    },
+    "add_monsters_cut_vertex_use": [
+      "AddMonsters calls FindBestCutVertex in a loop that can select up to five non-null tiles.",
+      "Each selected cut vertex is appended to selected_tiles and immediately marked Tile.impassable=true at offset 0x90.",
+      "The placement counter starts as the number of selected cut vertices and is later incremented toward the floor monster target.",
+      "Before the probabilistic pass, AddMonsters temporarily blocks unblocked neighbors of selected cut vertices.",
+      "The probabilistic pass accepts shuffled unused tiles when Game.RandomFloat() < Tile.MonsterPercent(), then temporarily blocks their unblocked neighbors.",
+      "After that pass, the temporary_neighbor_blockers list is released at AddMonsters address 0x100279cf0.",
+      "If the target count is still not reached, AddMonsters backfills from the same shuffled AllTiles list with unused tiles not already in selected_tiles.",
+      "Before final monster construction, AddMonsters releases selected_tiles by clearing Tile.impassable=false at address 0x10027a000.",
+      "Final construction builds TilePlusInt(tile, GetStartDistances()[tile.x, tile.y]) records from selected_tiles, sorts them with the DungeonBoard.TileDistanceSort callable, then creates monsters in that sorted order."
+    ],
+    "tavern_placement": {
+      "feature_name": "Tavern",
+      "entry_guard": {
+        "summary": "AddTaverns returns before placement unless Dungeon.player.profession is present and passes the method's runtime type check inferred as ProfessionBard.",
+        "receiver_chain": [
+          {
+            "owner_type": "DungeonBoard",
+            "operation": "VirtualObject.get_dungeon()",
+            "result_type": "Dungeon"
+          },
+          {
+            "owner_type": "Dungeon",
+            "field_offset": "0x80",
+            "field_name": "player",
+            "result_type": "DungeonPlayer"
+          },
+          {
+            "owner_type": "DungeonPlayer",
+            "field_offset": "0xd8",
+            "field_name": "profession",
+            "result_type": "ProfessionBase"
+          }
+        ],
+        "conditions": [
+          "Dungeon.player.profession must be non-null.",
+          "The value must pass the runtime type check using metadata type token 0x7a7, inferred as ProfessionBard."
+        ],
+        "evidence": [
+          "DungeonBoard.AddTaverns reads Dungeon.player at offset 0x80, then reads offset 0xd8 from that DungeonPlayer object before any Tavern placement.",
+          "DungeonPlayer.Initialize writes the result of ProfessionBase.Build(...) to offset 0xd8.",
+          "ProfessionBase.Build returns a ProfessionBase subtype and validates the constructed object against the ProfessionBase runtime class token before returning it.",
+          "AddTaverns immediately follows the runtime check with Bard-specific tavern placement and the WINBARD2/Musical Champion achievement gate."
+        ],
+        "runtime_type_check": {
+          "token": "0x7a7",
+          "inferred_type": "ProfessionBard",
+          "confidence": "high",
+          "basis": "The checked object is DungeonPlayer.profession, and the only downstream profession-specific tavern rule is the Bard WINBARD2 achievement branch."
+        }
+      },
+      "rules": [
+        "AddTaverns creates tavern features through DungeonBoard.CreateFeature(tile, \"Tavern\").",
+        "On depth 1, the target tile is RandomUnusedNeighbor(PlayerTile()).",
+        "On later depths, the target tile is RandomUnusedTile().",
+        "If depth is 1 and DungeonUser.GetAttribute(WINBARD2=149) is nonzero, AddTaverns creates an additional Tavern at RandomUnusedTile()."
+      ],
+      "achievement_gate": {
+        "attribute": 149,
+        "attribute_name": "WINBARD2",
+        "achievement_internal_name": "WinBard2",
+        "achievement_display_name": "Musical Champion"
+      }
+    },
+    "unresolved": []
+  }
+}

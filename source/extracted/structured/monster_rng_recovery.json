@@ -1,0 +1,235 @@
+{
+  "source": {
+    "monsters": "extracted/structured/monster_catalog.json",
+    "game_in_game_random_range_disassembly": "extracted/disassembly/Game_InGameRandomRange.txt",
+    "goblin_start_turn_disassembly": "extracted/disassembly/GoblinMechanist_StartTurn.txt",
+    "goblin_build_equipment_disassembly": "extracted/disassembly/GoblinMechanist_BuildRandomEquipment.txt",
+    "revenant_effect_disassembly": "extracted/disassembly/Revenant_RevenantEffect.txt",
+    "deck_shuffle_disassembly": "extracted/disassembly/Deck_Shuffle.txt"
+  },
+  "notes": [
+    "This artifact recovers static monster RNG/list-order shape for the only two monster RNG/shuffle candidates in monster_runtime_accuracy_gaps.json.",
+    "It records call ordering, bounds, candidate equipment, and Deck.Shuffle mutation shape, but does not replay original RNG stream position."
+  ],
+  "summary": {
+    "check_count": 14,
+    "passed_count": 14,
+    "failed_count": 0,
+    "monster_rng_candidate_count": 2,
+    "monster_rng_or_shuffle_step_count": 3,
+    "goblin_mechanist_rng_range_recovered": true,
+    "goblin_mechanist_rng_branch_shape_recovered": true,
+    "goblin_mechanist_equipment_candidate_count": 9,
+    "goblin_mechanist_equipment_rng_shape_recovered": true,
+    "revenant_deck_shuffle_shape_recovered": true,
+    "deck_shuffle_remaining_deck_fisher_yates_shape_recovered": true,
+    "in_game_random_range_inclusive_upper_bound_recovered": true,
+    "monster_rng_static_shape_recovered": true,
+    "original_monster_rng_stream_replay_complete": false,
+    "original_monster_shuffle_index_stream_replay_complete": false
+  },
+  "random_range_helper": {
+    "status": "inclusive_upper_bound_recovered",
+    "game_rng_field_offset": "0xc8",
+    "argument_shape": "Random.Next(a, b + 1)",
+    "evidence_confirmed": true,
+    "original_rng_stream_replay_complete": false
+  },
+  "monster_rng_cases": [
+    {
+      "monster": "GoblinMechanist",
+      "source_methods": [
+        "StartTurn",
+        "BuildRandomEquipment"
+      ],
+      "start_turn": {
+        "status": "roll_zero_explodes_nonzero_builds_equipment",
+        "rng_call": {
+          "method": "GoblinMechanist.StartTurn",
+          "operation": "Game.InGameRandomRange",
+          "range_inclusive": [
+            0,
+            4
+          ],
+          "catalog_step_count": 1,
+          "call_address": "0x10010db80"
+        },
+        "branch_shape": {
+          "zero_roll": "show EXPLOSION! visual and call Player.TakeDamage(5, FIRE)",
+          "nonzero_roll": "call GoblinMechanist.BuildRandomEquipment and show Built <equipment> visual",
+          "evidence_confirmed": true
+        },
+        "build_equipment_step_count": 1
+      },
+      "build_random_equipment": {
+        "status": "candidate_list_and_random_index_recovered",
+        "candidate_equipment": [
+          "Sword",
+          "Shield",
+          "Armor",
+          "CloakOfInvisibility",
+          "DartingDaggers",
+          "BootsOfSpeed",
+          "CloakOfFlame",
+          "Forcefield",
+          "JeremiadsBracer"
+        ],
+        "candidate_count": 9,
+        "random_index_shape": "Game.InGameRandomRange(0, candidate_count - 1)",
+        "create_equipment_slot": 339,
+        "evidence_confirmed": true
+      },
+      "original_rng_stream_replay_complete": false
+    },
+    {
+      "monster": "Revenant",
+      "source_methods": [
+        "RevenantEffect"
+      ],
+      "revenant_effect": {
+        "status": "add_scream_then_shuffle_deck",
+        "special_method": "RevenantEffect",
+        "added_card": "Scream",
+        "add_card_count": 3,
+        "shuffle_step_count": 1,
+        "shuffle_call_address": "0x10011cdb8",
+        "evidence_confirmed": true
+      },
+      "deck_shuffle": {
+        "status": "remaining_deck_fisher_yates_shape_recovered",
+        "deck_list_field_offset": "0x78",
+        "draw_index_field_offset": "0x80",
+        "algorithm": "for index from deck.draw_index to Count-1: random_index = Game.InGameRandomRange(index, Count-1); swap list[index] and list[random_index]",
+        "evidence_confirmed": true,
+        "original_shuffle_index_stream_replay_complete": false
+      },
+      "original_shuffle_index_stream_replay_complete": false
+    }
+  ],
+  "checks": [
+    {
+      "name": "catalog:goblin_mechanist_rng_step_count",
+      "status": "passed",
+      "actual": 1,
+      "expected": 1,
+      "details": {}
+    },
+    {
+      "name": "catalog:goblin_mechanist_build_equipment_step_count",
+      "status": "passed",
+      "actual": 1,
+      "expected": 1,
+      "details": {}
+    },
+    {
+      "name": "catalog:revenant_add_card_step_count",
+      "status": "passed",
+      "actual": 3,
+      "expected": 3,
+      "details": {}
+    },
+    {
+      "name": "catalog:revenant_shuffle_step_count",
+      "status": "passed",
+      "actual": 1,
+      "expected": 1,
+      "details": {}
+    },
+    {
+      "name": "catalog:goblin_mechanist_rng_range",
+      "status": "passed",
+      "actual": {
+        "a": 0,
+        "b": 4
+      },
+      "expected": {
+        "a": 0,
+        "b": 4
+      },
+      "details": {}
+    },
+    {
+      "name": "rng:in_game_random_range_inclusive_upper_bound_recovered",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "goblin:start_turn_rng_branch_shape_recovered",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "goblin:equipment_candidate_list_and_random_index_recovered",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "goblin:equipment_candidate_count",
+      "status": "passed",
+      "actual": 9,
+      "expected": 9,
+      "details": {}
+    },
+    {
+      "name": "goblin:equipment_candidate_list",
+      "status": "passed",
+      "actual": [
+        "Sword",
+        "Shield",
+        "Armor",
+        "CloakOfInvisibility",
+        "DartingDaggers",
+        "BootsOfSpeed",
+        "CloakOfFlame",
+        "Forcefield",
+        "JeremiadsBracer"
+      ],
+      "expected": [
+        "Sword",
+        "Shield",
+        "Armor",
+        "CloakOfInvisibility",
+        "DartingDaggers",
+        "BootsOfSpeed",
+        "CloakOfFlame",
+        "Forcefield",
+        "JeremiadsBracer"
+      ],
+      "details": {}
+    },
+    {
+      "name": "revenant:add_scream_then_shuffle_shape_recovered",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "deck:shuffle_remaining_deck_fisher_yates_shape_recovered",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "decision:original_rng_stream_replay_complete",
+      "status": "passed",
+      "actual": false,
+      "expected": false,
+      "details": {}
+    },
+    {
+      "name": "decision:original_shuffle_index_stream_replay_complete",
+      "status": "passed",
+      "actual": false,
+      "expected": false,
+      "details": {}
+    }
+  ]
+}

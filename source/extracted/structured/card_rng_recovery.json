@@ -1,0 +1,1218 @@
+{
+  "source": {
+    "cards": "extracted/structured/cards.json",
+    "card_runtime_accuracy_gaps": "extracted/structured/card_runtime_accuracy_gaps.json",
+    "game_in_game_random_range_disassembly": "extracted/disassembly/Game_InGameRandomRange.txt",
+    "game_in_game_random_float_disassembly": "extracted/disassembly/Game_InGameRandomFloat.txt",
+    "game_in_game_random_float_a_disassembly": "extracted/disassembly/Game_InGameRandomFloat_a.txt",
+    "deck_shuffle_disassembly": "extracted/disassembly/Deck_Shuffle.txt",
+    "deck_random_card_name_disassembly": "extracted/disassembly/Deck_RandomCardName.txt",
+    "player_random_exile_disassembly": "extracted/disassembly/Player_RandomExile_ignoreCurses.txt",
+    "card_force_random_discard_disassembly": "extracted/disassembly/Card_ForceRandomDiscard.txt",
+    "cardfinder_random_available_non_equipment_disassembly": "extracted/disassembly/CardFinder_RandomAvailableNonEquipmentCard.txt",
+    "penalty_curses_disassembly": "extracted/disassembly/PenaltyCurses_ApplyPenaltyEffect.txt",
+    "penalty_curses_final_disassembly": "extracted/disassembly/PenaltyCursesFinal_ApplyPenaltyEffect.txt",
+    "stone_play_effect_disassembly": "extracted/disassembly/Stone_PlayEffect.txt",
+    "stone_python_play_effect_disassembly": "extracted/disassembly/Stone_PythonPlayEffect.txt"
+  },
+  "notes": [
+    "This artifact catalogs card RNG/shuffle static shape only; it is not a Unity RNG stream replay.",
+    "Stone.PlayEffect binary now confirms Curse insertion, Deck.Shuffle, and ForceDiscard shape; original RNG/shuffle stream replay remains incomplete."
+  ],
+  "summary": {
+    "check_count": 27,
+    "passed_count": 27,
+    "failed_count": 0,
+    "card_rng_candidate_count": 23,
+    "card_rng_step_count": 25,
+    "game_in_game_random_range_step_count": 9,
+    "game_in_game_random_float_step_count": 2,
+    "player_random_exile_step_count": 3,
+    "card_force_random_discard_step_count": 1,
+    "deck_random_card_name_step_count": 1,
+    "deck_random_card_name_predicate_closure_step_count": 1,
+    "deck_shuffle_step_count": 4,
+    "cardfinder_random_available_non_equipment_step_count": 4,
+    "rules_text_shuffle_cards_into_deck_step_count": 0,
+    "in_game_random_range_inclusive_upper_bound_recovered": true,
+    "in_game_random_float_shape_recovered": true,
+    "deck_shuffle_shape_recovered": true,
+    "deck_random_card_name_shape_recovered": true,
+    "player_random_exile_shape_recovered": true,
+    "card_force_random_discard_shape_recovered": true,
+    "cardfinder_random_available_non_equipment_shape_recovered": true,
+    "penalty_curse_shuffle_shape_recovered": true,
+    "rules_text_shuffle_cards_into_deck_cataloged": false,
+    "stone_shuffle_binary_shape_recovered": true,
+    "card_rng_static_shape_cataloged": true,
+    "stone_shuffle_binary_confirmation_complete": true,
+    "original_card_rng_stream_replay_complete": false,
+    "original_card_shuffle_index_stream_replay_complete": false,
+    "prototype_runtime_ready": false
+  },
+  "helper_shapes": {
+    "in_game_random_range": {
+      "status": "inclusive_upper_bound_recovered",
+      "game_rng_field_offset": "0xc8",
+      "argument_shape": "Random.Next(a, b + 1)",
+      "card_steps": [
+        {
+          "card": "BadWishes",
+          "display_name": "Three Wishes",
+          "source_method": "PlayEffect",
+          "address": "0x10008c108",
+          "args": {
+            "a": 0,
+            "w20": -1
+          },
+          "shape": "dynamic_count_minus_one_upper_bound"
+        },
+        {
+          "card": "BadWishes2",
+          "display_name": "Three Wishes",
+          "source_method": "PlayEffect",
+          "address": "0x10008c8dc",
+          "args": {
+            "a": 0,
+            "w20": -1
+          },
+          "shape": "dynamic_count_minus_one_upper_bound"
+        },
+        {
+          "card": "ChaosPrayer",
+          "display_name": "Chaos Prayer",
+          "source_method": "PlayEffect",
+          "address": "0x1001da9d4",
+          "args": {
+            "a": 0,
+            "b": 3
+          },
+          "shape": "fixed_inclusive_bounds"
+        },
+        {
+          "card": "ChaosStrike",
+          "display_name": "Chaos Strike",
+          "source_method": "PlayEffect",
+          "address": "0x1001dae48",
+          "args": {
+            "a": 1,
+            "b": 3
+          },
+          "shape": "fixed_inclusive_bounds"
+        },
+        {
+          "card": "ChaosStrike2",
+          "display_name": "Chaos Strike",
+          "source_method": "PlayEffect",
+          "address": "0x1001daffc",
+          "args": {
+            "a": 2,
+            "b": 4
+          },
+          "shape": "fixed_inclusive_bounds"
+        },
+        {
+          "card": "ElementalSurge",
+          "display_name": "Elemental Surge",
+          "source_method": "PlayEffect",
+          "address": "0x1001e3778",
+          "args": {
+            "a": 0
+          },
+          "shape": "dynamic_upper_bound_from_context"
+        },
+        {
+          "card": "Mahamat",
+          "display_name": "Mahamat",
+          "source_method": "PlayEffect",
+          "address": "0x1001f018c",
+          "args": {
+            "a": 0,
+            "b": 3
+          },
+          "shape": "fixed_inclusive_bounds"
+        },
+        {
+          "card": "Mahamat",
+          "display_name": "Mahamat",
+          "source_method": "PlayEffect",
+          "address": "0x1001f01b8",
+          "args": {
+            "a": 0,
+            "b": 2
+          },
+          "shape": "fixed_inclusive_bounds"
+        },
+        {
+          "card": "SummonCompanions",
+          "display_name": "Summon Companions",
+          "source_method": "PlayEffect",
+          "address": "0x100204d6c",
+          "args": {
+            "a": 0
+          },
+          "shape": "dynamic_upper_bound_from_context"
+        }
+      ],
+      "evidence_confirmed": true,
+      "original_rng_stream_replay_complete": false
+    },
+    "in_game_random_float": {
+      "status": "uniform_float_recovered",
+      "game_rng_field_offset": "0xc8",
+      "no_arg_shape": "InGameRandomFloat() delegates with upper bound 1.0",
+      "argument_shape": "Random.NextDouble() * upper_bound",
+      "card_steps": [
+        {
+          "card": "ChainLightning",
+          "display_name": "Chain Lightning",
+          "source_method": "ShouldTrigger",
+          "address": "0x1000b60e0",
+          "args": {},
+          "shape": "uniform_float_threshold"
+        },
+        {
+          "card": "Haste",
+          "display_name": "Haste",
+          "source_method": "PlayEffect",
+          "address": "0x1001eb08c",
+          "args": {},
+          "shape": "uniform_float_threshold"
+        }
+      ],
+      "evidence_confirmed": true,
+      "original_rng_stream_replay_complete": false
+    },
+    "deck_shuffle": {
+      "status": "remaining_deck_fisher_yates_shape_recovered",
+      "deck_list_field_offset": "0x78",
+      "draw_index_field_offset": "0x80",
+      "card_steps": [
+        {
+          "card": "InfernalContract",
+          "display_name": "Infernal Contract",
+          "source_method": "PlayEffect",
+          "address": "0x1001ecda0",
+          "args": {},
+          "shape": "remaining_deck_fisher_yates_shuffle"
+        },
+        {
+          "card": "PenaltyCurses",
+          "display_name": null,
+          "source_method": "ApplyPenaltyEffect",
+          "address": "0x1001f407c",
+          "args": {},
+          "shape": "remaining_deck_fisher_yates_shuffle"
+        },
+        {
+          "card": "PenaltyCursesFinal",
+          "display_name": null,
+          "source_method": "ApplyPenaltyEffect",
+          "address": "0x1001f4308",
+          "args": {},
+          "shape": "remaining_deck_fisher_yates_shuffle"
+        },
+        {
+          "card": "Stone",
+          "display_name": "Stone",
+          "source_method": "PlayEffect",
+          "address": "0x100202a94",
+          "args": {},
+          "shape": "remaining_deck_fisher_yates_shuffle"
+        }
+      ],
+      "evidence_confirmed": true,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    "deck_random_card_name": {
+      "status": "filtered_remaining_deck_random_index_shape_recovered",
+      "card_steps": [
+        {
+          "card": "LastChance",
+          "display_name": "Desperate Strike",
+          "source_method": "PlayEffect",
+          "address": "0x1001ef1b8",
+          "args": {},
+          "shape": "filter_remaining_deck_then_random_index"
+        },
+        {
+          "card": "LastChance",
+          "display_name": "Desperate Strike",
+          "source_method": "PlayEffect",
+          "address": "0x1001ef148",
+          "args": {},
+          "shape": "predicate_closure_for_deck_random_card_name"
+        }
+      ],
+      "random_index_shape": "Game.InGameRandomRange(0, filtered_candidate_count - 1)",
+      "predicate_closure_card": "LastChance",
+      "evidence_confirmed": true,
+      "original_rng_stream_replay_complete": false
+    },
+    "player_random_exile": {
+      "status": "candidate_hand_list_tail_swap_random_selection_shape_recovered",
+      "card_steps": [
+        {
+          "card": "Beckon",
+          "display_name": "Beckon",
+          "source_method": "PlayEffect",
+          "address": "0x10008d500",
+          "args": {
+            "x": 2
+          },
+          "shape": "select_random_hand_cards_then_exile"
+        },
+        {
+          "card": "DeadlyCurse",
+          "display_name": "Deadly Curse",
+          "source_method": "PlayEffect",
+          "address": "0x1001df18c",
+          "args": {
+            "x": 3,
+            "ignoreCurses": 1
+          },
+          "shape": "select_random_hand_cards_then_exile"
+        },
+        {
+          "card": "Digest",
+          "display_name": "Digest",
+          "source_method": "PlayEffect",
+          "address": "0x1001df868",
+          "args": {
+            "x": 1
+          },
+          "shape": "select_random_hand_cards_then_exile"
+        }
+      ],
+      "random_index_shape": "Game.InGameRandomRange(0, remaining_candidate_count - 1)",
+      "selection_shape": "repeat up to x times, select random candidate, apply exile/discard flow, and tail-swap selected list slot",
+      "evidence_confirmed": true,
+      "original_rng_stream_replay_complete": false
+    },
+    "card_force_random_discard": {
+      "status": "card_to_player_random_discard_bridge_recovered",
+      "card_steps": [
+        {
+          "card": "Kick",
+          "display_name": "Kick",
+          "source_method": "PlayEffect",
+          "address": "0x1001eed18",
+          "args": {
+            "x": 1
+          },
+          "shape": "delegate_to_player_random_discard"
+        }
+      ],
+      "bridge_shape": "Card.ForceRandomDiscard resolves player/enemy hand context and delegates random discard count to player-side implementation",
+      "evidence_confirmed": true,
+      "original_rng_stream_replay_complete": false
+    },
+    "cardfinder_random_available_non_equipment_card": {
+      "status": "available_non_equipment_candidate_random_pick_recovered",
+      "card_steps": [
+        {
+          "card": "WildMana",
+          "display_name": "Wild Mana",
+          "source_method": "PlayEffect",
+          "address": "0x100208bc0",
+          "args": {},
+          "shape": "cardfinder_available_non_equipment_random_pick"
+        },
+        {
+          "card": "WildStrike1",
+          "display_name": "Wild Strike (1)",
+          "source_method": "PlayEffect",
+          "address": "0x100208e40",
+          "args": {},
+          "shape": "cardfinder_available_non_equipment_random_pick"
+        },
+        {
+          "card": "WildStrike2",
+          "display_name": "Wild Strike (2)",
+          "source_method": "PlayEffect",
+          "address": "0x1002090d8",
+          "args": {},
+          "shape": "cardfinder_available_non_equipment_random_pick"
+        },
+        {
+          "card": "WildStrike3",
+          "display_name": "Wild Strike (3)",
+          "source_method": "PlayEffect",
+          "address": "0x10020937c",
+          "args": {},
+          "shape": "cardfinder_available_non_equipment_random_pick"
+        }
+      ],
+      "random_pick_shape": "build available non-equipment candidates, draw one or two random indices from candidate count, and return card data for DrawExNihil/Temporary flow",
+      "evidence_confirmed": true,
+      "original_rng_stream_replay_complete": false
+    },
+    "penalty_curse_shuffle": {
+      "status": "put_curses_then_shuffle_deck_recovered",
+      "card_steps": [
+        {
+          "card": "PenaltyCurses",
+          "display_name": null,
+          "source_method": "ApplyPenaltyEffect",
+          "address": "0x1001f407c",
+          "args": {},
+          "shape": "remaining_deck_fisher_yates_shuffle"
+        },
+        {
+          "card": "PenaltyCursesFinal",
+          "display_name": null,
+          "source_method": "ApplyPenaltyEffect",
+          "address": "0x1001f4308",
+          "args": {},
+          "shape": "remaining_deck_fisher_yates_shuffle"
+        }
+      ],
+      "cards": [
+        "PenaltyCurses",
+        "PenaltyCursesFinal"
+      ],
+      "evidence_confirmed": true,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    "stone_shuffle": {
+      "status": "binary_confirmed_stone_curse_insert_shuffle_discard",
+      "card_steps": [
+        {
+          "card": "Stone",
+          "display_name": "Stone",
+          "source_method": "PlayEffect",
+          "address": "0x100202a94",
+          "args": {},
+          "shape": "remaining_deck_fisher_yates_shuffle"
+        }
+      ],
+      "cards": [
+        "Stone"
+      ],
+      "evidence_confirmed": true,
+      "binary_confirmation_complete": true,
+      "stone_play_effect_disassembly": "extracted/disassembly/Stone_PlayEffect.txt",
+      "stone_python_play_effect_disassembly": "extracted/disassembly/Stone_PythonPlayEffect.txt",
+      "binary_evidence": {
+        "literal": "Curse",
+        "literal_load_address": "0x100202944",
+        "mind_immune_check_address": "0x1002029b0",
+        "put_on_top_slot": 123,
+        "put_on_top_call_address": "0x100202a44",
+        "put_on_top_loop_count": 2,
+        "shuffle_slot": 93,
+        "shuffle_call_address": "0x100202a94",
+        "discard_slot": 219,
+        "discard_call_address": "0x100202aa8",
+        "discard_count": 1,
+        "python_play_effect_is_empty_wrapper": true
+      },
+      "original_shuffle_index_stream_replay_complete": false
+    }
+  },
+  "card_rng_cases": [
+    {
+      "card": "BadWishes",
+      "display_name": "Three Wishes",
+      "card_type": "Action",
+      "rules": "Present your opponent with three options. They choose one.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Game.InGameRandomRange",
+          "effect": "random_range",
+          "source_method": "PlayEffect",
+          "address": "0x10008c108",
+          "args": {
+            "a": 0,
+            "w20": -1
+          },
+          "classification": "game_in_game_random_range",
+          "shape": "dynamic_count_minus_one_upper_bound",
+          "translation_status": "parameterized_effect"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "BadWishes2",
+      "display_name": "Three Wishes",
+      "card_type": "Action",
+      "rules": "Present your opponent with three options. They choose one.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Game.InGameRandomRange",
+          "effect": "random_range",
+          "source_method": "PlayEffect",
+          "address": "0x10008c8dc",
+          "args": {
+            "a": 0,
+            "w20": -1
+          },
+          "classification": "game_in_game_random_range",
+          "shape": "dynamic_count_minus_one_upper_bound",
+          "translation_status": "parameterized_effect"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "Beckon",
+      "display_name": "Beckon",
+      "card_type": "Action",
+      "rules": "Exile 2 cards at random from your opponent's hand.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Player.RandomExile",
+          "effect": "random_exile",
+          "source_method": "PlayEffect",
+          "address": "0x10008d500",
+          "args": {
+            "x": 2
+          },
+          "classification": "player_random_exile",
+          "shape": "select_random_hand_cards_then_exile",
+          "translation_status": "parameterized_effect"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "ChainLightning",
+      "display_name": "Chain Lightning",
+      "card_type": "Reaction",
+      "rules": "Trigger: An opponent plays a card (10% chance per card in play) \\\\n Effect: That card has no effect. The opponent takes 2 @air damage for each card in play. The turn ends.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Game.InGameRandomFloat",
+          "effect": "random_float",
+          "source_method": "ShouldTrigger",
+          "address": "0x1000b60e0",
+          "args": {},
+          "classification": "game_in_game_random_float",
+          "shape": "uniform_float_threshold",
+          "translation_status": "effect_without_immediate_args"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "ChaosPrayer",
+      "display_name": "Chaos Prayer",
+      "card_type": "Action",
+      "rules": "Choose one at random: Heal 5 health, or your opponent loses 2 @tim ^, or your opponent discards 2 cards, or you take 3 @fir damage.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Game.InGameRandomRange",
+          "effect": "random_range",
+          "source_method": "PlayEffect",
+          "address": "0x1001da9d4",
+          "args": {
+            "a": 0,
+            "b": 3
+          },
+          "classification": "game_in_game_random_range",
+          "shape": "fixed_inclusive_bounds",
+          "translation_status": "parameterized_effect"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "ChaosStrike",
+      "display_name": "Chaos Strike",
+      "card_type": "AttackCard",
+      "rules": "Deal 1, 2, or 3 @atk damage, chosen randomly.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Game.InGameRandomRange",
+          "effect": "random_range",
+          "source_method": "PlayEffect",
+          "address": "0x1001dae48",
+          "args": {
+            "a": 1,
+            "b": 3
+          },
+          "classification": "game_in_game_random_range",
+          "shape": "fixed_inclusive_bounds",
+          "translation_status": "parameterized_effect"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "ChaosStrike2",
+      "display_name": "Chaos Strike",
+      "card_type": "AttackCard",
+      "rules": "Deal 2, 3, or 4 @atk damage, chosen randomly.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Game.InGameRandomRange",
+          "effect": "random_range",
+          "source_method": "PlayEffect",
+          "address": "0x1001daffc",
+          "args": {
+            "a": 2,
+            "b": 4
+          },
+          "classification": "game_in_game_random_range",
+          "shape": "fixed_inclusive_bounds",
+          "translation_status": "parameterized_effect"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "DeadlyCurse",
+      "display_name": "Deadly Curse",
+      "card_type": "Action",
+      "rules": "Replace 3 random non-curse cards in your opponent's hand with curses.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Player.RandomExile",
+          "effect": "random_exile",
+          "source_method": "PlayEffect",
+          "address": "0x1001df18c",
+          "args": {
+            "x": 3,
+            "ignoreCurses": 1
+          },
+          "classification": "player_random_exile",
+          "shape": "select_random_hand_cards_then_exile",
+          "translation_status": "parameterized_effect"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "Digest",
+      "display_name": "Digest",
+      "card_type": "Action",
+      "rules": "Your opponent exiles a card at random from their hand.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Player.RandomExile",
+          "effect": "random_exile",
+          "source_method": "PlayEffect",
+          "address": "0x1001df868",
+          "args": {
+            "x": 1
+          },
+          "classification": "player_random_exile",
+          "shape": "select_random_hand_cards_then_exile",
+          "translation_status": "parameterized_effect"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "ElementalSurge",
+      "display_name": "Elemental Surge",
+      "card_type": "ManaCard",
+      "rules": "Gain 4 mana.  Draw one of Fireball, Frost Bolt, Shock, or Acid Lance.  That card is <temporary> ^.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Game.InGameRandomRange",
+          "effect": "random_range",
+          "source_method": "PlayEffect",
+          "address": "0x1001e3778",
+          "args": {
+            "a": 0
+          },
+          "classification": "game_in_game_random_range",
+          "shape": "dynamic_upper_bound_from_context",
+          "translation_status": "parameterized_effect"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "Haste",
+      "display_name": "Haste",
+      "card_type": "SpellCard",
+      "rules": "Draw 2 cards. In addition, you have a 10% chance to gain an extra turn.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Game.InGameRandomFloat",
+          "effect": "random_float",
+          "source_method": "PlayEffect",
+          "address": "0x1001eb08c",
+          "args": {},
+          "classification": "game_in_game_random_float",
+          "shape": "uniform_float_threshold",
+          "translation_status": "effect_without_immediate_args"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "InfernalContract",
+      "display_name": "Infernal Contract",
+      "card_type": "Action",
+      "rules": "Your opponent discards their hand and gains curses equal to the number of cards discarded this way.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Deck.Shuffle",
+          "effect": "shuffle_deck",
+          "source_method": "PlayEffect",
+          "address": "0x1001ecda0",
+          "args": {},
+          "classification": "deck_shuffle",
+          "shape": "remaining_deck_fisher_yates_shuffle",
+          "translation_status": "binary_effect_recovered_from_disassembly"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "Kick",
+      "display_name": "Kick",
+      "card_type": "ActionCard",
+      "rules": "Deal 1 @atk damage. Your opponent discards a card at random.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Card.ForceRandomDiscard",
+          "effect": "card_force_random_discard",
+          "source_method": "PlayEffect",
+          "address": "0x1001eed18",
+          "args": {
+            "x": 1
+          },
+          "classification": "card_force_random_discard",
+          "shape": "delegate_to_player_random_discard",
+          "translation_status": "named_call_preserved"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "LastChance",
+      "display_name": "Desperate Strike",
+      "card_type": "ActionCard",
+      "rules": "This card has the effect of a random non-\"Desperate Strike\" action card from your deck.",
+      "rng_step_count": 2,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "__Deck_RandomCardName$callable5$822_37__..ctor",
+          "effect": null,
+          "source_method": "PlayEffect",
+          "address": "0x1001ef148",
+          "args": {},
+          "classification": "deck_random_card_name_predicate_closure",
+          "shape": "predicate_closure_for_deck_random_card_name",
+          "translation_status": "constructor_preserved"
+        },
+        {
+          "index": 1,
+          "operation": "Deck.RandomCardName",
+          "effect": "random_card_name",
+          "source_method": "PlayEffect",
+          "address": "0x1001ef1b8",
+          "args": {},
+          "classification": "deck_random_card_name",
+          "shape": "filter_remaining_deck_then_random_index",
+          "translation_status": "effect_without_immediate_args"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "Mahamat",
+      "display_name": "Mahamat",
+      "card_type": "SpellCard",
+      "rules": "Choose 2 at random: Draw 3 cards, deal 10 <piercing> damage to your opponent, gain 15 health, or prevent the next 15 damage that would be dealt to you.",
+      "rng_step_count": 2,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Game.InGameRandomRange",
+          "effect": "random_range",
+          "source_method": "PlayEffect",
+          "address": "0x1001f018c",
+          "args": {
+            "a": 0,
+            "b": 3
+          },
+          "classification": "game_in_game_random_range",
+          "shape": "fixed_inclusive_bounds",
+          "translation_status": "parameterized_effect"
+        },
+        {
+          "index": 1,
+          "operation": "Game.InGameRandomRange",
+          "effect": "random_range",
+          "source_method": "PlayEffect",
+          "address": "0x1001f01b8",
+          "args": {
+            "a": 0,
+            "b": 2
+          },
+          "classification": "game_in_game_random_range",
+          "shape": "fixed_inclusive_bounds",
+          "translation_status": "parameterized_effect"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "PenaltyCurses",
+      "display_name": null,
+      "card_type": null,
+      "rules": null,
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Deck.Shuffle",
+          "effect": "shuffle_deck",
+          "source_method": "ApplyPenaltyEffect",
+          "address": "0x1001f407c",
+          "args": {},
+          "classification": "deck_shuffle",
+          "shape": "remaining_deck_fisher_yates_shuffle",
+          "translation_status": "control_flow_recovered_from_disassembly"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "PenaltyCursesFinal",
+      "display_name": null,
+      "card_type": null,
+      "rules": null,
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Deck.Shuffle",
+          "effect": "shuffle_deck",
+          "source_method": "ApplyPenaltyEffect",
+          "address": "0x1001f4308",
+          "args": {},
+          "classification": "deck_shuffle",
+          "shape": "remaining_deck_fisher_yates_shuffle",
+          "translation_status": "control_flow_recovered_from_disassembly"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "Stone",
+      "display_name": "Stone",
+      "card_type": "Action",
+      "rules": "Shuffle 2 curse cards (which do nothing) into your opponent's deck. Your opponent discards a card.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Deck.Shuffle",
+          "effect": "shuffle_deck",
+          "source_method": "PlayEffect",
+          "address": "0x100202a94",
+          "args": {},
+          "classification": "deck_shuffle",
+          "shape": "remaining_deck_fisher_yates_shuffle",
+          "translation_status": "binary_effect_recovered_from_disassembly"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "SummonCompanions",
+      "display_name": "Summon Companions",
+      "card_type": "SpellCard",
+      "rules": "Draw one of Wolf, Turtle, or Eagle.  That card is <temporary> ^.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "Game.InGameRandomRange",
+          "effect": "random_range",
+          "source_method": "PlayEffect",
+          "address": "0x100204d6c",
+          "args": {
+            "a": 0
+          },
+          "classification": "game_in_game_random_range",
+          "shape": "dynamic_upper_bound_from_context",
+          "translation_status": "parameterized_effect"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "WildMana",
+      "display_name": "Wild Mana",
+      "card_type": "ManaCard",
+      "rules": "Gain 5 mana. Draw a random <temporary> non-equipment card.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "CardFinder.RandomAvailableNonEquipmentCard",
+          "effect": null,
+          "source_method": "PlayEffect",
+          "address": "0x100208bc0",
+          "args": {},
+          "classification": "cardfinder_random_available_non_equipment_card",
+          "shape": "cardfinder_available_non_equipment_random_pick",
+          "translation_status": "read_dependency"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "WildStrike1",
+      "display_name": "Wild Strike (1)",
+      "card_type": "ActionCard",
+      "rules": "Deal 2 @atk damage. Add a random <temporary> non-equipment card to your hand.\\\\n\\\\nWarning: Higher levels of Wild Strike cost additional @tim to play.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "CardFinder.RandomAvailableNonEquipmentCard",
+          "effect": null,
+          "source_method": "PlayEffect",
+          "address": "0x100208e40",
+          "args": {},
+          "classification": "cardfinder_random_available_non_equipment_card",
+          "shape": "cardfinder_available_non_equipment_random_pick",
+          "translation_status": "read_dependency"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "WildStrike2",
+      "display_name": "Wild Strike (2)",
+      "card_type": "ActionCard",
+      "rules": "Deal 4 @atk damage. Add 2 random <temporary> non-equipment cards to your hand.\\\\n\\\\nWarning: Higher levels of Wild Strike cost additional @tim to play.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "CardFinder.RandomAvailableNonEquipmentCard",
+          "effect": null,
+          "source_method": "PlayEffect",
+          "address": "0x1002090d8",
+          "args": {},
+          "classification": "cardfinder_random_available_non_equipment_card",
+          "shape": "cardfinder_available_non_equipment_random_pick",
+          "translation_status": "read_dependency"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    },
+    {
+      "card": "WildStrike3",
+      "display_name": "Wild Strike (3)",
+      "card_type": "ActionCard",
+      "rules": "Deal 6 @atk damage. Add 3 random <temporary> non-equipment cards to your hand.\\\\n\\\\nWarning: Higher levels of Wild Strike cost additional @tim to play.",
+      "rng_step_count": 1,
+      "rng_steps": [
+        {
+          "index": 0,
+          "operation": "CardFinder.RandomAvailableNonEquipmentCard",
+          "effect": null,
+          "source_method": "PlayEffect",
+          "address": "0x10020937c",
+          "args": {},
+          "classification": "cardfinder_random_available_non_equipment_card",
+          "shape": "cardfinder_available_non_equipment_random_pick",
+          "translation_status": "read_dependency"
+        }
+      ],
+      "original_rng_stream_replay_complete": false,
+      "original_shuffle_index_stream_replay_complete": false
+    }
+  ],
+  "checks": [
+    {
+      "name": "gap:reported_card_rng_candidate_count",
+      "status": "passed",
+      "actual": 23,
+      "expected": 23,
+      "details": {}
+    },
+    {
+      "name": "catalog:card_rng_candidate_count",
+      "status": "passed",
+      "actual": 23,
+      "expected": 23,
+      "details": {}
+    },
+    {
+      "name": "catalog:card_rng_step_count",
+      "status": "passed",
+      "actual": 25,
+      "expected": 25,
+      "details": {}
+    },
+    {
+      "name": "catalog:card_rng_candidate_names",
+      "status": "passed",
+      "actual": [
+        "BadWishes",
+        "BadWishes2",
+        "Beckon",
+        "ChainLightning",
+        "ChaosPrayer",
+        "ChaosStrike",
+        "ChaosStrike2",
+        "DeadlyCurse",
+        "Digest",
+        "ElementalSurge",
+        "Haste",
+        "InfernalContract",
+        "Kick",
+        "LastChance",
+        "Mahamat",
+        "PenaltyCurses",
+        "PenaltyCursesFinal",
+        "Stone",
+        "SummonCompanions",
+        "WildMana",
+        "WildStrike1",
+        "WildStrike2",
+        "WildStrike3"
+      ],
+      "expected": [
+        "BadWishes",
+        "BadWishes2",
+        "Beckon",
+        "ChainLightning",
+        "ChaosPrayer",
+        "ChaosStrike",
+        "ChaosStrike2",
+        "DeadlyCurse",
+        "Digest",
+        "ElementalSurge",
+        "Haste",
+        "InfernalContract",
+        "Kick",
+        "LastChance",
+        "Mahamat",
+        "PenaltyCurses",
+        "PenaltyCursesFinal",
+        "Stone",
+        "SummonCompanions",
+        "WildMana",
+        "WildStrike1",
+        "WildStrike2",
+        "WildStrike3"
+      ],
+      "details": {}
+    },
+    {
+      "name": "catalog:unclassified_rng_step_count",
+      "status": "passed",
+      "actual": 0,
+      "expected": 0,
+      "details": {
+        "unclassified_steps": []
+      }
+    },
+    {
+      "name": "class:game_in_game_random_range_step_count",
+      "status": "passed",
+      "actual": 9,
+      "expected": 9,
+      "details": {}
+    },
+    {
+      "name": "class:game_in_game_random_float_step_count",
+      "status": "passed",
+      "actual": 2,
+      "expected": 2,
+      "details": {}
+    },
+    {
+      "name": "class:player_random_exile_step_count",
+      "status": "passed",
+      "actual": 3,
+      "expected": 3,
+      "details": {}
+    },
+    {
+      "name": "class:card_force_random_discard_step_count",
+      "status": "passed",
+      "actual": 1,
+      "expected": 1,
+      "details": {}
+    },
+    {
+      "name": "class:deck_random_card_name_step_count",
+      "status": "passed",
+      "actual": 1,
+      "expected": 1,
+      "details": {}
+    },
+    {
+      "name": "class:deck_random_card_name_predicate_closure_step_count",
+      "status": "passed",
+      "actual": 1,
+      "expected": 1,
+      "details": {}
+    },
+    {
+      "name": "class:deck_shuffle_step_count",
+      "status": "passed",
+      "actual": 4,
+      "expected": 4,
+      "details": {}
+    },
+    {
+      "name": "class:cardfinder_random_available_non_equipment_step_count",
+      "status": "passed",
+      "actual": 4,
+      "expected": 4,
+      "details": {}
+    },
+    {
+      "name": "class:rules_text_shuffle_cards_into_deck_step_count",
+      "status": "passed",
+      "actual": 0,
+      "expected": 0,
+      "details": {}
+    },
+    {
+      "name": "helper:in_game_random_range_shape",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "helper:in_game_random_float_shape",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "helper:deck_shuffle_shape",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "helper:deck_random_card_name_shape",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "helper:player_random_exile_shape",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "helper:card_force_random_discard_shape",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "helper:cardfinder_random_available_non_equipment_shape",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "helper:penalty_curse_shuffle_shape",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "helper:stone_shuffle_binary_shape",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "helper:stone_shuffle_binary_confirmation",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "decision:card_rng_static_shape_cataloged",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "decision:original_card_rng_stream_replay_complete",
+      "status": "passed",
+      "actual": false,
+      "expected": false,
+      "details": {}
+    },
+    {
+      "name": "decision:original_card_shuffle_index_stream_replay_complete",
+      "status": "passed",
+      "actual": false,
+      "expected": false,
+      "details": {}
+    }
+  ]
+}

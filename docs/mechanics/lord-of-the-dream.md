@@ -1,0 +1,56 @@
+---
+title: "梦境之主"
+description: "Dream Quest 最终 Boss 机制、BossAttr、贡品、王令和特殊卡牌。"
+---
+
+
+<section class="dq-profession-hero dq-monster-hero">
+  <div>
+    <p class="dq-kicker">Final Boss · FinalBoss</p>
+    <h1>梦境之主</h1>
+    <span class="dq-original">原名：Lord of the Dream</span>
+    <p class="dq-lede">最终 Boss 不走普通怪物目录里的 MonsterData 条目，而是使用 FinalBoss 类和 Dungeon.BossAttributes 生成三组特殊能力。Portent 能提前读出这些能力。</p>
+    <div class="dq-tag-row">
+      <span>最终战</span>
+      <span>独立 BossAttr</span>
+      <span>非普通 MonsterData</span>
+    </div>
+  </div>
+  <div class="dq-profession-portrait dq-monster-portrait">
+    <img src="/assets/extracted/textures/by_container/resources/FinalBoss__1052.png" alt="梦境之主" loading="lazy">
+  </div>
+</section>
+
+<section class="dq-wide-panel">
+  <h2>Lord 基础属性</h2>
+  <div class="dq-meta-grid">
+<span title="最终 Boss 的运行时类名，不走普通 MonsterData 怪物表。"><strong>内部类</strong><em>FinalBoss</em></span>
+<span title="wiki 中使用的统一中文名称。"><strong>中文名</strong><em>梦境之主</em></span>
+<span title="最终 Boss 的战斗显示名。"><strong>英文名</strong><em>Lord of the Dream</em></span>
+<span title="地牢第四层创建最终 Boss 时使用的内部名称。"><strong>内部名称</strong><em>FinalBoss</em></span>
+<span title="FinalBoss.BuildAttributes 固定写入的 level。"><strong>等级</strong><em>10</em></span>
+<span title="FinalBoss.BuildAttributes 固定写入的 health。"><strong>生命</strong><em>1000</em></span>
+<span title="FinalBoss.BuildAttributes 固定写入的 actions。"><strong>行动点</strong><em>5</em></span>
+<span title="FinalBoss.BuildAttributes 固定写入的 cards。"><strong>每回合抽牌</strong><em>5</em></span>
+<span title="基础牌组构造结束后固定写入的 mana。"><strong>法力</strong><em>40</em></span>
+<span title="先从排除 6 张指定牌后的非奖励卡池里不放回抽 20 张，再追加 20 张随机 Attack1-4。"><strong>基础牌组</strong><em>40 张</em></span>
+<span title="最终 Boss 的奖励字段固定为 0；即使特殊死亡进入击杀结算，传给玩家的经验仍是 0。"><strong>金币 / 经验</strong><em>0 / 0</em></span>
+<span title="Flee 卡和 Flee 能力会调用 Game.Escape；这个流程没有检查 FinalBoss.CanFleeFrom。"><strong>玩家逃跑</strong><em>可以逃离</em></span>
+</div>
+  </section>
+
+<section class="dq-section-block">
+  <h2>专题入口</h2>
+  <div class="dq-link-grid dq-link-grid-four">
+<a href="/mechanics/lord/final-boss"><strong>FinalBoss 全流程</strong><span>第四层进入、基础属性、开战数值、Crush Everything 阈值和最终战整体顺序。</span></a>
+<a href="/mechanics/lord/bossattr"><strong>BossAttr 与楼层暗示</strong><span>三组能力、Portent 提示、楼层入口文本、玩家可见效果和变形后的能力改写。</span></a>
+<a href="/mechanics/lord/card-decay"><strong>卡牌衰变</strong><span>Your cards decay 的触发条件、50% 随机判定、默认衰变目标和完整卡图衰变链。</span></a>
+<a href="/mechanics/lord/decrees-gifts-choices"><strong>王令、贡品与死亡选择</strong><span>LordlyDecrees、Requires gifts、Pick Your Poison 的实际结算和对应惩罚牌。</span></a>
+<a href="/mechanics/lord/deck-and-interactions"><strong>牌组与特殊交互</strong><span>基础牌组生成、随机候选池、起手装备、特殊死亡交互和最终战相关卡牌。</span></a>
+  </div>
+</section>
+
+<section class="dq-action-row">
+  <a class="dq-button" href="/monsters/lord-of-the-dream">查看怪物图鉴条目</a>
+  <a class="dq-button dq-button-secondary" href="/mechanics/dungeon-generation">查看地牢生成</a>
+</section>

@@ -1,0 +1,19 @@
+{
+  "name": "dreamquest-wiki",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-content.mjs",
+    "dev": "npm run sync && vitepress dev docs --host 127.0.0.1",
+    "build": "npm run sync && vitepress build docs",
+    "preview": "vitepress preview docs --host 127.0.0.1"
+  },
+  "devDependencies": {
+    "@vue/server-renderer": "^3.5.34",
+    "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}

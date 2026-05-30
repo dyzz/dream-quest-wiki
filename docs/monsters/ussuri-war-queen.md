@@ -1,0 +1,308 @@
+---
+title: "乌苏里战争女王"
+description: "Boss，出现在 森林、山脉。等级范围 4-7 级。基础牌组 5 张。有独立技能或回合机制。等级提升会改动牌组或属性。"
+---
+
+
+<section class="dq-profession-hero dq-monster-hero">
+  <div>
+    <p class="dq-kicker">Monster · 4-7 级</p>
+    <h1>乌苏里战争女王</h1>
+    <span class="dq-original">原名：Ussuri War Queen</span>
+    <p class="dq-lede">Boss，出现在 森林、山脉。等级范围 4-7 级。基础牌组 5 张。有独立技能或回合机制。等级提升会改动牌组或属性。</p>
+    <div class="dq-tag-row">
+      <span>Boss</span>
+      <span>机制与等级变化</span>
+      <span>森林</span>
+<span>山脉</span>
+    </div>
+  </div>
+  <div class="dq-profession-portrait dq-monster-portrait">
+    <img src="/assets/extracted/textures/by_container/resources/UssuriWarQueen__585.png" alt="乌苏里战争女王" loading="lazy">
+  </div>
+</section>
+
+<section class="dq-wide-panel">
+  <h2>后台信息</h2>
+  <div class="dq-meta-grid">
+<span title="wiki 中使用的统一中文名称。"><strong>中文名</strong><em>乌苏里战争女王</em></span>
+<span title="游戏原始显示名。"><strong>英文名</strong><em>Ussuri War Queen</em></span>
+<span title="怪物在解析数据中的内部引用名称。"><strong>怪物 ID</strong><em>UssuriWarQueen</em></span>
+<span title="反编译类名，通常用于和代码中的怪物实现对应。"><strong>类名</strong><em>UssuriWarQueen</em></span>
+<span title="Boss 通常有更高金币、经验或生命倍率，也会使用更高等级段。"><strong>类型</strong><em>Boss</em></span>
+<span title="地牢生成时可能出现的怪物等级范围；某些怪物在不同等级有不同牌组或属性。"><strong>等级范围</strong><em>4-7 级</em></span>
+<span title="怪物可在这些地形环境中生成。"><strong>生成地形</strong><em>森林、山脉</em></span>
+<span title="不同地形中的生成权重；0 表示通常不在该环境自然生成。"><strong>地形权重</strong><em>墓穴: 0、森林: 10、地牢: 0、水域: 0、火山: 0、山脉: 5</em></span>
+<span title="龙职业吞噬机制读取的怪物类型；后半段注明吞噬该类怪物时触发的奖励。"><strong>Devour 类型</strong><em>7 · 迅捷型；吞噬收益：获得 +1 Action，也就是行动点 +1。</em></span>
+<span title="怪物开局或基础配置中的法力值。"><strong>基础法力</strong><em>0</em></span>
+<span title="BuildAttributes 里写入的基础等级，实际生成仍受地牢等级范围影响。"><strong>基础等级</strong><em>4</em></span>
+<span title="怪物初始化里的牌组/行动稀释参数，用于控制其节奏表现。"><strong>稀释值</strong><em>5</em></span>
+<span title="怪物初始化里的行动点修正。"><strong>行动点修正</strong><em>1</em></span>
+<span title="怪物初始化里的抽牌/手牌修正。"><strong>手牌修正</strong><em>1</em></span>
+<span title="怪物生命倍率，Boss 常高于普通怪物。"><strong>生命倍率</strong><em>2</em></span>
+<span title="击败后金币奖励倍率。"><strong>金币倍率</strong><em>3</em></span>
+<span title="击败后经验奖励倍率。"><strong>经验倍率</strong><em>4</em></span>
+<span title="解析出的怪物机制覆盖程度。"><strong>机制状态</strong><em>机制与等级变化</em></span>
+<span title="等级变化解析状态；详情在等级变化表中展示。"><strong>等级规则</strong><em>structured_level_up</em></span>
+</div>
+</section>
+
+<section class="dq-section-block">
+  <h2>关键机制</h2>
+  <div class="dq-mechanic-list dq-core-mechanics">
+<p>每回合阻挡玩家部分出牌；第二轮牌组强度会在 <a class="dq-card-chip" href="/cards/pounce">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>扑击</strong><small>Pounce</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>扑击</strong>
+      <small>Pounce · 行动牌 · 6 阶 · 1 行动点 / 0 法力</small>
+      <em>抽 3 张牌，然后直到本场战斗结束，从你的牌库中移除 扑击。</em>
+    </span>
+  </span>
+</a> 消耗后下降。</p>
+<p>会阻挡玩家每回合前几张牌；具体数量由怪物计数器决定。</p>
+<p>起手优先牌：<a class="dq-card-chip" href="/cards/pounce">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>扑击</strong><small>Pounce</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>扑击</strong>
+      <small>Pounce · 行动牌 · 6 阶 · 1 行动点 / 0 法力</small>
+      <em>抽 3 张牌，然后直到本场战斗结束，从你的牌库中移除 扑击。</em>
+    </span>
+  </span>
+</a>。</p>
+</div>
+</section>
+
+
+
+<section class="dq-section-block">
+  <h2>等级变化</h2>
+  <table class="dq-data-table">
+  <thead><tr><th>等级</th><th>变化</th><th>次数</th><th>条件说明</th></tr></thead>
+  <tbody>
+<tr>
+  <td>6+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/claw">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Claw__1028.png" alt="爪击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>爪击</strong><small>Claw</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Claw__1028.png" alt="爪击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>爪击</strong>
+      <small>Claw · 行动牌 · 1 阶 · 1 行动点 / 0 法力</small>
+      <em>造成 2 点攻击伤害。</em>
+    </span>
+  </span>
+</a> <span class="dq-repeat-count">重复 2 次</span></td>
+  <td>2</td>
+  <td></td>
+</tr>
+<tr>
+  <td>7+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/shred">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>撕碎</strong><small>Shred</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>撕碎</strong>
+      <small>Shred · 行动牌 · 3 阶 · 1 行动点 / 0 法力</small>
+      <em>造成 2 点攻击伤害。造成 2 点攻击伤害 每有爪击 场上的牌。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>7+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/pounce">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>扑击</strong><small>Pounce</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>扑击</strong>
+      <small>Pounce · 行动牌 · 6 阶 · 1 行动点 / 0 法力</small>
+      <em>抽 3 张牌，然后直到本场战斗结束，从你的牌库中移除 扑击。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>8+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/shred">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>撕碎</strong><small>Shred</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>撕碎</strong>
+      <small>Shred · 行动牌 · 3 阶 · 1 行动点 / 0 法力</small>
+      <em>造成 2 点攻击伤害。造成 2 点攻击伤害 每有爪击 场上的牌。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>8+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/claw">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Claw__1028.png" alt="爪击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>爪击</strong><small>Claw</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Claw__1028.png" alt="爪击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>爪击</strong>
+      <small>Claw · 行动牌 · 1 阶 · 1 行动点 / 0 法力</small>
+      <em>造成 2 点攻击伤害。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>9+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/pounce">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>扑击</strong><small>Pounce</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>扑击</strong>
+      <small>Pounce · 行动牌 · 6 阶 · 1 行动点 / 0 法力</small>
+      <em>抽 3 张牌，然后直到本场战斗结束，从你的牌库中移除 扑击。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+<tr>
+  <td>9+</td>
+  <td>加入 <a class="dq-card-chip" href="/cards/shred">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>撕碎</strong><small>Shred</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>撕碎</strong>
+      <small>Shred · 行动牌 · 3 阶 · 1 行动点 / 0 法力</small>
+      <em>造成 2 点攻击伤害。造成 2 点攻击伤害 每有爪击 场上的牌。</em>
+    </span>
+  </span>
+</a></td>
+  <td>1</td>
+  <td></td>
+</tr>
+  </tbody>
+</table>
+</section>
+
+<section class="dq-section-block">
+  <h2>卡牌</h2>
+  <div class="dq-monster-card-summary">
+  <span>基础牌组 5 张</span>
+  <span>唯一卡牌 3 张</span>
+</div>
+<h3>牌型比例</h3>
+<table class="dq-data-table">
+  <thead><tr><th>牌型</th><th>数量</th><th>代表牌</th></tr></thead>
+  <tbody>
+<tr>
+  <td>行动牌</td>
+  <td>5</td>
+  <td><a class="dq-card-chip" href="/cards/claw">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Claw__1028.png" alt="爪击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>爪击</strong><small>Claw</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Claw__1028.png" alt="爪击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>爪击</strong>
+      <small>Claw · 行动牌 · 1 阶 · 1 行动点 / 0 法力</small>
+      <em>造成 2 点攻击伤害。</em>
+    </span>
+  </span>
+</a>、<a class="dq-card-chip" href="/cards/shred">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>撕碎</strong><small>Shred</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>撕碎</strong>
+      <small>Shred · 行动牌 · 3 阶 · 1 行动点 / 0 法力</small>
+      <em>造成 2 点攻击伤害。造成 2 点攻击伤害 每有爪击 场上的牌。</em>
+    </span>
+  </span>
+</a>、<a class="dq-card-chip" href="/cards/pounce">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>扑击</strong><small>Pounce</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>扑击</strong>
+      <small>Pounce · 行动牌 · 6 阶 · 1 行动点 / 0 法力</small>
+      <em>抽 3 张牌，然后直到本场战斗结束，从你的牌库中移除 扑击。</em>
+    </span>
+  </span>
+</a></td>
+</tr>
+  </tbody>
+</table>
+<h3>关联卡牌</h3>
+<div class="dq-profession-card-grid dq-monster-card-grid">
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/claw">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Claw__1028.png" alt="爪击" loading="eager"></span></span>
+  <strong>爪击</strong>
+  <span class="dq-profession-card-meta">Claw · 基础牌组 x3 / 等级加入</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Claw__1028.png" alt="爪击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>爪击</strong>
+      <small>Claw · 行动牌 · 1 阶 · 1 行动点 / 0 法力</small>
+      <em>造成 2 点攻击伤害。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/shred">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="eager"></span></span>
+  <strong>撕碎</strong>
+  <span class="dq-profession-card-meta">Shred · 基础牌组 x1 / 等级加入</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>撕碎</strong>
+      <small>Shred · 行动牌 · 3 阶 · 1 行动点 / 0 法力</small>
+      <em>造成 2 点攻击伤害。造成 2 点攻击伤害 每有爪击 场上的牌。</em>
+    </span>
+  </span>
+</a>
+<a class="dq-profession-card-link dq-profession-card-entry" href="/cards/pounce">
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="eager"></span></span>
+  <strong>扑击</strong>
+  <span class="dq-profession-card-meta">Pounce · 基础牌组 x1 / 优先起手 / 等级加入</span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>扑击</strong>
+      <small>Pounce · 行动牌 · 6 阶 · 1 行动点 / 0 法力</small>
+      <em>抽 3 张牌，然后直到本场战斗结束，从你的牌库中移除 扑击。</em>
+    </span>
+  </span>
+</a>
+</div>
+</section>
+
+<section class="dq-action-row">
+  <a class="dq-button" href="/monsters">回到怪物图鉴</a>
+  <a class="dq-button dq-button-secondary" href="/cards">查看卡牌图鉴</a>
+</section>

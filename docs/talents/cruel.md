@@ -1,0 +1,69 @@
+---
+title: "Cruel"
+description: "你的每个物理伤害来源对对手额外造成 1 点伤害。"
+---
+
+
+<section class="dq-profession-hero dq-feature-hero">
+  <div>
+    <p class="dq-kicker">Talent · 3 阶</p>
+    <h1>Cruel</h1>
+    <p class="dq-lede">你的每个物理伤害来源对对手额外造成 1 点伤害。</p>
+    <p class="dq-original">原文：Your opponents take an additional point of damage from each of your physical sources</p>
+    <div class="dq-tag-row">
+      <span>战斗被动</span>
+      <span>不可重复</span>
+      <span>无成就要求</span>
+    </div>
+  </div>
+  <div class="dq-profession-portrait dq-feature-portrait">
+    <img src="/assets/extracted/textures/by_container/resources/Cruel__604.png" alt="Cruel" loading="lazy">
+  </div>
+</section>
+
+<section class="dq-wide-panel">
+  <h2>Metadata</h2>
+  <div class="dq-meta-grid">
+<span title="DungeonTalentList 中的内部名称。"><strong>内部名称</strong><em>Cruel</em></span>
+<span title="游戏内显示名称。"><strong>显示名</strong><em>Cruel</em></span>
+<span title="天赋选择时使用的阶级。"><strong>阶级</strong><em>3</em></span>
+<span title="是否可以重复选择同一项天赋。"><strong>可重复</strong><em>否</em></span>
+<span title="立即/地牢层面生效，或进入战斗后作为玩家被动生效。"><strong>作用域</strong><em>战斗被动</em></span>
+<span title="需要先完成的 UserAttribute / 成就。"><strong>需求</strong><em>无</em></span>
+</div>
+</section>
+
+
+
+<section class="dq-section-block">
+  <h2>实际效果</h2>
+  <div class="dq-mechanic-list">
+    <p>登记能力文本：每个物理伤害来源额外造成 1 点伤害。</p>
+    <p>进入战斗后设置玩家属性 cruel：每个物理伤害来源额外造成 1 点伤害。。</p>
+  </div>
+</section>
+
+<section class="dq-section-block">
+  <h2>解析效果</h2>
+  <table class="dq-data-table">
+  <thead><tr><th>入口</th><th>操作</th><th>目标</th><th>参数</th></tr></thead>
+  <tbody>
+<tr>
+  <td>ApplyTo</td>
+  <td>添加能力文本</td>
+  <td>DungeonPlayer.AddPower</td>
+  <td>能力文本：每个物理伤害来源额外造成 1 点伤害。（Deal 1 extra physical damage）</td>
+</tr>
+<tr>
+  <td>ApplyToPlayer</td>
+  <td>设置玩家属性</td>
+  <td>Player.SetAttribute</td>
+  <td>属性 ID：33；属性名：cruel；赋值：Player.get_cruel()+1</td>
+</tr>
+  </tbody>
+</table>
+</section>
+
+<section class="dq-action-row">
+  <a class="dq-button" href="/talents">回到天赋图鉴</a>
+</section>

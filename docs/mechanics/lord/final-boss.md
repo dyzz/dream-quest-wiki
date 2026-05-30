@@ -1,0 +1,60 @@
+---
+title: "梦境之主：FinalBoss 全流程"
+description: "第四层进入、基础属性、开战数值、Crush Everything 阈值和最终战整体顺序。"
+---
+
+
+<section class="dq-wide-panel">
+  <p class="dq-kicker">梦境之主 · Lord of the Dream</p>
+  <h1>梦境之主：FinalBoss 全流程</h1>
+  <p class="dq-lede">第四层进入、基础属性、开战数值、Crush Everything 阈值和最终战整体顺序。</p>
+  <div class="dq-action-row">
+    <a class="dq-button" href="/mechanics/lord-of-the-dream">梦境之主总览</a>
+    <a class="dq-button dq-button-secondary" href="/monsters/lord-of-the-dream">怪物图鉴条目</a>
+  </div>
+</section>
+
+<section class="dq-wide-panel">
+  <h2>Lord 基础属性</h2>
+  <div class="dq-meta-grid">
+<span title="最终 Boss 的运行时类名，不走普通 MonsterData 怪物表。"><strong>内部类</strong><em>FinalBoss</em></span>
+<span title="wiki 中使用的统一中文名称。"><strong>中文名</strong><em>梦境之主</em></span>
+<span title="最终 Boss 的战斗显示名。"><strong>英文名</strong><em>Lord of the Dream</em></span>
+<span title="地牢第四层创建最终 Boss 时使用的内部名称。"><strong>内部名称</strong><em>FinalBoss</em></span>
+<span title="FinalBoss.BuildAttributes 固定写入的 level。"><strong>等级</strong><em>10</em></span>
+<span title="FinalBoss.BuildAttributes 固定写入的 health。"><strong>生命</strong><em>1000</em></span>
+<span title="FinalBoss.BuildAttributes 固定写入的 actions。"><strong>行动点</strong><em>5</em></span>
+<span title="FinalBoss.BuildAttributes 固定写入的 cards。"><strong>每回合抽牌</strong><em>5</em></span>
+<span title="基础牌组构造结束后固定写入的 mana。"><strong>法力</strong><em>40</em></span>
+<span title="先从排除 6 张指定牌后的非奖励卡池里不放回抽 20 张，再追加 20 张随机 Attack1-4。"><strong>基础牌组</strong><em>40 张</em></span>
+<span title="最终 Boss 的奖励字段固定为 0；即使特殊死亡进入击杀结算，传给玩家的经验仍是 0。"><strong>金币 / 经验</strong><em>0 / 0</em></span>
+<span title="Flee 卡和 Flee 能力会调用 Game.Escape；这个流程没有检查 FinalBoss.CanFleeFrom。"><strong>玩家逃跑</strong><em>可以逃离</em></span>
+</div>
+  </section>
+
+<section class="dq-section-block">
+  <h2>FinalBoss 全流程</h2>
+  <table class="dq-data-table">
+    <thead><tr><th>阶段</th><th>玩家需要知道</th></tr></thead>
+    <tbody>
+<tr><td>前三层入口</td><td>每层进入文本末尾会追加 Lord 警告，里面的三句暗示对应本局最终战的三组 BossAttr。它不是纯气氛文本，而是在提前告诉玩家最终战会遇到哪三类压力。</td></tr>
+<tr><td>第四层入口</td><td>第四层不再走普通地牢房间。进入时显示白光、王座和“另一个自己”的文本，然后直接面对 Lord of the Dream。</td></tr>
+<tr><td>开战数值</td><td>Lord 固定为 1000 生命、5 行动点、每回合抽 5 张、40 法力，并且不能逃跑。基础牌组是 40 张：先从排除 6 张指定牌后的非奖励卡池里不放回抽 20 张，再补 20 张随机 Attack1-4。</td></tr>
+<tr><td>三组能力生效</td><td>最终战只会从三组里各取一个能力。抗性、限时、双回合、吸血、中毒、穿透、重装、衰变这类效果会直接改变战斗环境；王令、死亡选择、贡品会在战斗过程中持续给玩家压力。</td></tr>
+<tr><td>Lord 回合开始</td><td>只有死亡选择和贡品是明确每个 Lord 回合主动触发。王令通过出牌监听惩罚违规，其他能力主要作为持续状态影响伤害、节奏或装备。</td></tr>
+<tr><td>装备破坏压力</td><td>Crush Everything 不是概率事件。战斗有一个全局回合计数，每次进入任意一方的新回合都会 +1；Lord 自己还有一个“下一次清装备档位”，初始为 1。每次 Lord 回合开始时，如果全局回合计数已经达到 档位 × 10，就生成 Crush Everything，并把档位 +1。因此触发点是第 10、20、30……次全局回合之后的 Lord 回合开始；一次 Lord 回合最多推进一档。 <a class="dq-card-chip" href="/cards/crush-all">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/CrushAll__400.png" alt="碾碎一切" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>碾碎一切</strong><small>Crush Everything</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/CrushAll__400.png" alt="碾碎一切" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>碾碎一切</strong>
+      <small>Crush Everything · 行动牌 · 5 阶 · 1 行动点 / 0 法力</small>
+      <em>摧毁对手所有装备。放逐 此 牌。</em>
+    </span>
+  </span>
+</a></td></tr>
+<tr><td>变形改写</td><td>Polymorph 或 Wild Shape 命中 FinalBoss 时，会让 Lord 重新决定三组能力。先看当前第一组：如果是王令，三组都按普通生成重抽；如果是死亡选择、卡牌衰变或贡品，按下方“变形后的能力变化规律”表改写。</td></tr>
+    </tbody>
+  </table>
+</section>

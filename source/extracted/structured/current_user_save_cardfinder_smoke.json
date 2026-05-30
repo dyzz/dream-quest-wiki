@@ -1,0 +1,1637 @@
+{
+  "source": {
+    "current_user_loading": "extracted/structured/current_user_loading.json",
+    "codec": "tools/dungeon_user_save_codec.py",
+    "cardfinder_reward_analysis": "tools/analyze_cardfinder_rewards.py",
+    "card_data": "extracted/structured/card_data.json",
+    "professions": "extracted/structured/professions_initializers.json",
+    "achievements": "extracted/structured/achievements.json",
+    "related_artifacts": [
+      "extracted/structured/current_user_loading_smoke.json",
+      "extracted/structured/dungeon_user_save_codec_smoke.json",
+      "extracted/structured/cardfinder_unlock_state_smoke.json"
+    ]
+  },
+  "notes": [
+    "This smoke integrates a synthetic PlayerPrefs currentUser selection, a synthetic player.hpl text, the recovered DungeonUser save parser, and CardFinder current-user unlock analysis.",
+    "It does not validate against a real player.hpl/player.hpl.bkp sample or original Unity PlayerPrefs storage."
+  ],
+  "summary": {
+    "check_count": 33,
+    "passed_count": 33,
+    "failed_count": 0,
+    "synthetic_playerprefs_emulated": true,
+    "synthetic_save_file_parser_integrated": true,
+    "loaded_user_name": "IntegrationUser",
+    "loaded_unlocked_attribute_names": [
+      "DAMAGE2",
+      "WINCHAOS"
+    ],
+    "loaded_current_user_candidate_count": 33,
+    "loaded_current_user_total_weight": 86.0,
+    "loaded_current_user_added_candidate_count": 2,
+    "fallback_user_created": true,
+    "real_player_hpl_sample_verified": false,
+    "playerprefs_original_storage_verified": false,
+    "prototype_runtime_ready": false
+  },
+  "fixtures": {
+    "playerprefs": {
+      "currentUser": "FallbackUser"
+    },
+    "file_paths": [
+      "profiles/FallbackUser/player.hpl",
+      "profiles/IntegrationUser/player.hpl"
+    ],
+    "loaded_user": {
+      "name": "IntegrationUser",
+      "path": "profiles/IntegrationUser/player.hpl",
+      "source": "existing_player_hpl",
+      "save": {
+        "attributes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "nonzero_attribute_indices": [
+          12,
+          103,
+          167
+        ],
+        "monsters_seen": [
+          "Pixie",
+          "Skeleton"
+        ],
+        "environments_seen": [
+          "FOREST",
+          "CAVE"
+        ],
+        "bosses_seen": [
+          "Lich"
+        ],
+        "history": [
+          "Floor 1: Warrior",
+          "Floor 2: Warrior"
+        ],
+        "raw_prefix_lines": [
+          "Pixie,Skeleton",
+          "FOREST,CAVE",
+          "Lich",
+          "Floor 1: Warrior",
+          "Floor 2: Warrior"
+        ],
+        "unknown_suffix": ""
+      }
+    },
+    "fallback_user": {
+      "name": "FallbackUser",
+      "path": "profiles/FallbackUser/player.hpl",
+      "source": "CreateUser",
+      "save": {
+        "attributes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nonzero_attribute_indices": [],
+        "monsters_seen": [],
+        "environments_seen": [],
+        "bosses_seen": [],
+        "history": [],
+        "raw_prefix_lines": [],
+        "unknown_suffix": ""
+      }
+    },
+    "parsed_save_cardfinder_summary": {
+      "card_data_count": 234,
+      "profession": "ProfessionWarrior",
+      "base_unlocked_candidate_count": 31,
+      "base_unlocked_total_weight": 75.0,
+      "probability_sum": 1.0,
+      "current_user_unlocked_attribute_count": 2,
+      "current_user_candidate_count": 33,
+      "current_user_total_weight": 86.0,
+      "current_user_probability_sum": 1.0,
+      "current_user_added_candidate_count": 2,
+      "current_user_added_candidates": [
+        {
+          "internal_name": "Execute",
+          "real_name": "Execute",
+          "requirements": [
+            {
+              "attribute": 12,
+              "attribute_name": "DAMAGE2",
+              "achievement_internal_name": "Damage2",
+              "achievement_display_name": "Carry a Really Big Stick",
+              "requirements_text": "Deal 1,000 damage",
+              "reward_text": "Gain access to the Execute card",
+              "cost": 350,
+              "flavor_name": "CARD",
+              "source_address": "0x0100037b94",
+              "enum_only_note": null
+            }
+          ],
+          "analysis_weight": 10.0,
+          "current_user_roll_start_inclusive": 76,
+          "current_user_roll_end_inclusive": 85
+        },
+        {
+          "internal_name": "WildStrike1",
+          "real_name": "Wild Strike (1)",
+          "requirements": [
+            {
+              "attribute": 167,
+              "attribute_name": "WINCHAOS",
+              "achievement_internal_name": null,
+              "achievement_display_name": null,
+              "requirements_text": null,
+              "reward_text": null,
+              "cost": null,
+              "flavor_name": null,
+              "source_address": null,
+              "enum_only_note": {
+                "status": "enum_only_profession_win_gate",
+                "basis": "UserAttribute contains WINCHAOS next to WINCHAOS2/FLOOR1_CHAOS/CHAOS_HS, and ProfessionChaosMage exists, but AchievementList.GetAchievementList has no WINCHAOS row.",
+                "inferred_condition": "likely clear the dungeon as Chaos Mage",
+                "confidence": "medium"
+              }
+            }
+          ],
+          "analysis_weight": 1.0,
+          "current_user_roll_start_inclusive": 86,
+          "current_user_roll_end_inclusive": 86
+        }
+      ],
+      "requirement_gated_candidate_count": 7,
+      "requirement_gated_candidate_unlocks": [
+        {
+          "internal_name": "Execute",
+          "real_name": "Execute",
+          "requirements": [
+            {
+              "attribute": 12,
+              "attribute_name": "DAMAGE2",
+              "achievement_internal_name": "Damage2",
+              "achievement_display_name": "Carry a Really Big Stick",
+              "requirements_text": "Deal 1,000 damage",
+              "reward_text": "Gain access to the Execute card",
+              "cost": 350,
+              "flavor_name": "CARD",
+              "source_address": "0x0100037b94",
+              "enum_only_note": null
+            }
+          ],
+          "analysis_weight": 10.0
+        },
+        {
+          "internal_name": "Pickpocket",
+          "real_name": "Pickpocket",
+          "requirements": [
+            {
+              "attribute": 10,
+              "attribute_name": "GOBLIN2",
+              "achievement_internal_name": "Goblin2",
+              "achievement_display_name": "Goblin Bane",
+              "requirements_text": "Kill 20 Goblins",
+              "reward_text": "Gain access to the Pickpocket card",
+              "cost": 500,
+              "flavor_name": "CARD",
+              "source_address": "0x0100038580",
+              "enum_only_note": null
+            }
+          ],
+          "analysis_weight": 3.0
+        },
+        {
+          "internal_name": "InnerStrength",
+          "real_name": "Second Thoughts",
+          "requirements": [
+            {
+              "attribute": 47,
+              "attribute_name": "KILL2",
+              "achievement_internal_name": "Kill2",
+              "achievement_display_name": "Killing Spree",
+              "requirements_text": "Kill 100 creatures",
+              "reward_text": "Gain access to the Second Thoughts card",
+              "cost": 350,
+              "flavor_name": "CARD",
+              "source_address": "0x0100038004",
+              "enum_only_note": null
+            }
+          ],
+          "analysis_weight": 2.0
+        },
+        {
+          "internal_name": "DivineInspiration",
+          "real_name": "Divine Inspiration",
+          "requirements": [
+            {
+              "attribute": 52,
+              "attribute_name": "BOSSLICH",
+              "achievement_internal_name": "BossLich",
+              "achievement_display_name": "No Lich",
+              "requirements_text": "Defeat the Lich",
+              "reward_text": "Gain access to the Divine Inspiration card",
+              "cost": 500,
+              "flavor_name": "CARD",
+              "source_address": "0x0100039328",
+              "enum_only_note": null
+            }
+          ],
+          "analysis_weight": 1.0
+        },
+        {
+          "internal_name": "LastChance",
+          "real_name": "Desperate Strike",
+          "requirements": [
+            {
+              "attribute": 55,
+              "attribute_name": "BOSSAKAMIASCENDENT",
+              "achievement_internal_name": "BossAkamiAscendent",
+              "achievement_display_name": "Lizard Master",
+              "requirements_text": "Defeat the Akami Ascendent",
+              "reward_text": "Gain access to the Desperate Strike card",
+              "cost": 500,
+              "flavor_name": "CARD",
+              "source_address": "0x0100039068",
+              "enum_only_note": null
+            }
+          ],
+          "analysis_weight": 1.0
+        },
+        {
+          "internal_name": "Sift",
+          "real_name": "Sift",
+          "requirements": [
+            {
+              "attribute": 58,
+              "attribute_name": "BOSSGELATINOUSCUBE",
+              "achievement_internal_name": "BossGelatinousCube",
+              "achievement_display_name": "Slurp No More",
+              "requirements_text": "Defeat the Gelatinous Cube",
+              "reward_text": "Gain access to the Sift card",
+              "cost": 500,
+              "flavor_name": "CARD",
+              "source_address": "0x0100038ec8",
+              "enum_only_note": null
+            }
+          ],
+          "analysis_weight": 1.0
+        },
+        {
+          "internal_name": "WildStrike1",
+          "real_name": "Wild Strike (1)",
+          "requirements": [
+            {
+              "attribute": 167,
+              "attribute_name": "WINCHAOS",
+              "achievement_internal_name": null,
+              "achievement_display_name": null,
+              "requirements_text": null,
+              "reward_text": null,
+              "cost": null,
+              "flavor_name": null,
+              "source_address": null,
+              "enum_only_note": {
+                "status": "enum_only_profession_win_gate",
+                "basis": "UserAttribute contains WINCHAOS next to WINCHAOS2/FLOOR1_CHAOS/CHAOS_HS, and ProfessionChaosMage exists, but AchievementList.GetAchievementList has no WINCHAOS row.",
+                "inferred_condition": "likely clear the dungeon as Chaos Mage",
+                "confidence": "medium"
+              }
+            }
+          ],
+          "analysis_weight": 1.0
+        }
+      ],
+      "requirement_gated_missing_achievement_evidence_count": 1,
+      "requirement_gated_missing_achievement_evidence": [
+        {
+          "internal_name": "WildStrike1",
+          "real_name": "Wild Strike (1)",
+          "requirements": [
+            {
+              "attribute": 167,
+              "attribute_name": "WINCHAOS",
+              "achievement_internal_name": null,
+              "achievement_display_name": null,
+              "requirements_text": null,
+              "reward_text": null,
+              "cost": null,
+              "flavor_name": null,
+              "source_address": null,
+              "enum_only_note": {
+                "status": "enum_only_profession_win_gate",
+                "basis": "UserAttribute contains WINCHAOS next to WINCHAOS2/FLOOR1_CHAOS/CHAOS_HS, and ProfessionChaosMage exists, but AchievementList.GetAchievementList has no WINCHAOS row.",
+                "inferred_condition": "likely clear the dungeon as Chaos Mage",
+                "confidence": "medium"
+              }
+            }
+          ]
+        }
+      ],
+      "all_card_requirement_missing_achievement_evidence_count": 2,
+      "all_card_requirement_missing_achievement_evidence": [
+        {
+          "attribute": 167,
+          "attribute_name": "WINCHAOS",
+          "enum_only_note": {
+            "status": "enum_only_profession_win_gate",
+            "basis": "UserAttribute contains WINCHAOS next to WINCHAOS2/FLOOR1_CHAOS/CHAOS_HS, and ProfessionChaosMage exists, but AchievementList.GetAchievementList has no WINCHAOS row.",
+            "inferred_condition": "likely clear the dungeon as Chaos Mage",
+            "confidence": "medium"
+          },
+          "card_names": [
+            "WildStrike1",
+            "WildStrike2",
+            "WildStrike3"
+          ]
+        },
+        {
+          "attribute": 168,
+          "attribute_name": "WINCHAOS2",
+          "enum_only_note": {
+            "status": "enum_only_profession_champion_gate",
+            "basis": "UserAttribute contains WINCHAOS2 next to WINCHAOS/FLOOR1_CHAOS/CHAOS_HS, and ProfessionChaosMage exists, but AchievementList.GetAchievementList has no WINCHAOS2 row.",
+            "inferred_condition": "likely reduce the final boss under the champion-health threshold as Chaos Mage, matching other *2 profession gates",
+            "confidence": "medium"
+          },
+          "card_names": [
+            "WildMana"
+          ]
+        }
+      ],
+      "access_counts": {
+        "never": 77,
+        "base_unlocked": 118,
+        "requirement_gated": 39
+      },
+      "user_access_counts": {
+        "never": 77,
+        "base_unlocked": 118,
+        "requirement_locked": 35,
+        "requirement_unlocked": 4
+      },
+      "rejected_counts": {
+        "CardData.HasAccess rejects requirement never": 77,
+        "Dungeon.SpawnCount is not below CardData.maxSpawns": 54,
+        "affinity score below threshold or negative": 57,
+        "analysis weight is not positive": 57,
+        "effective tier outside requested range": 151,
+        "card has unlock requirements; excluded from base-unlocked pool": 39
+      },
+      "top_base_unlocked_candidates": [
+        {
+          "internal_name": "CollosusSmash",
+          "real_name": "Colossus Smash",
+          "card_type": "AttackCard",
+          "effective_tier": 2,
+          "analysis_weight": 10.0,
+          "analysis_probability": 0.13333333
+        },
+        {
+          "internal_name": "Strike1",
+          "real_name": "Strike (1)",
+          "card_type": "ActionCard",
+          "effective_tier": 2,
+          "analysis_weight": 8.0,
+          "analysis_probability": 0.10666667
+        },
+        {
+          "internal_name": "StormSlash1",
+          "real_name": "Storm Slash (1)",
+          "card_type": "AttackCard",
+          "effective_tier": 1,
+          "analysis_weight": 7.0,
+          "analysis_probability": 0.09333333
+        },
+        {
+          "internal_name": "StormSlash2",
+          "real_name": "Storm Slash (2)",
+          "card_type": "AttackCard",
+          "effective_tier": 2,
+          "analysis_weight": 7.0,
+          "analysis_probability": 0.09333333
+        },
+        {
+          "internal_name": "Circle",
+          "real_name": "Circle",
+          "card_type": "ActionCard",
+          "effective_tier": 3,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "CorrosiveSlash1",
+          "real_name": "Corrosive Slash (1)",
+          "card_type": "AttackCard",
+          "effective_tier": 1,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "CorrosiveSlash2",
+          "real_name": "Corrosive Slash (2)",
+          "card_type": "AttackCard",
+          "effective_tier": 2,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "FlameSlash1",
+          "real_name": "Flame Slash (1)",
+          "card_type": "AttackCard",
+          "effective_tier": 1,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "FlameSlash2",
+          "real_name": "Flame Slash (2)",
+          "card_type": "AttackCard",
+          "effective_tier": 2,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "FrostSlash1",
+          "real_name": "Frost Slash (1)",
+          "card_type": "AttackCard",
+          "effective_tier": 1,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "FrostSlash2",
+          "real_name": "Frost Slash (2)",
+          "card_type": "AttackCard",
+          "effective_tier": 2,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "Kick",
+          "real_name": "Kick",
+          "card_type": "ActionCard",
+          "effective_tier": 3,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "AcidLance",
+          "real_name": "Acid Lance",
+          "card_type": "SpellCard",
+          "effective_tier": 3,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "Backstab",
+          "real_name": "Backstab",
+          "card_type": "AttackCard",
+          "effective_tier": 3,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "Blur",
+          "real_name": "Blur",
+          "card_type": "SpellCard",
+          "effective_tier": 3,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "Fireball",
+          "real_name": "Fireball",
+          "card_type": "SpellCard",
+          "effective_tier": 3,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "FlameCharge",
+          "real_name": "Flame Charge",
+          "card_type": "ManaCard",
+          "effective_tier": 2,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "FrostBolt",
+          "real_name": "Frost Bolt",
+          "card_type": "SpellCard",
+          "effective_tier": 3,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "FrostCharge",
+          "real_name": "Frost Charge",
+          "card_type": "ManaCard",
+          "effective_tier": 2,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "Heal",
+          "real_name": "Heal",
+          "card_type": "SpellCard",
+          "effective_tier": 2,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        }
+      ],
+      "roll_band_count": 31,
+      "roll_min": 1,
+      "roll_max": 75,
+      "current_user_roll_band_count": 33,
+      "current_user_roll_min": 1,
+      "current_user_roll_max": 86,
+      "remaining_gaps": [
+        "This is a CardFinder candidate/weight analysis, not byte-accurate list/RNG replay.",
+        "User achievement state is explicit fixture input; original GameManager/current-user save loading and RNG stream position are not replayed here.",
+        "Utility.RoundRandom is represented structurally; this fixture has zero starting elemental counts, so DungeonPlayer.FrequencyMod contributes 0 for the default Warrior floor-1 analysis.",
+        "Spawn counts are normalized through Card.BaseName, but this analysis still uses a static input map rather than replaying Dungeon.SpawnCard after every selected reward."
+      ]
+    },
+    "fallback_cardfinder_summary": {
+      "card_data_count": 234,
+      "profession": "ProfessionWarrior",
+      "base_unlocked_candidate_count": 31,
+      "base_unlocked_total_weight": 75.0,
+      "probability_sum": 1.0,
+      "current_user_unlocked_attribute_count": 0,
+      "current_user_candidate_count": 31,
+      "current_user_total_weight": 75.0,
+      "current_user_probability_sum": 1.0,
+      "current_user_added_candidate_count": 0,
+      "current_user_added_candidates": [],
+      "requirement_gated_candidate_count": 7,
+      "requirement_gated_candidate_unlocks": [
+        {
+          "internal_name": "Execute",
+          "real_name": "Execute",
+          "requirements": [
+            {
+              "attribute": 12,
+              "attribute_name": "DAMAGE2",
+              "achievement_internal_name": "Damage2",
+              "achievement_display_name": "Carry a Really Big Stick",
+              "requirements_text": "Deal 1,000 damage",
+              "reward_text": "Gain access to the Execute card",
+              "cost": 350,
+              "flavor_name": "CARD",
+              "source_address": "0x0100037b94",
+              "enum_only_note": null
+            }
+          ],
+          "analysis_weight": 10.0
+        },
+        {
+          "internal_name": "Pickpocket",
+          "real_name": "Pickpocket",
+          "requirements": [
+            {
+              "attribute": 10,
+              "attribute_name": "GOBLIN2",
+              "achievement_internal_name": "Goblin2",
+              "achievement_display_name": "Goblin Bane",
+              "requirements_text": "Kill 20 Goblins",
+              "reward_text": "Gain access to the Pickpocket card",
+              "cost": 500,
+              "flavor_name": "CARD",
+              "source_address": "0x0100038580",
+              "enum_only_note": null
+            }
+          ],
+          "analysis_weight": 3.0
+        },
+        {
+          "internal_name": "InnerStrength",
+          "real_name": "Second Thoughts",
+          "requirements": [
+            {
+              "attribute": 47,
+              "attribute_name": "KILL2",
+              "achievement_internal_name": "Kill2",
+              "achievement_display_name": "Killing Spree",
+              "requirements_text": "Kill 100 creatures",
+              "reward_text": "Gain access to the Second Thoughts card",
+              "cost": 350,
+              "flavor_name": "CARD",
+              "source_address": "0x0100038004",
+              "enum_only_note": null
+            }
+          ],
+          "analysis_weight": 2.0
+        },
+        {
+          "internal_name": "DivineInspiration",
+          "real_name": "Divine Inspiration",
+          "requirements": [
+            {
+              "attribute": 52,
+              "attribute_name": "BOSSLICH",
+              "achievement_internal_name": "BossLich",
+              "achievement_display_name": "No Lich",
+              "requirements_text": "Defeat the Lich",
+              "reward_text": "Gain access to the Divine Inspiration card",
+              "cost": 500,
+              "flavor_name": "CARD",
+              "source_address": "0x0100039328",
+              "enum_only_note": null
+            }
+          ],
+          "analysis_weight": 1.0
+        },
+        {
+          "internal_name": "LastChance",
+          "real_name": "Desperate Strike",
+          "requirements": [
+            {
+              "attribute": 55,
+              "attribute_name": "BOSSAKAMIASCENDENT",
+              "achievement_internal_name": "BossAkamiAscendent",
+              "achievement_display_name": "Lizard Master",
+              "requirements_text": "Defeat the Akami Ascendent",
+              "reward_text": "Gain access to the Desperate Strike card",
+              "cost": 500,
+              "flavor_name": "CARD",
+              "source_address": "0x0100039068",
+              "enum_only_note": null
+            }
+          ],
+          "analysis_weight": 1.0
+        },
+        {
+          "internal_name": "Sift",
+          "real_name": "Sift",
+          "requirements": [
+            {
+              "attribute": 58,
+              "attribute_name": "BOSSGELATINOUSCUBE",
+              "achievement_internal_name": "BossGelatinousCube",
+              "achievement_display_name": "Slurp No More",
+              "requirements_text": "Defeat the Gelatinous Cube",
+              "reward_text": "Gain access to the Sift card",
+              "cost": 500,
+              "flavor_name": "CARD",
+              "source_address": "0x0100038ec8",
+              "enum_only_note": null
+            }
+          ],
+          "analysis_weight": 1.0
+        },
+        {
+          "internal_name": "WildStrike1",
+          "real_name": "Wild Strike (1)",
+          "requirements": [
+            {
+              "attribute": 167,
+              "attribute_name": "WINCHAOS",
+              "achievement_internal_name": null,
+              "achievement_display_name": null,
+              "requirements_text": null,
+              "reward_text": null,
+              "cost": null,
+              "flavor_name": null,
+              "source_address": null,
+              "enum_only_note": {
+                "status": "enum_only_profession_win_gate",
+                "basis": "UserAttribute contains WINCHAOS next to WINCHAOS2/FLOOR1_CHAOS/CHAOS_HS, and ProfessionChaosMage exists, but AchievementList.GetAchievementList has no WINCHAOS row.",
+                "inferred_condition": "likely clear the dungeon as Chaos Mage",
+                "confidence": "medium"
+              }
+            }
+          ],
+          "analysis_weight": 1.0
+        }
+      ],
+      "requirement_gated_missing_achievement_evidence_count": 1,
+      "requirement_gated_missing_achievement_evidence": [
+        {
+          "internal_name": "WildStrike1",
+          "real_name": "Wild Strike (1)",
+          "requirements": [
+            {
+              "attribute": 167,
+              "attribute_name": "WINCHAOS",
+              "achievement_internal_name": null,
+              "achievement_display_name": null,
+              "requirements_text": null,
+              "reward_text": null,
+              "cost": null,
+              "flavor_name": null,
+              "source_address": null,
+              "enum_only_note": {
+                "status": "enum_only_profession_win_gate",
+                "basis": "UserAttribute contains WINCHAOS next to WINCHAOS2/FLOOR1_CHAOS/CHAOS_HS, and ProfessionChaosMage exists, but AchievementList.GetAchievementList has no WINCHAOS row.",
+                "inferred_condition": "likely clear the dungeon as Chaos Mage",
+                "confidence": "medium"
+              }
+            }
+          ]
+        }
+      ],
+      "all_card_requirement_missing_achievement_evidence_count": 2,
+      "all_card_requirement_missing_achievement_evidence": [
+        {
+          "attribute": 167,
+          "attribute_name": "WINCHAOS",
+          "enum_only_note": {
+            "status": "enum_only_profession_win_gate",
+            "basis": "UserAttribute contains WINCHAOS next to WINCHAOS2/FLOOR1_CHAOS/CHAOS_HS, and ProfessionChaosMage exists, but AchievementList.GetAchievementList has no WINCHAOS row.",
+            "inferred_condition": "likely clear the dungeon as Chaos Mage",
+            "confidence": "medium"
+          },
+          "card_names": [
+            "WildStrike1",
+            "WildStrike2",
+            "WildStrike3"
+          ]
+        },
+        {
+          "attribute": 168,
+          "attribute_name": "WINCHAOS2",
+          "enum_only_note": {
+            "status": "enum_only_profession_champion_gate",
+            "basis": "UserAttribute contains WINCHAOS2 next to WINCHAOS/FLOOR1_CHAOS/CHAOS_HS, and ProfessionChaosMage exists, but AchievementList.GetAchievementList has no WINCHAOS2 row.",
+            "inferred_condition": "likely reduce the final boss under the champion-health threshold as Chaos Mage, matching other *2 profession gates",
+            "confidence": "medium"
+          },
+          "card_names": [
+            "WildMana"
+          ]
+        }
+      ],
+      "access_counts": {
+        "never": 77,
+        "base_unlocked": 118,
+        "requirement_gated": 39
+      },
+      "user_access_counts": {
+        "never": 77,
+        "base_unlocked": 118,
+        "requirement_locked": 39
+      },
+      "rejected_counts": {
+        "CardData.HasAccess rejects requirement never": 77,
+        "Dungeon.SpawnCount is not below CardData.maxSpawns": 54,
+        "affinity score below threshold or negative": 57,
+        "analysis weight is not positive": 57,
+        "effective tier outside requested range": 151,
+        "card has unlock requirements; excluded from base-unlocked pool": 39
+      },
+      "top_base_unlocked_candidates": [
+        {
+          "internal_name": "CollosusSmash",
+          "real_name": "Colossus Smash",
+          "card_type": "AttackCard",
+          "effective_tier": 2,
+          "analysis_weight": 10.0,
+          "analysis_probability": 0.13333333
+        },
+        {
+          "internal_name": "Strike1",
+          "real_name": "Strike (1)",
+          "card_type": "ActionCard",
+          "effective_tier": 2,
+          "analysis_weight": 8.0,
+          "analysis_probability": 0.10666667
+        },
+        {
+          "internal_name": "StormSlash1",
+          "real_name": "Storm Slash (1)",
+          "card_type": "AttackCard",
+          "effective_tier": 1,
+          "analysis_weight": 7.0,
+          "analysis_probability": 0.09333333
+        },
+        {
+          "internal_name": "StormSlash2",
+          "real_name": "Storm Slash (2)",
+          "card_type": "AttackCard",
+          "effective_tier": 2,
+          "analysis_weight": 7.0,
+          "analysis_probability": 0.09333333
+        },
+        {
+          "internal_name": "Circle",
+          "real_name": "Circle",
+          "card_type": "ActionCard",
+          "effective_tier": 3,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "CorrosiveSlash1",
+          "real_name": "Corrosive Slash (1)",
+          "card_type": "AttackCard",
+          "effective_tier": 1,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "CorrosiveSlash2",
+          "real_name": "Corrosive Slash (2)",
+          "card_type": "AttackCard",
+          "effective_tier": 2,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "FlameSlash1",
+          "real_name": "Flame Slash (1)",
+          "card_type": "AttackCard",
+          "effective_tier": 1,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "FlameSlash2",
+          "real_name": "Flame Slash (2)",
+          "card_type": "AttackCard",
+          "effective_tier": 2,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "FrostSlash1",
+          "real_name": "Frost Slash (1)",
+          "card_type": "AttackCard",
+          "effective_tier": 1,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "FrostSlash2",
+          "real_name": "Frost Slash (2)",
+          "card_type": "AttackCard",
+          "effective_tier": 2,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "Kick",
+          "real_name": "Kick",
+          "card_type": "ActionCard",
+          "effective_tier": 3,
+          "analysis_weight": 3.0,
+          "analysis_probability": 0.04
+        },
+        {
+          "internal_name": "AcidLance",
+          "real_name": "Acid Lance",
+          "card_type": "SpellCard",
+          "effective_tier": 3,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "Backstab",
+          "real_name": "Backstab",
+          "card_type": "AttackCard",
+          "effective_tier": 3,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "Blur",
+          "real_name": "Blur",
+          "card_type": "SpellCard",
+          "effective_tier": 3,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "Fireball",
+          "real_name": "Fireball",
+          "card_type": "SpellCard",
+          "effective_tier": 3,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "FlameCharge",
+          "real_name": "Flame Charge",
+          "card_type": "ManaCard",
+          "effective_tier": 2,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "FrostBolt",
+          "real_name": "Frost Bolt",
+          "card_type": "SpellCard",
+          "effective_tier": 3,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "FrostCharge",
+          "real_name": "Frost Charge",
+          "card_type": "ManaCard",
+          "effective_tier": 2,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        },
+        {
+          "internal_name": "Heal",
+          "real_name": "Heal",
+          "card_type": "SpellCard",
+          "effective_tier": 2,
+          "analysis_weight": 1.0,
+          "analysis_probability": 0.01333333
+        }
+      ],
+      "roll_band_count": 31,
+      "roll_min": 1,
+      "roll_max": 75,
+      "current_user_roll_band_count": 31,
+      "current_user_roll_min": 1,
+      "current_user_roll_max": 75,
+      "remaining_gaps": [
+        "This is a CardFinder candidate/weight analysis, not byte-accurate list/RNG replay.",
+        "User achievement state is explicit fixture input; original GameManager/current-user save loading and RNG stream position are not replayed here.",
+        "Utility.RoundRandom is represented structurally; this fixture has zero starting elemental counts, so DungeonPlayer.FrequencyMod contributes 0 for the default Warrior floor-1 analysis.",
+        "Spawn counts are normalized through Card.BaseName, but this analysis still uses a static input map rather than replaying Dungeon.SpawnCard after every selected reward."
+      ]
+    },
+    "events": [
+      {
+        "op": "GameManager.GetCurrentUser.PlayerPrefs.GetString",
+        "playerprefs_key": "currentUser",
+        "value": "IntegrationUser"
+      },
+      {
+        "op": "DungeonUser.PlayerFilename",
+        "user": "IntegrationUser",
+        "path": "profiles/IntegrationUser/player.hpl"
+      },
+      {
+        "op": "DungeonUser.LoadUser.Load",
+        "user": "IntegrationUser",
+        "path": "profiles/IntegrationUser/player.hpl"
+      },
+      {
+        "op": "GameManager.LoadCurrentUser.cache_store",
+        "user": "IntegrationUser"
+      },
+      {
+        "op": "GameManager.LoadCurrentUser.cached",
+        "user": "IntegrationUser"
+      },
+      {
+        "op": "GameManager.SetCurrentUser",
+        "user": "FallbackUser",
+        "playerprefs_key": "currentUser",
+        "cached_current_user_cleared": true
+      },
+      {
+        "op": "GameManager.GetCurrentUser.static",
+        "value": "FallbackUser"
+      },
+      {
+        "op": "DungeonUser.PlayerFilename",
+        "user": "FallbackUser",
+        "path": "profiles/FallbackUser/player.hpl"
+      },
+      {
+        "op": "DungeonUser.LoadUser.file_missing",
+        "path": "profiles/FallbackUser/player.hpl"
+      },
+      {
+        "op": "DungeonUser.CreateUser",
+        "user": "FallbackUser",
+        "path": "profiles/FallbackUser/player.hpl"
+      },
+      {
+        "op": "GameManager.LoadCurrentUser.cache_store",
+        "user": "FallbackUser"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "current_user_loading:playerprefs_key",
+      "status": "passed",
+      "actual": "currentUser",
+      "expected": "currentUser",
+      "details": {}
+    },
+    {
+      "name": "current_user_loading:profile_directory",
+      "status": "passed",
+      "actual": "profiles",
+      "expected": "profiles",
+      "details": {}
+    },
+    {
+      "name": "current_user_loading:player_filename",
+      "status": "passed",
+      "actual": "player.hpl",
+      "expected": "player.hpl",
+      "details": {}
+    },
+    {
+      "name": "current_user_loading:attribute_regex",
+      "status": "passed",
+      "actual": "(\\d+): (\\d+)\\D*",
+      "expected": "(\\d+): (\\d+)\\D*",
+      "details": {}
+    },
+    {
+      "name": "playerprefs_initial_selection",
+      "status": "passed",
+      "actual": "IntegrationUser",
+      "expected": "IntegrationUser",
+      "details": {}
+    },
+    {
+      "name": "loaded_user_name",
+      "status": "passed",
+      "actual": "IntegrationUser",
+      "expected": "IntegrationUser",
+      "details": {}
+    },
+    {
+      "name": "loaded_user_path",
+      "status": "passed",
+      "actual": "profiles/IntegrationUser/player.hpl",
+      "expected": "profiles/IntegrationUser/player.hpl",
+      "details": {}
+    },
+    {
+      "name": "loaded_user_source",
+      "status": "passed",
+      "actual": "existing_player_hpl",
+      "expected": "existing_player_hpl",
+      "details": {}
+    },
+    {
+      "name": "loaded_nonzero_attribute_indices",
+      "status": "passed",
+      "actual": [
+        12,
+        103,
+        167
+      ],
+      "expected": [
+        12,
+        103,
+        167
+      ],
+      "details": {}
+    },
+    {
+      "name": "loaded_unlocked_attribute_names",
+      "status": "passed",
+      "actual": [
+        "DAMAGE2",
+        "WINCHAOS"
+      ],
+      "expected": [
+        "DAMAGE2",
+        "WINCHAOS"
+      ],
+      "details": {}
+    },
+    {
+      "name": "default_current_user_candidate_count",
+      "status": "passed",
+      "actual": 31,
+      "expected": 31,
+      "details": {}
+    },
+    {
+      "name": "loaded_current_user_candidate_count",
+      "status": "passed",
+      "actual": 33,
+      "expected": 33,
+      "details": {}
+    },
+    {
+      "name": "loaded_current_user_total_weight",
+      "status": "passed",
+      "actual": 86.0,
+      "expected": 86.0,
+      "details": {}
+    },
+    {
+      "name": "loaded_current_user_added_candidates",
+      "status": "passed",
+      "actual": [
+        "Execute",
+        "WildStrike1"
+      ],
+      "expected": [
+        "Execute",
+        "WildStrike1"
+      ],
+      "details": {}
+    },
+    {
+      "name": "execute_access_status",
+      "status": "passed",
+      "actual": "requirement_unlocked",
+      "expected": "requirement_unlocked",
+      "details": {}
+    },
+    {
+      "name": "execute_roll_band",
+      "status": "passed",
+      "actual": [
+        76,
+        85
+      ],
+      "expected": [
+        76,
+        85
+      ],
+      "details": {}
+    },
+    {
+      "name": "wildstrike_enum_only_access_status",
+      "status": "passed",
+      "actual": "requirement_unlocked",
+      "expected": "requirement_unlocked",
+      "details": {}
+    },
+    {
+      "name": "wildstrike_roll_band",
+      "status": "passed",
+      "actual": [
+        86,
+        86
+      ],
+      "expected": [
+        86,
+        86
+      ],
+      "details": {}
+    },
+    {
+      "name": "load_current_user_cache_hit",
+      "status": "passed",
+      "actual": "IntegrationUser",
+      "expected": "IntegrationUser",
+      "details": {}
+    },
+    {
+      "name": "load_current_user_cache_event_recorded",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "set_current_user_writes_playerprefs",
+      "status": "passed",
+      "actual": "FallbackUser",
+      "expected": "FallbackUser",
+      "details": {}
+    },
+    {
+      "name": "set_current_user_playerprefs_save_count",
+      "status": "passed",
+      "actual": 1,
+      "expected": 1,
+      "details": {}
+    },
+    {
+      "name": "fallback_user_name",
+      "status": "passed",
+      "actual": "FallbackUser",
+      "expected": "FallbackUser",
+      "details": {}
+    },
+    {
+      "name": "fallback_user_source",
+      "status": "passed",
+      "actual": "CreateUser",
+      "expected": "CreateUser",
+      "details": {}
+    },
+    {
+      "name": "fallback_user_path",
+      "status": "passed",
+      "actual": "profiles/FallbackUser/player.hpl",
+      "expected": "profiles/FallbackUser/player.hpl",
+      "details": {}
+    },
+    {
+      "name": "fallback_user_file_created",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "fallback_nonzero_attribute_indices",
+      "status": "passed",
+      "actual": [],
+      "expected": [],
+      "details": {}
+    },
+    {
+      "name": "fallback_current_user_candidate_count",
+      "status": "passed",
+      "actual": 31,
+      "expected": 31,
+      "details": {}
+    },
+    {
+      "name": "event_ops",
+      "status": "passed",
+      "actual": [
+        "GameManager.GetCurrentUser.PlayerPrefs.GetString",
+        "DungeonUser.PlayerFilename",
+        "DungeonUser.LoadUser.Load",
+        "GameManager.LoadCurrentUser.cache_store",
+        "GameManager.LoadCurrentUser.cached",
+        "GameManager.SetCurrentUser",
+        "GameManager.GetCurrentUser.static",
+        "DungeonUser.PlayerFilename",
+        "DungeonUser.LoadUser.file_missing",
+        "DungeonUser.CreateUser",
+        "GameManager.LoadCurrentUser.cache_store"
+      ],
+      "expected": [
+        "GameManager.GetCurrentUser.PlayerPrefs.GetString",
+        "DungeonUser.PlayerFilename",
+        "DungeonUser.LoadUser.Load",
+        "GameManager.LoadCurrentUser.cache_store",
+        "GameManager.LoadCurrentUser.cached",
+        "GameManager.SetCurrentUser",
+        "GameManager.GetCurrentUser.static",
+        "DungeonUser.PlayerFilename",
+        "DungeonUser.LoadUser.file_missing",
+        "DungeonUser.CreateUser",
+        "GameManager.LoadCurrentUser.cache_store"
+      ],
+      "details": {}
+    },
+    {
+      "name": "decision:synthetic_playerprefs_emulated",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "decision:synthetic_save_file_parser_integrated",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "decision:real_player_hpl_sample_verified",
+      "status": "passed",
+      "actual": false,
+      "expected": false,
+      "details": {}
+    },
+    {
+      "name": "decision:prototype_runtime_ready",
+      "status": "passed",
+      "actual": false,
+      "expected": false,
+      "details": {}
+    }
+  ]
+}

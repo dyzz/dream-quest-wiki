@@ -1,0 +1,5560 @@
+{
+  "source": {
+    "card_data": "extracted/structured/card_data.json",
+    "achievements": "extracted/structured/achievements.json",
+    "disassembly": {
+      "CardData.HasAccess": "extracted/disassembly/CardData_HasAccess.txt",
+      "CardData.HasNever": "extracted/disassembly/CardData_HasNever.txt",
+      "DungeonUser.GetAttribute": "extracted/disassembly/DungeonUser_GetAttribute.txt",
+      "GameManager.LoadCurrentUser": "extracted/disassembly/GameManager_LoadCurrentUser.txt"
+    }
+  },
+  "rule_model": {
+    "card_requirements_field_offset": "0x28",
+    "never_attribute": 103,
+    "never_rule": "CardData.HasNever and CardData.HasAccess both treat requirement 103 as an immediate false/disabled gate.",
+    "access_rule": "A card with no requirements is base-unlocked; otherwise CardData.HasAccess requires every non-103 requirement to be present in the current DungeonUser/UserAttribute source.",
+    "current_user_attribute_read": "DungeonUser.GetAttribute(attribute) reads the int attribute list at DungeonUser offset 0x80.",
+    "fixture_unlocked_attributes": [],
+    "fixture_unlocked_attribute_names": {},
+    "remaining_gap": "This artifact models the requirement predicate; original GameManager.LoadCurrentUser save-file selection and lifecycle are not replayed."
+  },
+  "summary": {
+    "card_data_count": 234,
+    "access_counts": {
+      "base_unlocked": 118,
+      "never": 77,
+      "requirement_locked": 39
+    },
+    "requirement_attribute_count": 38,
+    "requirement_card_reference_count": 116,
+    "never_card_count": 77,
+    "requirement_gated_or_unlocked_count": 39,
+    "missing_achievement_requirement_count": 2,
+    "missing_achievement_requirements": [
+      {
+        "attribute": 167,
+        "attribute_name": "WINCHAOS",
+        "card_count": 3,
+        "cards": [
+          "WildStrike1",
+          "WildStrike2",
+          "WildStrike3"
+        ],
+        "has_achievement_row": false,
+        "achievement_internal_name": null,
+        "achievement_display_name": null,
+        "requirements_text": null,
+        "reward_text": null,
+        "is_never": false
+      },
+      {
+        "attribute": 168,
+        "attribute_name": "WINCHAOS2",
+        "card_count": 1,
+        "cards": [
+          "WildMana"
+        ],
+        "has_achievement_row": false,
+        "achievement_internal_name": null,
+        "achievement_display_name": null,
+        "requirements_text": null,
+        "reward_text": null,
+        "is_never": false
+      }
+    ],
+    "prototype_runtime_ready": false
+  },
+  "requirements": [
+    {
+      "attribute": 5,
+      "attribute_name": "MANA2",
+      "card_count": 1,
+      "cards": [
+        "ForceOfWill"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Mana2",
+      "achievement_display_name": "Magically Tasty",
+      "requirements_text": "Gain 500 mana",
+      "reward_text": "Gain access to the Force of Will card",
+      "is_never": false
+    },
+    {
+      "attribute": 6,
+      "attribute_name": "MANA3",
+      "card_count": 1,
+      "cards": [
+        "ElusivePower"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Mana3",
+      "achievement_display_name": "Magically Delicious",
+      "requirements_text": "Gain 2,000 mana",
+      "reward_text": "Gain access to the Elusive Power card",
+      "is_never": false
+    },
+    {
+      "attribute": 7,
+      "attribute_name": "MANA4",
+      "card_count": 1,
+      "cards": [
+        "KineticCharge"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Mana4",
+      "achievement_display_name": "Magically Scrumptious",
+      "requirements_text": "Gain 10,000 mana",
+      "reward_text": "Gain access to the Kinetic Charge card",
+      "is_never": false
+    },
+    {
+      "attribute": 10,
+      "attribute_name": "GOBLIN2",
+      "card_count": 1,
+      "cards": [
+        "Pickpocket"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Goblin2",
+      "achievement_display_name": "Goblin Bane",
+      "requirements_text": "Kill 20 Goblins",
+      "reward_text": "Gain access to the Pickpocket card",
+      "is_never": false
+    },
+    {
+      "attribute": 12,
+      "attribute_name": "DAMAGE2",
+      "card_count": 1,
+      "cards": [
+        "Execute"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Damage2",
+      "achievement_display_name": "Carry a Really Big Stick",
+      "requirements_text": "Deal 1,000 damage",
+      "reward_text": "Gain access to the Execute card",
+      "is_never": false
+    },
+    {
+      "attribute": 13,
+      "attribute_name": "DAMAGE3",
+      "card_count": 1,
+      "cards": [
+        "Skullcrack"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Damage3",
+      "achievement_display_name": "Carry a Bludgeon",
+      "requirements_text": "Deal 5,000 damage",
+      "reward_text": "Gain access to the Skull Crack card",
+      "is_never": false
+    },
+    {
+      "attribute": 14,
+      "attribute_name": "DAMAGE4",
+      "card_count": 1,
+      "cards": [
+        "BattleCry"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Damage4",
+      "achievement_display_name": "Carry a Sledgehammer",
+      "requirements_text": "Deal 20,000 damage",
+      "reward_text": "Gain access to the Battle Cry card",
+      "is_never": false
+    },
+    {
+      "attribute": 20,
+      "attribute_name": "STEPS2",
+      "card_count": 1,
+      "cards": [
+        "Elude"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Steps2",
+      "achievement_display_name": "5K",
+      "requirements_text": "Walk 5,000 steps",
+      "reward_text": "Gain access to the Dodge card",
+      "is_never": false
+    },
+    {
+      "attribute": 21,
+      "attribute_name": "STEPS3",
+      "card_count": 1,
+      "cards": [
+        "Evasion"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Steps3",
+      "achievement_display_name": "Amazing Race",
+      "requirements_text": "Walk 12,000 steps",
+      "reward_text": "Gain access to the Evasion card",
+      "is_never": false
+    },
+    {
+      "attribute": 47,
+      "attribute_name": "KILL2",
+      "card_count": 1,
+      "cards": [
+        "InnerStrength"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Kill2",
+      "achievement_display_name": "Killing Spree",
+      "requirements_text": "Kill 100 creatures",
+      "reward_text": "Gain access to the Second Thoughts card",
+      "is_never": false
+    },
+    {
+      "attribute": 48,
+      "attribute_name": "KILL3",
+      "card_count": 1,
+      "cards": [
+        "SecondStrike"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Kill3",
+      "achievement_display_name": "Slaughter",
+      "requirements_text": "Kill 500 creatures",
+      "reward_text": "Gain access to the Second Strike card",
+      "is_never": false
+    },
+    {
+      "attribute": 49,
+      "attribute_name": "KILL4",
+      "card_count": 1,
+      "cards": [
+        "FinalFortune"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Kill4",
+      "achievement_display_name": "Devastation",
+      "requirements_text": "Kill 1,000 creatures",
+      "reward_text": "Gain access to the Last Chance card",
+      "is_never": false
+    },
+    {
+      "attribute": 52,
+      "attribute_name": "BOSSLICH",
+      "card_count": 1,
+      "cards": [
+        "DivineInspiration"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "BossLich",
+      "achievement_display_name": "No Lich",
+      "requirements_text": "Defeat the Lich",
+      "reward_text": "Gain access to the Divine Inspiration card",
+      "is_never": false
+    },
+    {
+      "attribute": 53,
+      "attribute_name": "BOSSCHROMATICDEMON",
+      "card_count": 1,
+      "cards": [
+        "ElementalFortitude"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "BossChromaticDemon",
+      "achievement_display_name": "Exorcist",
+      "requirements_text": "Defeat the Chromatic Demon",
+      "reward_text": "Gain access to the Elemental Fortitude card",
+      "is_never": false
+    },
+    {
+      "attribute": 55,
+      "attribute_name": "BOSSAKAMIASCENDENT",
+      "card_count": 1,
+      "cards": [
+        "LastChance"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "BossAkamiAscendent",
+      "achievement_display_name": "Lizard Master",
+      "requirements_text": "Defeat the Akami Ascendent",
+      "reward_text": "Gain access to the Desperate Strike card",
+      "is_never": false
+    },
+    {
+      "attribute": 56,
+      "attribute_name": "BOSSUSSURIWARQUEEN",
+      "card_count": 1,
+      "cards": [
+        "Dodge"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "BossUssuriWarQueen",
+      "achievement_display_name": "Cat Killer",
+      "requirements_text": "Defeat the Ussuri War Queen",
+      "reward_text": "Gain access to the Avoid card",
+      "is_never": false
+    },
+    {
+      "attribute": 57,
+      "attribute_name": "BOSSMIME",
+      "card_count": 1,
+      "cards": [
+        "Mimic"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "BossMime",
+      "achievement_display_name": "Mirror Breaker",
+      "requirements_text": "Defeat the Mime",
+      "reward_text": "Gain access to the Mimic card",
+      "is_never": false
+    },
+    {
+      "attribute": 58,
+      "attribute_name": "BOSSGELATINOUSCUBE",
+      "card_count": 1,
+      "cards": [
+        "Sift"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "BossGelatinousCube",
+      "achievement_display_name": "Slurp No More",
+      "requirements_text": "Defeat the Gelatinous Cube",
+      "reward_text": "Gain access to the Sift card",
+      "is_never": false
+    },
+    {
+      "attribute": 59,
+      "attribute_name": "BOSSUNICORN",
+      "card_count": 1,
+      "cards": [
+        "SecondWind"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "BossUnicorn",
+      "achievement_display_name": "Magic-Proof",
+      "requirements_text": "Defeat the Unicorn",
+      "reward_text": "Gain access to the Second Wind card",
+      "is_never": false
+    },
+    {
+      "attribute": 61,
+      "attribute_name": "BOSSVAMPIRE",
+      "card_count": 1,
+      "cards": [
+        "Anticipate"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "BossVampire",
+      "achievement_display_name": "Vampire Slayer",
+      "requirements_text": "Defeat the Vampire",
+      "reward_text": "Gain access to the Anticipate card",
+      "is_never": false
+    },
+    {
+      "attribute": 62,
+      "attribute_name": "BOSSGIANTSHARK",
+      "card_count": 1,
+      "cards": [
+        "SunderingStrike"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "BossGiantShark",
+      "achievement_display_name": "Duh Nuh Duh Nuh Duh Nuh",
+      "requirements_text": "Defeat the Giant Shark",
+      "reward_text": "Gain access to the Sundering Strike card",
+      "is_never": false
+    },
+    {
+      "attribute": 63,
+      "attribute_name": "BOSSGENIE",
+      "card_count": 1,
+      "cards": [
+        "Mahamat"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "BossGenie",
+      "achievement_display_name": "More Wishes",
+      "requirements_text": "Defeat the Genie",
+      "reward_text": "Gain access to the Mahamat card",
+      "is_never": false
+    },
+    {
+      "attribute": 64,
+      "attribute_name": "BOSSCUMULONIMBUS",
+      "card_count": 1,
+      "cards": [
+        "Meditation"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "BossCumuloNimbus",
+      "achievement_display_name": "Clear Skies",
+      "requirements_text": "Defeat Cumulo Nimbus",
+      "reward_text": "Gain access to the Meditation card",
+      "is_never": false
+    },
+    {
+      "attribute": 66,
+      "attribute_name": "BOSSPHOENIX",
+      "card_count": 1,
+      "cards": [
+        "WallOfSwords"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "BossPhoenix",
+      "achievement_display_name": "Cold Turkey",
+      "requirements_text": "Defeat the Phoenix",
+      "reward_text": "Gain access to the Wall of Swords card",
+      "is_never": false
+    },
+    {
+      "attribute": 70,
+      "attribute_name": "ADVENTURERS2",
+      "card_count": 1,
+      "cards": [
+        "Resilience"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Adventurers2",
+      "achievement_display_name": "Bully",
+      "requirements_text": "Kill 20 adventurers",
+      "reward_text": "Gain access to the Resilience card",
+      "is_never": false
+    },
+    {
+      "attribute": 75,
+      "attribute_name": "CATS2",
+      "card_count": 1,
+      "cards": [
+        "Invisibility"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Cats2",
+      "achievement_display_name": "Nine Fewer Lives",
+      "requirements_text": "Kill 20 Ussuri",
+      "reward_text": "Gain access to the Invisibility card",
+      "is_never": false
+    },
+    {
+      "attribute": 77,
+      "attribute_name": "LIZARDS2",
+      "card_count": 1,
+      "cards": [
+        "Bewitch"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Lizards2",
+      "achievement_display_name": "Totem Crusher",
+      "requirements_text": "Kill 20 Akami",
+      "reward_text": "Gain access to the Bewitch card",
+      "is_never": false
+    },
+    {
+      "attribute": 79,
+      "attribute_name": "UNDEAD2",
+      "card_count": 1,
+      "cards": [
+        "Infect"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Undead2",
+      "achievement_display_name": "Crusader",
+      "requirements_text": "Kill 20 Undead",
+      "reward_text": "Gain access to the Infect card",
+      "is_never": false
+    },
+    {
+      "attribute": 83,
+      "attribute_name": "ELEMENTALS2",
+      "card_count": 1,
+      "cards": [
+        "Channel"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Elementals2",
+      "achievement_display_name": "Aperiodic",
+      "requirements_text": "Kill 20 elementals",
+      "reward_text": "Gain access to the Channel card",
+      "is_never": false
+    },
+    {
+      "attribute": 85,
+      "attribute_name": "DRAGON2",
+      "card_count": 1,
+      "cards": [
+        "Obliterate"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Dragon2",
+      "achievement_display_name": "Silkworm Size or Immense",
+      "requirements_text": "Kill 20 dragons",
+      "reward_text": "Gain access to the Obliterate card",
+      "is_never": false
+    },
+    {
+      "attribute": 95,
+      "attribute_name": "CARDS2",
+      "card_count": 1,
+      "cards": [
+        "Recycle"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Cards2",
+      "achievement_display_name": "Well-Stocked",
+      "requirements_text": "Add 200 cards to your deck",
+      "reward_text": "Gain access to the Recycle card",
+      "is_never": false
+    },
+    {
+      "attribute": 96,
+      "attribute_name": "CARDS3",
+      "card_count": 1,
+      "cards": [
+        "Pilfer"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Cards3",
+      "achievement_display_name": "Mastermind",
+      "requirements_text": "Add 500 cards to your deck",
+      "reward_text": "Gain access to the Pilfer card",
+      "is_never": false
+    },
+    {
+      "attribute": 97,
+      "attribute_name": "CARDS4",
+      "card_count": 1,
+      "cards": [
+        "Overpower"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "Cards4",
+      "achievement_display_name": "Power Overwhelming",
+      "requirements_text": "Add 1000 cards to your deck",
+      "reward_text": "Gain access to the Overpower card",
+      "is_never": false
+    },
+    {
+      "attribute": 103,
+      "attribute_name": "never",
+      "card_count": 77,
+      "cards": [
+        "Attack1",
+        "Attack2",
+        "Attack3",
+        "Attack4",
+        "SunderingStrike1",
+        "SunderingStrike2",
+        "SunderingStrike3",
+        "DragonsClaw1",
+        "DragonsClaw2",
+        "DragonsClaw3",
+        "DragonsBite",
+        "Rake",
+        "Maul",
+        "Bite",
+        "ChaosStrike",
+        "ChaosStrike2",
+        "FlameStrike",
+        "LightningStrike",
+        "Burn",
+        "Burn2",
+        "SharkBite",
+        "SharkBite2",
+        "Thrash",
+        "Infect1",
+        "Infect2",
+        "Infect3",
+        "Mana1",
+        "Mana2",
+        "DragonsWisdom",
+        "SoulSiphon",
+        "Orison",
+        "VaporForm",
+        "NaturesBlessing",
+        "SummonCompanions",
+        "Sear",
+        "Explosion",
+        "Slow",
+        "ThunderStorm",
+        "Solidify",
+        "DarkMending",
+        "Discharge",
+        "StudyGuide",
+        "Tiltowait",
+        "Strike",
+        "Misdirection",
+        "Flee",
+        "ManaPotion",
+        "StormPalm",
+        "FlamePalm",
+        "AcidPalm",
+        "FrostPalm",
+        "LichKick",
+        "DragonsBreath",
+        "DragonsHide",
+        "DragonsRoar",
+        "DragonsSnack",
+        "DragonsTail",
+        "Eagle",
+        "Wolf",
+        "Turtle",
+        "MimicAction",
+        "MimicAction2",
+        "CoinToss",
+        "Gag",
+        "Hide",
+        "Escape",
+        "GoblinBomb",
+        "MindDrain",
+        "SpriteStab",
+        "ManaDrain",
+        "Suffocate",
+        "BoneShield",
+        "BoneShield2",
+        "VampireBite",
+        "VampireBite2",
+        "Slam",
+        "FlameBreath"
+      ],
+      "has_achievement_row": false,
+      "achievement_internal_name": null,
+      "achievement_display_name": null,
+      "requirements_text": null,
+      "reward_text": null,
+      "is_never": true
+    },
+    {
+      "attribute": 162,
+      "attribute_name": "WINDRUID",
+      "card_count": 1,
+      "cards": [
+        "Harry"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "WinDruid",
+      "achievement_display_name": "Natural Savior",
+      "requirements_text": "Clear the dungeon as a druid",
+      "reward_text": "Gain access to the Harry card",
+      "is_never": false
+    },
+    {
+      "attribute": 163,
+      "attribute_name": "WINDRUID2",
+      "card_count": 1,
+      "cards": [
+        "ElementalSurge"
+      ],
+      "has_achievement_row": true,
+      "achievement_internal_name": "WinDruid2",
+      "achievement_display_name": "Natural Champion",
+      "requirements_text": "Reduce the final boss to under 850 health as a druid",
+      "reward_text": "Gain access to the Elemental Surge card",
+      "is_never": false
+    },
+    {
+      "attribute": 167,
+      "attribute_name": "WINCHAOS",
+      "card_count": 3,
+      "cards": [
+        "WildStrike1",
+        "WildStrike2",
+        "WildStrike3"
+      ],
+      "has_achievement_row": false,
+      "achievement_internal_name": null,
+      "achievement_display_name": null,
+      "requirements_text": null,
+      "reward_text": null,
+      "is_never": false
+    },
+    {
+      "attribute": 168,
+      "attribute_name": "WINCHAOS2",
+      "card_count": 1,
+      "cards": [
+        "WildMana"
+      ],
+      "has_achievement_row": false,
+      "achievement_internal_name": null,
+      "achievement_display_name": null,
+      "requirements_text": null,
+      "reward_text": null,
+      "is_never": false
+    }
+  ],
+  "cards": [
+    {
+      "internal_name": "Attack1",
+      "real_name": "Attack (1)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Attack2",
+      "real_name": "Attack (2)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Attack3",
+      "real_name": "Attack (3)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Attack4",
+      "real_name": "Attack (4)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "StormSlash1",
+      "real_name": "Storm Slash (1)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "StormSlash2",
+      "real_name": "Storm Slash (2)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "StormSlash3",
+      "real_name": "Storm Slash (3)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FrostSlash1",
+      "real_name": "Frost Slash (1)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FrostSlash2",
+      "real_name": "Frost Slash (2)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FrostSlash3",
+      "real_name": "Frost Slash (3)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FlameSlash1",
+      "real_name": "Flame Slash (1)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FlameSlash2",
+      "real_name": "Flame Slash (2)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FlameSlash3",
+      "real_name": "Flame Slash (3)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "CorrosiveSlash1",
+      "real_name": "Corrosive Slash (1)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "CorrosiveSlash2",
+      "real_name": "Corrosive Slash (2)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "CorrosiveSlash3",
+      "real_name": "Corrosive Slash (3)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "CollosusSmash",
+      "real_name": "Colossus Smash",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "SunderingStrike",
+      "real_name": "Sundering Strike",
+      "card_type": "AttackCard",
+      "requirements": [
+        62
+      ],
+      "requirement_names": [
+        "BOSSGIANTSHARK"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 62,
+          "attribute_name": "BOSSGIANTSHARK",
+          "achievement_internal_name": "BossGiantShark",
+          "achievement_display_name": "Duh Nuh Duh Nuh Duh Nuh",
+          "requirements_text": "Defeat the Giant Shark",
+          "reward_text": "Gain access to the Sundering Strike card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038fe0",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        62
+      ]
+    },
+    {
+      "internal_name": "SunderingStrike1",
+      "real_name": "Sundering Strike (1)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "SunderingStrike2",
+      "real_name": "Sundering Strike (2)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "SunderingStrike3",
+      "real_name": "Sundering Strike (3)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "RallyingStroke",
+      "real_name": "Rallying Stroke",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "BerserkerStrike",
+      "real_name": "Berserker Strike",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Pierce1",
+      "real_name": "Pierce (1)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Pierce2",
+      "real_name": "Pierce (2)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Pierce3",
+      "real_name": "Pierce (3)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "HolyStrike1",
+      "real_name": "Holy Strike (1)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "HolyStrike2",
+      "real_name": "Holy Strike (2)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "HolyStrike3",
+      "real_name": "Holy Strike (3)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "SorcerousStrike1",
+      "real_name": "Sorcerous Strike (1)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "SorcerousStrike2",
+      "real_name": "Sorcerous Strike (2)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "SorcerousStrike3",
+      "real_name": "Sorcerous Strike (3)",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Infect",
+      "real_name": "Infect",
+      "card_type": "AttackCard",
+      "requirements": [
+        79
+      ],
+      "requirement_names": [
+        "UNDEAD2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 79,
+          "attribute_name": "UNDEAD2",
+          "achievement_internal_name": "Undead2",
+          "achievement_display_name": "Crusader",
+          "requirements_text": "Kill 20 Undead",
+          "reward_text": "Gain access to the Infect card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x01000388bc",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        79
+      ]
+    },
+    {
+      "internal_name": "DragonsClaw1",
+      "real_name": "Dragon's Claw (1)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "DragonsClaw2",
+      "real_name": "Dragon's Claw (2)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "DragonsClaw3",
+      "real_name": "Dragon's Claw (3)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "DragonsBite",
+      "real_name": "Dragon's Bite",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "ShieldBash",
+      "real_name": "Shield Bash",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Backstab",
+      "real_name": "Backstab",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Slash",
+      "real_name": "Slash",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Smash",
+      "real_name": "Smash",
+      "card_type": "AttackCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Skullcrack",
+      "real_name": "Skull Crack",
+      "card_type": "AttackCard",
+      "requirements": [
+        13
+      ],
+      "requirement_names": [
+        "DAMAGE3"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 13,
+          "attribute_name": "DAMAGE3",
+          "achievement_internal_name": "Damage3",
+          "achievement_display_name": "Carry a Bludgeon",
+          "requirements_text": "Deal 5,000 damage",
+          "reward_text": "Gain access to the Skull Crack card",
+          "cost": 700,
+          "flavor_name": "CARD",
+          "source_address": "0x0100037c24",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        13
+      ]
+    },
+    {
+      "internal_name": "Harry",
+      "real_name": "Harry",
+      "card_type": "AttackCard",
+      "requirements": [
+        162
+      ],
+      "requirement_names": [
+        "WINDRUID"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 162,
+          "attribute_name": "WINDRUID",
+          "achievement_internal_name": "WinDruid",
+          "achievement_display_name": "Natural Savior",
+          "requirements_text": "Clear the dungeon as a druid",
+          "reward_text": "Gain access to the Harry card",
+          "cost": 3000,
+          "flavor_name": "CARD",
+          "source_address": "0x0100039c80",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        162
+      ]
+    },
+    {
+      "internal_name": "Rake",
+      "real_name": "Rake",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Maul",
+      "real_name": "Maul",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Bite",
+      "real_name": "Bite",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "ChaosStrike",
+      "real_name": "Chaos Strike",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "ChaosStrike2",
+      "real_name": "Chaos Strike",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FlameStrike",
+      "real_name": "Flame Strike",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "LightningStrike",
+      "real_name": "Lightning Strike",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Burn",
+      "real_name": "Burn",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Burn2",
+      "real_name": "Burn (2)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "SharkBite",
+      "real_name": "Shark Bite",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "SharkBite2",
+      "real_name": "Shark Bite (2)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Thrash",
+      "real_name": "Thrash",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Infect1",
+      "real_name": "Infect (1)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Infect2",
+      "real_name": "Infect (2)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Infect3",
+      "real_name": "Infect (3)",
+      "card_type": "AttackCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Mana1",
+      "real_name": "Mana (1)",
+      "card_type": "ManaCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Mana2",
+      "real_name": "Mana (2)",
+      "card_type": "ManaCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Mana3",
+      "real_name": "Mana (3)",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "DragonsWisdom",
+      "real_name": "Dragon's Wisdom",
+      "card_type": "ManaCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FlameCharge",
+      "real_name": "Flame Charge",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FrostCharge",
+      "real_name": "Frost Charge",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "StaticCharge",
+      "real_name": "Static Charge",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "VileCharge",
+      "real_name": "Stone Charge",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Salve",
+      "real_name": "Salve",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Wisdom",
+      "real_name": "Wisdom",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Piety",
+      "real_name": "Piety",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Clarity",
+      "real_name": "Clarity",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "ManaSurge",
+      "real_name": "Mana Surge",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "RawPower",
+      "real_name": "Raw Power",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "ElusivePower",
+      "real_name": "Elusive Power",
+      "card_type": "ManaCard",
+      "requirements": [
+        6
+      ],
+      "requirement_names": [
+        "MANA3"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 6,
+          "attribute_name": "MANA3",
+          "achievement_internal_name": "Mana3",
+          "achievement_display_name": "Magically Delicious",
+          "requirements_text": "Gain 2,000 mana",
+          "reward_text": "Gain access to the Elusive Power card",
+          "cost": 700,
+          "flavor_name": "CARD",
+          "source_address": "0x01000379ec",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        6
+      ]
+    },
+    {
+      "internal_name": "Inspiration",
+      "real_name": "Inspiration",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "KineticCharge",
+      "real_name": "Kinetic Charge",
+      "card_type": "ManaCard",
+      "requirements": [
+        7
+      ],
+      "requirement_names": [
+        "MANA4"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 7,
+          "attribute_name": "MANA4",
+          "achievement_internal_name": "Mana4",
+          "achievement_display_name": "Magically Scrumptious",
+          "requirements_text": "Gain 10,000 mana",
+          "reward_text": "Gain access to the Kinetic Charge card",
+          "cost": 1000,
+          "flavor_name": "CARD",
+          "source_address": "0x0100037a78",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        7
+      ]
+    },
+    {
+      "internal_name": "ManaSwell",
+      "real_name": "Mana Swell",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Overload",
+      "real_name": "Overload",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Conduit",
+      "real_name": "Conduit",
+      "card_type": "ManaCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "ElementalSurge",
+      "real_name": "Elemental Surge",
+      "card_type": "ManaCard",
+      "requirements": [
+        163
+      ],
+      "requirement_names": [
+        "WINDRUID2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 163,
+          "attribute_name": "WINDRUID2",
+          "achievement_internal_name": "WinDruid2",
+          "achievement_display_name": "Natural Champion",
+          "requirements_text": "Reduce the final boss to under 850 health as a druid",
+          "reward_text": "Gain access to the Elemental Surge card",
+          "cost": 3000,
+          "flavor_name": "CARD",
+          "source_address": "0x010003a5dc",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        163
+      ]
+    },
+    {
+      "internal_name": "WildMana",
+      "real_name": "Wild Mana",
+      "card_type": "ManaCard",
+      "requirements": [
+        168
+      ],
+      "requirement_names": [
+        "WINCHAOS2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 168,
+          "attribute_name": "WINCHAOS2",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": {
+            "status": "enum_only_profession_champion_gate",
+            "basis": "UserAttribute contains WINCHAOS2 next to WINCHAOS/FLOOR1_CHAOS/CHAOS_HS, and ProfessionChaosMage exists, but AchievementList.GetAchievementList has no WINCHAOS2 row.",
+            "inferred_condition": "likely reduce the final boss under the champion-health threshold as Chaos Mage, matching other *2 profession gates",
+            "confidence": "medium"
+          }
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        168
+      ]
+    },
+    {
+      "internal_name": "JasrasJarringJolt",
+      "real_name": "Jasra's Jarring Jolt",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Blur",
+      "real_name": "Blur",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "WrathOfGod",
+      "real_name": "Wrath of God",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "SoulSiphon",
+      "real_name": "Soul Siphon",
+      "card_type": "SpellCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Orison",
+      "real_name": "Orison",
+      "card_type": "SpellCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Heal",
+      "real_name": "Heal",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Ward",
+      "real_name": "Ward",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "DivineInspiration",
+      "real_name": "Divine Inspiration",
+      "card_type": "SpellCard",
+      "requirements": [
+        52
+      ],
+      "requirement_names": [
+        "BOSSLICH"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 52,
+          "attribute_name": "BOSSLICH",
+          "achievement_internal_name": "BossLich",
+          "achievement_display_name": "No Lich",
+          "requirements_text": "Defeat the Lich",
+          "reward_text": "Gain access to the Divine Inspiration card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100039328",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        52
+      ]
+    },
+    {
+      "internal_name": "SiphonLife",
+      "real_name": "Drain Life",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Haste",
+      "real_name": "Haste",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "MindSear",
+      "real_name": "Mind Sear",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Crumble",
+      "real_name": "Crumble",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Invisibility",
+      "real_name": "Invisibility",
+      "card_type": "SpellCard",
+      "requirements": [
+        75
+      ],
+      "requirement_names": [
+        "CATS2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 75,
+          "attribute_name": "CATS2",
+          "achievement_internal_name": "Cats2",
+          "achievement_display_name": "Nine Fewer Lives",
+          "requirements_text": "Kill 20 Ussuri",
+          "reward_text": "Gain access to the Invisibility card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038694",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        75
+      ]
+    },
+    {
+      "internal_name": "Bless",
+      "real_name": "Bless",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Soulfire",
+      "real_name": "Soulfire",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Penance",
+      "real_name": "Penance",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "ForceOfWill",
+      "real_name": "Force of Will",
+      "card_type": "SpellCard",
+      "requirements": [
+        5
+      ],
+      "requirement_names": [
+        "MANA2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 5,
+          "attribute_name": "MANA2",
+          "achievement_internal_name": "Mana2",
+          "achievement_display_name": "Magically Tasty",
+          "requirements_text": "Gain 500 mana",
+          "reward_text": "Gain access to the Force of Will card",
+          "cost": 350,
+          "flavor_name": "CARD",
+          "source_address": "0x010003795c",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        5
+      ]
+    },
+    {
+      "internal_name": "EyeForAnEye",
+      "real_name": "Eye for an Eye",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "VaporForm",
+      "real_name": "Vapor Form",
+      "card_type": "SpellCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "ElementalFortitude",
+      "real_name": "Elemental Shroud",
+      "card_type": "SpellCard",
+      "requirements": [
+        53
+      ],
+      "requirement_names": [
+        "BOSSCHROMATICDEMON"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 53,
+          "attribute_name": "BOSSCHROMATICDEMON",
+          "achievement_internal_name": "BossChromaticDemon",
+          "achievement_display_name": "Exorcist",
+          "requirements_text": "Defeat the Chromatic Demon",
+          "reward_text": "Gain access to the Elemental Fortitude card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x01000393b0",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        53
+      ]
+    },
+    {
+      "internal_name": "Shrink",
+      "real_name": "Shrink",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Stasis",
+      "real_name": "Stasis",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "AbsorbVis",
+      "real_name": "Absorb Vis",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "PurifyingLight",
+      "real_name": "Purifying Light",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Mahamat",
+      "real_name": "Mahamat",
+      "card_type": "SpellCard",
+      "requirements": [
+        63
+      ],
+      "requirement_names": [
+        "BOSSGENIE"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 63,
+          "attribute_name": "BOSSGENIE",
+          "achievement_internal_name": "BossGenie",
+          "achievement_display_name": "More Wishes",
+          "requirements_text": "Defeat the Genie",
+          "reward_text": "Gain access to the Mahamat card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038db0",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        63
+      ]
+    },
+    {
+      "internal_name": "Fireball",
+      "real_name": "Fireball",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FrostBolt",
+      "real_name": "Frost Bolt",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Shock",
+      "real_name": "Shock",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "AcidLance",
+      "real_name": "Acid Lance",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Meteor",
+      "real_name": "Meteor",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "AcidRain",
+      "real_name": "Acid Rain",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Blizzard",
+      "real_name": "Blizzard",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Electrocute",
+      "real_name": "Electrocute",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Conflagration",
+      "real_name": "Conflagration",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Storm",
+      "real_name": "Storm",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Blight",
+      "real_name": "Blight",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Freeze",
+      "real_name": "Freeze",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "EarthShape",
+      "real_name": "Earth Shape",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FrostShape",
+      "real_name": "Frost Shape",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FireShape",
+      "real_name": "Fire Shape",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "StormShape",
+      "real_name": "Storm Shape",
+      "card_type": "SpellCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "NaturesBlessing",
+      "real_name": "Nature's Blessing",
+      "card_type": "SpellCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "SummonCompanions",
+      "real_name": "Summon Companions",
+      "card_type": "SpellCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Sear",
+      "real_name": "Sear",
+      "card_type": "SpellCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Explosion",
+      "real_name": "Explosion",
+      "card_type": "SpellCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Slow",
+      "real_name": "Slow",
+      "card_type": "SpellCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "ThunderStorm",
+      "real_name": "Thunder Storm",
+      "card_type": "SpellCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Solidify",
+      "real_name": "Solidify",
+      "card_type": "SpellCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "DarkMending",
+      "real_name": "Dark Mending",
+      "card_type": "SpellCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Discharge",
+      "real_name": "Discharge",
+      "card_type": "SpellCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "HealingPotion",
+      "real_name": "Healing Potion",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FireBomb",
+      "real_name": "Fire Bomb",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Bandage",
+      "real_name": "Bandage",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Sift",
+      "real_name": "Sift",
+      "card_type": "ActionCard",
+      "requirements": [
+        58
+      ],
+      "requirement_names": [
+        "BOSSGELATINOUSCUBE"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 58,
+          "attribute_name": "BOSSGELATINOUSCUBE",
+          "achievement_internal_name": "BossGelatinousCube",
+          "achievement_display_name": "Slurp No More",
+          "requirements_text": "Defeat the Gelatinous Cube",
+          "reward_text": "Gain access to the Sift card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038ec8",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        58
+      ]
+    },
+    {
+      "internal_name": "FinalFortune",
+      "real_name": "Last Chance",
+      "card_type": "ActionCard",
+      "requirements": [
+        49
+      ],
+      "requirement_names": [
+        "KILL4"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 49,
+          "attribute_name": "KILL4",
+          "achievement_internal_name": "Kill4",
+          "achievement_display_name": "Devastation",
+          "requirements_text": "Kill 1,000 creatures",
+          "reward_text": "Gain access to the Last Chance card",
+          "cost": 1000,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038120",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        49
+      ]
+    },
+    {
+      "internal_name": "StudyGuide",
+      "real_name": "Study Guide",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Tiltowait",
+      "real_name": "Tiltowait",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Strike",
+      "real_name": "Slap",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Slice",
+      "real_name": "Slice",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Dice",
+      "real_name": "Dice",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Pilfer",
+      "real_name": "Pilfer",
+      "card_type": "ActionCard",
+      "requirements": [
+        96
+      ],
+      "requirement_names": [
+        "CARDS3"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 96,
+          "attribute_name": "CARDS3",
+          "achievement_internal_name": "Cards3",
+          "achievement_display_name": "Mastermind",
+          "requirements_text": "Add 500 cards to your deck",
+          "reward_text": "Gain access to the Pilfer card",
+          "cost": 700,
+          "flavor_name": "CARD",
+          "source_address": "0x01000382c4",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        96
+      ]
+    },
+    {
+      "internal_name": "Swiftness",
+      "real_name": "Swiftness",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Alacrity",
+      "real_name": "Alacrity",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Jab",
+      "real_name": "Jab",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Dodge",
+      "real_name": "Avoid",
+      "card_type": "ActionCard",
+      "requirements": [
+        56
+      ],
+      "requirement_names": [
+        "BOSSUSSURIWARQUEEN"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 56,
+          "attribute_name": "BOSSUSSURIWARQUEEN",
+          "achievement_internal_name": "BossUssuriWarQueen",
+          "achievement_display_name": "Cat Killer",
+          "requirements_text": "Defeat the Ussuri War Queen",
+          "reward_text": "Gain access to the Avoid card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x01000390f8",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        56
+      ]
+    },
+    {
+      "internal_name": "Venom",
+      "real_name": "Venom",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Mimic",
+      "real_name": "Mimic",
+      "card_type": "ActionCard",
+      "requirements": [
+        57
+      ],
+      "requirement_names": [
+        "BOSSMIME"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 57,
+          "attribute_name": "BOSSMIME",
+          "achievement_internal_name": "BossMime",
+          "achievement_display_name": "Mirror Breaker",
+          "requirements_text": "Defeat the Mime",
+          "reward_text": "Gain access to the Mimic card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100039210",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        57
+      ]
+    },
+    {
+      "internal_name": "Evasion",
+      "real_name": "Evasion",
+      "card_type": "ActionCard",
+      "requirements": [
+        21
+      ],
+      "requirement_names": [
+        "STEPS3"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 21,
+          "attribute_name": "STEPS3",
+          "achievement_internal_name": "Steps3",
+          "achievement_display_name": "Amazing Race",
+          "requirements_text": "Walk 12,000 steps",
+          "reward_text": "Gain access to the Evasion card",
+          "cost": 700,
+          "flavor_name": "CARD",
+          "source_address": "0x0100037e60",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        21
+      ]
+    },
+    {
+      "internal_name": "Circle",
+      "real_name": "Circle",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Expose",
+      "real_name": "Expose",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Sidestep",
+      "real_name": "Sidestep",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Hemorrhage",
+      "real_name": "Hemorrhage",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Preparation",
+      "real_name": "Preparation",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "LastChance",
+      "real_name": "Desperate Strike",
+      "card_type": "ActionCard",
+      "requirements": [
+        55
+      ],
+      "requirement_names": [
+        "BOSSAKAMIASCENDENT"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 55,
+          "attribute_name": "BOSSAKAMIASCENDENT",
+          "achievement_internal_name": "BossAkamiAscendent",
+          "achievement_display_name": "Lizard Master",
+          "requirements_text": "Defeat the Akami Ascendent",
+          "reward_text": "Gain access to the Desperate Strike card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100039068",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        55
+      ]
+    },
+    {
+      "internal_name": "Bleed",
+      "real_name": "Bleed",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "CoupDeGrace",
+      "real_name": "Coup de Grace",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Accelerate",
+      "real_name": "Accelerate",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "PenetratingPalm",
+      "real_name": "Penetrating Palm",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Strike1",
+      "real_name": "Strike (1)",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Strike2",
+      "real_name": "Strike (2)",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Strike3",
+      "real_name": "Strike (3)",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Kick",
+      "real_name": "Kick",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Pickpocket",
+      "real_name": "Pickpocket",
+      "card_type": "ActionCard",
+      "requirements": [
+        10
+      ],
+      "requirement_names": [
+        "GOBLIN2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 10,
+          "attribute_name": "GOBLIN2",
+          "achievement_internal_name": "Goblin2",
+          "achievement_display_name": "Goblin Bane",
+          "requirements_text": "Kill 20 Goblins",
+          "reward_text": "Gain access to the Pickpocket card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038580",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        10
+      ]
+    },
+    {
+      "internal_name": "Skewer",
+      "real_name": "Skewer",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Elude",
+      "real_name": "Dodge",
+      "card_type": "ActionCard",
+      "requirements": [
+        20
+      ],
+      "requirement_names": [
+        "STEPS2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 20,
+          "attribute_name": "STEPS2",
+          "achievement_internal_name": "Steps2",
+          "achievement_display_name": "5K",
+          "requirements_text": "Walk 5,000 steps",
+          "reward_text": "Gain access to the Dodge card",
+          "cost": 350,
+          "flavor_name": "CARD",
+          "source_address": "0x0100037dcc",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        20
+      ]
+    },
+    {
+      "internal_name": "Recycle",
+      "real_name": "Recycle",
+      "card_type": "ActionCard",
+      "requirements": [
+        95
+      ],
+      "requirement_names": [
+        "CARDS2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 95,
+          "attribute_name": "CARDS2",
+          "achievement_internal_name": "Cards2",
+          "achievement_display_name": "Well-Stocked",
+          "requirements_text": "Add 200 cards to your deck",
+          "reward_text": "Gain access to the Recycle card",
+          "cost": 350,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038234",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        95
+      ]
+    },
+    {
+      "internal_name": "PiercingStab",
+      "real_name": "Piercing Stab",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "MentalFortress",
+      "real_name": "Mental Fortress",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Extract",
+      "real_name": "Extract",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Focus",
+      "real_name": "Focus",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "InnerFocus",
+      "real_name": "Inner Focus",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "InnerPeace",
+      "real_name": "Inner Peace",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Meditation",
+      "real_name": "Meditation",
+      "card_type": "ActionCard",
+      "requirements": [
+        64
+      ],
+      "requirement_names": [
+        "BOSSCUMULONIMBUS"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 64,
+          "attribute_name": "BOSSCUMULONIMBUS",
+          "achievement_internal_name": "BossCumuloNimbus",
+          "achievement_display_name": "Clear Skies",
+          "requirements_text": "Defeat Cumulo Nimbus",
+          "reward_text": "Gain access to the Meditation card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038e38",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        64
+      ]
+    },
+    {
+      "internal_name": "Study",
+      "real_name": "Study",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "CurseOfWeakness",
+      "real_name": "Curse of Weakness",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "InnerStrength",
+      "real_name": "Second Thoughts",
+      "card_type": "ActionCard",
+      "requirements": [
+        47
+      ],
+      "requirement_names": [
+        "KILL2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 47,
+          "attribute_name": "KILL2",
+          "achievement_internal_name": "Kill2",
+          "achievement_display_name": "Killing Spree",
+          "requirements_text": "Kill 100 creatures",
+          "reward_text": "Gain access to the Second Thoughts card",
+          "cost": 350,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038004",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        47
+      ]
+    },
+    {
+      "internal_name": "SecondWind",
+      "real_name": "Second Wind",
+      "card_type": "ActionCard",
+      "requirements": [
+        59
+      ],
+      "requirement_names": [
+        "BOSSUNICORN"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 59,
+          "attribute_name": "BOSSUNICORN",
+          "achievement_internal_name": "BossUnicorn",
+          "achievement_display_name": "Magic-Proof",
+          "requirements_text": "Defeat the Unicorn",
+          "reward_text": "Gain access to the Second Wind card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038d20",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        59
+      ]
+    },
+    {
+      "internal_name": "PsionicBlast",
+      "real_name": "Psionic Blast",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "PureThoughts",
+      "real_name": "Pure Thoughts",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "SecondStrike",
+      "real_name": "Second Strike",
+      "card_type": "ActionCard",
+      "requirements": [
+        48
+      ],
+      "requirement_names": [
+        "KILL3"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 48,
+          "attribute_name": "KILL3",
+          "achievement_internal_name": "Kill3",
+          "achievement_display_name": "Slaughter",
+          "requirements_text": "Kill 500 creatures",
+          "reward_text": "Gain access to the Second Strike card",
+          "cost": 700,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038094",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        48
+      ]
+    },
+    {
+      "internal_name": "Anticipate",
+      "real_name": "Anticipate",
+      "card_type": "ActionCard",
+      "requirements": [
+        61
+      ],
+      "requirement_names": [
+        "BOSSVAMPIRE"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 61,
+          "attribute_name": "BOSSVAMPIRE",
+          "achievement_internal_name": "BossVampire",
+          "achievement_display_name": "Vampire Slayer",
+          "requirements_text": "Defeat the Vampire",
+          "reward_text": "Gain access to the Anticipate card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038f50",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        61
+      ]
+    },
+    {
+      "internal_name": "Charm",
+      "real_name": "Charm",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Bewitch",
+      "real_name": "Bewitch",
+      "card_type": "ActionCard",
+      "requirements": [
+        77
+      ],
+      "requirement_names": [
+        "LIZARDS2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 77,
+          "attribute_name": "LIZARDS2",
+          "achievement_internal_name": "Lizards2",
+          "achievement_display_name": "Totem Crusher",
+          "requirements_text": "Kill 20 Akami",
+          "reward_text": "Gain access to the Bewitch card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x01000387a8",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        77
+      ]
+    },
+    {
+      "internal_name": "Channel",
+      "real_name": "Channel",
+      "card_type": "ActionCard",
+      "requirements": [
+        83
+      ],
+      "requirement_names": [
+        "ELEMENTALS2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 83,
+          "attribute_name": "ELEMENTALS2",
+          "achievement_internal_name": "Elementals2",
+          "achievement_display_name": "Aperiodic",
+          "requirements_text": "Kill 20 elementals",
+          "reward_text": "Gain access to the Channel card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038aec",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        83
+      ]
+    },
+    {
+      "internal_name": "Misdirection",
+      "real_name": "Misdirection",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Rush",
+      "real_name": "Rush",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Stoneskin",
+      "real_name": "Stoneskin",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Overpower",
+      "real_name": "Overpower",
+      "card_type": "ActionCard",
+      "requirements": [
+        97
+      ],
+      "requirement_names": [
+        "CARDS4"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 97,
+          "attribute_name": "CARDS4",
+          "achievement_internal_name": "Cards4",
+          "achievement_display_name": "Power Overwhelming",
+          "requirements_text": "Add 1000 cards to your deck",
+          "reward_text": "Gain access to the Overpower card",
+          "cost": 1000,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038350",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        97
+      ]
+    },
+    {
+      "internal_name": "BattleCry",
+      "real_name": "Battle Cry",
+      "card_type": "ActionCard",
+      "requirements": [
+        14
+      ],
+      "requirement_names": [
+        "DAMAGE4"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 14,
+          "attribute_name": "DAMAGE4",
+          "achievement_internal_name": "Damage4",
+          "achievement_display_name": "Carry a Sledgehammer",
+          "requirements_text": "Deal 20,000 damage",
+          "reward_text": "Gain access to the Battle Cry card",
+          "cost": 1000,
+          "flavor_name": "CARD",
+          "source_address": "0x0100037cb0",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        14
+      ]
+    },
+    {
+      "internal_name": "Choke",
+      "real_name": "Choke",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Execute",
+      "real_name": "Execute",
+      "card_type": "ActionCard",
+      "requirements": [
+        12
+      ],
+      "requirement_names": [
+        "DAMAGE2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 12,
+          "attribute_name": "DAMAGE2",
+          "achievement_internal_name": "Damage2",
+          "achievement_display_name": "Carry a Really Big Stick",
+          "requirements_text": "Deal 1,000 damage",
+          "reward_text": "Gain access to the Execute card",
+          "cost": 350,
+          "flavor_name": "CARD",
+          "source_address": "0x0100037b94",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        12
+      ]
+    },
+    {
+      "internal_name": "Crush",
+      "real_name": "Crush",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Hamstring",
+      "real_name": "Hamstring",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "BladeFlurry",
+      "real_name": "Blade Flurry",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "ShieldWall",
+      "real_name": "Shield Wall",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "TrollHide",
+      "real_name": "Troll Hide",
+      "card_type": "ActionCard",
+      "requirements": [],
+      "requirement_names": [],
+      "requirement_evidence": [],
+      "access_status": "base_unlocked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Obliterate",
+      "real_name": "Obliterate",
+      "card_type": "ActionCard",
+      "requirements": [
+        85
+      ],
+      "requirement_names": [
+        "DRAGON2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 85,
+          "attribute_name": "DRAGON2",
+          "achievement_internal_name": "Dragon2",
+          "achievement_display_name": "Silkworm Size or Immense",
+          "requirements_text": "Kill 20 dragons",
+          "reward_text": "Gain access to the Obliterate card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100038c08",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        85
+      ]
+    },
+    {
+      "internal_name": "WallOfSwords",
+      "real_name": "Wall of Swords",
+      "card_type": "ActionCard",
+      "requirements": [
+        66
+      ],
+      "requirement_names": [
+        "BOSSPHOENIX"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 66,
+          "attribute_name": "BOSSPHOENIX",
+          "achievement_internal_name": "BossPhoenix",
+          "achievement_display_name": "Cold Turkey",
+          "requirements_text": "Defeat the Phoenix",
+          "reward_text": "Gain access to the Wall of Swords card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x0100039558",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        66
+      ]
+    },
+    {
+      "internal_name": "Resilience",
+      "real_name": "Resilience",
+      "card_type": "ActionCard",
+      "requirements": [
+        70
+      ],
+      "requirement_names": [
+        "ADVENTURERS2"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 70,
+          "attribute_name": "ADVENTURERS2",
+          "achievement_internal_name": "Adventurers2",
+          "achievement_display_name": "Bully",
+          "requirements_text": "Kill 20 adventurers",
+          "reward_text": "Gain access to the Resilience card",
+          "cost": 500,
+          "flavor_name": "CARD",
+          "source_address": "0x010003846c",
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        70
+      ]
+    },
+    {
+      "internal_name": "WildStrike1",
+      "real_name": "Wild Strike (1)",
+      "card_type": "ActionCard",
+      "requirements": [
+        167
+      ],
+      "requirement_names": [
+        "WINCHAOS"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 167,
+          "attribute_name": "WINCHAOS",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": {
+            "status": "enum_only_profession_win_gate",
+            "basis": "UserAttribute contains WINCHAOS next to WINCHAOS2/FLOOR1_CHAOS/CHAOS_HS, and ProfessionChaosMage exists, but AchievementList.GetAchievementList has no WINCHAOS row.",
+            "inferred_condition": "likely clear the dungeon as Chaos Mage",
+            "confidence": "medium"
+          }
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        167
+      ]
+    },
+    {
+      "internal_name": "WildStrike2",
+      "real_name": "Wild Strike (2)",
+      "card_type": "ActionCard",
+      "requirements": [
+        167
+      ],
+      "requirement_names": [
+        "WINCHAOS"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 167,
+          "attribute_name": "WINCHAOS",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": {
+            "status": "enum_only_profession_win_gate",
+            "basis": "UserAttribute contains WINCHAOS next to WINCHAOS2/FLOOR1_CHAOS/CHAOS_HS, and ProfessionChaosMage exists, but AchievementList.GetAchievementList has no WINCHAOS row.",
+            "inferred_condition": "likely clear the dungeon as Chaos Mage",
+            "confidence": "medium"
+          }
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        167
+      ]
+    },
+    {
+      "internal_name": "WildStrike3",
+      "real_name": "Wild Strike (3)",
+      "card_type": "ActionCard",
+      "requirements": [
+        167
+      ],
+      "requirement_names": [
+        "WINCHAOS"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 167,
+          "attribute_name": "WINCHAOS",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": {
+            "status": "enum_only_profession_win_gate",
+            "basis": "UserAttribute contains WINCHAOS next to WINCHAOS2/FLOOR1_CHAOS/CHAOS_HS, and ProfessionChaosMage exists, but AchievementList.GetAchievementList has no WINCHAOS row.",
+            "inferred_condition": "likely clear the dungeon as Chaos Mage",
+            "confidence": "medium"
+          }
+        }
+      ],
+      "access_status": "requirement_locked",
+      "has_never": false,
+      "unlocked_requirements": [],
+      "missing_requirements": [
+        167
+      ]
+    },
+    {
+      "internal_name": "Flee",
+      "real_name": "Flee",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "ManaPotion",
+      "real_name": "Mana Potion",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "StormPalm",
+      "real_name": "Storm Palm",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FlamePalm",
+      "real_name": "Flame Palm",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "AcidPalm",
+      "real_name": "Acid Palm",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FrostPalm",
+      "real_name": "Frost Palm",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "LichKick",
+      "real_name": "Lich Kick",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "DragonsBreath",
+      "real_name": "Dragon's Breath",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "DragonsHide",
+      "real_name": "Dragon's Hide",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "DragonsRoar",
+      "real_name": "Dragon's Roar",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "DragonsSnack",
+      "real_name": "Dragon's Snack",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "DragonsTail",
+      "real_name": "Dragon's Tail",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Eagle",
+      "real_name": "Eagle",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Wolf",
+      "real_name": "Wolf",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Turtle",
+      "real_name": "Turtle",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "MimicAction",
+      "real_name": "Tongue Lash",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "MimicAction2",
+      "real_name": "Tongue Lash",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "CoinToss",
+      "real_name": "Coin Toss",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Gag",
+      "real_name": "Gag",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Hide",
+      "real_name": "Hide",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Escape",
+      "real_name": "Escape",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "GoblinBomb",
+      "real_name": "Goblin Bomb",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "MindDrain",
+      "real_name": "Mind Drain",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "SpriteStab",
+      "real_name": "Sprite Stab",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "ManaDrain",
+      "real_name": "Mana Drain",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Suffocate",
+      "real_name": "Suffocate",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "BoneShield",
+      "real_name": "Bone Shield",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "BoneShield2",
+      "real_name": "Bone Shield (2)",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "VampireBite",
+      "real_name": "Vampire Bite",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "VampireBite2",
+      "real_name": "Vampire Bite (2)",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "Slam",
+      "real_name": "Slam",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    },
+    {
+      "internal_name": "FlameBreath",
+      "real_name": "Flame Breath",
+      "card_type": "ActionCard",
+      "requirements": [
+        103
+      ],
+      "requirement_names": [
+        "never"
+      ],
+      "requirement_evidence": [
+        {
+          "attribute": 103,
+          "attribute_name": "never",
+          "achievement_internal_name": null,
+          "achievement_display_name": null,
+          "requirements_text": null,
+          "reward_text": null,
+          "cost": null,
+          "flavor_name": null,
+          "source_address": null,
+          "enum_only_note": null
+        }
+      ],
+      "access_status": "never",
+      "has_never": true,
+      "unlocked_requirements": [],
+      "missing_requirements": []
+    }
+  ]
+}

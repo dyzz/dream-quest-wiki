@@ -1,0 +1,142 @@
+[
+  {
+    "id": "BellicoseBallad",
+    "display_name": "Belicose Ballad",
+    "effect": "Your attack cards deal double damage in the next combat",
+    "name_index": 7454,
+    "effect_index": 7455
+  },
+  {
+    "id": "SoothingSerenade",
+    "display_name": "Soothing Serenade",
+    "effect": "You regenerate four health per turn in the next combat",
+    "name_index": 7456,
+    "effect_index": 7457
+  },
+  {
+    "id": "KnavishNocturne",
+    "display_name": "Knavish Nocturne",
+    "effect": "You are invisible until you interact with the dungeon",
+    "name_index": 7458,
+    "effect_index": 7459
+  },
+  {
+    "id": "MiserlyMinuet",
+    "display_name": "Miserly Minuet",
+    "effect": "You receive double the gold from the next combat",
+    "name_index": 7460,
+    "effect_index": 7461
+  },
+  {
+    "id": "BlazingBeat",
+    "display_name": "Blazing Beat",
+    "effect": "In the next combat, draw a temporary fireball card at the start of each turn",
+    "name_index": 7462,
+    "effect_index": 7463
+  },
+  {
+    "id": "CadenzaOfCelerity",
+    "display_name": "Cadenza of Celerity",
+    "effect": "You have +3 actions for the next combat",
+    "name_index": 7464,
+    "effect_index": 7465
+  },
+  {
+    "id": "AnthemOfAmbush",
+    "display_name": "Arming Aria",
+    "effect": "You begin the next combat with two random pieces of equipment",
+    "name_index": 7466,
+    "effect_index": 7467
+  },
+  {
+    "id": "DreadfulDirge",
+    "display_name": "Dreadful Dirge",
+    "effect": "Your opponent loses 3 current and maximum health at the start of each of your turns in the next combat",
+    "name_index": 7468,
+    "effect_index": 7469
+  },
+  {
+    "id": "ArmingAria",
+    "display_name": "Anthem of Ambush",
+    "effect": "Start the next fight with 3 additional cards",
+    "name_index": 7470,
+    "effect_index": 7471
+  },
+  {
+    "id": "HeroicHymn",
+    "display_name": "Heroic Hymn",
+    "effect": "Your maximum hand size is increased by one in the next fight",
+    "name_index": 7472,
+    "effect_index": 7473
+  },
+  {
+    "id": "HealingHarmony",
+    "display_name": "Healing Harmony",
+    "effect": "Generate three health packs at random on the map",
+    "name_index": 7474,
+    "effect_index": 7475
+  },
+  {
+    "id": "PiercingPaean",
+    "display_name": "Piercing Paean",
+    "effect": "In the next fight, damage you deal is piercing",
+    "name_index": 7476,
+    "effect_index": 7477
+  },
+  {
+    "id": "RollickingRondo",
+    "display_name": "Rollicking Rondo",
+    "effect": "In the next fight, whenever you play an Action card, draw a card",
+    "name_index": 7478,
+    "effect_index": 7479
+  },
+  {
+    "id": "RhapsodyOfRecall",
+    "display_name": "Rhapsody of Recall",
+    "effect": "In the next fight, at the beginning of each turn, return all Spell cards from your graveyard to your hand",
+    "name_index": 7480,
+    "effect_index": 7481
+  },
+  {
+    "id": "VileVibrato",
+    "display_name": "Vile Vibrato",
+    "effect": "In the next fight, whenever you play an Action card, your opponent is Poisoned for 1",
+    "name_index": 7482,
+    "effect_index": 7483
+  },
+  {
+    "id": "StoutSonata",
+    "display_name": "Stout Sonata",
+    "effect": "In the next fight, you have 20 additional health",
+    "name_index": 7484,
+    "effect_index": 7485
+  },
+  {
+    "id": "ChoraleOfChaos",
+    "display_name": "Chorale of Chaos",
+    "effect": "In the next fight, you and your opponent swap decks",
+    "name_index": 7486,
+    "effect_index": 7487
+  },
+  {
+    "id": "ChantOfClarity",
+    "display_name": "Enlightened Elegy",
+    "effect": "In the next combat, whenever you would draw a card during your turn, instead search your deck for a card and put it into your hand",
+    "name_index": 7488,
+    "effect_index": 7489
+  },
+  {
+    "id": "EnlightenedElegy",
+    "display_name": "Pugilist's Polka",
+    "effect": "In the next combat, whenever you would draw a card during your turn, deal 3 physical damage to your opponent",
+    "name_index": 7490,
+    "effect_index": 7491
+  },
+  {
+    "id": "PugilistsPolka",
+    "display_name": "Chant of Clarity",
+    "effect": "Start the next combat with 30 additional mana",
+    "name_index": 7492,
+    "effect_index": 7493
+  }
+]

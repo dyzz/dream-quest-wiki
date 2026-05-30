@@ -1,0 +1,207 @@
+---
+title: "职业速览"
+description: "Dream Quest 全职业起始资源和能力比较。"
+---
+
+
+<section class="dq-page-hero">
+  <div>
+    <p class="dq-kicker">Profession Catalog</p>
+    <h1>职业速览</h1>
+    <p class="dq-lede">职业图鉴已经合并了全职业列表。这里保留为旧入口，点击职业名进入详细页面。</p>
+  </div>
+  <a class="dq-button" href="/professions">进入职业图鉴</a>
+</section>
+
+<h2>玩家可选职业</h2>
+<section class="dq-profession-table">
+<a class="dq-profession-row" href="/professions/assassin">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionAssassin__404.png" alt="刺客" loading="eager"></span>
+  <strong>刺客</strong>
+  <em>Assassin · Channel：每当刺客打出行动牌时，获得 2 点法力。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>1</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+<a class="dq-profession-row" href="/professions/bard">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionBard__514.png" alt="吟游诗人" loading="eager"></span>
+  <strong>吟游诗人</strong>
+  <em>Bard · Sing：吟游诗人会学习歌曲。每首歌都可以作为地牢行动使用，冷却为 3 场战斗，效果通常持续到下一场战斗或立即影响地图。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>2</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+<a class="dq-profession-row" href="/professions/paladin">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionPaladin__945.png" alt="圣骑士" loading="eager"></span>
+  <strong>圣骑士</strong>
+  <em>Paladin · Holy War：每 2 场战斗，圣骑士会自动升级牌库中的 1 张攻击牌。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>0</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+<a class="dq-profession-row" href="/professions/druid">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionDruidHuman__361.png" alt="德鲁伊" loading="eager"></span>
+  <strong>德鲁伊</strong>
+  <em>Druid · Shapeshifting：每场战斗后，德鲁伊在人形和狼形之间切换。人形牌组没有攻击牌，狼形没有法力和法术牌。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>2</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+<a class="dq-profession-row" href="/professions/warrior">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionWarrior__494.png" alt="战士" loading="eager"></span>
+  <strong>战士</strong>
+  <em>Warrior · Smash：每 2 场战斗后，战士可以摧毁地牢中的一面墙。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>0</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+<a class="dq-profession-row" href="/professions/professor">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionProfessor__836.png" alt="教授" loading="eager"></span>
+  <strong>教授</strong>
+  <em>Professor · Research：战斗中，教授可以从对手牌库搜索 1 张牌加入手牌，并永久加入自己的牌库。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>0</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+<a class="dq-profession-row" href="/professions/monk">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionMonk__896.png" alt="武僧" loading="eager"></span>
+  <strong>武僧</strong>
+  <em>Monk · Meditate：每 4 场战斗，武僧可以进入冥想并遗忘自己牌库中的 1 张牌。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>0</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+<a class="dq-profession-row" href="/professions/samurai">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionSamurai__603.png" alt="武士" loading="eager"></span>
+  <strong>武士</strong>
+  <em>Samurai · Bushido：每当武士击败等级不低于自己的对手时，完全回复生命。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>0</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+<a class="dq-profession-row" href="/professions/necromancer">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionNecromancer__365.png" alt="死灵法师" loading="eager"></span>
+  <strong>死灵法师</strong>
+  <em>Necromancer · Portal：每 3 场战斗，死灵法师可以在怪物位置打开传送门，并与它交换位置。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>2</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+<a class="dq-profession-row" href="/professions/wizard">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionWizard__992.png" alt="法师" loading="eager"></span>
+  <strong>法师</strong>
+  <em>Wizard · Teleport：每场战斗后，法师可以传送到地图任意位置，包括尚未发现的位置。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>2</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+<a class="dq-profession-row" href="/professions/ranger">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionRanger__133.png" alt="游侠" loading="eager"></span>
+  <strong>游侠</strong>
+  <em>Ranger · Invisibility：每 4 场战斗，游侠可以进入隐形；在与地牢互动前，可以不被怪物发现地穿过它们。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>0</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+<a class="dq-profession-row" href="/professions/priest">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionPriest__218.png" alt="牧师" loading="eager"></span>
+  <strong>牧师</strong>
+  <em>Priest · Oracle：每 2 场战斗，牧师可以揭示一个格子以及周围 8 个格子。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>2</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+<a class="dq-profession-row" href="/professions/thief">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionThief__381.png" alt="盗贼" loading="eager"></span>
+  <strong>盗贼</strong>
+  <em>Thief · Find Treasure：每 4 场战斗，盗贼可以发现其他职业找不到的宝藏。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>0</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+<a class="dq-profession-row" href="/professions/dragon">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionDragon__1013.png" alt="龙" loading="eager"></span>
+  <strong>龙</strong>
+  <em>Dragon · Devour：每 3 场战斗可吞噬一个可见普通非首领生物，获得经验和吞噬收益。Hoard：花费金币换取龙族成长，费用随已使用次数提高。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>0</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+</section>
+
+<section class="dq-section-block">
+  <h2>特殊入口</h2>
+  <section class="dq-profession-table">
+<a class="dq-profession-row" href="/professions/random">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionRandom__468.png" alt="随机职业" loading="eager"></span>
+  <strong>随机职业</strong>
+  <em>Random · 随机职业会从已解锁、且可获得成就的职业里选择一个。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>2</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+  </section>
+</section>
+
+<section class="dq-section-block">
+  <h2>未实装资料</h2>
+  <p class="dq-note">仅保留为资料参考，不作为玩家可选职业计算。</p>
+  <section class="dq-profession-table">
+<a class="dq-profession-row" href="/professions/chaosmage">
+  <span><img src="/assets/extracted/textures/by_container/resources/ProfessionChaosMage__775.png" alt="混沌法师" loading="eager"></span>
+  <strong>混沌法师</strong>
+  <em>Chaos Mage · Wild Shape：每 3 场战斗，混沌法师可以随机替换一个怪物。</em>
+  <span class="dq-stat-row"><span class="dq-stat"><strong>15</strong>生命</span>
+<span class="dq-stat"><strong>2</strong>法力</span>
+<span class="dq-stat"><strong>2</strong>手牌</span>
+<span class="dq-stat"><strong>1</strong>行动点</span>
+<span class="dq-stat"><strong>0</strong>金币</span>
+<span class="dq-stat"><strong>0</strong>装备槽</span></span>
+</a>
+  </section>
+</section>

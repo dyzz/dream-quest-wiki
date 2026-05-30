@@ -1,0 +1,70 @@
+---
+title: "修道院 / Monastery"
+description: "打开牌组选择界面，选择牌并支付费用删除或净化牌组。"
+---
+
+
+<section class="dq-profession-hero dq-feature-hero">
+  <div>
+    <p class="dq-kicker">Dungeon Feature · 净化</p>
+    <h1>修道院</h1>
+    <p class="dq-lede">打开牌组选择界面，选择牌并支付费用删除或净化牌组。</p>
+    <p class="dq-original">原名：Monastery · 类名：Monastery</p>
+    <div class="dq-tag-row"><span>净化</span><span>服务奖励三选一时约 33.3%；随机奖励名另有 5%。</span></div>
+  </div>
+  <div class="dq-profession-portrait dq-feature-portrait">
+    <img src="/assets/extracted/textures/by_container/resources/Monastery__583.png" alt="Monastery" loading="lazy">
+  </div>
+</section>
+
+<section class="dq-wide-panel">
+  <h2>Metadata</h2>
+  <div class="dq-meta-grid">
+<span title="wiki 中使用的中文名称。"><strong>中文名</strong><em>修道院</em></span>
+<span title="游戏原始名称或代码中对应名称。"><strong>英文名</strong><em>Monastery</em></span>
+<span title="反编译类型或创建 feature 时使用的内部名称。"><strong>类名</strong><em>Monastery</em></span>
+<span title="用于图鉴分组。"><strong>类别</strong><em>净化</em></span>
+<span title="从地牢生成和奖励分配中恢复出的生成入口。"><strong>生成方式</strong><em>服务奖励三选一时约 33.3%；随机奖励名另有 5%。</em></span>
+</div>
+</section>
+
+<section class="dq-section-block">
+  <h2>机制说明</h2>
+  <div class="dq-mechanic-list">
+<p>Monastery.Enter 会进入牌组选择流程，ResolveMonastery 在确认后执行。</p>
+<p>第一次删牌免费；之后费用来自 DungeonPlayer.DeleteCost。</p>
+<p>DeleteCost = 10 + 15 * 已删牌次数；确认后删除选择的牌并增加删牌费用计数。</p>
+<p>成就 ALTAR2 解锁 Necromancer，但 Monastery 自身主要是牌组处理服务。</p>
+  </div>
+</section>
+
+<section class="dq-section-block">
+  <h2>删牌费用</h2>
+  
+  <table class="dq-data-table">
+    <thead><tr><th>情况</th><th>费用</th><th>后处理</th></tr></thead>
+    <tbody>
+<tr><td>第一次使用</td><td>0 金币</td><td>选择牌并删除。</td></tr>
+<tr><td>之后使用</td><td>10 + 15 * 已删牌次数</td><td>SpendGold 后删除选择的牌，并调用 IncreaseDeleteCost。</td></tr>
+<tr><td>费用来源</td><td>DungeonPlayer.DeleteCost()</td><td>计数存在 DungeonPlayer.stats 中。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+<section class="dq-section-block">
+  <h2>随机奖励权重</h2>
+  <table class="dq-data-table">
+    <thead><tr><th>楼层组</th><th>概率</th><th>说明</th></tr></thead>
+    <tbody>
+<tr><td>第 1 层</td><td>5%</td><td>来自 DungeonBoard.GenerateRewardName。</td></tr>
+<tr><td>第 2 层以后</td><td>5%</td><td>来自 DungeonBoard.GenerateRewardName。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="dq-action-row">
+  <a class="dq-button" href="/buildings">回到地牢建筑图鉴</a>
+  <a class="dq-button dq-button-secondary" href="/mechanics/dungeon-generation">查看地牢生成</a>
+</section>

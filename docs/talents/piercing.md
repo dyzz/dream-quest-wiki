@@ -1,0 +1,84 @@
+---
+title: "Sublime"
+description: "你造成的所有伤害都具有穿透。"
+---
+
+
+<section class="dq-profession-hero dq-feature-hero">
+  <div>
+    <p class="dq-kicker">Talent · 3 阶</p>
+    <h1>Sublime</h1>
+    <p class="dq-lede">你造成的所有伤害都具有穿透。</p>
+    <p class="dq-original">原文：All your damage is piercing</p>
+    <div class="dq-tag-row">
+      <span>战斗被动</span>
+      <span>不可重复</span>
+      <span>需要 NOCARDS</span>
+    </div>
+  </div>
+  <div class="dq-profession-portrait dq-feature-portrait">
+    <img src="/assets/extracted/textures/by_container/resources/Piercing__296.png" alt="Sublime" loading="lazy">
+  </div>
+</section>
+
+<section class="dq-wide-panel">
+  <h2>Metadata</h2>
+  <div class="dq-meta-grid">
+<span title="DungeonTalentList 中的内部名称。"><strong>内部名称</strong><em>Piercing</em></span>
+<span title="游戏内显示名称。"><strong>显示名</strong><em>Sublime</em></span>
+<span title="天赋选择时使用的阶级。"><strong>阶级</strong><em>3</em></span>
+<span title="是否可以重复选择同一项天赋。"><strong>可重复</strong><em>否</em></span>
+<span title="立即/地牢层面生效，或进入战斗后作为玩家被动生效。"><strong>作用域</strong><em>战斗被动</em></span>
+<span title="需要先完成的 UserAttribute / 成就。"><strong>需求</strong><em>NOCARDS</em></span>
+</div>
+</section>
+
+<section class="dq-section-block">
+  <h2>解锁要求</h2>
+  <table class="dq-data-table">
+    <thead><tr><th>成就</th><th>要求</th><th>奖励</th></tr></thead>
+    <tbody>
+<tr><td>Pure<br><code>NOCARDS</code></td><td>战斗开始时牌库中没有卡牌</td><td>解锁 Sublime 天赋</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="dq-section-block">
+  <h2>实际效果</h2>
+  <div class="dq-mechanic-list">
+    <p>登记能力文本：造成的所有伤害都具有穿透。</p>
+    <p>进入战斗后把当前伤害形态设为穿透。</p>
+    <p>进入战斗后把基础伤害形态设为穿透。</p>
+  </div>
+</section>
+
+<section class="dq-section-block">
+  <h2>解析效果</h2>
+  <table class="dq-data-table">
+  <thead><tr><th>入口</th><th>操作</th><th>目标</th><th>参数</th></tr></thead>
+  <tbody>
+<tr>
+  <td>ApplyTo</td>
+  <td>添加能力文本</td>
+  <td>DungeonPlayer.AddPower</td>
+  <td>能力文本：造成的所有伤害都具有穿透。（Your damage is piercing）</td>
+</tr>
+<tr>
+  <td>ApplyToPlayer</td>
+  <td>调用</td>
+  <td>Player.ElementalForm</td>
+  <td>数值：6</td>
+</tr>
+<tr>
+  <td>ApplyToPlayer</td>
+  <td>调用</td>
+  <td>Player.ElementalFormBase</td>
+  <td>数值：6</td>
+</tr>
+  </tbody>
+</table>
+</section>
+
+<section class="dq-action-row">
+  <a class="dq-button" href="/talents">回到天赋图鉴</a>
+</section>

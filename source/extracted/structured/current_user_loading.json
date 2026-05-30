@@ -1,0 +1,514 @@
+{
+  "source": {
+    "game_model": "extracted/il2cpp_game_model.json",
+    "disassembly": {
+      "GameManager.GetCurrentUser": "extracted/disassembly/GameManager_GetCurrentUser.txt",
+      "GameManager.SetCurrentUser": "extracted/disassembly/GameManager_SetCurrentUser.txt",
+      "GameManager.LoadCurrentUser": "extracted/disassembly/GameManager_LoadCurrentUser.txt",
+      "GameManager.Difficulty": "extracted/disassembly/GameManager_Difficulty.txt",
+      "DungeonUser..ctor": "extracted/disassembly/DungeonUser_ctor.txt",
+      "DungeonUser.Initialize": "extracted/disassembly/DungeonUser_Initialize.txt",
+      "DungeonUser.GetAttribute": "extracted/disassembly/DungeonUser_GetAttribute.txt",
+      "DungeonUser.SetAttributePerm": "extracted/disassembly/DungeonUser_SetAttributePerm.txt",
+      "DungeonUser.AddToAttribute": "extracted/disassembly/DungeonUser_AddToAttribute.txt",
+      "DungeonUser.GetDifficulty": "extracted/disassembly/DungeonUser_GetDifficulty.txt",
+      "DungeonUser.Load": "extracted/disassembly/DungeonUser_Load_full.txt",
+      "DungeonUser.Save": "extracted/disassembly/DungeonUser_Save_full.txt",
+      "DungeonUser.DirectoryName": "extracted/disassembly/DungeonUser_DirectoryName_instance_full.txt",
+      "DungeonUser.PlayerFilename": "extracted/disassembly/DungeonUser_PlayerFilename_static.txt",
+      "DungeonUser.VerifyBaseDirectory": "extracted/disassembly/DungeonUser_VerifyBaseDirectory.txt",
+      "DungeonUser.UserExists": "extracted/disassembly/DungeonUser_UserExists_full.txt",
+      "DungeonUser.CreateUser": "extracted/disassembly/DungeonUser_CreateUser.txt",
+      "DungeonUser.LoadUser": "extracted/disassembly/DungeonUser_LoadUser_full.txt"
+    }
+  },
+  "method_table": [
+    {
+      "type": "GameManager",
+      "method": "GetCurrentUser",
+      "method_index": 20953,
+      "vmaddr": "0x1002f7220",
+      "parameters": [],
+      "metadata_token": 6416
+    },
+    {
+      "type": "GameManager",
+      "method": "LoadCurrentUser",
+      "method_index": 20954,
+      "vmaddr": "0x1002f5ec0",
+      "parameters": [],
+      "metadata_token": 6417
+    },
+    {
+      "type": "GameManager",
+      "method": "SetCurrentUser",
+      "method_index": 20955,
+      "vmaddr": "0x1002f7360",
+      "parameters": [
+        "s"
+      ],
+      "metadata_token": 6418
+    },
+    {
+      "type": "GameManager",
+      "method": "Difficulty",
+      "method_index": 20966,
+      "vmaddr": "0x1002f7bd0",
+      "parameters": [],
+      "metadata_token": 6429
+    },
+    {
+      "type": "DungeonUser",
+      "method": ".ctor",
+      "method_index": 20444,
+      "vmaddr": "0x1002c7378",
+      "parameters": [],
+      "metadata_token": 5907
+    },
+    {
+      "type": "DungeonUser",
+      "method": "Initialize",
+      "method_index": 20445,
+      "vmaddr": "0x1002c73a4",
+      "parameters": [],
+      "metadata_token": 5908
+    },
+    {
+      "type": "DungeonUser",
+      "method": "GetAttribute",
+      "method_index": 20451,
+      "vmaddr": "0x1002c8cb8",
+      "parameters": [
+        "ca"
+      ],
+      "metadata_token": 5914
+    },
+    {
+      "type": "DungeonUser",
+      "method": "SetAttributePerm",
+      "method_index": 20465,
+      "vmaddr": "0x1002cdc4c",
+      "parameters": [
+        "ca",
+        "val"
+      ],
+      "metadata_token": 5928
+    },
+    {
+      "type": "DungeonUser",
+      "method": "AddToAttribute",
+      "method_index": 20466,
+      "vmaddr": "0x1002cdcb0",
+      "parameters": [
+        "ca",
+        "val"
+      ],
+      "metadata_token": 5929
+    },
+    {
+      "type": "DungeonUser",
+      "method": "Load",
+      "method_index": 20470,
+      "vmaddr": "0x1002cf72c",
+      "parameters": [],
+      "metadata_token": 5933
+    },
+    {
+      "type": "DungeonUser",
+      "method": "Save",
+      "method_index": 20471,
+      "vmaddr": "0x1002cffec",
+      "parameters": [],
+      "metadata_token": 5934
+    },
+    {
+      "type": "DungeonUser",
+      "method": "DirectoryName",
+      "method_index": 20472,
+      "vmaddr": "0x1002d0688",
+      "parameters": [],
+      "metadata_token": 5935
+    },
+    {
+      "type": "DungeonUser",
+      "method": "PlayerFilename",
+      "method_index": 20473,
+      "vmaddr": "0x1002d070c",
+      "parameters": [],
+      "metadata_token": 5936
+    },
+    {
+      "type": "DungeonUser",
+      "method": "PlayerFilenameBkp",
+      "method_index": 20474,
+      "vmaddr": "0x1002d07b0",
+      "parameters": [],
+      "metadata_token": 5937
+    },
+    {
+      "type": "DungeonUser",
+      "method": "VerifyUserDirectory",
+      "method_index": 20475,
+      "vmaddr": "0x1002d0854",
+      "parameters": [],
+      "metadata_token": 5938
+    },
+    {
+      "type": "DungeonUser",
+      "method": "SetDifficulty",
+      "method_index": 20478,
+      "vmaddr": "0x1002d2980",
+      "parameters": [
+        "x"
+      ],
+      "metadata_token": 5941
+    },
+    {
+      "type": "DungeonUser",
+      "method": "GetDifficulty",
+      "method_index": 20479,
+      "vmaddr": "0x1002c8d00",
+      "parameters": [],
+      "metadata_token": 5942
+    },
+    {
+      "type": "DungeonUser",
+      "method": "PlayerFilename",
+      "method_index": 20499,
+      "vmaddr": "0x1002d0714",
+      "parameters": [
+        "s"
+      ],
+      "metadata_token": 5962
+    },
+    {
+      "type": "DungeonUser",
+      "method": "PlayerFilenameBkp",
+      "method_index": 20500,
+      "vmaddr": "0x1002d07b8",
+      "parameters": [
+        "s"
+      ],
+      "metadata_token": 5963
+    },
+    {
+      "type": "DungeonUser",
+      "method": "DirectoryName",
+      "method_index": 20501,
+      "vmaddr": "0x1002d0690",
+      "parameters": [
+        "sin"
+      ],
+      "metadata_token": 5964
+    },
+    {
+      "type": "DungeonUser",
+      "method": "VerifyBaseDirectory",
+      "method_index": 20502,
+      "vmaddr": "0x1002d2984",
+      "parameters": [],
+      "metadata_token": 5965
+    },
+    {
+      "type": "DungeonUser",
+      "method": "UserExists",
+      "method_index": 20503,
+      "vmaddr": "0x1002cffcc",
+      "parameters": [
+        "s"
+      ],
+      "metadata_token": 5966
+    },
+    {
+      "type": "DungeonUser",
+      "method": "CreateUser",
+      "method_index": 20505,
+      "vmaddr": "0x1002d2c00",
+      "parameters": [
+        "s"
+      ],
+      "metadata_token": 5968
+    },
+    {
+      "type": "DungeonUser",
+      "method": "LoadUser",
+      "method_index": 20506,
+      "vmaddr": "0x1002d2ca8",
+      "parameters": [
+        "s"
+      ],
+      "metadata_token": 5969
+    }
+  ],
+  "fields": [
+    {
+      "owner": "GameManager static fields",
+      "field": "currentUser",
+      "offset": "0x38",
+      "evidence": "GameManager.GetCurrentUser reads static field offset 0x38; SetCurrentUser writes the same offset."
+    },
+    {
+      "owner": "GameManager static fields",
+      "field": "cachedCurrentUser",
+      "offset": "0x40",
+      "evidence": "GameManager.LoadCurrentUser reads/writes static field offset 0x40; SetCurrentUser clears it before tail-calling LoadCurrentUser."
+    },
+    {
+      "owner": "DungeonUser",
+      "field": "name",
+      "offset": "0x78",
+      "evidence": "CreateUser/LoadUser store the selected user name at 0x78; instance DirectoryName/PlayerFilename tail-call through this field."
+    },
+    {
+      "owner": "DungeonUser",
+      "field": "attributes",
+      "offset": "0x80",
+      "evidence": "Initialize stores an int[] at 0x80; GetAttribute/SetAttributePerm/AddToAttribute index through the same field."
+    },
+    {
+      "owner": "DungeonUser",
+      "field": "monstersSeen",
+      "offset": "0x88",
+      "evidence": "Initialize and Load allocate/fill the first string collection at 0x88."
+    },
+    {
+      "owner": "DungeonUser",
+      "field": "bossesSeen",
+      "offset": "0x90",
+      "evidence": "Initialize and Load allocate/fill the second string collection at 0x90."
+    },
+    {
+      "owner": "DungeonUser",
+      "field": "environmentsSeen",
+      "offset": "0x98",
+      "evidence": "Initialize and Load allocate/fill the third string collection at 0x98."
+    },
+    {
+      "owner": "DungeonUser",
+      "field": "history",
+      "offset": "0xa0",
+      "evidence": "Initialize creates the history collection at 0xa0; Load appends parsed history entries."
+    },
+    {
+      "owner": "DungeonUser",
+      "field": "MAX_HISTORIES",
+      "offset": "0xa8",
+      "value": 200,
+      "evidence": "DungeonUser constructor/CreateUser/LoadUser write immediate 0xc8 to offset 0xa8."
+    }
+  ],
+  "literals": [
+    {
+      "literal": "currentUser",
+      "uses": [
+        "GameManager.GetCurrentUser PlayerPrefs lookup key",
+        "GameManager.SetCurrentUser PlayerPrefs write key"
+      ]
+    },
+    {
+      "literal": "profiles",
+      "uses": [
+        "DungeonUser.VerifyBaseDirectory appends the profile root directory name."
+      ]
+    },
+    {
+      "literal": "player.hpl",
+      "uses": [
+        "DungeonUser.PlayerFilename appends the main profile save file name."
+      ]
+    },
+    {
+      "literal": "player.hpl.bkp",
+      "uses": [
+        "DungeonUser.PlayerFilenameBkp appends the backup profile save file name."
+      ]
+    },
+    {
+      "literal": "(\\d+): (\\d+)\\D*",
+      "uses": [
+        "DungeonUser.Load parses attribute index/value pairs from save text."
+      ]
+    },
+    {
+      "literal": ",",
+      "uses": [
+        "DungeonUser.Load/Save split and join seen-list sections with comma separators."
+      ]
+    },
+    {
+      "literal": ": ",
+      "uses": [
+        "DungeonUser.Save emits attribute index/value entries using ': ' between key and value."
+      ]
+    }
+  ],
+  "flow": [
+    {
+      "order": 1,
+      "method": "GameManager.GetCurrentUser",
+      "operation": "Read static currentUser from offset 0x38.",
+      "evidence_addresses": [
+        "0x1002f72a0",
+        "0x1002f72a4",
+        "0x1002f7350"
+      ]
+    },
+    {
+      "order": 2,
+      "method": "GameManager.GetCurrentUser",
+      "operation": "If currentUser is null/empty, probe PlayerPrefs key 'currentUser' and load PlayerPrefs.GetString into static currentUser.",
+      "evidence_addresses": [
+        "0x1002f72c8",
+        "0x1002f72f0",
+        "0x1002f7304",
+        "0x1002f732c"
+      ],
+      "confidence": "high for key and branch shape; Unity PlayerPrefs helper names inferred from call signatures."
+    },
+    {
+      "order": 3,
+      "method": "GameManager.SetCurrentUser",
+      "operation": "Write static currentUser offset 0x38, persist PlayerPrefs key 'currentUser', save PlayerPrefs, clear cachedCurrentUser offset 0x40, then tail-call LoadCurrentUser.",
+      "evidence_addresses": [
+        "0x1002f73d4",
+        "0x1002f73f0",
+        "0x1002f73fc",
+        "0x1002f7408",
+        "0x1002f7414"
+      ],
+      "confidence": "high for static writes and key; Unity PlayerPrefs helper names inferred from call signatures."
+    },
+    {
+      "order": 4,
+      "method": "GameManager.LoadCurrentUser",
+      "operation": "Return cachedCurrentUser from offset 0x40 when present.",
+      "evidence_addresses": [
+        "0x1002f5f2c",
+        "0x1002f5f34",
+        "0x1002f5fdc"
+      ]
+    },
+    {
+      "order": 5,
+      "method": "GameManager.LoadCurrentUser",
+      "operation": "When no cached user exists, call GetCurrentUser; if the selected name is empty, return null/current cached value.",
+      "evidence_addresses": [
+        "0x1002f5f4c",
+        "0x1002f5f80",
+        "0x1002f5f84"
+      ]
+    },
+    {
+      "order": 6,
+      "method": "GameManager.LoadCurrentUser",
+      "operation": "For a non-empty selected name, call DungeonUser.LoadUser(name), cache the returned DungeonUser at offset 0x40, and return it.",
+      "evidence_addresses": [
+        "0x1002f5f90",
+        "0x1002f5f94",
+        "0x1002f5fbc"
+      ]
+    },
+    {
+      "order": 7,
+      "method": "DungeonUser.LoadUser",
+      "operation": "Build PlayerFilename(name), check file existence, then construct/initialize/load an existing DungeonUser or tail-call CreateUser(name) when the file is missing.",
+      "evidence_addresses": [
+        "0x1002d2ce4",
+        "0x1002d2cf4",
+        "0x1002d2d3c",
+        "0x1002d2d60",
+        "0x1002d2d6c"
+      ]
+    },
+    {
+      "order": 8,
+      "method": "DungeonUser.CreateUser",
+      "operation": "Construct and initialize a DungeonUser, set name at 0x78, call Save, and return the new user.",
+      "evidence_addresses": [
+        "0x1002d2c4c",
+        "0x1002d2c5c",
+        "0x1002d2c7c",
+        "0x1002d2c90"
+      ]
+    }
+  ],
+  "save_model": {
+    "profile_root": {
+      "base_helper": "Unity/application data root helper at 0x100564444; exact managed symbol is not named in this artifact.",
+      "directory_literal": "profiles",
+      "directory_creation": "VerifyBaseDirectory creates the profiles directory if it does not exist.",
+      "user_directory": "DirectoryName(userName) appends the selected user name beneath the profiles root."
+    },
+    "filenames": {
+      "main": "player.hpl",
+      "backup": "player.hpl.bkp",
+      "main_path_rule": "PlayerFilename(userName) = DirectoryName(userName) / player.hpl",
+      "backup_path_rule": "PlayerFilenameBkp(userName) = DirectoryName(userName) / player.hpl.bkp"
+    },
+    "attributes": {
+      "array_offset": "0x80",
+      "array_kind": "int[]",
+      "initialize_length_source": "Enum.GetValues(UserAttribute).Length",
+      "get_rule": "GetAttribute(attribute) bounds-checks and returns attributes[attribute].",
+      "set_rule": "SetAttributePerm(attribute, value) writes attributes[attribute] then calls Save.",
+      "add_rule": "AddToAttribute(attribute, delta) adds delta to attributes[attribute] then calls Save.",
+      "serialized_pair_regex": "(\\d+): (\\d+)\\D*",
+      "serialized_pair_separator": ": ",
+      "write_loop": "Save loops over the full attributes array and emits index/value pairs.",
+      "load_loop": "Load parses regex groups 1 and 2 as integer index/value and stores the value into attributes[index]."
+    },
+    "collections": [
+      {
+        "field": "monstersSeen",
+        "offset": "0x88",
+        "separator": ",",
+        "load_status": "structured_list_section"
+      },
+      {
+        "field": "bossesSeen",
+        "offset": "0x90",
+        "separator": ",",
+        "load_status": "structured_list_section"
+      },
+      {
+        "field": "environmentsSeen",
+        "offset": "0x98",
+        "separator": ",",
+        "load_status": "structured_list_section"
+      },
+      {
+        "field": "history",
+        "offset": "0xa0",
+        "load_status": "history_entries_parsed_after_list_sections"
+      }
+    ],
+    "remaining_gap": "The lifecycle/path/attribute format is structured, but the remaster harness still does not round-trip real player.hpl files or emulate Unity PlayerPrefs/storage."
+  },
+  "remaster_implications": [
+    "CardData.HasAccess and CardFinder unlock fixtures should source user attributes from DungeonUser.attributes[UserAttribute] loaded via this path.",
+    "Changing the current user must invalidate cachedCurrentUser before resolving card/profession/dungeon gates.",
+    "A remaster importer can start with profiles/<user>/player.hpl and parse numeric UserAttribute pairs with the recovered regex, then add collection/history support."
+  ],
+  "summary": {
+    "method_count": 24,
+    "field_offset_count": 9,
+    "literal_count": 7,
+    "flow_step_count": 8,
+    "current_user_playerprefs_key": "currentUser",
+    "profile_directory_literal": "profiles",
+    "player_filename": "player.hpl",
+    "player_backup_filename": "player.hpl.bkp",
+    "attribute_array_offset": "0x80",
+    "attribute_save_regex": "(\\d+): (\\d+)\\D*",
+    "max_histories": 200,
+    "current_user_lifecycle_structured": true,
+    "loaduser_missing_file_falls_back_to_createuser": true,
+    "save_file_parser_integrated": false,
+    "prototype_runtime_ready": false
+  },
+  "remaining_gaps": [
+    "The old binary is not runnable here, so PlayerPrefs and filesystem behavior are inferred from call shape and string literals.",
+    "No real player.hpl sample has been round-tripped against this model.",
+    "The dungeon seed harness and CardFinder analysis accept explicit UserAttribute fixtures; they do not yet call this lifecycle model."
+  ]
+}

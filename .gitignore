@@ -1,0 +1,18 @@
+.DS_Store
+npm-debug.log*
+
+node_modules/
+output/
+.playwright-cli/
+
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+docs/public/assets/extracted/
+public/assets/extracted/
+
+.vercel/
+
+# Tencent Cloud EdgeOne
+.env
+.edgeone/
+.tef_dist/

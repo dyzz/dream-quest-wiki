@@ -1,0 +1,319 @@
+{
+  "source": {
+    "profession_skills": "extracted/structured/profession_skills.json",
+    "profession_skill_runtime_accuracy_gaps": "extracted/structured/profession_skill_runtime_accuracy_gaps.json",
+    "game_in_game_random_range_disassembly": "extracted/disassembly/Game_InGameRandomRange.txt",
+    "desperate_prayer_disassembly": "extracted/disassembly/CombatAbilityDesperatePrayer_DoMe.txt",
+    "find_monster_disassembly": "extracted/disassembly/DungeonActionFindMonster_Perform.txt",
+    "find_treasure_disassembly": "extracted/disassembly/DungeonActionFindTreasure_Perform.txt",
+    "cardfinder_random_equipment_disassembly": "extracted/disassembly/CardFinder_RandomEquipment.txt",
+    "talent_apply_to_disassembly": "extracted/disassembly/DungeonTalentHandler_ApplyTo.txt",
+    "talent_apply_to_player_disassembly": "extracted/disassembly/DungeonTalentHandler_ApplyToPlayer.txt"
+  },
+  "notes": [
+    "This artifact recovers static RNG/list-order shape for profession/skill RNG candidates from profession_skill_runtime_accuracy_gaps.json.",
+    "It records call ordering, bounds, target helpers, and random-equipment source shape, but does not replay original RNG stream position."
+  ],
+  "summary": {
+    "check_count": 20,
+    "passed_count": 20,
+    "failed_count": 0,
+    "profession_skill_rng_candidate_count": 5,
+    "runtime_rng_entry_count": 3,
+    "runtime_rng_step_count": 3,
+    "talent_random_handler_count": 2,
+    "desperate_prayer_rng_shape_recovered": true,
+    "find_monster_rng_shape_recovered": true,
+    "find_treasure_random_gold_shape_recovered": true,
+    "charismatic_random_reward_shape_recovered": true,
+    "hoard_random_equipment_shape_recovered": true,
+    "in_game_random_range_inclusive_upper_bound_recovered": true,
+    "profession_skill_rng_static_shape_recovered": true,
+    "original_profession_skill_rng_stream_replay_complete": false,
+    "original_profession_skill_shuffle_index_stream_replay_complete": false
+  },
+  "random_range_helper": {
+    "status": "inclusive_upper_bound_recovered",
+    "game_rng_field_offset": "0xc8",
+    "argument_shape": "Random.Next(a, b + 1)",
+    "evidence_confirmed": true,
+    "original_rng_stream_replay_complete": false
+  },
+  "profession_skill_rng_cases": [
+    {
+      "entry_type": "combat_ability",
+      "name": "CombatAbilityDesperatePrayer",
+      "shape": {
+        "status": "fixed_0_to_4_roll_with_five_static_outcome_literals",
+        "source_method": "CombatAbilityDesperatePrayer.DoMe",
+        "rng_call": {
+          "operation": "Game.InGameRandomRange",
+          "range_inclusive": [
+            0,
+            4
+          ],
+          "catalog_step_count": 1,
+          "call_address": "0x100232f70"
+        },
+        "outcome_literals": [
+          "Knowledge!",
+          "Protection!",
+          "Death!",
+          "Speed!",
+          "Armored!"
+        ],
+        "equipment_literals_in_method": [
+          "CelestialPlate",
+          "DeckOfWonder",
+          "Pendant"
+        ],
+        "visual_stack_literal": "ScrollTextDurationColor",
+        "evidence_confirmed": true
+      },
+      "original_rng_stream_replay_complete": false
+    },
+    {
+      "entry_type": "dungeon_action",
+      "name": "DungeonActionFindMonster",
+      "shape": {
+        "status": "dynamic_monster_list_random_index_shape_recovered",
+        "source_method": "DungeonActionFindMonster.Perform",
+        "catalog_step": {
+          "operation": "Game.InGameRandomRange",
+          "address": "0x100267094",
+          "kind": "virtual_call",
+          "category": "effect",
+          "effect": "game_in_game_random_range",
+          "args": {
+            "a": 0
+          },
+          "translation_status": "named_call_preserved",
+          "source_method": "Perform",
+          "source_group": "execution_methods"
+        },
+        "random_index_shape": "Game.InGameRandomRange(0, candidate_count - 1)",
+        "post_selection_shape": "selected monster is used for dungeon monster creation/display flow",
+        "evidence_confirmed": true
+      },
+      "original_rng_stream_replay_complete": false
+    },
+    {
+      "entry_type": "dungeon_action",
+      "name": "DungeonActionFindTreasure",
+      "shape": {
+        "status": "random_gold_target_then_reward_flow_recovered",
+        "source_method": "DungeonActionFindTreasure.Perform",
+        "catalog_step_count": 1,
+        "random_gold_target_call_address": "0x100267658",
+        "evidence_confirmed": true
+      },
+      "original_rng_stream_replay_complete": false
+    },
+    {
+      "entry_type": "dungeon_talent",
+      "name": "Charismatic",
+      "shape": {
+        "status": "generate_random_reward_tier_call_recovered",
+        "talent": "Charismatic",
+        "handler_method": "DungeonTalentHandler.ApplyTo",
+        "effect_count": 1,
+        "arguments": {
+          "x": 5
+        },
+        "source_addresses": [
+          "0x01002c5978"
+        ],
+        "evidence_confirmed": true
+      },
+      "original_rng_stream_replay_complete": false
+    },
+    {
+      "entry_type": "dungeon_talent",
+      "name": "Hoard",
+      "shape": {
+        "status": "cardfinder_random_equipment_then_create_equipment_recovered",
+        "talent": "Hoard",
+        "handler_methods": [
+          "DungeonTalentHandler.ApplyTo",
+          "DungeonTalentHandler.ApplyToPlayer"
+        ],
+        "add_power_count": 1,
+        "random_equipment_effect_count": 1,
+        "equipment_source": "CardFinder.RandomEquipment",
+        "source_addresses": [
+          "0x01002c6de8",
+          "0x01002c6df4"
+        ],
+        "handler_evidence_confirmed": true,
+        "cardfinder_random_equipment_shape": {
+          "status": "all_equipment_then_random_index_or_fallback",
+          "random_index_shape": "selects from CardFinder.AllEquipment using a 0..Count-1 random index helper",
+          "evidence_confirmed": true
+        }
+      },
+      "original_rng_stream_replay_complete": false
+    }
+  ],
+  "checks": [
+    {
+      "name": "gap:rng_or_shuffle_entry_count",
+      "status": "passed",
+      "actual": 3,
+      "expected": 3,
+      "details": {}
+    },
+    {
+      "name": "gap:rng_or_shuffle_step_count",
+      "status": "passed",
+      "actual": 3,
+      "expected": 3,
+      "details": {}
+    },
+    {
+      "name": "gap:talent_random_handler_count",
+      "status": "passed",
+      "actual": 2,
+      "expected": 2,
+      "details": {}
+    },
+    {
+      "name": "catalog:runtime_rng_entry_names",
+      "status": "passed",
+      "actual": [
+        "CombatAbilityDesperatePrayer",
+        "DungeonActionFindMonster",
+        "DungeonActionFindTreasure"
+      ],
+      "expected": [
+        "CombatAbilityDesperatePrayer",
+        "DungeonActionFindMonster",
+        "DungeonActionFindTreasure"
+      ],
+      "details": {}
+    },
+    {
+      "name": "catalog:talent_rng_entry_names",
+      "status": "passed",
+      "actual": [
+        "Charismatic",
+        "Hoard"
+      ],
+      "expected": [
+        "Charismatic",
+        "Hoard"
+      ],
+      "details": {}
+    },
+    {
+      "name": "catalog:desperate_prayer_rng_step_count",
+      "status": "passed",
+      "actual": 1,
+      "expected": 1,
+      "details": {}
+    },
+    {
+      "name": "catalog:desperate_prayer_rng_args",
+      "status": "passed",
+      "actual": {
+        "a": 0,
+        "b": 4
+      },
+      "expected": {
+        "a": 0,
+        "b": 4
+      },
+      "details": {}
+    },
+    {
+      "name": "catalog:find_monster_rng_step_count",
+      "status": "passed",
+      "actual": 1,
+      "expected": 1,
+      "details": {}
+    },
+    {
+      "name": "catalog:find_monster_rng_lower_bound",
+      "status": "passed",
+      "actual": 0,
+      "expected": 0,
+      "details": {}
+    },
+    {
+      "name": "catalog:find_treasure_random_gold_step_count",
+      "status": "passed",
+      "actual": 1,
+      "expected": 1,
+      "details": {}
+    },
+    {
+      "name": "rng:in_game_random_range_inclusive_upper_bound_recovered",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "desperate_prayer:outcome_rng_shape_recovered",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "desperate_prayer:outcome_literal_count",
+      "status": "passed",
+      "actual": 5,
+      "expected": 5,
+      "details": {}
+    },
+    {
+      "name": "find_monster:dynamic_random_index_shape_recovered",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "find_treasure:random_gold_target_flow_recovered",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "charismatic:generate_random_reward_tier_recovered",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "hoard:random_equipment_handler_recovered",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "hoard:cardfinder_random_equipment_shape_recovered",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "decision:original_profession_skill_rng_stream_replay_complete",
+      "status": "passed",
+      "actual": false,
+      "expected": false,
+      "details": {}
+    },
+    {
+      "name": "decision:original_profession_skill_shuffle_index_stream_replay_complete",
+      "status": "passed",
+      "actual": false,
+      "expected": false,
+      "details": {}
+    }
+  ]
+}

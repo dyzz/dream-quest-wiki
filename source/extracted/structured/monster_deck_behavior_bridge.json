@@ -1,0 +1,3745 @@
+{
+  "source": {
+    "monsters": "extracted/structured/monster_catalog.json",
+    "cards": "extracted/structured/cards.json",
+    "card_actionplay_bridge_matrix": "extracted/structured/card_actionplay_bridge_matrix_smoke.json"
+  },
+  "notes": [
+    "This bridges deck-encoded monster behavior to recovered card runtime and ActionPlay candidate evidence.",
+    "It verifies deterministic loadout replay and referenced-card coverage only; original monster AI turn order, target legality, RNG/list ownership, and action execution remain unreplayed."
+  ],
+  "summary": {
+    "deck_encoded_monster_count": 25,
+    "behavior_encoded_step_count": 25,
+    "unique_referenced_card_count": 105,
+    "monster_card_pair_count": 143,
+    "duplicate_monster_card_pair_count": 0,
+    "base_deck_card_occurrence_count": 132,
+    "starting_equipment_occurrence_count": 16,
+    "preferred_starting_card_occurrence_count": 28,
+    "key_behavior_card_occurrence_count": 83,
+    "level_up_behavior_card_occurrence_count": 98,
+    "unique_base_deck_card_count": 51,
+    "unique_starting_equipment_card_count": 12,
+    "unique_preferred_starting_card_count": 25,
+    "unique_key_behavior_card_count": 65,
+    "unique_level_up_behavior_card_count": 83,
+    "missing_card_count": 0,
+    "missing_runtime_rule_count": 0,
+    "missing_actionplay_bridge_count": 0,
+    "loadout_mismatch_count": 0,
+    "card_type_counts": {
+      "Action": 14,
+      "ActionCard": 23,
+      "AttackCard": 11,
+      "Equipment": 20,
+      "ManaCard": 21,
+      "Prayer": 5,
+      "Reaction": 10,
+      "SpellCard": 39
+    },
+    "unique_card_type_counts": {
+      "Action": 12,
+      "ActionCard": 22,
+      "AttackCard": 10,
+      "Equipment": 16,
+      "ManaCard": 11,
+      "Prayer": 5,
+      "Reaction": 6,
+      "SpellCard": 23
+    },
+    "runtime_rule_status_counts": {
+      "simple_tailcall": 41,
+      "structured_trace": 102
+    },
+    "uses_shared_runtime_engine": true,
+    "deterministic_monster_deck_behavior_bridge_complete": true,
+    "original_monster_ai_deck_behavior_replay_complete": false,
+    "prototype_runtime_ready": false,
+    "check_count": 19,
+    "passed_count": 19,
+    "failed_count": 0
+  },
+  "monster_cases": [
+    {
+      "monster": "AkamiAscendent",
+      "display_name": "Akami Ascendant",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "ManaTotem",
+        "HasteTotem",
+        "ShockTotem",
+        "ThunderStorm",
+        "ThunderStorm",
+        "Slow",
+        "Slow",
+        "Mana3",
+        "Mana3",
+        "Mana3"
+      ],
+      "starting_equipment": [
+        "ManaTotem",
+        "HasteTotem",
+        "ShockTotem"
+      ],
+      "preferred_starting_cards": [],
+      "key_behavior_cards": [
+        "ManaTotem",
+        "HasteTotem",
+        "ShockTotem",
+        "ThunderStorm",
+        "Slow"
+      ],
+      "level_up_behavior_cards": [
+        "ManaSurge",
+        "Overload",
+        "Electrocute",
+        "Solidify",
+        "Shock",
+        "StormShape",
+        "Haste"
+      ],
+      "referenced_cards": [
+        "Electrocute",
+        "Haste",
+        "HasteTotem",
+        "Mana3",
+        "ManaSurge",
+        "ManaTotem",
+        "Overload",
+        "Shock",
+        "ShockTotem",
+        "Slow",
+        "Solidify",
+        "StormShape",
+        "ThunderStorm"
+      ],
+      "referenced_card_count": 13,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "ManaTotem",
+            "HasteTotem",
+            "ShockTotem",
+            "ThunderStorm",
+            "ThunderStorm",
+            "Slow",
+            "Slow",
+            "Mana3",
+            "Mana3",
+            "Mana3"
+          ],
+          "equipment": [
+            "ManaTotem",
+            "HasteTotem",
+            "ShockTotem"
+          ],
+          "preferred_starting_cards": [],
+          "key_behavior_cards": [
+            "ManaTotem",
+            "HasteTotem",
+            "ShockTotem",
+            "ThunderStorm",
+            "Slow"
+          ],
+          "level_up_behavior_cards": [
+            "ManaSurge",
+            "Overload",
+            "Electrocute",
+            "Solidify",
+            "Shock",
+            "StormShape",
+            "Haste"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "AkamiMuckcaller",
+      "display_name": "Akami Muckcaller",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "ShockTotem",
+        "Slow",
+        "ManaSurge",
+        "ManaSurge",
+        "Shock",
+        "Blizzard",
+        "FrostBolt"
+      ],
+      "starting_equipment": [
+        "ShockTotem"
+      ],
+      "preferred_starting_cards": [],
+      "key_behavior_cards": [
+        "ShockTotem",
+        "Slow",
+        "ManaSurge",
+        "Shock",
+        "Blizzard",
+        "FrostBolt"
+      ],
+      "level_up_behavior_cards": [
+        "Solidify",
+        "Slow",
+        "FrostCharge",
+        "Blizzard",
+        "ShockTotem"
+      ],
+      "referenced_cards": [
+        "Blizzard",
+        "FrostBolt",
+        "FrostCharge",
+        "ManaSurge",
+        "Shock",
+        "ShockTotem",
+        "Slow",
+        "Solidify"
+      ],
+      "referenced_card_count": 8,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "ShockTotem",
+            "Slow",
+            "ManaSurge",
+            "ManaSurge",
+            "Shock",
+            "Blizzard",
+            "FrostBolt"
+          ],
+          "equipment": [
+            "ShockTotem"
+          ],
+          "preferred_starting_cards": [],
+          "key_behavior_cards": [
+            "ShockTotem",
+            "Slow",
+            "ManaSurge",
+            "Shock",
+            "Blizzard",
+            "FrostBolt"
+          ],
+          "level_up_behavior_cards": [
+            "Solidify",
+            "Slow",
+            "FrostCharge",
+            "Blizzard",
+            "ShockTotem"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "AkamiShaman",
+      "display_name": "Akami Shaman",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "ManaTotem",
+        "Fireball",
+        "Fireball",
+        "Mana2",
+        "Mana2",
+        "Mana2",
+        "Mana2",
+        "Slow",
+        "Slow"
+      ],
+      "starting_equipment": [
+        "ManaTotem"
+      ],
+      "preferred_starting_cards": [],
+      "key_behavior_cards": [
+        "ManaTotem",
+        "Fireball",
+        "Mana2",
+        "Slow"
+      ],
+      "level_up_behavior_cards": [
+        "Salve",
+        "Mana2",
+        "FlameCharge",
+        "Solidify",
+        "Slow"
+      ],
+      "referenced_cards": [
+        "Fireball",
+        "FlameCharge",
+        "Mana2",
+        "ManaTotem",
+        "Salve",
+        "Slow",
+        "Solidify"
+      ],
+      "referenced_card_count": 7,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "ManaTotem",
+            "Fireball",
+            "Fireball",
+            "Mana2",
+            "Mana2",
+            "Mana2",
+            "Mana2",
+            "Slow",
+            "Slow"
+          ],
+          "equipment": [
+            "ManaTotem"
+          ],
+          "preferred_starting_cards": [],
+          "key_behavior_cards": [
+            "ManaTotem",
+            "Fireball",
+            "Mana2",
+            "Slow"
+          ],
+          "level_up_behavior_cards": [
+            "Salve",
+            "Mana2",
+            "FlameCharge",
+            "Solidify",
+            "Slow"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "AkamiStormcaller",
+      "display_name": "Akami Stormcaller",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "HasteTotem",
+        "StormStab",
+        "StormStab",
+        "Dice"
+      ],
+      "starting_equipment": [
+        "HasteTotem"
+      ],
+      "preferred_starting_cards": [],
+      "key_behavior_cards": [
+        "HasteTotem",
+        "StormStab",
+        "Dice"
+      ],
+      "level_up_behavior_cards": [
+        "StormStab"
+      ],
+      "referenced_cards": [
+        "Dice",
+        "HasteTotem",
+        "StormStab"
+      ],
+      "referenced_card_count": 3,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "HasteTotem",
+            "StormStab",
+            "StormStab",
+            "Dice"
+          ],
+          "equipment": [
+            "HasteTotem"
+          ],
+          "preferred_starting_cards": [],
+          "key_behavior_cards": [
+            "HasteTotem",
+            "StormStab",
+            "Dice"
+          ],
+          "level_up_behavior_cards": [
+            "StormStab"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "DiscipleOfChaos",
+      "display_name": "Disciple of Chaos",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "ChaosPrayer",
+        "ChaosPrayer",
+        "ChaosPrayer",
+        "ChaosStrike",
+        "ChaosStrike",
+        "ChaosStrike",
+        "ChaosStrike",
+        "ChaosStrike",
+        "ChaosStrike",
+        "ChaosStrike"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [],
+      "key_behavior_cards": [
+        "ChaosPrayer",
+        "ChaosStrike"
+      ],
+      "level_up_behavior_cards": [],
+      "referenced_cards": [
+        "ChaosPrayer",
+        "ChaosStrike"
+      ],
+      "referenced_card_count": 2,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "ChaosPrayer",
+            "ChaosPrayer",
+            "ChaosPrayer",
+            "ChaosStrike",
+            "ChaosStrike",
+            "ChaosStrike",
+            "ChaosStrike",
+            "ChaosStrike",
+            "ChaosStrike",
+            "ChaosStrike"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [],
+          "key_behavior_cards": [
+            "ChaosPrayer",
+            "ChaosStrike"
+          ],
+          "level_up_behavior_cards": []
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "FaerieRogue",
+      "display_name": "Faerie Rogue",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Riposte",
+        "Riposte",
+        "Riposte",
+        "Disorient",
+        "Disorient"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [],
+      "key_behavior_cards": [
+        "Riposte",
+        "Disorient"
+      ],
+      "level_up_behavior_cards": [],
+      "referenced_cards": [
+        "Disorient",
+        "Riposte"
+      ],
+      "referenced_card_count": 2,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Riposte",
+            "Riposte",
+            "Riposte",
+            "Disorient",
+            "Disorient"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [],
+          "key_behavior_cards": [
+            "Riposte",
+            "Disorient"
+          ],
+          "level_up_behavior_cards": []
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "GelatinousCube",
+      "display_name": "Gelatinous Cube",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Slurp",
+        "Slurp",
+        "Slurp"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "Resilience"
+      ],
+      "key_behavior_cards": [
+        "Slurp",
+        "Resilience",
+        "Engulf"
+      ],
+      "level_up_behavior_cards": [
+        "Resilience",
+        "Engulf"
+      ],
+      "referenced_cards": [
+        "Engulf",
+        "Resilience",
+        "Slurp"
+      ],
+      "referenced_card_count": 3,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Slurp",
+            "Slurp",
+            "Slurp"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "Resilience"
+          ],
+          "key_behavior_cards": [
+            "Slurp",
+            "Resilience",
+            "Engulf"
+          ],
+          "level_up_behavior_cards": [
+            "Resilience",
+            "Engulf"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Genie",
+      "display_name": "Genie",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "BadWishes",
+        "BadWishes",
+        "Mana2",
+        "ManaSurge",
+        "Haste",
+        "Ward",
+        "Wisdom"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "BadWishes",
+        "BadWishes2"
+      ],
+      "key_behavior_cards": [
+        "BadWishes",
+        "BadWishes2",
+        "Ward",
+        "Wisdom",
+        "Haste",
+        "ManaSurge"
+      ],
+      "level_up_behavior_cards": [
+        "BadWishes2",
+        "Ward",
+        "VaporForm",
+        "Shock",
+        "Soulfire"
+      ],
+      "referenced_cards": [
+        "BadWishes",
+        "BadWishes2",
+        "Haste",
+        "Mana2",
+        "ManaSurge",
+        "Shock",
+        "Soulfire",
+        "VaporForm",
+        "Ward",
+        "Wisdom"
+      ],
+      "referenced_card_count": 10,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "BadWishes",
+            "BadWishes",
+            "Mana2",
+            "ManaSurge",
+            "Haste",
+            "Ward",
+            "Wisdom"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "BadWishes",
+            "BadWishes2"
+          ],
+          "key_behavior_cards": [
+            "BadWishes",
+            "BadWishes2",
+            "Ward",
+            "Wisdom",
+            "Haste",
+            "ManaSurge"
+          ],
+          "level_up_behavior_cards": [
+            "BadWishes2",
+            "Ward",
+            "VaporForm",
+            "Shock",
+            "Soulfire"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "GiantSpider",
+      "display_name": "Giant Spider",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Sting",
+        "Sting",
+        "Sting",
+        "Web",
+        "Web",
+        "Web"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "Sting",
+        "Web"
+      ],
+      "key_behavior_cards": [
+        "Sting",
+        "Web"
+      ],
+      "level_up_behavior_cards": [
+        "Web2",
+        "Web"
+      ],
+      "referenced_cards": [
+        "Sting",
+        "Web",
+        "Web2"
+      ],
+      "referenced_card_count": 3,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Sting",
+            "Sting",
+            "Sting",
+            "Web",
+            "Web",
+            "Web"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "Sting",
+            "Web"
+          ],
+          "key_behavior_cards": [
+            "Sting",
+            "Web"
+          ],
+          "level_up_behavior_cards": [
+            "Web2",
+            "Web"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Goblin",
+      "display_name": "Goblin",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "GoblinAlly"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "GoblinAlly"
+      ],
+      "key_behavior_cards": [
+        "GoblinAlly"
+      ],
+      "level_up_behavior_cards": [
+        "GoblinAlly"
+      ],
+      "referenced_cards": [
+        "GoblinAlly"
+      ],
+      "referenced_card_count": 1,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "GoblinAlly"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "GoblinAlly"
+          ],
+          "key_behavior_cards": [
+            "GoblinAlly"
+          ],
+          "level_up_behavior_cards": [
+            "GoblinAlly"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Griffon",
+      "display_name": "Griffon",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Fly",
+        "Fly"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "Fly"
+      ],
+      "key_behavior_cards": [
+        "Fly"
+      ],
+      "level_up_behavior_cards": [],
+      "referenced_cards": [
+        "Fly"
+      ],
+      "referenced_card_count": 1,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Fly",
+            "Fly"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "Fly"
+          ],
+          "key_behavior_cards": [
+            "Fly"
+          ],
+          "level_up_behavior_cards": []
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Harpy",
+      "display_name": "Harpy",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Sting",
+        "Sting",
+        "Sting",
+        "Sting",
+        "Screech",
+        "Screech",
+        "Disorient",
+        "Disorient",
+        "Disorient",
+        "Infect2",
+        "Infect2",
+        "Infect2"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "Sting"
+      ],
+      "key_behavior_cards": [
+        "Sting",
+        "Screech",
+        "Disorient",
+        "Infect2"
+      ],
+      "level_up_behavior_cards": [],
+      "referenced_cards": [
+        "Disorient",
+        "Infect2",
+        "Screech",
+        "Sting"
+      ],
+      "referenced_card_count": 4,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Sting",
+            "Sting",
+            "Sting",
+            "Sting",
+            "Screech",
+            "Screech",
+            "Disorient",
+            "Disorient",
+            "Disorient",
+            "Infect2",
+            "Infect2",
+            "Infect2"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "Sting"
+          ],
+          "key_behavior_cards": [
+            "Sting",
+            "Screech",
+            "Disorient",
+            "Infect2"
+          ],
+          "level_up_behavior_cards": []
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Kobold",
+      "display_name": "Kobold",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Cower",
+        "Cower",
+        "Cower"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "Cower"
+      ],
+      "key_behavior_cards": [
+        "Cower"
+      ],
+      "level_up_behavior_cards": [],
+      "referenced_cards": [
+        "Cower"
+      ],
+      "referenced_card_count": 1,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Cower",
+            "Cower",
+            "Cower"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "Cower"
+          ],
+          "key_behavior_cards": [
+            "Cower"
+          ],
+          "level_up_behavior_cards": []
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Mage",
+      "display_name": "Mage",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "FlameCharge",
+        "FlameCharge",
+        "FrostCharge",
+        "FrostCharge",
+        "Fireball",
+        "FrostBolt"
+      ],
+      "starting_equipment": [
+        "Staff",
+        "JasrasTome"
+      ],
+      "preferred_starting_cards": [
+        "FrostBolt"
+      ],
+      "key_behavior_cards": [
+        "FlameCharge",
+        "FrostCharge",
+        "Fireball",
+        "FrostBolt",
+        "Staff",
+        "JasrasTome"
+      ],
+      "level_up_behavior_cards": [
+        "ManaSurge",
+        "Blur",
+        "Staff",
+        "FireShape",
+        "Fireball",
+        "FrostBolt",
+        "Blizzard",
+        "Meteor",
+        "Inspiration",
+        "JasrasTome",
+        "Freeze",
+        "ManaSwell",
+        "JasrasEmerald",
+        "Conflagration"
+      ],
+      "referenced_cards": [
+        "Blizzard",
+        "Blur",
+        "Conflagration",
+        "FireShape",
+        "Fireball",
+        "FlameCharge",
+        "Freeze",
+        "FrostBolt",
+        "FrostCharge",
+        "Inspiration",
+        "JasrasEmerald",
+        "JasrasTome",
+        "ManaSurge",
+        "ManaSwell",
+        "Meteor",
+        "Staff"
+      ],
+      "referenced_card_count": 16,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "FlameCharge",
+            "FlameCharge",
+            "FrostCharge",
+            "FrostCharge",
+            "Fireball",
+            "FrostBolt"
+          ],
+          "equipment": [
+            "Staff",
+            "JasrasTome"
+          ],
+          "preferred_starting_cards": [
+            "FrostBolt"
+          ],
+          "key_behavior_cards": [
+            "FlameCharge",
+            "FrostCharge",
+            "Fireball",
+            "FrostBolt",
+            "Staff",
+            "JasrasTome"
+          ],
+          "level_up_behavior_cards": [
+            "ManaSurge",
+            "Blur",
+            "Staff",
+            "FireShape",
+            "Fireball",
+            "FrostBolt",
+            "Blizzard",
+            "Meteor",
+            "Inspiration",
+            "JasrasTome",
+            "Freeze",
+            "ManaSwell",
+            "JasrasEmerald",
+            "Conflagration"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Medusa",
+      "display_name": "Medusa",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Stone",
+        "Stone",
+        "Stone",
+        "Stone",
+        "Gaze",
+        "Gaze"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "Stone"
+      ],
+      "key_behavior_cards": [
+        "Stone",
+        "Gaze"
+      ],
+      "level_up_behavior_cards": [
+        "Stoneskin"
+      ],
+      "referenced_cards": [
+        "Gaze",
+        "Stone",
+        "Stoneskin"
+      ],
+      "referenced_card_count": 3,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Stone",
+            "Stone",
+            "Stone",
+            "Stone",
+            "Gaze",
+            "Gaze"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "Stone"
+          ],
+          "key_behavior_cards": [
+            "Stone",
+            "Gaze"
+          ],
+          "level_up_behavior_cards": [
+            "Stoneskin"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Mime",
+      "display_name": "Mime",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Reenact",
+        "Reenact",
+        "Reenact",
+        "Reenact",
+        "Reenact"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "VampireSword",
+        "Reenact"
+      ],
+      "key_behavior_cards": [
+        "Reenact",
+        "VampireSword",
+        "Disorient"
+      ],
+      "level_up_behavior_cards": [
+        "VampireSword",
+        "Disorient"
+      ],
+      "referenced_cards": [
+        "Disorient",
+        "Reenact",
+        "VampireSword"
+      ],
+      "referenced_card_count": 3,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Reenact",
+            "Reenact",
+            "Reenact",
+            "Reenact",
+            "Reenact"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "VampireSword",
+            "Reenact"
+          ],
+          "key_behavior_cards": [
+            "Reenact",
+            "VampireSword",
+            "Disorient"
+          ],
+          "level_up_behavior_cards": [
+            "VampireSword",
+            "Disorient"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "MimicMonster",
+      "display_name": "Mimic",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "CoinToss",
+        "CoinToss",
+        "CoinToss",
+        "CoinToss",
+        "CoinToss",
+        "MimicAction",
+        "MimicAction"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "CoinToss"
+      ],
+      "key_behavior_cards": [
+        "CoinToss",
+        "MimicAction"
+      ],
+      "level_up_behavior_cards": [
+        "CoinToss",
+        "MimicAction2",
+        "MimicAction"
+      ],
+      "referenced_cards": [
+        "CoinToss",
+        "MimicAction",
+        "MimicAction2"
+      ],
+      "referenced_card_count": 3,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "CoinToss",
+            "CoinToss",
+            "CoinToss",
+            "CoinToss",
+            "CoinToss",
+            "MimicAction",
+            "MimicAction"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "CoinToss"
+          ],
+          "key_behavior_cards": [
+            "CoinToss",
+            "MimicAction"
+          ],
+          "level_up_behavior_cards": [
+            "CoinToss",
+            "MimicAction2",
+            "MimicAction"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Orc",
+      "display_name": "Orc",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Sword"
+      ],
+      "starting_equipment": [
+        "Sword"
+      ],
+      "preferred_starting_cards": [
+        "Sword"
+      ],
+      "key_behavior_cards": [
+        "Sword"
+      ],
+      "level_up_behavior_cards": [
+        "Sword"
+      ],
+      "referenced_cards": [
+        "Sword"
+      ],
+      "referenced_card_count": 1,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Sword"
+          ],
+          "equipment": [
+            "Sword"
+          ],
+          "preferred_starting_cards": [
+            "Sword"
+          ],
+          "key_behavior_cards": [
+            "Sword"
+          ],
+          "level_up_behavior_cards": [
+            "Sword"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Piranha",
+      "display_name": "Piranha",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "SharkBite",
+        "Thrash"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "SharkBite"
+      ],
+      "key_behavior_cards": [
+        "SharkBite",
+        "Thrash"
+      ],
+      "level_up_behavior_cards": [
+        "SharkBite"
+      ],
+      "referenced_cards": [
+        "SharkBite",
+        "Thrash"
+      ],
+      "referenced_card_count": 2,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "SharkBite",
+            "Thrash"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "SharkBite"
+          ],
+          "key_behavior_cards": [
+            "SharkBite",
+            "Thrash"
+          ],
+          "level_up_behavior_cards": [
+            "SharkBite"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Priest",
+      "display_name": "Priest",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Salve",
+        "Salve",
+        "Heal",
+        "PrayerOfViolence"
+      ],
+      "starting_equipment": [
+        "PhoenixFeather",
+        "Pendant"
+      ],
+      "preferred_starting_cards": [
+        "PrayerOfViolence",
+        "PrayerOfWrath",
+        "CurseOfDoomPlayer",
+        "Ward"
+      ],
+      "key_behavior_cards": [
+        "Salve",
+        "Heal",
+        "PrayerOfViolence",
+        "PhoenixFeather",
+        "Pendant",
+        "PrayerOfWrath",
+        "CurseOfDoomPlayer",
+        "Ward"
+      ],
+      "level_up_behavior_cards": [
+        "ManaSurge",
+        "PrayerOfLife",
+        "Haste",
+        "Piety",
+        "Pendant",
+        "Ward",
+        "Penance",
+        "PrayerOfWrath",
+        "PrayerOfViolence",
+        "Bless",
+        "Soulfire",
+        "CurseOfWeakness",
+        "Focus",
+        "PrayerOfSpeed",
+        "Extract",
+        "CurseOfDoomPlayer",
+        "PhoenixFeather",
+        "Mahamat",
+        "Inspiration",
+        "AbsorbVis"
+      ],
+      "referenced_cards": [
+        "AbsorbVis",
+        "Bless",
+        "CurseOfDoomPlayer",
+        "CurseOfWeakness",
+        "Extract",
+        "Focus",
+        "Haste",
+        "Heal",
+        "Inspiration",
+        "Mahamat",
+        "ManaSurge",
+        "Penance",
+        "Pendant",
+        "PhoenixFeather",
+        "Piety",
+        "PrayerOfLife",
+        "PrayerOfSpeed",
+        "PrayerOfViolence",
+        "PrayerOfWrath",
+        "Salve",
+        "Soulfire",
+        "Ward"
+      ],
+      "referenced_card_count": 22,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Salve",
+            "Salve",
+            "Heal",
+            "PrayerOfViolence"
+          ],
+          "equipment": [
+            "PhoenixFeather",
+            "Pendant"
+          ],
+          "preferred_starting_cards": [
+            "PrayerOfViolence",
+            "PrayerOfWrath",
+            "CurseOfDoomPlayer",
+            "Ward"
+          ],
+          "key_behavior_cards": [
+            "Salve",
+            "Heal",
+            "PrayerOfViolence",
+            "PhoenixFeather",
+            "Pendant",
+            "PrayerOfWrath",
+            "CurseOfDoomPlayer",
+            "Ward"
+          ],
+          "level_up_behavior_cards": [
+            "ManaSurge",
+            "PrayerOfLife",
+            "Haste",
+            "Piety",
+            "Pendant",
+            "Ward",
+            "Penance",
+            "PrayerOfWrath",
+            "PrayerOfViolence",
+            "Bless",
+            "Soulfire",
+            "CurseOfWeakness",
+            "Focus",
+            "PrayerOfSpeed",
+            "Extract",
+            "CurseOfDoomPlayer",
+            "PhoenixFeather",
+            "Mahamat",
+            "Inspiration",
+            "AbsorbVis"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Siren",
+      "display_name": "Siren",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Beckon",
+        "Beckon",
+        "Salve",
+        "Salve",
+        "Ward",
+        "Heal"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "Beckon"
+      ],
+      "key_behavior_cards": [
+        "Beckon",
+        "Salve",
+        "Ward",
+        "Heal"
+      ],
+      "level_up_behavior_cards": [
+        "Ward",
+        "Heal",
+        "Bless"
+      ],
+      "referenced_cards": [
+        "Beckon",
+        "Bless",
+        "Heal",
+        "Salve",
+        "Ward"
+      ],
+      "referenced_card_count": 5,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Beckon",
+            "Beckon",
+            "Salve",
+            "Salve",
+            "Ward",
+            "Heal"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "Beckon"
+          ],
+          "key_behavior_cards": [
+            "Beckon",
+            "Salve",
+            "Ward",
+            "Heal"
+          ],
+          "level_up_behavior_cards": [
+            "Ward",
+            "Heal",
+            "Bless"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Thief",
+      "display_name": "Thief",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Slice",
+        "Slice",
+        "Dice",
+        "Circle"
+      ],
+      "starting_equipment": [
+        "CloakOfInvisibility",
+        "BootsOfSpeed"
+      ],
+      "preferred_starting_cards": [
+        "Slice",
+        "Circle"
+      ],
+      "key_behavior_cards": [
+        "Slice",
+        "Dice",
+        "Circle",
+        "CloakOfInvisibility",
+        "BootsOfSpeed"
+      ],
+      "level_up_behavior_cards": [
+        "Jab",
+        "Backstab",
+        "Circle",
+        "CloakOfInvisibility",
+        "Dice",
+        "Preparation",
+        "BootsOfSpeed",
+        "Expose",
+        "Hide",
+        "Accelerate"
+      ],
+      "referenced_cards": [
+        "Accelerate",
+        "Backstab",
+        "BootsOfSpeed",
+        "Circle",
+        "CloakOfInvisibility",
+        "Dice",
+        "Expose",
+        "Hide",
+        "Jab",
+        "Preparation",
+        "Slice"
+      ],
+      "referenced_card_count": 11,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Slice",
+            "Slice",
+            "Dice",
+            "Circle"
+          ],
+          "equipment": [
+            "CloakOfInvisibility",
+            "BootsOfSpeed"
+          ],
+          "preferred_starting_cards": [
+            "Slice",
+            "Circle"
+          ],
+          "key_behavior_cards": [
+            "Slice",
+            "Dice",
+            "Circle",
+            "CloakOfInvisibility",
+            "BootsOfSpeed"
+          ],
+          "level_up_behavior_cards": [
+            "Jab",
+            "Backstab",
+            "Circle",
+            "CloakOfInvisibility",
+            "Dice",
+            "Preparation",
+            "BootsOfSpeed",
+            "Expose",
+            "Hide",
+            "Accelerate"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "VampireBat",
+      "display_name": "Vampire Bat",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "VampireBite",
+        "VampireBite",
+        "VampireBite"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "VampireBite"
+      ],
+      "key_behavior_cards": [
+        "VampireBite"
+      ],
+      "level_up_behavior_cards": [],
+      "referenced_cards": [
+        "VampireBite"
+      ],
+      "referenced_card_count": 1,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "VampireBite",
+            "VampireBite",
+            "VampireBite"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "VampireBite"
+          ],
+          "key_behavior_cards": [
+            "VampireBite"
+          ],
+          "level_up_behavior_cards": []
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Warrior",
+      "display_name": "Warrior",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Shield",
+        "Hamstring",
+        "Gag"
+      ],
+      "starting_equipment": [
+        "Sword",
+        "Scimitars",
+        "Shield"
+      ],
+      "preferred_starting_cards": [
+        "Sword",
+        "SunderingStrike",
+        "Armor"
+      ],
+      "key_behavior_cards": [
+        "Shield",
+        "Hamstring",
+        "Gag",
+        "Sword",
+        "Scimitars",
+        "SunderingStrike",
+        "Armor"
+      ],
+      "level_up_behavior_cards": [
+        "Sword",
+        "Hamstring",
+        "Crush",
+        "Disorient",
+        "Riposte",
+        "BattleCry",
+        "Armor",
+        "Overpower",
+        "Pierce2",
+        "Scimitars",
+        "SunderingStrike",
+        "ShieldBash",
+        "Pierce3"
+      ],
+      "referenced_cards": [
+        "Armor",
+        "BattleCry",
+        "Crush",
+        "Disorient",
+        "Gag",
+        "Hamstring",
+        "Overpower",
+        "Pierce2",
+        "Pierce3",
+        "Riposte",
+        "Scimitars",
+        "Shield",
+        "ShieldBash",
+        "SunderingStrike",
+        "Sword"
+      ],
+      "referenced_card_count": 15,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Shield",
+            "Hamstring",
+            "Gag"
+          ],
+          "equipment": [
+            "Sword",
+            "Scimitars",
+            "Shield"
+          ],
+          "preferred_starting_cards": [
+            "Sword",
+            "SunderingStrike",
+            "Armor"
+          ],
+          "key_behavior_cards": [
+            "Shield",
+            "Hamstring",
+            "Gag",
+            "Sword",
+            "Scimitars",
+            "SunderingStrike",
+            "Armor"
+          ],
+          "level_up_behavior_cards": [
+            "Sword",
+            "Hamstring",
+            "Crush",
+            "Disorient",
+            "Riposte",
+            "BattleCry",
+            "Armor",
+            "Overpower",
+            "Pierce2",
+            "Scimitars",
+            "SunderingStrike",
+            "ShieldBash",
+            "Pierce3"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    },
+    {
+      "monster": "Wyvern",
+      "display_name": "Wyvern",
+      "source_method": "PythonBuildAttributes",
+      "translation_status": "deck_encoded_behavior_recovered_from_build_attributes",
+      "base_deck": [
+        "Sting",
+        "Sting",
+        "Sting",
+        "Infect1",
+        "Infect1",
+        "Infect1"
+      ],
+      "starting_equipment": [],
+      "preferred_starting_cards": [
+        "Sting"
+      ],
+      "key_behavior_cards": [
+        "Sting",
+        "Infect1"
+      ],
+      "level_up_behavior_cards": [
+        "Infect2",
+        "Infect1"
+      ],
+      "referenced_cards": [
+        "Infect1",
+        "Infect2",
+        "Sting"
+      ],
+      "referenced_card_count": 3,
+      "runtime_events": [
+        {
+          "effect": "behavior_encoded_in_deck",
+          "deck": [
+            "Sting",
+            "Sting",
+            "Sting",
+            "Infect1",
+            "Infect1",
+            "Infect1"
+          ],
+          "equipment": [],
+          "preferred_starting_cards": [
+            "Sting"
+          ],
+          "key_behavior_cards": [
+            "Sting",
+            "Infect1"
+          ],
+          "level_up_behavior_cards": [
+            "Infect2",
+            "Infect1"
+          ]
+        }
+      ],
+      "loadout_matches": true
+    }
+  ],
+  "card_rows": [
+    {
+      "monster": "AkamiAscendent",
+      "card": "Electrocute",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 102,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiAscendent",
+      "card": "Haste",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 158,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiAscendent",
+      "card": "HasteTotem",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 159,
+      "in_base_deck": true,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "AkamiAscendent",
+      "card": "Mana3",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 194,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "AkamiAscendent",
+      "card": "ManaSurge",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 197,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiAscendent",
+      "card": "ManaTotem",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 199,
+      "in_base_deck": true,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "AkamiAscendent",
+      "card": "Overload",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 213,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiAscendent",
+      "card": "Shock",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 283,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiAscendent",
+      "card": "ShockTotem",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 284,
+      "in_base_deck": true,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "AkamiAscendent",
+      "card": "Slow",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 295,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "AkamiAscendent",
+      "card": "Solidify",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 298,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiAscendent",
+      "card": "StormShape",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 316,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiAscendent",
+      "card": "ThunderStorm",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 345,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "AkamiMuckcaller",
+      "card": "Blizzard",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 34,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiMuckcaller",
+      "card": "FrostBolt",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 138,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "AkamiMuckcaller",
+      "card": "FrostCharge",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 140,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiMuckcaller",
+      "card": "ManaSurge",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 197,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "AkamiMuckcaller",
+      "card": "Shock",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 283,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "AkamiMuckcaller",
+      "card": "ShockTotem",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 284,
+      "in_base_deck": true,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiMuckcaller",
+      "card": "Slow",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 295,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiMuckcaller",
+      "card": "Solidify",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 298,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiShaman",
+      "card": "Fireball",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 123,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "AkamiShaman",
+      "card": "FlameCharge",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 125,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiShaman",
+      "card": "Mana2",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 193,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiShaman",
+      "card": "ManaTotem",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 199,
+      "in_base_deck": true,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "AkamiShaman",
+      "card": "Salve",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 270,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiShaman",
+      "card": "Slow",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 295,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiShaman",
+      "card": "Solidify",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 298,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "AkamiStormcaller",
+      "card": "Dice",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 80,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "AkamiStormcaller",
+      "card": "HasteTotem",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 159,
+      "in_base_deck": true,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "AkamiStormcaller",
+      "card": "StormStab",
+      "card_type": "Action",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 320,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "DiscipleOfChaos",
+      "card": "ChaosPrayer",
+      "card_type": "Action",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 45,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "DiscipleOfChaos",
+      "card": "ChaosStrike",
+      "card_type": "AttackCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 46,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "FaerieRogue",
+      "card": "Disorient",
+      "card_type": "Reaction",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 83,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "FaerieRogue",
+      "card": "Riposte",
+      "card_type": "Reaction",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 268,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "GelatinousCube",
+      "card": "Engulf",
+      "card_type": "Action",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 107,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "GelatinousCube",
+      "card": "Resilience",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 265,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "GelatinousCube",
+      "card": "Slurp",
+      "card_type": "Reaction",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 296,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Genie",
+      "card": "BadWishes",
+      "card_type": "Action",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 20,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Genie",
+      "card": "BadWishes2",
+      "card_type": "Action",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 21,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Genie",
+      "card": "Haste",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 158,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Genie",
+      "card": "Mana2",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 193,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Genie",
+      "card": "ManaSurge",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 197,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Genie",
+      "card": "Shock",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 283,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Genie",
+      "card": "Soulfire",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 304,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Genie",
+      "card": "VaporForm",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 353,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Genie",
+      "card": "Ward",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 357,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Genie",
+      "card": "Wisdom",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 364,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "GiantSpider",
+      "card": "Sting",
+      "card_type": "Action",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 310,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "GiantSpider",
+      "card": "Web",
+      "card_type": "Action",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 358,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "GiantSpider",
+      "card": "Web2",
+      "card_type": "Action",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 359,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Goblin",
+      "card": "GoblinAlly",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 149,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Griffon",
+      "card": "Fly",
+      "card_type": "Action",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 133,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Harpy",
+      "card": "Disorient",
+      "card_type": "Reaction",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 83,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Harpy",
+      "card": "Infect2",
+      "card_type": "AttackCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 170,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Harpy",
+      "card": "Screech",
+      "card_type": "Reaction",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 274,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Harpy",
+      "card": "Sting",
+      "card_type": "Action",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 310,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Kobold",
+      "card": "Cower",
+      "card_type": "Reaction",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 65,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Mage",
+      "card": "Blizzard",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 34,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mage",
+      "card": "Blur",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 36,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mage",
+      "card": "Conflagration",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 58,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mage",
+      "card": "FireShape",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 122,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mage",
+      "card": "Fireball",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 123,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mage",
+      "card": "FlameCharge",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 125,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Mage",
+      "card": "Freeze",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 137,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mage",
+      "card": "FrostBolt",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 138,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mage",
+      "card": "FrostCharge",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 140,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Mage",
+      "card": "Inspiration",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 177,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mage",
+      "card": "JasrasEmerald",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 180,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mage",
+      "card": "JasrasTome",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 182,
+      "in_base_deck": false,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mage",
+      "card": "ManaSurge",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 197,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mage",
+      "card": "ManaSwell",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 198,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mage",
+      "card": "Meteor",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 203,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mage",
+      "card": "Staff",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 307,
+      "in_base_deck": false,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Medusa",
+      "card": "Gaze",
+      "card_type": "Action",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 148,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Medusa",
+      "card": "Stone",
+      "card_type": "Action",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 311,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Medusa",
+      "card": "Stoneskin",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 312,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mime",
+      "card": "Disorient",
+      "card_type": "Reaction",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 83,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Mime",
+      "card": "Reenact",
+      "card_type": "Reaction",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 264,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Mime",
+      "card": "VampireSword",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 352,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "MimicMonster",
+      "card": "CoinToss",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 55,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "MimicMonster",
+      "card": "MimicAction",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 205,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "MimicMonster",
+      "card": "MimicAction2",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 206,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Orc",
+      "card": "Sword",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 337,
+      "in_base_deck": true,
+      "in_starting_equipment": true,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Piranha",
+      "card": "SharkBite",
+      "card_type": "AttackCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 278,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Piranha",
+      "card": "Thrash",
+      "card_type": "AttackCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 344,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Priest",
+      "card": "AbsorbVis",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 0,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "Bless",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 32,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "CurseOfDoomPlayer",
+      "card_type": "Prayer",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 72,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "CurseOfWeakness",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 73,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "Extract",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 117,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "Focus",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 134,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "Haste",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 158,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "Heal",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 160,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Priest",
+      "card": "Inspiration",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 177,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "Mahamat",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 191,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "ManaSurge",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 197,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "Penance",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 235,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "Pendant",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 236,
+      "in_base_deck": false,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "PhoenixFeather",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 239,
+      "in_base_deck": false,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "Piety",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 246,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "PrayerOfLife",
+      "card_type": "Prayer",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 250,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "PrayerOfSpeed",
+      "card_type": "Prayer",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 251,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "PrayerOfViolence",
+      "card_type": "Prayer",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 252,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "PrayerOfWrath",
+      "card_type": "Prayer",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 253,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "Salve",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 270,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Priest",
+      "card": "Soulfire",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 304,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Priest",
+      "card": "Ward",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 357,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Siren",
+      "card": "Beckon",
+      "card_type": "Action",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 26,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Siren",
+      "card": "Bless",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 32,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Siren",
+      "card": "Heal",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 160,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Siren",
+      "card": "Salve",
+      "card_type": "ManaCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 270,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Siren",
+      "card": "Ward",
+      "card_type": "SpellCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 357,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Thief",
+      "card": "Accelerate",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 1,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Thief",
+      "card": "Backstab",
+      "card_type": "AttackCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 19,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Thief",
+      "card": "BootsOfSpeed",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 39,
+      "in_base_deck": false,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Thief",
+      "card": "Circle",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 50,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Thief",
+      "card": "CloakOfInvisibility",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 54,
+      "in_base_deck": false,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Thief",
+      "card": "Dice",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 80,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Thief",
+      "card": "Expose",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 116,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Thief",
+      "card": "Hide",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 163,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Thief",
+      "card": "Jab",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 179,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Thief",
+      "card": "Preparation",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 254,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Thief",
+      "card": "Slice",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 294,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "VampireBat",
+      "card": "VampireBite",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 350,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Warrior",
+      "card": "Armor",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 14,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Warrior",
+      "card": "BattleCry",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 24,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Warrior",
+      "card": "Crush",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 67,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Warrior",
+      "card": "Disorient",
+      "card_type": "Reaction",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 83,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Warrior",
+      "card": "Gag",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 146,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Warrior",
+      "card": "Hamstring",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 155,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Warrior",
+      "card": "Overpower",
+      "card_type": "ActionCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 214,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Warrior",
+      "card": "Pierce2",
+      "card_type": "AttackCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 243,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Warrior",
+      "card": "Pierce3",
+      "card_type": "AttackCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 244,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Warrior",
+      "card": "Riposte",
+      "card_type": "Reaction",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 268,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Warrior",
+      "card": "Scimitars",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 271,
+      "in_base_deck": false,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Warrior",
+      "card": "Shield",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 280,
+      "in_base_deck": true,
+      "in_starting_equipment": true,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    },
+    {
+      "monster": "Warrior",
+      "card": "ShieldBash",
+      "card_type": "AttackCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 281,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Warrior",
+      "card": "SunderingStrike",
+      "card_type": "AttackCard",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 329,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Warrior",
+      "card": "Sword",
+      "card_type": "Equipment",
+      "runtime_rule_status": "structured_trace",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 337,
+      "in_base_deck": false,
+      "in_starting_equipment": true,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Wyvern",
+      "card": "Infect1",
+      "card_type": "AttackCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 169,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": true,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Wyvern",
+      "card": "Infect2",
+      "card_type": "AttackCard",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 170,
+      "in_base_deck": false,
+      "in_starting_equipment": false,
+      "in_preferred_starting": false,
+      "in_key_behavior": false,
+      "in_level_up_behavior": true
+    },
+    {
+      "monster": "Wyvern",
+      "card": "Sting",
+      "card_type": "Action",
+      "runtime_rule_status": "simple_tailcall",
+      "actionplay_bridge_available": true,
+      "action_target_pair_index": 310,
+      "in_base_deck": true,
+      "in_starting_equipment": false,
+      "in_preferred_starting": true,
+      "in_key_behavior": true,
+      "in_level_up_behavior": false
+    }
+  ],
+  "checks": [
+    {
+      "name": "deck_encoded_monster_count",
+      "status": "passed",
+      "actual": 25,
+      "expected": 25,
+      "details": {}
+    },
+    {
+      "name": "behavior_encoded_step_count",
+      "status": "passed",
+      "actual": 25,
+      "expected": 25,
+      "details": {}
+    },
+    {
+      "name": "unique_referenced_card_count",
+      "status": "passed",
+      "actual": 105,
+      "expected": 105,
+      "details": {}
+    },
+    {
+      "name": "base_deck_card_occurrence_count",
+      "status": "passed",
+      "actual": 132,
+      "expected": 132,
+      "details": {}
+    },
+    {
+      "name": "starting_equipment_occurrence_count",
+      "status": "passed",
+      "actual": 16,
+      "expected": 16,
+      "details": {}
+    },
+    {
+      "name": "preferred_starting_card_occurrence_count",
+      "status": "passed",
+      "actual": 28,
+      "expected": 28,
+      "details": {}
+    },
+    {
+      "name": "key_behavior_card_occurrence_count",
+      "status": "passed",
+      "actual": 83,
+      "expected": 83,
+      "details": {}
+    },
+    {
+      "name": "level_up_behavior_card_occurrence_count",
+      "status": "passed",
+      "actual": 98,
+      "expected": 98,
+      "details": {}
+    },
+    {
+      "name": "unique_base_deck_card_count",
+      "status": "passed",
+      "actual": 51,
+      "expected": 51,
+      "details": {}
+    },
+    {
+      "name": "unique_starting_equipment_card_count",
+      "status": "passed",
+      "actual": 12,
+      "expected": 12,
+      "details": {}
+    },
+    {
+      "name": "unique_preferred_starting_card_count",
+      "status": "passed",
+      "actual": 25,
+      "expected": 25,
+      "details": {}
+    },
+    {
+      "name": "unique_key_behavior_card_count",
+      "status": "passed",
+      "actual": 65,
+      "expected": 65,
+      "details": {}
+    },
+    {
+      "name": "unique_level_up_behavior_card_count",
+      "status": "passed",
+      "actual": 83,
+      "expected": 83,
+      "details": {}
+    },
+    {
+      "name": "missing_card_count",
+      "status": "passed",
+      "actual": 0,
+      "expected": 0,
+      "details": {
+        "missing_cards": []
+      }
+    },
+    {
+      "name": "missing_runtime_rule_count",
+      "status": "passed",
+      "actual": 0,
+      "expected": 0,
+      "details": {
+        "missing_runtime_rules": []
+      }
+    },
+    {
+      "name": "missing_actionplay_bridge_count",
+      "status": "passed",
+      "actual": 0,
+      "expected": 0,
+      "details": {
+        "missing_actionplay_bridge": []
+      }
+    },
+    {
+      "name": "loadout_mismatch_count",
+      "status": "passed",
+      "actual": 0,
+      "expected": 0,
+      "details": {
+        "loadout_mismatches": []
+      }
+    },
+    {
+      "name": "deterministic_monster_deck_behavior_bridge_complete",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "original_monster_ai_deck_behavior_replay_complete",
+      "status": "passed",
+      "actual": false,
+      "expected": false,
+      "details": {}
+    }
+  ]
+}

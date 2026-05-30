@@ -1,0 +1,4835 @@
+{
+  "source": {
+    "dungeon_generation": "extracted/structured/dungeon_generation.json",
+    "dungeon_seed": "extracted/structured/remaster_dungeon_seed.json",
+    "treasure_chest_loot_smoke": "extracted/structured/treasure_chest_loot_smoke.json",
+    "cardfinder_reward_smoke": "extracted/structured/cardfinder_reward_smoke.json",
+    "cardfinder_spawn_sequence_smoke": "extracted/structured/cardfinder_spawn_sequence_smoke.json"
+  },
+  "notes": [
+    "This artifact inventories RNG and list-order consumers that are currently represented by Python fixtures, logged scalar values, or annotations.",
+    "It is intentionally not a proof of original replay. Every consumer remains original_replay_complete=false until the shared Game RNG stream, list ordering, and side effects are replayed end-to-end.",
+    "Counts separate recorded scalar fixture values, inferred/unlogged scalar consumers, and shuffle calls because list shuffle helpers may consume multiple random values internally."
+  ],
+  "summary": {
+    "check_count": 40,
+    "passed_count": 40,
+    "failed_count": 0,
+    "random_helper_count": 3,
+    "consumer_category_count": 20,
+    "original_replay_complete_count": 0,
+    "not_replayed_consumer_count": 20,
+    "seed_recorded_scalar_event_count": 129,
+    "seed_unrecorded_scalar_event_count": 0,
+    "seed_shuffle_call_count": 17,
+    "seed_shuffle_order_recorded_call_count": 17,
+    "seed_shuffle_fixture_index_draw_recorded_count": 17,
+    "seed_shuffle_fixture_index_draw_replay_count": 17,
+    "seed_shuffle_fixture_index_draw_total": 349,
+    "seed_fixture_rng_event_or_call_count": 146,
+    "maze_decision_count": 64,
+    "monster_probabilistic_roll_count": 39,
+    "threat_component_selection_roll_count": 8,
+    "feature_placement_log_count": 15,
+    "reward_random_unused_shuffle_count": 12,
+    "boss_random_unused_shuffle_count": 2,
+    "treasure_chest_seed_annotation_count": 2,
+    "treasure_chest_smoke_fixture_count": 3,
+    "treasure_chest_shuffle_helper_check_count": 7,
+    "cardfinder_reward_smoke_check_count": 96,
+    "cardfinder_spawn_sequence_length": 2,
+    "false_original_accuracy_rules": [
+      "add_rewards_gold_distribution_original_accurate",
+      "add_rewards_threat_component_replay_original_accurate",
+      "tile_feature_placement_original_accurate",
+      "unity_physical_replay_complete"
+    ],
+    "original_rng_replay_complete": false,
+    "prototype_runtime_ready": false
+  },
+  "rng_consumers": [
+    {
+      "id": "build_maze_tile_order_shuffle",
+      "phase": "BuildMaze",
+      "rng_api": "list shuffle fixture",
+      "event_count": 1,
+      "value_status": "shuffled_order_recorded_fixture_index_draws_derived",
+      "replay_status": "fixture_not_original",
+      "original_replay_complete": false,
+      "examples": [],
+      "evidence": "remaster_dungeon_seed.json records the shuffled board-coordinate order before wall decisions and fixture-derived Utility.Shuffle index draws that replay that order.",
+      "next_action": "Recover the original list shuffle helper and replay tile order from the shared Game RNG stream.",
+      "candidate_tile_count": 64,
+      "shuffle_boundary": {
+        "id": "build_maze_tile_order_shuffle",
+        "rng_api": "Python random.shuffle fixture for recovered list-shuffle boundary",
+        "candidate_count": 64,
+        "fixture_index_draws_recorded": true,
+        "fixture_index_draw_source": "derived_from_current_fixture_order_not_original_rng",
+        "fixture_index_draw_count": 64,
+        "fixture_index_draw_replays_output": true,
+        "fixture_index_draws": {
+          "algorithm": "for i in 0..Count-1: j = RandomRange(i, Count-1); swap(i, j)",
+          "draw_source": "derived_from_current_fixture_order_not_original_rng",
+          "draw_count": 64,
+          "replays_fixture_output": true,
+          "draws": [
+            {
+              "iteration": 0,
+              "random_range_low": 0,
+              "random_range_high": 63,
+              "selected_index": 22,
+              "swapped": true,
+              "left_before": [
+                0,
+                0
+              ],
+              "right_before": [
+                6,
+                2
+              ],
+              "output_value": [
+                6,
+                2
+              ]
+            },
+            {
+              "iteration": 1,
+              "random_range_low": 1,
+              "random_range_high": 63,
+              "selected_index": 12,
+              "swapped": true,
+              "left_before": [
+                1,
+                0
+              ],
+              "right_before": [
+                4,
+                1
+              ],
+              "output_value": [
+                4,
+                1
+              ]
+            },
+            {
+              "iteration": 2,
+              "random_range_low": 2,
+              "random_range_high": 63,
+              "selected_index": 52,
+              "swapped": true,
+              "left_before": [
+                2,
+                0
+              ],
+              "right_before": [
+                4,
+                6
+              ],
+              "output_value": [
+                4,
+                6
+              ]
+            },
+            {
+              "iteration": 3,
+              "random_range_low": 3,
+              "random_range_high": 63,
+              "selected_index": 3,
+              "swapped": false,
+              "left_before": [
+                3,
+                0
+              ],
+              "right_before": [
+                3,
+                0
+              ],
+              "output_value": [
+                3,
+                0
+              ]
+            },
+            {
+              "iteration": 4,
+              "random_range_low": 4,
+              "random_range_high": 63,
+              "selected_index": 19,
+              "swapped": true,
+              "left_before": [
+                4,
+                0
+              ],
+              "right_before": [
+                3,
+                2
+              ],
+              "output_value": [
+                3,
+                2
+              ]
+            },
+            {
+              "iteration": 5,
+              "random_range_low": 5,
+              "random_range_high": 63,
+              "selected_index": 5,
+              "swapped": false,
+              "left_before": [
+                5,
+                0
+              ],
+              "right_before": [
+                5,
+                0
+              ],
+              "output_value": [
+                5,
+                0
+              ]
+            },
+            {
+              "iteration": 6,
+              "random_range_low": 6,
+              "random_range_high": 63,
+              "selected_index": 60,
+              "swapped": true,
+              "left_before": [
+                6,
+                0
+              ],
+              "right_before": [
+                4,
+                7
+              ],
+              "output_value": [
+                4,
+                7
+              ]
+            },
+            {
+              "iteration": 7,
+              "random_range_low": 7,
+              "random_range_high": 63,
+              "selected_index": 58,
+              "swapped": true,
+              "left_before": [
+                7,
+                0
+              ],
+              "right_before": [
+                2,
+                7
+              ],
+              "output_value": [
+                2,
+                7
+              ]
+            },
+            {
+              "iteration": 8,
+              "random_range_low": 8,
+              "random_range_high": 63,
+              "selected_index": 52,
+              "swapped": true,
+              "left_before": [
+                0,
+                1
+              ],
+              "right_before": [
+                2,
+                0
+              ],
+              "output_value": [
+                2,
+                0
+              ]
+            },
+            {
+              "iteration": 9,
+              "random_range_low": 9,
+              "random_range_high": 63,
+              "selected_index": 33,
+              "swapped": true,
+              "left_before": [
+                1,
+                1
+              ],
+              "right_before": [
+                1,
+                4
+              ],
+              "output_value": [
+                1,
+                4
+              ]
+            },
+            {
+              "iteration": 10,
+              "random_range_low": 10,
+              "random_range_high": 63,
+              "selected_index": 10,
+              "swapped": false,
+              "left_before": [
+                2,
+                1
+              ],
+              "right_before": [
+                2,
+                1
+              ],
+              "output_value": [
+                2,
+                1
+              ]
+            },
+            {
+              "iteration": 11,
+              "random_range_low": 11,
+              "random_range_high": 63,
+              "selected_index": 52,
+              "swapped": true,
+              "left_before": [
+                3,
+                1
+              ],
+              "right_before": [
+                0,
+                1
+              ],
+              "output_value": [
+                0,
+                1
+              ]
+            },
+            {
+              "iteration": 12,
+              "random_range_low": 12,
+              "random_range_high": 63,
+              "selected_index": 29,
+              "swapped": true,
+              "left_before": [
+                1,
+                0
+              ],
+              "right_before": [
+                5,
+                3
+              ],
+              "output_value": [
+                5,
+                3
+              ]
+            },
+            {
+              "iteration": 13,
+              "random_range_low": 13,
+              "random_range_high": 63,
+              "selected_index": 26,
+              "swapped": true,
+              "left_before": [
+                5,
+                1
+              ],
+              "right_before": [
+                2,
+                3
+              ],
+              "output_value": [
+                2,
+                3
+              ]
+            },
+            {
+              "iteration": 14,
+              "random_range_low": 14,
+              "random_range_high": 63,
+              "selected_index": 25,
+              "swapped": true,
+              "left_before": [
+                6,
+                1
+              ],
+              "right_before": [
+                1,
+                3
+              ],
+              "output_value": [
+                1,
+                3
+              ]
+            },
+            {
+              "iteration": 15,
+              "random_range_low": 15,
+              "random_range_high": 63,
+              "selected_index": 33,
+              "swapped": true,
+              "left_before": [
+                7,
+                1
+              ],
+              "right_before": [
+                1,
+                1
+              ],
+              "output_value": [
+                1,
+                1
+              ]
+            },
+            {
+              "iteration": 16,
+              "random_range_low": 16,
+              "random_range_high": 63,
+              "selected_index": 44,
+              "swapped": true,
+              "left_before": [
+                0,
+                2
+              ],
+              "right_before": [
+                4,
+                5
+              ],
+              "output_value": [
+                4,
+                5
+              ]
+            },
+            {
+              "iteration": 17,
+              "random_range_low": 17,
+              "random_range_high": 63,
+              "selected_index": 18,
+              "swapped": true,
+              "left_before": [
+                1,
+                2
+              ],
+              "right_before": [
+                2,
+                2
+              ],
+              "output_value": [
+                2,
+                2
+              ]
+            },
+            {
+              "iteration": 18,
+              "random_range_low": 18,
+              "random_range_high": 63,
+              "selected_index": 62,
+              "swapped": true,
+              "left_before": [
+                1,
+                2
+              ],
+              "right_before": [
+                6,
+                7
+              ],
+              "output_value": [
+                6,
+                7
+              ]
+            },
+            {
+              "iteration": 19,
+              "random_range_low": 19,
+              "random_range_high": 63,
+              "selected_index": 52,
+              "swapped": true,
+              "left_before": [
+                4,
+                0
+              ],
+              "right_before": [
+                3,
+                1
+              ],
+              "output_value": [
+                3,
+                1
+              ]
+            },
+            {
+              "iteration": 20,
+              "random_range_low": 20,
+              "random_range_high": 63,
+              "selected_index": 47,
+              "swapped": true,
+              "left_before": [
+                4,
+                2
+              ],
+              "right_before": [
+                7,
+                5
+              ],
+              "output_value": [
+                7,
+                5
+              ]
+            },
+            {
+              "iteration": 21,
+              "random_range_low": 21,
+              "random_range_high": 63,
+              "selected_index": 40,
+              "swapped": true,
+              "left_before": [
+                5,
+                2
+              ],
+              "right_before": [
+                0,
+                5
+              ],
+              "output_value": [
+                0,
+                5
+              ]
+            },
+            {
+              "iteration": 22,
+              "random_range_low": 22,
+              "random_range_high": 63,
+              "selected_index": 33,
+              "swapped": true,
+              "left_before": [
+                0,
+                0
+              ],
+              "right_before": [
+                7,
+                1
+              ],
+              "output_value": [
+                7,
+                1
+              ]
+            },
+            {
+              "iteration": 23,
+              "random_range_low": 23,
+              "random_range_high": 63,
+              "selected_index": 39,
+              "swapped": true,
+              "left_before": [
+                7,
+                2
+              ],
+              "right_before": [
+                7,
+                4
+              ],
+              "output_value": [
+                7,
+                4
+              ]
+            },
+            {
+              "iteration": 24,
+              "random_range_low": 24,
+              "random_range_high": 63,
+              "selected_index": 56,
+              "swapped": true,
+              "left_before": [
+                0,
+                3
+              ],
+              "right_before": [
+                0,
+                7
+              ],
+              "output_value": [
+                0,
+                7
+              ]
+            },
+            {
+              "iteration": 25,
+              "random_range_low": 25,
+              "random_range_high": 63,
+              "selected_index": 57,
+              "swapped": true,
+              "left_before": [
+                6,
+                1
+              ],
+              "right_before": [
+                1,
+                7
+              ],
+              "output_value": [
+                1,
+                7
+              ]
+            },
+            {
+              "iteration": 26,
+              "random_range_low": 26,
+              "random_range_high": 63,
+              "selected_index": 32,
+              "swapped": true,
+              "left_before": [
+                5,
+                1
+              ],
+              "right_before": [
+                0,
+                4
+              ],
+              "output_value": [
+                0,
+                4
+              ]
+            },
+            {
+              "iteration": 27,
+              "random_range_low": 27,
+              "random_range_high": 63,
+              "selected_index": 39,
+              "swapped": true,
+              "left_before": [
+                3,
+                3
+              ],
+              "right_before": [
+                7,
+                2
+              ],
+              "output_value": [
+                7,
+                2
+              ]
+            },
+            {
+              "iteration": 28,
+              "random_range_low": 28,
+              "random_range_high": 63,
+              "selected_index": 49,
+              "swapped": true,
+              "left_before": [
+                4,
+                3
+              ],
+              "right_before": [
+                1,
+                6
+              ],
+              "output_value": [
+                1,
+                6
+              ]
+            },
+            {
+              "iteration": 29,
+              "random_range_low": 29,
+              "random_range_high": 63,
+              "selected_index": 43,
+              "swapped": true,
+              "left_before": [
+                1,
+                0
+              ],
+              "right_before": [
+                3,
+                5
+              ],
+              "output_value": [
+                3,
+                5
+              ]
+            },
+            {
+              "iteration": 30,
+              "random_range_low": 30,
+              "random_range_high": 63,
+              "selected_index": 40,
+              "swapped": true,
+              "left_before": [
+                6,
+                3
+              ],
+              "right_before": [
+                5,
+                2
+              ],
+              "output_value": [
+                5,
+                2
+              ]
+            },
+            {
+              "iteration": 31,
+              "random_range_low": 31,
+              "random_range_high": 63,
+              "selected_index": 45,
+              "swapped": true,
+              "left_before": [
+                7,
+                3
+              ],
+              "right_before": [
+                5,
+                5
+              ],
+              "output_value": [
+                5,
+                5
+              ]
+            },
+            {
+              "iteration": 32,
+              "random_range_low": 32,
+              "random_range_high": 63,
+              "selected_index": 42,
+              "swapped": true,
+              "left_before": [
+                5,
+                1
+              ],
+              "right_before": [
+                2,
+                5
+              ],
+              "output_value": [
+                2,
+                5
+              ]
+            },
+            {
+              "iteration": 33,
+              "random_range_low": 33,
+              "random_range_high": 63,
+              "selected_index": 34,
+              "swapped": true,
+              "left_before": [
+                0,
+                0
+              ],
+              "right_before": [
+                2,
+                4
+              ],
+              "output_value": [
+                2,
+                4
+              ]
+            },
+            {
+              "iteration": 34,
+              "random_range_low": 34,
+              "random_range_high": 63,
+              "selected_index": 35,
+              "swapped": true,
+              "left_before": [
+                0,
+                0
+              ],
+              "right_before": [
+                3,
+                4
+              ],
+              "output_value": [
+                3,
+                4
+              ]
+            },
+            {
+              "iteration": 35,
+              "random_range_low": 35,
+              "random_range_high": 63,
+              "selected_index": 46,
+              "swapped": true,
+              "left_before": [
+                0,
+                0
+              ],
+              "right_before": [
+                6,
+                5
+              ],
+              "output_value": [
+                6,
+                5
+              ]
+            },
+            {
+              "iteration": 36,
+              "random_range_low": 36,
+              "random_range_high": 63,
+              "selected_index": 47,
+              "swapped": true,
+              "left_before": [
+                4,
+                4
+              ],
+              "right_before": [
+                4,
+                2
+              ],
+              "output_value": [
+                4,
+                2
+              ]
+            },
+            {
+              "iteration": 37,
+              "random_range_low": 37,
+              "random_range_high": 63,
+              "selected_index": 61,
+              "swapped": true,
+              "left_before": [
+                5,
+                4
+              ],
+              "right_before": [
+                5,
+                7
+              ],
+              "output_value": [
+                5,
+                7
+              ]
+            },
+            {
+              "iteration": 38,
+              "random_range_low": 38,
+              "random_range_high": 63,
+              "selected_index": 61,
+              "swapped": true,
+              "left_before": [
+                6,
+                4
+              ],
+              "right_before": [
+                5,
+                4
+              ],
+              "output_value": [
+                5,
+                4
+              ]
+            },
+            {
+              "iteration": 39,
+              "random_range_low": 39,
+              "random_range_high": 63,
+              "selected_index": 57,
+              "swapped": true,
+              "left_before": [
+                3,
+                3
+              ],
+              "right_before": [
+                6,
+                1
+              ],
+              "output_value": [
+                6,
+                1
+              ]
+            },
+            {
+              "iteration": 40,
+              "random_range_low": 40,
+              "random_range_high": 63,
+              "selected_index": 63,
+              "swapped": true,
+              "left_before": [
+                6,
+                3
+              ],
+              "right_before": [
+                7,
+                7
+              ],
+              "output_value": [
+                7,
+                7
+              ]
+            },
+            {
+              "iteration": 41,
+              "random_range_low": 41,
+              "random_range_high": 63,
+              "selected_index": 53,
+              "swapped": true,
+              "left_before": [
+                1,
+                5
+              ],
+              "right_before": [
+                5,
+                6
+              ],
+              "output_value": [
+                5,
+                6
+              ]
+            },
+            {
+              "iteration": 42,
+              "random_range_low": 42,
+              "random_range_high": 63,
+              "selected_index": 46,
+              "swapped": true,
+              "left_before": [
+                5,
+                1
+              ],
+              "right_before": [
+                0,
+                0
+              ],
+              "output_value": [
+                0,
+                0
+              ]
+            },
+            {
+              "iteration": 43,
+              "random_range_low": 43,
+              "random_range_high": 63,
+              "selected_index": 61,
+              "swapped": true,
+              "left_before": [
+                1,
+                0
+              ],
+              "right_before": [
+                6,
+                4
+              ],
+              "output_value": [
+                6,
+                4
+              ]
+            },
+            {
+              "iteration": 44,
+              "random_range_low": 44,
+              "random_range_high": 63,
+              "selected_index": 57,
+              "swapped": true,
+              "left_before": [
+                0,
+                2
+              ],
+              "right_before": [
+                3,
+                3
+              ],
+              "output_value": [
+                3,
+                3
+              ]
+            },
+            {
+              "iteration": 45,
+              "random_range_low": 45,
+              "random_range_high": 63,
+              "selected_index": 50,
+              "swapped": true,
+              "left_before": [
+                7,
+                3
+              ],
+              "right_before": [
+                2,
+                6
+              ],
+              "output_value": [
+                2,
+                6
+              ]
+            },
+            {
+              "iteration": 46,
+              "random_range_low": 46,
+              "random_range_high": 63,
+              "selected_index": 61,
+              "swapped": true,
+              "left_before": [
+                5,
+                1
+              ],
+              "right_before": [
+                1,
+                0
+              ],
+              "output_value": [
+                1,
+                0
+              ]
+            },
+            {
+              "iteration": 47,
+              "random_range_low": 47,
+              "random_range_high": 63,
+              "selected_index": 55,
+              "swapped": true,
+              "left_before": [
+                4,
+                4
+              ],
+              "right_before": [
+                7,
+                6
+              ],
+              "output_value": [
+                7,
+                6
+              ]
+            },
+            {
+              "iteration": 48,
+              "random_range_low": 48,
+              "random_range_high": 63,
+              "selected_index": 60,
+              "swapped": true,
+              "left_before": [
+                0,
+                6
+              ],
+              "right_before": [
+                6,
+                0
+              ],
+              "output_value": [
+                6,
+                0
+              ]
+            },
+            {
+              "iteration": 49,
+              "random_range_low": 49,
+              "random_range_high": 63,
+              "selected_index": 61,
+              "swapped": true,
+              "left_before": [
+                4,
+                3
+              ],
+              "right_before": [
+                5,
+                1
+              ],
+              "output_value": [
+                5,
+                1
+              ]
+            },
+            {
+              "iteration": 50,
+              "random_range_low": 50,
+              "random_range_high": 63,
+              "selected_index": 56,
+              "swapped": true,
+              "left_before": [
+                7,
+                3
+              ],
+              "right_before": [
+                0,
+                3
+              ],
+              "output_value": [
+                0,
+                3
+              ]
+            },
+            {
+              "iteration": 51,
+              "random_range_low": 51,
+              "random_range_high": 63,
+              "selected_index": 53,
+              "swapped": true,
+              "left_before": [
+                3,
+                6
+              ],
+              "right_before": [
+                1,
+                5
+              ],
+              "output_value": [
+                1,
+                5
+              ]
+            },
+            {
+              "iteration": 52,
+              "random_range_low": 52,
+              "random_range_high": 63,
+              "selected_index": 63,
+              "swapped": true,
+              "left_before": [
+                4,
+                0
+              ],
+              "right_before": [
+                6,
+                3
+              ],
+              "output_value": [
+                6,
+                3
+              ]
+            },
+            {
+              "iteration": 53,
+              "random_range_low": 53,
+              "random_range_high": 63,
+              "selected_index": 61,
+              "swapped": true,
+              "left_before": [
+                3,
+                6
+              ],
+              "right_before": [
+                4,
+                3
+              ],
+              "output_value": [
+                4,
+                3
+              ]
+            },
+            {
+              "iteration": 54,
+              "random_range_low": 54,
+              "random_range_high": 63,
+              "selected_index": 59,
+              "swapped": true,
+              "left_before": [
+                6,
+                6
+              ],
+              "right_before": [
+                3,
+                7
+              ],
+              "output_value": [
+                3,
+                7
+              ]
+            },
+            {
+              "iteration": 55,
+              "random_range_low": 55,
+              "random_range_high": 63,
+              "selected_index": 56,
+              "swapped": true,
+              "left_before": [
+                4,
+                4
+              ],
+              "right_before": [
+                7,
+                3
+              ],
+              "output_value": [
+                7,
+                3
+              ]
+            },
+            {
+              "iteration": 56,
+              "random_range_low": 56,
+              "random_range_high": 63,
+              "selected_index": 58,
+              "swapped": true,
+              "left_before": [
+                4,
+                4
+              ],
+              "right_before": [
+                7,
+                0
+              ],
+              "output_value": [
+                7,
+                0
+              ]
+            },
+            {
+              "iteration": 57,
+              "random_range_low": 57,
+              "random_range_high": 63,
+              "selected_index": 57,
+              "swapped": false,
+              "left_before": [
+                0,
+                2
+              ],
+              "right_before": [
+                0,
+                2
+              ],
+              "output_value": [
+                0,
+                2
+              ]
+            },
+            {
+              "iteration": 58,
+              "random_range_low": 58,
+              "random_range_high": 63,
+              "selected_index": 63,
+              "swapped": true,
+              "left_before": [
+                4,
+                4
+              ],
+              "right_before": [
+                4,
+                0
+              ],
+              "output_value": [
+                4,
+                0
+              ]
+            },
+            {
+              "iteration": 59,
+              "random_range_low": 59,
+              "random_range_high": 63,
+              "selected_index": 60,
+              "swapped": true,
+              "left_before": [
+                6,
+                6
+              ],
+              "right_before": [
+                0,
+                6
+              ],
+              "output_value": [
+                0,
+                6
+              ]
+            },
+            {
+              "iteration": 60,
+              "random_range_low": 60,
+              "random_range_high": 63,
+              "selected_index": 61,
+              "swapped": true,
+              "left_before": [
+                6,
+                6
+              ],
+              "right_before": [
+                3,
+                6
+              ],
+              "output_value": [
+                3,
+                6
+              ]
+            },
+            {
+              "iteration": 61,
+              "random_range_low": 61,
+              "random_range_high": 63,
+              "selected_index": 61,
+              "swapped": false,
+              "left_before": [
+                6,
+                6
+              ],
+              "right_before": [
+                6,
+                6
+              ],
+              "output_value": [
+                6,
+                6
+              ]
+            },
+            {
+              "iteration": 62,
+              "random_range_low": 62,
+              "random_range_high": 63,
+              "selected_index": 63,
+              "swapped": true,
+              "left_before": [
+                1,
+                2
+              ],
+              "right_before": [
+                4,
+                4
+              ],
+              "output_value": [
+                4,
+                4
+              ]
+            },
+            {
+              "iteration": 63,
+              "random_range_low": 63,
+              "random_range_high": 63,
+              "selected_index": 63,
+              "swapped": false,
+              "left_before": [
+                1,
+                2
+              ],
+              "right_before": [
+                1,
+                2
+              ],
+              "output_value": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        "index_draws_recorded": false,
+        "original_replay_complete": false,
+        "ordered_input": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            7
+          ]
+        ],
+        "shuffled_tile_order": [
+          [
+            6,
+            2
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "build_maze_wall_decision_rolls",
+      "phase": "BuildMaze",
+      "rng_api": "Game.RandomFloat shape",
+      "event_count": 64,
+      "value_status": "recorded_fixture_values",
+      "replay_status": "python_random_not_original",
+      "original_replay_complete": false,
+      "examples": [
+        {
+          "tile": [
+            6,
+            2
+          ],
+          "can_delete": true,
+          "roll": 0.303369,
+          "made_wall": true
+        },
+        {
+          "tile": [
+            4,
+            1
+          ],
+          "can_delete": true,
+          "roll": 0.587581,
+          "made_wall": false
+        },
+        {
+          "tile": [
+            4,
+            6
+          ],
+          "can_delete": true,
+          "roll": 0.882479,
+          "made_wall": false
+        }
+      ],
+      "evidence": "remaster_dungeon_seed.json records one roll per shuffled board tile in maze.decision_log.",
+      "next_action": "Replace Python random values with original System.Random/Game.RandomFloat replay and original tile order."
+    },
+    {
+      "id": "monster_level_weight_rolls",
+      "phase": "DungeonBoard.GenerateMonsterLevels",
+      "rng_api": "Game.RandomFloat shape",
+      "event_count": 3,
+      "value_status": "recorded_after_plus_half",
+      "replay_status": "python_random_not_original",
+      "original_replay_complete": false,
+      "examples": [
+        0.677211,
+        1.084461,
+        1.361009
+      ],
+      "evidence": "monster_levels.weights records rng.random()+0.5 fixture values for each base level bucket.",
+      "next_action": "Record raw values and replay the original weighting, truncation, fill, and level-sum correction path."
+    },
+    {
+      "id": "monster_level_jitter_rolls",
+      "phase": "DungeonBoard.GenerateMonsterLevels",
+      "rng_api": "Game.RandomFloat shape",
+      "event_count": 6,
+      "value_status": "recorded_fixture_values",
+      "replay_status": "python_random_not_original",
+      "original_replay_complete": false,
+      "examples": [
+        {
+          "index": 0,
+          "base_level": 1,
+          "raw_roll": 0.798439,
+          "adjusted_roll": 0.648439,
+          "delta": 0,
+          "level": 1
+        },
+        {
+          "index": 1,
+          "base_level": 2,
+          "raw_roll": 0.797098,
+          "adjusted_roll": 0.697098,
+          "delta": 0,
+          "level": 2
+        },
+        {
+          "index": 2,
+          "base_level": 2,
+          "raw_roll": 0.816437,
+          "adjusted_roll": 0.766437,
+          "delta": 0,
+          "level": 2
+        }
+      ],
+      "evidence": "remaster_dungeon_seed.json records one jitter roll per generated monster level plus any level-sum correction index rolls.",
+      "next_action": "Replay original adjustment thresholds and level-sum correction from the shared Game RNG stream.",
+      "level_sum_adjustment_rolls": []
+    },
+    {
+      "id": "generate_rewards_health_branch_roll",
+      "phase": "DungeonBoard.GenerateRewards",
+      "rng_api": "Game.RandomFloat shape",
+      "event_count": 1,
+      "value_status": "recorded_fixture_value",
+      "replay_status": "python_random_not_original",
+      "original_replay_complete": false,
+      "examples": [],
+      "evidence": "rewards.health_branch_roll records the fixture roll that selected the health reward branch.",
+      "next_action": "Replay the health-branch RandomFloat from the same original stream as reward count/name generation.",
+      "health_branch": "health_pack_only",
+      "health_branch_roll": 0.083234
+    },
+    {
+      "id": "generate_rewards_health_count_range",
+      "phase": "DungeonBoard.GenerateRewards",
+      "rng_api": "Game.RandomRange inclusive",
+      "event_count": 1,
+      "value_status": "recorded_fixture_value",
+      "replay_status": "python_random_not_original",
+      "original_replay_complete": false,
+      "examples": [],
+      "evidence": "rewards.health_count_roll records the branch-specific inclusive RandomRange result.",
+      "next_action": "Replay the branch-specific HealthPack count against original RNG.",
+      "health_count_range": [
+        2,
+        4
+      ],
+      "health_count_roll": 2,
+      "reward_counts": {
+        "Blacksmith": 1,
+        "HealthPack": 5,
+        "Shop": 4,
+        "TreasureChest": 2
+      }
+    },
+    {
+      "id": "generate_rewards_service_roll",
+      "phase": "DungeonBoard.GenerateRewards",
+      "rng_api": "Game.RandomFloat shape",
+      "event_count": 1,
+      "value_status": "recorded_fixture_value",
+      "replay_status": "python_random_not_original",
+      "original_replay_complete": false,
+      "examples": [],
+      "evidence": "rewards.service_roll records the fixture roll for the service reward table.",
+      "next_action": "Replay service reward selection from the original Game.RandomFloat stream.",
+      "service_roll": 0.452999,
+      "service_reward": "Blacksmith"
+    },
+    {
+      "id": "generate_rewards_random_reward_count",
+      "phase": "DungeonBoard.GenerateRewards",
+      "rng_api": "Game.RandomRange inclusive",
+      "event_count": 1,
+      "value_status": "recorded_fixture_value",
+      "replay_status": "python_random_not_original",
+      "original_replay_complete": false,
+      "examples": [],
+      "evidence": "rewards.additional_random_reward_count_roll records the inclusive RandomRange(2,4) result before GenerateRewardByName calls.",
+      "next_action": "Replay RandomRange(2,4) from the original reward RNG stream.",
+      "additional_random_reward_count_roll": 3
+    },
+    {
+      "id": "generate_reward_name_rolls",
+      "phase": "DungeonBoard.GenerateRewardByName",
+      "rng_api": "Game.RandomFloat shape",
+      "event_count": 3,
+      "value_status": "recorded_fixture_values",
+      "replay_status": "python_random_not_original",
+      "original_replay_complete": false,
+      "examples": [
+        {
+          "table_key": "depth_1",
+          "roll": 0.249559,
+          "reward": "TreasureChest",
+          "matched_cumulative_probability": 0.4
+        },
+        {
+          "table_key": "depth_1",
+          "roll": 0.109489,
+          "reward": "TreasureChest",
+          "matched_cumulative_probability": 0.4
+        },
+        {
+          "table_key": "depth_1",
+          "roll": 0.624802,
+          "reward": "Shop",
+          "matched_cumulative_probability": 0.7
+        }
+      ],
+      "evidence": "rewards.additional_random_reward_rolls records each reward-name roll and depth-specific probability table match.",
+      "next_action": "Replay each reward-name RandomFloat against the original depth-specific probability table."
+    },
+    {
+      "id": "generate_rewards_final_shuffle",
+      "phase": "DungeonBoard.GenerateRewards/AddRewards",
+      "rng_api": "list shuffle fixture",
+      "event_count": 1,
+      "value_status": "shuffled_order_recorded_fixture_index_draws_derived",
+      "replay_status": "python_shuffle_not_original",
+      "original_replay_complete": false,
+      "examples": [],
+      "evidence": "rewards.final_shuffle_boundary records GenerateRewards input/output reward order plus fixture-derived Utility.Shuffle index draws; original RNG-sourced index draws remain unavailable.",
+      "next_action": "Replace Python random.shuffle with the recovered original shuffle helper and record index draws.",
+      "reward_count": 12,
+      "shuffle_boundary": {
+        "id": "generate_rewards_final_shuffle",
+        "rng_api": "Python random.shuffle fixture for recovered list-shuffle boundary",
+        "candidate_count": 12,
+        "fixture_index_draws_recorded": true,
+        "fixture_index_draw_source": "derived_from_current_fixture_order_not_original_rng",
+        "fixture_index_draw_count": 12,
+        "fixture_index_draw_replays_output": true,
+        "fixture_index_draws": {
+          "algorithm": "for i in 0..Count-1: j = RandomRange(i, Count-1); swap(i, j)",
+          "draw_source": "derived_from_current_fixture_order_not_original_rng",
+          "draw_count": 12,
+          "replays_fixture_output": true,
+          "draws": [
+            {
+              "iteration": 0,
+              "random_range_low": 0,
+              "random_range_high": 11,
+              "selected_index": 0,
+              "swapped": false,
+              "left_before": "Shop",
+              "right_before": "Shop",
+              "output_value": "Shop"
+            },
+            {
+              "iteration": 1,
+              "random_range_low": 1,
+              "random_range_high": 11,
+              "selected_index": 3,
+              "swapped": true,
+              "left_before": "Shop",
+              "right_before": "HealthPack",
+              "output_value": "HealthPack"
+            },
+            {
+              "iteration": 2,
+              "random_range_low": 2,
+              "random_range_high": 11,
+              "selected_index": 4,
+              "swapped": true,
+              "left_before": "Shop",
+              "right_before": "HealthPack",
+              "output_value": "HealthPack"
+            },
+            {
+              "iteration": 3,
+              "random_range_low": 3,
+              "random_range_high": 11,
+              "selected_index": 5,
+              "swapped": true,
+              "left_before": "Shop",
+              "right_before": "HealthPack",
+              "output_value": "HealthPack"
+            },
+            {
+              "iteration": 4,
+              "random_range_low": 4,
+              "random_range_high": 11,
+              "selected_index": 8,
+              "swapped": true,
+              "left_before": "Shop",
+              "right_before": "TreasureChest",
+              "output_value": "TreasureChest"
+            },
+            {
+              "iteration": 5,
+              "random_range_low": 5,
+              "random_range_high": 11,
+              "selected_index": 5,
+              "swapped": false,
+              "left_before": "Shop",
+              "right_before": "Shop",
+              "output_value": "Shop"
+            },
+            {
+              "iteration": 6,
+              "random_range_low": 6,
+              "random_range_high": 11,
+              "selected_index": 7,
+              "swapped": true,
+              "left_before": "HealthPack",
+              "right_before": "Blacksmith",
+              "output_value": "Blacksmith"
+            },
+            {
+              "iteration": 7,
+              "random_range_low": 7,
+              "random_range_high": 11,
+              "selected_index": 9,
+              "swapped": true,
+              "left_before": "HealthPack",
+              "right_before": "TreasureChest",
+              "output_value": "TreasureChest"
+            },
+            {
+              "iteration": 8,
+              "random_range_low": 8,
+              "random_range_high": 11,
+              "selected_index": 8,
+              "swapped": false,
+              "left_before": "Shop",
+              "right_before": "Shop",
+              "output_value": "Shop"
+            },
+            {
+              "iteration": 9,
+              "random_range_low": 9,
+              "random_range_high": 11,
+              "selected_index": 10,
+              "swapped": true,
+              "left_before": "HealthPack",
+              "right_before": "Shop",
+              "output_value": "Shop"
+            },
+            {
+              "iteration": 10,
+              "random_range_low": 10,
+              "random_range_high": 11,
+              "selected_index": 10,
+              "swapped": false,
+              "left_before": "HealthPack",
+              "right_before": "HealthPack",
+              "output_value": "HealthPack"
+            },
+            {
+              "iteration": 11,
+              "random_range_low": 11,
+              "random_range_high": 11,
+              "selected_index": 11,
+              "swapped": false,
+              "left_before": "HealthPack",
+              "right_before": "HealthPack",
+              "output_value": "HealthPack"
+            }
+          ]
+        },
+        "index_draws_recorded": false,
+        "original_replay_complete": false,
+        "ordered_input": [
+          "Shop",
+          "Shop",
+          "Shop",
+          "HealthPack",
+          "HealthPack",
+          "HealthPack",
+          "HealthPack",
+          "Blacksmith",
+          "TreasureChest",
+          "TreasureChest",
+          "Shop",
+          "HealthPack"
+        ],
+        "shuffled_output": [
+          "Shop",
+          "HealthPack",
+          "HealthPack",
+          "HealthPack",
+          "TreasureChest",
+          "Shop",
+          "Blacksmith",
+          "TreasureChest",
+          "Shop",
+          "Shop",
+          "HealthPack",
+          "HealthPack"
+        ]
+      }
+    },
+    {
+      "id": "gold_random_normal_by_floor",
+      "phase": "DungeonBoard.RandomGoldByFloor",
+      "rng_api": "Game.RandomNormal",
+      "event_count": 1,
+      "value_status": "sample_recorded_distribution_state_not_logged",
+      "replay_status": "python_gauss_not_original",
+      "original_replay_complete": false,
+      "examples": [],
+      "evidence": "gold.sample_random_gold_by_floor records the fixture sample from Python random.gauss.",
+      "next_action": "Replay Game.RandomNormal mean/deviation and random source consumption, including Box-Muller/cache behavior if used.",
+      "gold_target": 10,
+      "total_gold_target": 90,
+      "sample_random_gold_by_floor": 9,
+      "assumption": "Uses Python random.gauss as a fixture for Game.RandomNormal."
+    },
+    {
+      "id": "boss_weighted_choice_roll",
+      "phase": "DungeonBoard.GenerateBoss",
+      "rng_api": "weighted Game.RandomFloat shape",
+      "event_count": 1,
+      "value_status": "recorded_fixture_value",
+      "replay_status": "python_random_not_original",
+      "original_replay_complete": false,
+      "examples": [],
+      "evidence": "boss.picked.selection_roll records the fixture weighted roll over candidate boss weights.",
+      "next_action": "Replay original candidate enumeration, prior-floor exclusions, and weighted selection from the shared RNG stream.",
+      "picked": {
+        "internal_name": "Mime",
+        "display_name": "Mime",
+        "level_range": [
+          4,
+          7
+        ],
+        "weight": 2,
+        "sequence": 58,
+        "base_probability": 0.08,
+        "selection_roll": 11.844275,
+        "total_weight": 25.0
+      },
+      "candidate_count": 4
+    },
+    {
+      "id": "add_monsters_tile_shuffle",
+      "phase": "DungeonBoard.AddMonsters",
+      "rng_api": "list shuffle fixture",
+      "event_count": 1,
+      "value_status": "shuffled_order_recorded_fixture_index_draws_derived",
+      "replay_status": "python_shuffle_not_original",
+      "original_replay_complete": false,
+      "examples": [],
+      "evidence": "monster_placement.tile_shuffle_boundary records the shuffled open-tile order plus fixture-derived Utility.Shuffle index draws before the probabilistic pass.",
+      "next_action": "Replay the original shuffled open-tile order and all mutations that affect Tile.IsUnused.",
+      "open_tile_count": 39,
+      "shuffle_boundary": {
+        "id": "add_monsters_tile_shuffle",
+        "rng_api": "Python random.shuffle fixture for recovered list-shuffle boundary",
+        "candidate_count": 39,
+        "fixture_index_draws_recorded": true,
+        "fixture_index_draw_source": "derived_from_current_fixture_order_not_original_rng",
+        "fixture_index_draw_count": 39,
+        "fixture_index_draw_replays_output": true,
+        "fixture_index_draws": {
+          "algorithm": "for i in 0..Count-1: j = RandomRange(i, Count-1); swap(i, j)",
+          "draw_source": "derived_from_current_fixture_order_not_original_rng",
+          "draw_count": 39,
+          "replays_fixture_output": true,
+          "draws": [
+            {
+              "iteration": 0,
+              "random_range_low": 0,
+              "random_range_high": 38,
+              "selected_index": 9,
+              "swapped": true,
+              "left_before": [
+                4,
+                0
+              ],
+              "right_before": [
+                7,
+                7
+              ],
+              "output_value": [
+                7,
+                7
+              ]
+            },
+            {
+              "iteration": 1,
+              "random_range_low": 1,
+              "random_range_high": 38,
+              "selected_index": 18,
+              "swapped": true,
+              "left_before": [
+                3,
+                4
+              ],
+              "right_before": [
+                0,
+                1
+              ],
+              "output_value": [
+                0,
+                1
+              ]
+            },
+            {
+              "iteration": 2,
+              "random_range_low": 2,
+              "random_range_high": 38,
+              "selected_index": 34,
+              "swapped": true,
+              "left_before": [
+                3,
+                7
+              ],
+              "right_before": [
+                1,
+                7
+              ],
+              "output_value": [
+                1,
+                7
+              ]
+            },
+            {
+              "iteration": 3,
+              "random_range_low": 3,
+              "random_range_high": 38,
+              "selected_index": 34,
+              "swapped": true,
+              "left_before": [
+                4,
+                6
+              ],
+              "right_before": [
+                3,
+                7
+              ],
+              "output_value": [
+                3,
+                7
+              ]
+            },
+            {
+              "iteration": 4,
+              "random_range_low": 4,
+              "random_range_high": 38,
+              "selected_index": 25,
+              "swapped": true,
+              "left_before": [
+                2,
+                2
+              ],
+              "right_before": [
+                3,
+                2
+              ],
+              "output_value": [
+                3,
+                2
+              ]
+            },
+            {
+              "iteration": 5,
+              "random_range_low": 5,
+              "random_range_high": 38,
+              "selected_index": 17,
+              "swapped": true,
+              "left_before": [
+                1,
+                0
+              ],
+              "right_before": [
+                5,
+                3
+              ],
+              "output_value": [
+                5,
+                3
+              ]
+            },
+            {
+              "iteration": 6,
+              "random_range_low": 6,
+              "random_range_high": 38,
+              "selected_index": 11,
+              "swapped": true,
+              "left_before": [
+                1,
+                6
+              ],
+              "right_before": [
+                4,
+                2
+              ],
+              "output_value": [
+                4,
+                2
+              ]
+            },
+            {
+              "iteration": 7,
+              "random_range_low": 7,
+              "random_range_high": 38,
+              "selected_index": 35,
+              "swapped": true,
+              "left_before": [
+                2,
+                5
+              ],
+              "right_before": [
+                2,
+                6
+              ],
+              "output_value": [
+                2,
+                6
+              ]
+            },
+            {
+              "iteration": 8,
+              "random_range_low": 8,
+              "random_range_high": 38,
+              "selected_index": 20,
+              "swapped": true,
+              "left_before": [
+                7,
+                4
+              ],
+              "right_before": [
+                1,
+                5
+              ],
+              "output_value": [
+                1,
+                5
+              ]
+            },
+            {
+              "iteration": 9,
+              "random_range_low": 9,
+              "random_range_high": 38,
+              "selected_index": 22,
+              "swapped": true,
+              "left_before": [
+                4,
+                0
+              ],
+              "right_before": [
+                6,
+                4
+              ],
+              "output_value": [
+                6,
+                4
+              ]
+            },
+            {
+              "iteration": 10,
+              "random_range_low": 10,
+              "random_range_high": 38,
+              "selected_index": 27,
+              "swapped": true,
+              "left_before": [
+                6,
+                5
+              ],
+              "right_before": [
+                3,
+                5
+              ],
+              "output_value": [
+                3,
+                5
+              ]
+            },
+            {
+              "iteration": 11,
+              "random_range_low": 11,
+              "random_range_high": 38,
+              "selected_index": 27,
+              "swapped": true,
+              "left_before": [
+                1,
+                6
+              ],
+              "right_before": [
+                6,
+                5
+              ],
+              "output_value": [
+                6,
+                5
+              ]
+            },
+            {
+              "iteration": 12,
+              "random_range_low": 12,
+              "random_range_high": 38,
+              "selected_index": 34,
+              "swapped": true,
+              "left_before": [
+                3,
+                0
+              ],
+              "right_before": [
+                4,
+                6
+              ],
+              "output_value": [
+                4,
+                6
+              ]
+            },
+            {
+              "iteration": 13,
+              "random_range_low": 13,
+              "random_range_high": 38,
+              "selected_index": 15,
+              "swapped": true,
+              "left_before": [
+                4,
+                5
+              ],
+              "right_before": [
+                5,
+                0
+              ],
+              "output_value": [
+                5,
+                0
+              ]
+            },
+            {
+              "iteration": 14,
+              "random_range_low": 14,
+              "random_range_high": 38,
+              "selected_index": 30,
+              "swapped": true,
+              "left_before": [
+                3,
+                3
+              ],
+              "right_before": [
+                0,
+                0
+              ],
+              "output_value": [
+                0,
+                0
+              ]
+            },
+            {
+              "iteration": 15,
+              "random_range_low": 15,
+              "random_range_high": 38,
+              "selected_index": 36,
+              "swapped": true,
+              "left_before": [
+                4,
+                5
+              ],
+              "right_before": [
+                6,
+                0
+              ],
+              "output_value": [
+                6,
+                0
+              ]
+            },
+            {
+              "iteration": 16,
+              "random_range_low": 16,
+              "random_range_high": 38,
+              "selected_index": 30,
+              "swapped": true,
+              "left_before": [
+                3,
+                6
+              ],
+              "right_before": [
+                3,
+                3
+              ],
+              "output_value": [
+                3,
+                3
+              ]
+            },
+            {
+              "iteration": 17,
+              "random_range_low": 17,
+              "random_range_high": 38,
+              "selected_index": 17,
+              "swapped": false,
+              "left_before": [
+                1,
+                0
+              ],
+              "right_before": [
+                1,
+                0
+              ],
+              "output_value": [
+                1,
+                0
+              ]
+            },
+            {
+              "iteration": 18,
+              "random_range_low": 18,
+              "random_range_high": 38,
+              "selected_index": 38,
+              "swapped": true,
+              "left_before": [
+                3,
+                4
+              ],
+              "right_before": [
+                6,
+                3
+              ],
+              "output_value": [
+                6,
+                3
+              ]
+            },
+            {
+              "iteration": 19,
+              "random_range_low": 19,
+              "random_range_high": 38,
+              "selected_index": 25,
+              "swapped": true,
+              "left_before": [
+                0,
+                7
+              ],
+              "right_before": [
+                2,
+                2
+              ],
+              "output_value": [
+                2,
+                2
+              ]
+            },
+            {
+              "iteration": 20,
+              "random_range_low": 20,
+              "random_range_high": 38,
+              "selected_index": 33,
+              "swapped": true,
+              "left_before": [
+                7,
+                4
+              ],
+              "right_before": [
+                2,
+                3
+              ],
+              "output_value": [
+                2,
+                3
+              ]
+            },
+            {
+              "iteration": 21,
+              "random_range_low": 21,
+              "random_range_high": 38,
+              "selected_index": 29,
+              "swapped": true,
+              "left_before": [
+                6,
+                1
+              ],
+              "right_before": [
+                5,
+                5
+              ],
+              "output_value": [
+                5,
+                5
+              ]
+            },
+            {
+              "iteration": 22,
+              "random_range_low": 22,
+              "random_range_high": 38,
+              "selected_index": 35,
+              "swapped": true,
+              "left_before": [
+                4,
+                0
+              ],
+              "right_before": [
+                2,
+                5
+              ],
+              "output_value": [
+                2,
+                5
+              ]
+            },
+            {
+              "iteration": 23,
+              "random_range_low": 23,
+              "random_range_high": 38,
+              "selected_index": 35,
+              "swapped": true,
+              "left_before": [
+                6,
+                7
+              ],
+              "right_before": [
+                4,
+                0
+              ],
+              "output_value": [
+                4,
+                0
+              ]
+            },
+            {
+              "iteration": 24,
+              "random_range_low": 24,
+              "random_range_high": 38,
+              "selected_index": 36,
+              "swapped": true,
+              "left_before": [
+                7,
+                6
+              ],
+              "right_before": [
+                4,
+                5
+              ],
+              "output_value": [
+                4,
+                5
+              ]
+            },
+            {
+              "iteration": 25,
+              "random_range_low": 25,
+              "random_range_high": 38,
+              "selected_index": 37,
+              "swapped": true,
+              "left_before": [
+                0,
+                7
+              ],
+              "right_before": [
+                6,
+                6
+              ],
+              "output_value": [
+                6,
+                6
+              ]
+            },
+            {
+              "iteration": 26,
+              "random_range_low": 26,
+              "random_range_high": 38,
+              "selected_index": 31,
+              "swapped": true,
+              "left_before": [
+                4,
+                1
+              ],
+              "right_before": [
+                2,
+                0
+              ],
+              "output_value": [
+                2,
+                0
+              ]
+            },
+            {
+              "iteration": 27,
+              "random_range_low": 27,
+              "random_range_high": 38,
+              "selected_index": 32,
+              "swapped": true,
+              "left_before": [
+                1,
+                6
+              ],
+              "right_before": [
+                0,
+                6
+              ],
+              "output_value": [
+                0,
+                6
+              ]
+            },
+            {
+              "iteration": 28,
+              "random_range_low": 28,
+              "random_range_high": 38,
+              "selected_index": 35,
+              "swapped": true,
+              "left_before": [
+                5,
+                2
+              ],
+              "right_before": [
+                6,
+                7
+              ],
+              "output_value": [
+                6,
+                7
+              ]
+            },
+            {
+              "iteration": 29,
+              "random_range_low": 29,
+              "random_range_high": 38,
+              "selected_index": 35,
+              "swapped": true,
+              "left_before": [
+                6,
+                1
+              ],
+              "right_before": [
+                5,
+                2
+              ],
+              "output_value": [
+                5,
+                2
+              ]
+            },
+            {
+              "iteration": 30,
+              "random_range_low": 30,
+              "random_range_high": 38,
+              "selected_index": 33,
+              "swapped": true,
+              "left_before": [
+                3,
+                6
+              ],
+              "right_before": [
+                7,
+                4
+              ],
+              "output_value": [
+                7,
+                4
+              ]
+            },
+            {
+              "iteration": 31,
+              "random_range_low": 31,
+              "random_range_high": 38,
+              "selected_index": 32,
+              "swapped": true,
+              "left_before": [
+                4,
+                1
+              ],
+              "right_before": [
+                1,
+                6
+              ],
+              "output_value": [
+                1,
+                6
+              ]
+            },
+            {
+              "iteration": 32,
+              "random_range_low": 32,
+              "random_range_high": 38,
+              "selected_index": 33,
+              "swapped": true,
+              "left_before": [
+                4,
+                1
+              ],
+              "right_before": [
+                3,
+                6
+              ],
+              "output_value": [
+                3,
+                6
+              ]
+            },
+            {
+              "iteration": 33,
+              "random_range_low": 33,
+              "random_range_high": 38,
+              "selected_index": 34,
+              "swapped": true,
+              "left_before": [
+                4,
+                1
+              ],
+              "right_before": [
+                3,
+                0
+              ],
+              "output_value": [
+                3,
+                0
+              ]
+            },
+            {
+              "iteration": 34,
+              "random_range_low": 34,
+              "random_range_high": 38,
+              "selected_index": 34,
+              "swapped": false,
+              "left_before": [
+                4,
+                1
+              ],
+              "right_before": [
+                4,
+                1
+              ],
+              "output_value": [
+                4,
+                1
+              ]
+            },
+            {
+              "iteration": 35,
+              "random_range_low": 35,
+              "random_range_high": 38,
+              "selected_index": 35,
+              "swapped": false,
+              "left_before": [
+                6,
+                1
+              ],
+              "right_before": [
+                6,
+                1
+              ],
+              "output_value": [
+                6,
+                1
+              ]
+            },
+            {
+              "iteration": 36,
+              "random_range_low": 36,
+              "random_range_high": 38,
+              "selected_index": 36,
+              "swapped": false,
+              "left_before": [
+                7,
+                6
+              ],
+              "right_before": [
+                7,
+                6
+              ],
+              "output_value": [
+                7,
+                6
+              ]
+            },
+            {
+              "iteration": 37,
+              "random_range_low": 37,
+              "random_range_high": 38,
+              "selected_index": 37,
+              "swapped": false,
+              "left_before": [
+                0,
+                7
+              ],
+              "right_before": [
+                0,
+                7
+              ],
+              "output_value": [
+                0,
+                7
+              ]
+            },
+            {
+              "iteration": 38,
+              "random_range_low": 38,
+              "random_range_high": 38,
+              "selected_index": 38,
+              "swapped": false,
+              "left_before": [
+                3,
+                4
+              ],
+              "right_before": [
+                3,
+                4
+              ],
+              "output_value": [
+                3,
+                4
+              ]
+            }
+          ]
+        },
+        "index_draws_recorded": false,
+        "original_replay_complete": false,
+        "ordered_input": [
+          [
+            4,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            3
+          ]
+        ],
+        "shuffled_tile_order": [
+          [
+            7,
+            7
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      }
+    },
+    {
+      "id": "add_monsters_probabilistic_rolls",
+      "phase": "DungeonBoard.AddMonsters",
+      "rng_api": "Game.RandomFloat shape",
+      "event_count": 39,
+      "value_status": "recorded_fixture_values",
+      "replay_status": "python_random_not_original",
+      "original_replay_complete": false,
+      "examples": [
+        {
+          "tile": [
+            7,
+            7
+          ],
+          "is_unused": true,
+          "monster_percent": 0.1,
+          "roll": 0.058785,
+          "accepted": true
+        },
+        {
+          "tile": [
+            0,
+            1
+          ],
+          "is_unused": true,
+          "monster_percent": 0.05,
+          "roll": 0.298606,
+          "accepted": false
+        },
+        {
+          "tile": [
+            1,
+            7
+          ],
+          "is_unused": true,
+          "monster_percent": 0.1,
+          "roll": 0.967903,
+          "accepted": false
+        }
+      ],
+      "evidence": "monster_placement.probabilistic_rolls records a roll for each visited shuffled tile until all monsters are placed.",
+      "next_action": "Replay RandomFloat and Tile.MonsterPercent in original shuffled order with original Tile.IsUnused side effects."
+    },
+    {
+      "id": "threat_component_pick_weighted_rolls",
+      "phase": "DungeonBoard.AddRewards",
+      "rng_api": "weighted Game.RandomFloat shape",
+      "event_count": 8,
+      "value_status": "recorded_fixture_values",
+      "replay_status": "fixture_components_not_original",
+      "original_replay_complete": false,
+      "examples": [
+        {
+          "reward_index": 0,
+          "reward": "Shop",
+          "selected_component_id": 1,
+          "component_threat": 1,
+          "selection_total": 3.0,
+          "roll": 2.348101,
+          "consumed_weight": 0.5,
+          "remaining_component_weight": 0.5,
+          "component_picks": 1,
+          "component_openSquares": 27
+        },
+        {
+          "reward_index": 1,
+          "reward": "HealthPack",
+          "selected_component_id": 3,
+          "component_threat": 5,
+          "selection_total": 2.5,
+          "roll": 0.847739,
+          "consumed_weight": 0.5,
+          "remaining_component_weight": 0.5,
+          "component_picks": 1,
+          "component_openSquares": 2
+        },
+        {
+          "reward_index": 2,
+          "reward": "HealthPack",
+          "selected_component_id": 3,
+          "component_threat": 5,
+          "selection_total": 2.0,
+          "roll": 0.42606,
+          "consumed_weight": 0.35,
+          "remaining_component_weight": 0.15,
+          "component_picks": 2,
+          "component_openSquares": 1
+        }
+      ],
+      "evidence": "add_rewards_threat_component_allocation.selection_log records weighted rolls until component weights deplete.",
+      "next_action": "Replay ThreatComponent construction, ordering, Pick weight decay, and selected reward allocation against original tile state.",
+      "no_roll_after_depletion_count": 4
+    },
+    {
+      "id": "random_unused_tile_reward_shuffles",
+      "phase": "DungeonBoard.AddRewards",
+      "rng_api": "list shuffle fixture",
+      "event_count": 12,
+      "value_status": "shuffled_order_recorded_fixture_index_draws_derived",
+      "replay_status": "python_shuffle_not_original",
+      "original_replay_complete": false,
+      "examples": [
+        {
+          "label": "reward:0:Shop:component:3",
+          "candidate_count": 3,
+          "checked_count": 1,
+          "selected": [
+            6,
+            6
+          ],
+          "shuffle_boundary": {
+            "id": "random_unused_tile_shuffle",
+            "rng_api": "Python random.shuffle fixture for recovered RandomUnusedTile(list) boundary",
+            "candidate_count": 3,
+            "fixture_index_draws_recorded": true,
+            "fixture_index_draw_source": "derived_from_current_fixture_order_not_original_rng",
+            "fixture_index_draw_count": 3,
+            "fixture_index_draw_replays_output": true,
+            "fixture_index_draws": {
+              "algorithm": "for i in 0..Count-1: j = RandomRange(i, Count-1); swap(i, j)",
+              "draw_source": "derived_from_current_fixture_order_not_original_rng",
+              "draw_count": 3,
+              "replays_fixture_output": true,
+              "draws": [
+                {
+                  "iteration": 0,
+                  "random_range_low": 0,
+                  "random_range_high": 2,
+                  "selected_index": 0,
+                  "swapped": false,
+                  "left_before": [
+                    6,
+                    6
+                  ],
+                  "right_before": [
+                    6,
+                    6
+                  ],
+                  "output_value": [
+                    6,
+                    6
+                  ]
+                },
+                {
+                  "iteration": 1,
+                  "random_range_low": 1,
+                  "random_range_high": 2,
+                  "selected_index": 1,
+                  "swapped": false,
+                  "left_before": [
+                    7,
+                    6
+                  ],
+                  "right_before": [
+                    7,
+                    6
+                  ],
+                  "output_value": [
+                    7,
+                    6
+                  ]
+                },
+                {
+                  "iteration": 2,
+                  "random_range_low": 2,
+                  "random_range_high": 2,
+                  "selected_index": 2,
+                  "swapped": false,
+                  "left_before": [
+                    6,
+                    7
+                  ],
+                  "right_before": [
+                    6,
+                    7
+                  ],
+                  "output_value": [
+                    6,
+                    7
+                  ]
+                }
+              ]
+            },
+            "index_draws_recorded": false,
+            "original_replay_complete": false,
+            "label": "reward:0:Shop:component:3",
+            "ordered_input": [
+              [
+                6,
+                6
+              ],
+              [
+                7,
+                6
+              ],
+              [
+                6,
+                7
+              ]
+            ],
+            "shuffled_candidates": [
+              [
+                6,
+                6
+              ],
+              [
+                7,
+                6
+              ],
+              [
+                6,
+                7
+              ]
+            ],
+            "selected_shuffle_index": 0
+          },
+          "rules": "Shuffle candidate list, then return first tile whose Tile.IsUnused() is true."
+        },
+        {
+          "label": "reward:1:HealthPack:component:3",
+          "candidate_count": 3,
+          "checked_count": 1,
+          "selected": [
+            7,
+            6
+          ],
+          "shuffle_boundary": {
+            "id": "random_unused_tile_shuffle",
+            "rng_api": "Python random.shuffle fixture for recovered RandomUnusedTile(list) boundary",
+            "candidate_count": 3,
+            "fixture_index_draws_recorded": true,
+            "fixture_index_draw_source": "derived_from_current_fixture_order_not_original_rng",
+            "fixture_index_draw_count": 3,
+            "fixture_index_draw_replays_output": true,
+            "fixture_index_draws": {
+              "algorithm": "for i in 0..Count-1: j = RandomRange(i, Count-1); swap(i, j)",
+              "draw_source": "derived_from_current_fixture_order_not_original_rng",
+              "draw_count": 3,
+              "replays_fixture_output": true,
+              "draws": [
+                {
+                  "iteration": 0,
+                  "random_range_low": 0,
+                  "random_range_high": 2,
+                  "selected_index": 1,
+                  "swapped": true,
+                  "left_before": [
+                    6,
+                    6
+                  ],
+                  "right_before": [
+                    7,
+                    6
+                  ],
+                  "output_value": [
+                    7,
+                    6
+                  ]
+                },
+                {
+                  "iteration": 1,
+                  "random_range_low": 1,
+                  "random_range_high": 2,
+                  "selected_index": 1,
+                  "swapped": false,
+                  "left_before": [
+                    6,
+                    6
+                  ],
+                  "right_before": [
+                    6,
+                    6
+                  ],
+                  "output_value": [
+                    6,
+                    6
+                  ]
+                },
+                {
+                  "iteration": 2,
+                  "random_range_low": 2,
+                  "random_range_high": 2,
+                  "selected_index": 2,
+                  "swapped": false,
+                  "left_before": [
+                    6,
+                    7
+                  ],
+                  "right_before": [
+                    6,
+                    7
+                  ],
+                  "output_value": [
+                    6,
+                    7
+                  ]
+                }
+              ]
+            },
+            "index_draws_recorded": false,
+            "original_replay_complete": false,
+            "label": "reward:1:HealthPack:component:3",
+            "ordered_input": [
+              [
+                6,
+                6
+              ],
+              [
+                7,
+                6
+              ],
+              [
+                6,
+                7
+              ]
+            ],
+            "shuffled_candidates": [
+              [
+                7,
+                6
+              ],
+              [
+                6,
+                6
+              ],
+              [
+                6,
+                7
+              ]
+            ],
+            "selected_shuffle_index": 0
+          },
+          "rules": "Shuffle candidate list, then return first tile whose Tile.IsUnused() is true."
+        },
+        {
+          "label": "reward:2:HealthPack:component:3",
+          "candidate_count": 3,
+          "checked_count": 2,
+          "selected": [
+            6,
+            7
+          ],
+          "shuffle_boundary": {
+            "id": "random_unused_tile_shuffle",
+            "rng_api": "Python random.shuffle fixture for recovered RandomUnusedTile(list) boundary",
+            "candidate_count": 3,
+            "fixture_index_draws_recorded": true,
+            "fixture_index_draw_source": "derived_from_current_fixture_order_not_original_rng",
+            "fixture_index_draw_count": 3,
+            "fixture_index_draw_replays_output": true,
+            "fixture_index_draws": {
+              "algorithm": "for i in 0..Count-1: j = RandomRange(i, Count-1); swap(i, j)",
+              "draw_source": "derived_from_current_fixture_order_not_original_rng",
+              "draw_count": 3,
+              "replays_fixture_output": true,
+              "draws": [
+                {
+                  "iteration": 0,
+                  "random_range_low": 0,
+                  "random_range_high": 2,
+                  "selected_index": 1,
+                  "swapped": true,
+                  "left_before": [
+                    6,
+                    6
+                  ],
+                  "right_before": [
+                    7,
+                    6
+                  ],
+                  "output_value": [
+                    7,
+                    6
+                  ]
+                },
+                {
+                  "iteration": 1,
+                  "random_range_low": 1,
+                  "random_range_high": 2,
+                  "selected_index": 2,
+                  "swapped": true,
+                  "left_before": [
+                    6,
+                    6
+                  ],
+                  "right_before": [
+                    6,
+                    7
+                  ],
+                  "output_value": [
+                    6,
+                    7
+                  ]
+                },
+                {
+                  "iteration": 2,
+                  "random_range_low": 2,
+                  "random_range_high": 2,
+                  "selected_index": 2,
+                  "swapped": false,
+                  "left_before": [
+                    6,
+                    6
+                  ],
+                  "right_before": [
+                    6,
+                    6
+                  ],
+                  "output_value": [
+                    6,
+                    6
+                  ]
+                }
+              ]
+            },
+            "index_draws_recorded": false,
+            "original_replay_complete": false,
+            "label": "reward:2:HealthPack:component:3",
+            "ordered_input": [
+              [
+                6,
+                6
+              ],
+              [
+                7,
+                6
+              ],
+              [
+                6,
+                7
+              ]
+            ],
+            "shuffled_candidates": [
+              [
+                7,
+                6
+              ],
+              [
+                6,
+                7
+              ],
+              [
+                6,
+                6
+              ]
+            ],
+            "selected_shuffle_index": 1
+          },
+          "rules": "Shuffle candidate list, then return first tile whose Tile.IsUnused() is true."
+        }
+      ],
+      "evidence": "feature_placement_log records RandomUnusedTile-style shuffled candidate order, selected shuffle index, and fixture-derived Utility.Shuffle index draws for reward placement.",
+      "next_action": "Replay original RandomUnusedTile(list) shuffle/index consumption and Tile.IsUnused child checks."
+    },
+    {
+      "id": "random_unused_tile_boss_shuffles",
+      "phase": "DungeonBoard.AddRewards boss tail",
+      "rng_api": "list shuffle fixture",
+      "event_count": 2,
+      "value_status": "shuffled_order_recorded_fixture_index_draws_derived",
+      "replay_status": "python_shuffle_not_original",
+      "original_replay_complete": false,
+      "examples": [
+        {
+          "label": "boss:component:3",
+          "candidate_count": 2,
+          "checked_count": 2,
+          "selected": null,
+          "shuffle_boundary": {
+            "id": "random_unused_tile_shuffle",
+            "rng_api": "Python random.shuffle fixture for recovered RandomUnusedTile(list) boundary",
+            "candidate_count": 2,
+            "fixture_index_draws_recorded": true,
+            "fixture_index_draw_source": "derived_from_current_fixture_order_not_original_rng",
+            "fixture_index_draw_count": 2,
+            "fixture_index_draw_replays_output": true,
+            "fixture_index_draws": {
+              "algorithm": "for i in 0..Count-1: j = RandomRange(i, Count-1); swap(i, j)",
+              "draw_source": "derived_from_current_fixture_order_not_original_rng",
+              "draw_count": 2,
+              "replays_fixture_output": true,
+              "draws": [
+                {
+                  "iteration": 0,
+                  "random_range_low": 0,
+                  "random_range_high": 1,
+                  "selected_index": 1,
+                  "swapped": true,
+                  "left_before": [
+                    7,
+                    6
+                  ],
+                  "right_before": [
+                    6,
+                    7
+                  ],
+                  "output_value": [
+                    6,
+                    7
+                  ]
+                },
+                {
+                  "iteration": 1,
+                  "random_range_low": 1,
+                  "random_range_high": 1,
+                  "selected_index": 1,
+                  "swapped": false,
+                  "left_before": [
+                    7,
+                    6
+                  ],
+                  "right_before": [
+                    7,
+                    6
+                  ],
+                  "output_value": [
+                    7,
+                    6
+                  ]
+                }
+              ]
+            },
+            "index_draws_recorded": false,
+            "original_replay_complete": false,
+            "label": "boss:component:3",
+            "ordered_input": [
+              [
+                7,
+                6
+              ],
+              [
+                6,
+                7
+              ]
+            ],
+            "shuffled_candidates": [
+              [
+                6,
+                7
+              ],
+              [
+                7,
+                6
+              ]
+            ],
+            "selected_shuffle_index": null
+          },
+          "rules": "No candidate passed Tile.IsUnused().",
+          "source": "sorted_threat_component",
+          "component_id": 3,
+          "component_threat": 5
+        },
+        {
+          "label": "boss:component:2",
+          "source": "sorted_threat_component",
+          "component_id": 2,
+          "candidate_count": 0,
+          "checked_count": 0,
+          "selected": null,
+          "rules": "No deletable tiles in this ThreatComponent."
+        },
+        {
+          "label": "boss:component:1",
+          "candidate_count": 20,
+          "checked_count": 1,
+          "selected": [
+            5,
+            2
+          ],
+          "shuffle_boundary": {
+            "id": "random_unused_tile_shuffle",
+            "rng_api": "Python random.shuffle fixture for recovered RandomUnusedTile(list) boundary",
+            "candidate_count": 20,
+            "fixture_index_draws_recorded": true,
+            "fixture_index_draw_source": "derived_from_current_fixture_order_not_original_rng",
+            "fixture_index_draw_count": 20,
+            "fixture_index_draw_replays_output": true,
+            "fixture_index_draws": {
+              "algorithm": "for i in 0..Count-1: j = RandomRange(i, Count-1); swap(i, j)",
+              "draw_source": "derived_from_current_fixture_order_not_original_rng",
+              "draw_count": 20,
+              "replays_fixture_output": true,
+              "draws": [
+                {
+                  "iteration": 0,
+                  "random_range_low": 0,
+                  "random_range_high": 19,
+                  "selected_index": 2,
+                  "swapped": true,
+                  "left_before": [
+                    2,
+                    2
+                  ],
+                  "right_before": [
+                    5,
+                    2
+                  ],
+                  "output_value": [
+                    5,
+                    2
+                  ]
+                },
+                {
+                  "iteration": 1,
+                  "random_range_low": 1,
+                  "random_range_high": 19,
+                  "selected_index": 3,
+                  "swapped": true,
+                  "left_before": [
+                    3,
+                    2
+                  ],
+                  "right_before": [
+                    2,
+                    3
+                  ],
+                  "output_value": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "iteration": 2,
+                  "random_range_low": 2,
+                  "random_range_high": 19,
+                  "selected_index": 16,
+                  "swapped": true,
+                  "left_before": [
+                    2,
+                    2
+                  ],
+                  "right_before": [
+                    4,
+                    6
+                  ],
+                  "output_value": [
+                    4,
+                    6
+                  ]
+                },
+                {
+                  "iteration": 3,
+                  "random_range_low": 3,
+                  "random_range_high": 19,
+                  "selected_index": 7,
+                  "swapped": true,
+                  "left_before": [
+                    3,
+                    2
+                  ],
+                  "right_before": [
+                    3,
+                    4
+                  ],
+                  "output_value": [
+                    3,
+                    4
+                  ]
+                },
+                {
+                  "iteration": 4,
+                  "random_range_low": 4,
+                  "random_range_high": 19,
+                  "selected_index": 11,
+                  "swapped": true,
+                  "left_before": [
+                    3,
+                    3
+                  ],
+                  "right_before": [
+                    3,
+                    5
+                  ],
+                  "output_value": [
+                    3,
+                    5
+                  ]
+                },
+                {
+                  "iteration": 5,
+                  "random_range_low": 5,
+                  "random_range_high": 19,
+                  "selected_index": 7,
+                  "swapped": true,
+                  "left_before": [
+                    5,
+                    3
+                  ],
+                  "right_before": [
+                    3,
+                    2
+                  ],
+                  "output_value": [
+                    3,
+                    2
+                  ]
+                },
+                {
+                  "iteration": 6,
+                  "random_range_low": 6,
+                  "random_range_high": 19,
+                  "selected_index": 11,
+                  "swapped": true,
+                  "left_before": [
+                    6,
+                    3
+                  ],
+                  "right_before": [
+                    3,
+                    3
+                  ],
+                  "output_value": [
+                    3,
+                    3
+                  ]
+                },
+                {
+                  "iteration": 7,
+                  "random_range_low": 7,
+                  "random_range_high": 19,
+                  "selected_index": 17,
+                  "swapped": true,
+                  "left_before": [
+                    5,
+                    3
+                  ],
+                  "right_before": [
+                    0,
+                    7
+                  ],
+                  "output_value": [
+                    0,
+                    7
+                  ]
+                },
+                {
+                  "iteration": 8,
+                  "random_range_low": 8,
+                  "random_range_high": 19,
+                  "selected_index": 13,
+                  "swapped": true,
+                  "left_before": [
+                    7,
+                    4
+                  ],
+                  "right_before": [
+                    5,
+                    5
+                  ],
+                  "output_value": [
+                    5,
+                    5
+                  ]
+                },
+                {
+                  "iteration": 9,
+                  "random_range_low": 9,
+                  "random_range_high": 19,
+                  "selected_index": 14,
+                  "swapped": true,
+                  "left_before": [
+                    1,
+                    5
+                  ],
+                  "right_before": [
+                    0,
+                    6
+                  ],
+                  "output_value": [
+                    0,
+                    6
+                  ]
+                },
+                {
+                  "iteration": 10,
+                  "random_range_low": 10,
+                  "random_range_high": 19,
+                  "selected_index": 14,
+                  "swapped": true,
+                  "left_before": [
+                    2,
+                    5
+                  ],
+                  "right_before": [
+                    1,
+                    5
+                  ],
+                  "output_value": [
+                    1,
+                    5
+                  ]
+                },
+                {
+                  "iteration": 11,
+                  "random_range_low": 11,
+                  "random_range_high": 19,
+                  "selected_index": 11,
+                  "swapped": false,
+                  "left_before": [
+                    6,
+                    3
+                  ],
+                  "right_before": [
+                    6,
+                    3
+                  ],
+                  "output_value": [
+                    6,
+                    3
+                  ]
+                },
+                {
+                  "iteration": 12,
+                  "random_range_low": 12,
+                  "random_range_high": 19,
+                  "selected_index": 18,
+                  "swapped": true,
+                  "left_before": [
+                    4,
+                    5
+                  ],
+                  "right_before": [
+                    1,
+                    7
+                  ],
+                  "output_value": [
+                    1,
+                    7
+                  ]
+                },
+                {
+                  "iteration": 13,
+                  "random_range_low": 13,
+                  "random_range_high": 19,
+                  "selected_index": 19,
+                  "swapped": true,
+                  "left_before": [
+                    7,
+                    4
+                  ],
+                  "right_before": [
+                    3,
+                    7
+                  ],
+                  "output_value": [
+                    3,
+                    7
+                  ]
+                },
+                {
+                  "iteration": 14,
+                  "random_range_low": 14,
+                  "random_range_high": 19,
+                  "selected_index": 16,
+                  "swapped": true,
+                  "left_before": [
+                    2,
+                    5
+                  ],
+                  "right_before": [
+                    2,
+                    2
+                  ],
+                  "output_value": [
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "iteration": 15,
+                  "random_range_low": 15,
+                  "random_range_high": 19,
+                  "selected_index": 15,
+                  "swapped": false,
+                  "left_before": [
+                    2,
+                    6
+                  ],
+                  "right_before": [
+                    2,
+                    6
+                  ],
+                  "output_value": [
+                    2,
+                    6
+                  ]
+                },
+                {
+                  "iteration": 16,
+                  "random_range_low": 16,
+                  "random_range_high": 19,
+                  "selected_index": 19,
+                  "swapped": true,
+                  "left_before": [
+                    2,
+                    5
+                  ],
+                  "right_before": [
+                    7,
+                    4
+                  ],
+                  "output_value": [
+                    7,
+                    4
+                  ]
+                },
+                {
+                  "iteration": 17,
+                  "random_range_low": 17,
+                  "random_range_high": 19,
+                  "selected_index": 17,
+                  "swapped": false,
+                  "left_before": [
+                    5,
+                    3
+                  ],
+                  "right_before": [
+                    5,
+                    3
+                  ],
+                  "output_value": [
+                    5,
+                    3
+                  ]
+                },
+                {
+                  "iteration": 18,
+                  "random_range_low": 18,
+                  "random_range_high": 19,
+                  "selected_index": 19,
+                  "swapped": true,
+                  "left_before": [
+                    4,
+                    5
+                  ],
+                  "right_before": [
+                    2,
+                    5
+                  ],
+                  "output_value": [
+                    2,
+                    5
+                  ]
+                },
+                {
+                  "iteration": 19,
+                  "random_range_low": 19,
+                  "random_range_high": 19,
+                  "selected_index": 19,
+                  "swapped": false,
+                  "left_before": [
+                    4,
+                    5
+                  ],
+                  "right_before": [
+                    4,
+                    5
+                  ],
+                  "output_value": [
+                    4,
+                    5
+                  ]
+                }
+              ]
+            },
+            "index_draws_recorded": false,
+            "original_replay_complete": false,
+            "label": "boss:component:1",
+            "ordered_input": [
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                5,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                5,
+                3
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                7,
+                4
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                5
+              ],
+              [
+                0,
+                6
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                3,
+                7
+              ]
+            ],
+            "shuffled_candidates": [
+              [
+                5,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                0,
+                7
+              ],
+              [
+                5,
+                5
+              ],
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                3,
+                7
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                7,
+                4
+              ],
+              [
+                5,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                4,
+                5
+              ]
+            ],
+            "selected_shuffle_index": 0
+          },
+          "rules": "Shuffle candidate list, then return first tile whose Tile.IsUnused() is true.",
+          "source": "sorted_threat_component",
+          "component_id": 1,
+          "component_threat": 1
+        }
+      ],
+      "evidence": "feature_placement_log records RandomUnusedTile-style shuffled candidate order, selected shuffle index, and fixture-derived Utility.Shuffle index draws for boss placement attempts.",
+      "next_action": "Replay sorted ThreatComponent boss candidate scans and fallback RandomUnusedTile calls against original occupancy."
+    },
+    {
+      "id": "treasure_chest_loot_rolls_annotated",
+      "phase": "TreasureChest.GenerateLoot",
+      "rng_api": "Game.RandomFloat/Game.RandomRange/Game.RandomNormal/list shuffle",
+      "event_count": 2,
+      "value_status": "seed_annotated_not_executed",
+      "replay_status": "not_integrated_into_seed",
+      "original_replay_complete": false,
+      "examples": [],
+      "evidence": "Seed reward feature creation annotates TreasureChest loot rules, while treasure_chest_loot_smoke validates separate deterministic fixtures.",
+      "next_action": "Integrate item-count, card/gold branch, RewardTier, RandomGoldByTier, CardFinder roll, SpawnCard mutation, and final loot shuffle into the same floor RNG stream.",
+      "treasure_chest_loot_smoke_summary": {
+        "check_count": 24,
+        "passed_count": 24,
+        "failed_count": 0,
+        "item_count_threshold_checks": 3,
+        "fixture_count": 3,
+        "shuffle_helper_check_count": 7,
+        "prototype_runtime_ready": false
+      }
+    },
+    {
+      "id": "cardfinder_reward_roll_bands",
+      "phase": "CardFinder.ChooseReward",
+      "rng_api": "Game.RandomRange inclusive",
+      "event_count": 96,
+      "value_status": "selector_boundaries_tested_not_streamed",
+      "replay_status": "not_integrated_into_seed",
+      "original_replay_complete": false,
+      "examples": [],
+      "evidence": "cardfinder_reward_smoke verifies all roll-band boundaries over the current candidate pool but does not consume the floor RNG stream.",
+      "next_action": "Consume CardFinder rolls inside TreasureChest/SpawnCard replay with real current-user state and maxSpawns mutation.",
+      "cardfinder_reward_smoke_summary": {
+        "check_count": 96,
+        "passed_count": 96,
+        "failed_count": 0,
+        "candidate_count": 31,
+        "total_weight": 75.0,
+        "roll_min": 1,
+        "roll_max": 75,
+        "prototype_runtime_ready": false
+      }
+    },
+    {
+      "id": "cardfinder_spawn_sequence_fixture_rolls",
+      "phase": "CardFinder.ChooseReward + Dungeon.SpawnCard",
+      "rng_api": "Game.RandomRange inclusive",
+      "event_count": 2,
+      "value_status": "deterministic_target_rolls",
+      "replay_status": "fixture_not_full_floor",
+      "original_replay_complete": false,
+      "examples": [
+        {
+          "step": 1,
+          "target": "StormSlash1",
+          "roll": 1,
+          "selected": "StormSlash1",
+          "spawn_count_key": "StormSlash",
+          "spawn_count_before": 0,
+          "spawn_count_after": 1,
+          "candidate_count_before": 31,
+          "candidate_count_after": 31,
+          "total_weight_before": 75.0,
+          "total_weight_after": 75.0
+        },
+        {
+          "step": 2,
+          "target": "StormSlash2",
+          "roll": 8,
+          "selected": "StormSlash2",
+          "spawn_count_key": "StormSlash",
+          "spawn_count_before": 1,
+          "spawn_count_after": 2,
+          "candidate_count_before": 31,
+          "candidate_count_after": 29,
+          "total_weight_before": 75.0,
+          "total_weight_after": 61.0
+        }
+      ],
+      "evidence": "cardfinder_spawn_sequence_smoke re-runs CardFinder after SpawnCard-style mutation for two target rolls.",
+      "next_action": "Apply SpawnCard mutation after every generated reward card in a full floor replay."
+    }
+  ],
+  "checks": [
+    {
+      "name": "catalog:random_helper_count",
+      "status": "passed",
+      "actual": 3,
+      "expected": 3,
+      "details": {}
+    },
+    {
+      "name": "seed:maze_decision_count",
+      "status": "passed",
+      "actual": 64,
+      "expected": 64,
+      "details": {}
+    },
+    {
+      "name": "seed:monster_level_weight_count",
+      "status": "passed",
+      "actual": 3,
+      "expected": 3,
+      "details": {}
+    },
+    {
+      "name": "seed:monster_level_jitter_count",
+      "status": "passed",
+      "actual": 6,
+      "expected": 6,
+      "details": {}
+    },
+    {
+      "name": "seed:monster_level_jitter_roll_count",
+      "status": "passed",
+      "actual": 6,
+      "expected": 6,
+      "details": {}
+    },
+    {
+      "name": "seed:level_sum_adjustment_roll_count",
+      "status": "passed",
+      "actual": 0,
+      "expected": 0,
+      "details": {}
+    },
+    {
+      "name": "seed:reward_shuffle_length",
+      "status": "passed",
+      "actual": 12,
+      "expected": 12,
+      "details": {}
+    },
+    {
+      "name": "seed:generated_reward_count",
+      "status": "passed",
+      "actual": 3,
+      "expected": 3,
+      "details": {}
+    },
+    {
+      "name": "seed:generated_reward_roll_count",
+      "status": "passed",
+      "actual": 3,
+      "expected": 3,
+      "details": {}
+    },
+    {
+      "name": "seed:health_branch_roll_recorded",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "seed:health_count_roll_recorded",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "seed:additional_random_reward_count_roll_recorded",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "seed:service_roll_recorded",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "seed:gold_sample_recorded",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "seed:boss_selection_roll_recorded",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {}
+    },
+    {
+      "name": "seed:monster_probabilistic_roll_count",
+      "status": "passed",
+      "actual": 39,
+      "expected": 39,
+      "details": {}
+    },
+    {
+      "name": "seed:threat_component_selection_roll_count",
+      "status": "passed",
+      "actual": 8,
+      "expected": 8,
+      "details": {}
+    },
+    {
+      "name": "seed:threat_component_selection_no_roll_count",
+      "status": "passed",
+      "actual": 4,
+      "expected": 4,
+      "details": {}
+    },
+    {
+      "name": "seed:feature_placement_log_count",
+      "status": "passed",
+      "actual": 15,
+      "expected": 15,
+      "details": {}
+    },
+    {
+      "name": "seed:reward_random_unused_shuffle_count",
+      "status": "passed",
+      "actual": 12,
+      "expected": 12,
+      "details": {}
+    },
+    {
+      "name": "seed:boss_random_unused_shuffle_count",
+      "status": "passed",
+      "actual": 2,
+      "expected": 2,
+      "details": {}
+    },
+    {
+      "name": "seed:shuffle_order_recorded_call_count",
+      "status": "passed",
+      "actual": 17,
+      "expected": 17,
+      "details": {}
+    },
+    {
+      "name": "seed:shuffle_fixture_index_draw_recorded_count",
+      "status": "passed",
+      "actual": 17,
+      "expected": 17,
+      "details": {}
+    },
+    {
+      "name": "seed:shuffle_fixture_index_draw_replay_count",
+      "status": "passed",
+      "actual": 17,
+      "expected": 17,
+      "details": {}
+    },
+    {
+      "name": "seed:shuffle_fixture_index_draw_total",
+      "status": "passed",
+      "actual": 349,
+      "expected": 349,
+      "details": {}
+    },
+    {
+      "name": "seed:shuffle_boundaries_marked_unreplayed",
+      "status": "passed",
+      "actual": true,
+      "expected": true,
+      "details": {
+        "shuffle_order_recorded_call_count": 17
+      }
+    },
+    {
+      "name": "seed:treasure_chest_annotation_count",
+      "status": "passed",
+      "actual": 2,
+      "expected": 2,
+      "details": {}
+    },
+    {
+      "name": "treasure_chest_loot_smoke:failed_count",
+      "status": "passed",
+      "actual": 0,
+      "expected": 0,
+      "details": {}
+    },
+    {
+      "name": "treasure_chest_loot_smoke:shuffle_helper_check_count",
+      "status": "passed",
+      "actual": 7,
+      "expected": 7,
+      "details": {}
+    },
+    {
+      "name": "cardfinder_reward_smoke:failed_count",
+      "status": "passed",
+      "actual": 0,
+      "expected": 0,
+      "details": {}
+    },
+    {
+      "name": "cardfinder_reward_smoke:check_count",
+      "status": "passed",
+      "actual": 96,
+      "expected": 96,
+      "details": {}
+    },
+    {
+      "name": "cardfinder_spawn_sequence_smoke:sequence_length",
+      "status": "passed",
+      "actual": 2,
+      "expected": 2,
+      "details": {}
+    },
+    {
+      "name": "aggregate:consumer_category_count",
+      "status": "passed",
+      "actual": 20,
+      "expected": 20,
+      "details": {}
+    },
+    {
+      "name": "aggregate:seed_recorded_scalar_event_count",
+      "status": "passed",
+      "actual": 129,
+      "expected": 129,
+      "details": {}
+    },
+    {
+      "name": "aggregate:seed_unrecorded_scalar_event_count",
+      "status": "passed",
+      "actual": 0,
+      "expected": 0,
+      "details": {}
+    },
+    {
+      "name": "aggregate:seed_shuffle_call_count",
+      "status": "passed",
+      "actual": 17,
+      "expected": 17,
+      "details": {}
+    },
+    {
+      "name": "aggregate:seed_fixture_rng_event_or_call_count",
+      "status": "passed",
+      "actual": 146,
+      "expected": 146,
+      "details": {}
+    },
+    {
+      "name": "aggregate:not_replayed_consumer_count",
+      "status": "passed",
+      "actual": 20,
+      "expected": 20,
+      "details": {}
+    },
+    {
+      "name": "seed:false_original_accuracy_rules",
+      "status": "passed",
+      "actual": [
+        "add_rewards_gold_distribution_original_accurate",
+        "add_rewards_threat_component_replay_original_accurate",
+        "tile_feature_placement_original_accurate",
+        "unity_physical_replay_complete"
+      ],
+      "expected": [
+        "add_rewards_gold_distribution_original_accurate",
+        "add_rewards_threat_component_replay_original_accurate",
+        "tile_feature_placement_original_accurate",
+        "unity_physical_replay_complete"
+      ],
+      "details": {}
+    },
+    {
+      "name": "decision:original_rng_replay_complete",
+      "status": "passed",
+      "actual": false,
+      "expected": false,
+      "details": {}
+    }
+  ]
+}

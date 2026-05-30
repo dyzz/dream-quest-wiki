@@ -1,0 +1,2325 @@
+{
+  "source": "extracted/disassembly/DungeonTalentList_GetDungeonTalentList.txt",
+  "constructor_call": "#0x1002c21ac",
+  "count": 43,
+  "summary": {
+    "talent_count": 43,
+    "tier_counts": {
+      "1": 11,
+      "2": 11,
+      "3": 11,
+      "4": 10
+    },
+    "repeatable_count": 8,
+    "repeatable_internal_names": [
+      "Action1",
+      "CopyTalent",
+      "EquipSlot",
+      "Health1",
+      "LevelUp",
+      "Mana1",
+      "Rich",
+      "Upgrade1"
+    ],
+    "talents_with_requirements": 31,
+    "requirement_reference_count": 31,
+    "named_requirement_reference_count": 31,
+    "unknown_requirement_reference_count": 0,
+    "runtime_scope_counts": {
+      "dungeon_or_immediate": 30,
+      "player_combat_or_passive": 13
+    },
+    "handler_covered_count": 43,
+    "handler_uncovered_count": 0,
+    "handler_uncovered_internal_names": [],
+    "handler_method_counts": {
+      "ApplyTo": 43,
+      "ApplyToPlayer": 13
+    },
+    "handler_effect_count": 60,
+    "handler_effect_covered_count": 43,
+    "handler_effect_uncovered_count": 0,
+    "handler_effect_uncovered_internal_names": [],
+    "handler_effect_method_counts": {
+      "ApplyTo": 46,
+      "ApplyToPlayer": 14
+    },
+    "handler_extra_literal_text_count": 44
+  },
+  "handler_sources": [
+    "extracted/disassembly/DungeonTalentHandler_ApplyTo.txt",
+    "extracted/disassembly/DungeonTalentHandler_ApplyToPlayer.txt",
+    "extracted/disassembly/DungeonTalentHandler_GetByName.txt",
+    "extracted/disassembly/DungeonTalentHandler_HandleDeckTargetted.txt"
+  ],
+  "handler_extra_literal_texts": [
+    "Adventurous",
+    "Alacrity",
+    "Alchemist",
+    "Armor",
+    "Backstab",
+    "Barbed",
+    "Charm",
+    "CombatAbilityFlee",
+    "Crusader",
+    "Crush",
+    "Deal 1 extra physical damage",
+    "Deal one damage each action",
+    "Draw 3 extra cards when at 15 or less health",
+    "Draw an extra fireball",
+    "Draw on your first action",
+    "FindTreasure",
+    "Fireball",
+    "Gain 1 health every 3 physical damage",
+    "Gain double monster rewards",
+    "Half elemental damage",
+    "Heal",
+    "Heal after each win",
+    "Heal instead of dying once",
+    "HealingPotion",
+    "Items in shops are free",
+    "Jab",
+    "Mana2",
+    "ManaSurge",
+    "Negate the first enemy card each turn",
+    "Opponents have one fewer card",
+    "Poison 3 each turn",
+    "PrayerOfWrath",
+    "RefreshManaCosts",
+    "Resourceful",
+    "Shield",
+    "Slash",
+    "Spells are free",
+    "Start with a random equipment",
+    "Start with sword, shield, and armor",
+    "Sword",
+    "Ward",
+    "Wisdom",
+    "Your damage is piercing",
+    "Your dungeon cooldowns are shorter"
+  ],
+  "notes": [
+    "requirements are raw UserAttribute IDs; requirement_names are joined from achievements.attribute/UserAttribute."
+  ],
+  "talents": [
+    {
+      "source_address": "0x01002c30f0",
+      "internal_name": "Ascendance",
+      "display_name": "Ascendance",
+      "effect": "Gain 20 health, 5 mana, and an action",
+      "tier": 4,
+      "repeatable": false,
+      "requirements": [],
+      "requirement_names": [],
+      "literal_indices": {
+        "internal_name": 6036,
+        "display_name": 6036,
+        "effect": 6066
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c5110",
+          "literal_index": 6036
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c5f60"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.GainMaxHealth",
+          "arguments": {
+            "x": 20
+          }
+        },
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c5f80"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.GainMana",
+          "arguments": {
+            "x": 5
+          }
+        },
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c5fa0"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.GainActions",
+          "arguments": {
+            "x": 1
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3180",
+      "internal_name": "Terror",
+      "display_name": "Terror",
+      "effect": "Your opponents' hand sizes are reduced by 1",
+      "tier": 4,
+      "repeatable": false,
+      "requirements": [],
+      "requirement_names": [],
+      "literal_indices": {
+        "internal_name": 6045,
+        "display_name": 6045,
+        "effect": 6067
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c5228",
+          "literal_index": 6045
+        },
+        {
+          "method": "ApplyToPlayer",
+          "address": "0x01002c673c",
+          "literal_index": 6045
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo",
+        "ApplyToPlayer"
+      ],
+      "runtime_scope": "player_combat_or_passive",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c61a8"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Opponents have one fewer card"
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "reduce_opponent_hand_size",
+          "source_addresses": [
+            "0x01002c6990",
+            "0x01002c69e4"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Game.OtherPlayer + Player.hand_size_field_0xac",
+          "arguments": {
+            "delta": -1
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c321c",
+      "internal_name": "Card1",
+      "display_name": "Smart",
+      "effect": "Draw one additional card each turn",
+      "tier": 4,
+      "repeatable": false,
+      "requirements": [],
+      "requirement_names": [],
+      "literal_indices": {
+        "internal_name": 6027,
+        "display_name": 6068,
+        "effect": 6069
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4e7c",
+          "literal_index": 6027
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c575c"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.GainCards",
+          "arguments": {
+            "x": 1
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c32c8",
+      "internal_name": "Equipped",
+      "display_name": "Well-Armed",
+      "effect": "Start each combat with a sword, shield, and armor in play",
+      "tier": 4,
+      "repeatable": false,
+      "requirements": [
+        24
+      ],
+      "requirement_names": [
+        "WINPALADIN"
+      ],
+      "literal_indices": {
+        "internal_name": 6059,
+        "display_name": 6070,
+        "effect": 6071
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c53a4",
+          "literal_index": 6059
+        },
+        {
+          "method": "ApplyToPlayer",
+          "address": "0x01002c67dc",
+          "literal_index": 6059
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo",
+        "ApplyToPlayer"
+      ],
+      "runtime_scope": "player_combat_or_passive",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c6528"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Start with sword, shield, and armor"
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "create_equipment",
+          "source_addresses": [
+            "0x01002c6d4c",
+            "0x01002c6d78",
+            "0x01002c6df4"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Player.CreateEquipment",
+          "arguments": {
+            "equipment": [
+              "Sword",
+              "Shield",
+              "Armor"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3374",
+      "internal_name": "MasterThief",
+      "display_name": "Master Thief",
+      "effect": "Items in shops are free",
+      "tier": 4,
+      "repeatable": false,
+      "requirements": [
+        44
+      ],
+      "requirement_names": [
+        "FINALBOSS2"
+      ],
+      "literal_indices": {
+        "internal_name": 5913,
+        "display_name": 6072,
+        "effect": 6039
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c5160",
+          "literal_index": 5913
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c6084"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Items in shops are free"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3418",
+      "internal_name": "Tiltowait",
+      "display_name": "Tiltowait",
+      "effect": "Add the action card Tiltowait to your deck which deals 20 piercing damage",
+      "tier": 4,
+      "repeatable": false,
+      "requirements": [
+        88
+      ],
+      "requirement_names": [
+        "RICH"
+      ],
+      "literal_indices": {
+        "internal_name": 4563,
+        "display_name": 4563,
+        "effect": 6073
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c541c",
+          "literal_index": 4563
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_cards_to_deck",
+          "source_addresses": [
+            "0x01002c6604"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddCard",
+          "arguments": {
+            "cards": [
+              "Tiltowait"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c34bc",
+      "internal_name": "Vampiric",
+      "display_name": "Vampiric",
+      "effect": "For every three points of physical damage you deal each turn, gain 1 life",
+      "tier": 4,
+      "repeatable": false,
+      "requirements": [
+        30
+      ],
+      "requirement_names": [
+        "WINNECROMANCER"
+      ],
+      "literal_indices": {
+        "internal_name": 5566,
+        "display_name": 5566,
+        "effect": 6074
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c5250",
+          "literal_index": 5566
+        },
+        {
+          "method": "ApplyToPlayer",
+          "address": "0x01002c6750",
+          "literal_index": 5566
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo",
+        "ApplyToPlayer"
+      ],
+      "runtime_scope": "player_combat_or_passive",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c61f0"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Gain 1 health every 3 physical damage"
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "set_player_attribute",
+          "source_addresses": [
+            "0x01002c6a3c"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Player.SetAttribute",
+          "arguments": {
+            "attribute_id": 34,
+            "attribute_name": "vampiric",
+            "value_expression": "Player.get_vampiric()+1"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3560",
+      "internal_name": "Poisonous",
+      "display_name": "Poisonous",
+      "effect": "At the beginning of your turn, poison your opponent 3",
+      "tier": 4,
+      "repeatable": false,
+      "requirements": [
+        28
+      ],
+      "requirement_names": [
+        "WINASSASSIN"
+      ],
+      "literal_indices": {
+        "internal_name": 5568,
+        "display_name": 5568,
+        "effect": 6075
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c532c",
+          "literal_index": 5568
+        },
+        {
+          "method": "ApplyToPlayer",
+          "address": "0x01002c67a0",
+          "literal_index": 5568
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo",
+        "ApplyToPlayer"
+      ],
+      "runtime_scope": "player_combat_or_passive",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c6450"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Poison 3 each turn"
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "set_player_attribute",
+          "source_addresses": [
+            "0x01002c6bf4"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Player.SetAttribute",
+          "arguments": {
+            "attribute_id": 38,
+            "attribute_name": "poisonous",
+            "value_expression": "Player.get_poisonous()+3"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3604",
+      "internal_name": "Archmage",
+      "display_name": "Archmage",
+      "effect": "Your spells no longer cost mana",
+      "tier": 4,
+      "repeatable": false,
+      "requirements": [
+        89
+      ],
+      "requirement_names": [
+        "CLARITY"
+      ],
+      "literal_indices": {
+        "internal_name": 5981,
+        "display_name": 5981,
+        "effect": 6076
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c52f0",
+          "literal_index": 5981
+        },
+        {
+          "method": "ApplyToPlayer",
+          "address": "0x01002c678c",
+          "literal_index": 5981
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo",
+        "ApplyToPlayer"
+      ],
+      "runtime_scope": "player_combat_or_passive",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c6358"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Spells are free"
+          }
+        },
+        {
+          "method": "ApplyTo",
+          "operation": "refresh_mana_costs",
+          "source_addresses": [
+            "0x01002c63e0"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "GamePhysical.AddToVisualStackNoYield",
+          "arguments": {
+            "receiver": "Dungeon.currentDungeon.physical",
+            "queued_method": "DungeonPhysical.RefreshManaCosts",
+            "arg_array_length": 0,
+            "name": "RefreshManaCosts"
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "set_player_attribute",
+          "source_addresses": [
+            "0x01002c6b84"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Player.SetAttribute",
+          "arguments": {
+            "attribute_id": 37,
+            "attribute_name": "archmage",
+            "value_expression": "Player.get_archmage()+1"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c36a8",
+      "internal_name": "Impervious",
+      "display_name": "Impervious",
+      "effect": "You take half damage (rounded down) from all elements",
+      "tier": 4,
+      "repeatable": false,
+      "requirements": [
+        92
+      ],
+      "requirement_names": [
+        "MUSHROOM"
+      ],
+      "literal_indices": {
+        "internal_name": 6037,
+        "display_name": 6037,
+        "effect": 6077
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c5124",
+          "literal_index": 6037
+        },
+        {
+          "method": "ApplyToPlayer",
+          "address": "0x01002c6854",
+          "literal_index": 6037
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo",
+        "ApplyToPlayer"
+      ],
+      "runtime_scope": "player_combat_or_passive",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c5fe0"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Half elemental damage"
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c6ed4"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Player.ElementalResist"
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3744",
+      "internal_name": "Enlightenment",
+      "display_name": "Immortal",
+      "effect": "The next time you would die, your health is instead set to its maximum and you are invulnerable until your next turn",
+      "tier": 3,
+      "repeatable": false,
+      "requirements": [],
+      "requirement_names": [],
+      "literal_indices": {
+        "internal_name": 5996,
+        "display_name": 3487,
+        "effect": 6078
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c51b0",
+          "literal_index": 5996
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c60cc"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Heal instead of dying once"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c37d4",
+      "internal_name": "Purity",
+      "display_name": "Purity",
+      "effect": "Choose up to three cards from your deck and delete them",
+      "tier": 3,
+      "repeatable": false,
+      "requirements": [],
+      "requirement_names": [],
+      "literal_indices": {
+        "internal_name": 5656,
+        "display_name": 5656,
+        "effect": 6079
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4eb8",
+          "literal_index": 5656
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "deck_targeted_talent_action",
+          "source_addresses": [
+            "0x01002c5838"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonTalentHandler.HandleDeckTargetted",
+          "arguments": {
+            "mode": "delete_cards",
+            "action_class": "DungeonActionTalentDeckTargetted",
+            "config_method": "DungeonActionTalentDeckTargetted.BuildFromTalent",
+            "perform_method": "DungeonActionTalentDeckTargetted.Perform",
+            "title": "Choose up to 3 cards to delete",
+            "confirm_name": "Delete",
+            "selection": {
+              "source": "deck",
+              "min_cards": 1,
+              "max_cards": 3,
+              "multi_cards": true,
+              "should_cull": false,
+              "all_cards": false
+            },
+            "perform_operations": [
+              {
+                "method": "DungeonStats.DeleteCard",
+                "card": "each_selected_card.internalName"
+              },
+              {
+                "method": "DungeonPlayer.RemoveCardFromDeck",
+                "card": "each_selected_card.internalName"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3864",
+      "internal_name": "Cruel",
+      "display_name": "Cruel",
+      "effect": "Your opponents take an additional point of damage from each of your physical sources",
+      "tier": 3,
+      "repeatable": false,
+      "requirements": [],
+      "requirement_names": [],
+      "literal_indices": {
+        "internal_name": 6043,
+        "display_name": 6043,
+        "effect": 6080
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c5200",
+          "literal_index": 6043
+        },
+        {
+          "method": "ApplyToPlayer",
+          "address": "0x01002c6728",
+          "literal_index": 6043
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo",
+        "ApplyToPlayer"
+      ],
+      "runtime_scope": "player_combat_or_passive",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c615c"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Deal 1 extra physical damage"
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "set_player_attribute",
+          "source_addresses": [
+            "0x01002c6920"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Player.SetAttribute",
+          "arguments": {
+            "attribute_id": 33,
+            "attribute_name": "cruel",
+            "value_expression": "Player.get_cruel()+1"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3908",
+      "internal_name": "Charismatic",
+      "display_name": "Charismatic",
+      "effect": "5 additional beneficial objects appear on this dungeon floor",
+      "tier": 3,
+      "repeatable": false,
+      "requirements": [
+        87
+      ],
+      "requirement_names": [
+        "MERCY"
+      ],
+      "literal_indices": {
+        "internal_name": 6028,
+        "display_name": 6028,
+        "effect": 6081
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4f08",
+          "literal_index": 6028
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c5978"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonBoard.GenerateRandomReward",
+          "arguments": {
+            "x": 5
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c39ac",
+      "internal_name": "Fluid",
+      "display_name": "Fluid",
+      "effect": "The first time you play an action card each turn, draw a card",
+      "tier": 3,
+      "repeatable": false,
+      "requirements": [
+        29
+      ],
+      "requirement_names": [
+        "WINMONK"
+      ],
+      "literal_indices": {
+        "internal_name": 6025,
+        "display_name": 6025,
+        "effect": 6082
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4e40",
+          "literal_index": 6025
+        },
+        {
+          "method": "ApplyToPlayer",
+          "address": "0x01002c6714",
+          "literal_index": 6025
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo",
+        "ApplyToPlayer"
+      ],
+      "runtime_scope": "player_combat_or_passive",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c568c"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Draw on your first action"
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "set_player_attribute",
+          "source_addresses": [
+            "0x01002c68b0"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Player.SetAttribute",
+          "arguments": {
+            "attribute_id": 41,
+            "attribute_name": "fluid",
+            "value_expression": "Player.get_fluid()+1"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3a50",
+      "internal_name": "Desperate",
+      "display_name": "Desperate",
+      "effect": "When you have 15 or less life, draw three additional cards each turn",
+      "tier": 3,
+      "repeatable": false,
+      "requirements": [
+        90
+      ],
+      "requirement_names": [
+        "ALTAR"
+      ],
+      "literal_indices": {
+        "internal_name": 6051,
+        "display_name": 6051,
+        "effect": 6083
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c52c8",
+          "literal_index": 6051
+        },
+        {
+          "method": "ApplyToPlayer",
+          "address": "0x01002c6778",
+          "literal_index": 6051
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo",
+        "ApplyToPlayer"
+      ],
+      "runtime_scope": "player_combat_or_passive",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c62c8"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Draw 3 extra cards when at 15 or less health"
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "set_player_attribute",
+          "source_addresses": [
+            "0x01002c6b14"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Player.SetAttribute",
+          "arguments": {
+            "attribute_id": 36,
+            "attribute_name": "desperate",
+            "value_expression": "Player.get_desperate()+1"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3af4",
+      "internal_name": "Fiery",
+      "display_name": "Fiery",
+      "effect": "At the start of each turn, draw a temporary Fireball",
+      "tier": 3,
+      "repeatable": false,
+      "requirements": [
+        31
+      ],
+      "requirement_names": [
+        "WINSAMURAI"
+      ],
+      "literal_indices": {
+        "internal_name": 6048,
+        "display_name": 6048,
+        "effect": 6084
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c5278",
+          "literal_index": 6048
+        },
+        {
+          "method": "ApplyToPlayer",
+          "address": "0x01002c6764",
+          "literal_index": 6048
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo",
+        "ApplyToPlayer"
+      ],
+      "runtime_scope": "player_combat_or_passive",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c6238"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Draw an extra fireball"
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c6aac"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Player.Fireballer",
+          "arguments": {
+            "x": 1
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3b98",
+      "internal_name": "Invisible",
+      "display_name": "Invisible",
+      "effect": "You have a 30% chance to prevent opponent's action or spell cards from having an effect",
+      "tier": 3,
+      "repeatable": false,
+      "requirements": [
+        32
+      ],
+      "requirement_names": [
+        "WINRANGER"
+      ],
+      "literal_indices": {
+        "internal_name": 3888,
+        "display_name": 3888,
+        "effect": 6085
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c5354",
+          "literal_index": 3888
+        },
+        {
+          "method": "ApplyToPlayer",
+          "address": "0x01002c67b4",
+          "literal_index": 3888
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo",
+        "ApplyToPlayer"
+      ],
+      "runtime_scope": "player_combat_or_passive",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c6498"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Negate the first enemy card each turn"
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c6c78"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Player.GainElusive",
+          "arguments": {
+            "x": 30
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3c44",
+      "internal_name": "UpgradeAll",
+      "display_name": "Heroic",
+      "effect": "Upgrade each card in your deck that can be upgraded to its maximum level",
+      "tier": 3,
+      "repeatable": false,
+      "requirements": [
+        34
+      ],
+      "requirement_names": [
+        "WINPALADIN2"
+      ],
+      "literal_indices": {
+        "internal_name": 6064,
+        "display_name": 6086,
+        "effect": 6087
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c5430",
+          "literal_index": 6064
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c6648"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.UpgradeAllMax"
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3cf0",
+      "internal_name": "Piercing",
+      "display_name": "Sublime",
+      "effect": "All your damage is piercing",
+      "tier": 3,
+      "repeatable": false,
+      "requirements": [
+        86
+      ],
+      "requirement_names": [
+        "NOCARDS"
+      ],
+      "literal_indices": {
+        "internal_name": 5567,
+        "display_name": 6088,
+        "effect": 6089
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c51d8",
+          "literal_index": 5567
+        },
+        {
+          "method": "ApplyToPlayer",
+          "address": "0x01002c6840",
+          "literal_index": 5567
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo",
+        "ApplyToPlayer"
+      ],
+      "runtime_scope": "player_combat_or_passive",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c6114"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Your damage is piercing"
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c6e5c"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Player.ElementalForm",
+          "arguments": {
+            "x": 6
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c6e7c"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Player.ElementalFormBase",
+          "arguments": {
+            "x": 6
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3d94",
+      "internal_name": "Hoard",
+      "display_name": "Hoard",
+      "effect": "Start each fight with a random equipment",
+      "tier": 3,
+      "repeatable": false,
+      "requirements": [
+        148
+      ],
+      "requirement_names": [
+        "WINDRAGON"
+      ],
+      "literal_indices": {
+        "internal_name": 6061,
+        "display_name": 6061,
+        "effect": 6090
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c53cc",
+          "literal_index": 6061
+        },
+        {
+          "method": "ApplyToPlayer",
+          "address": "0x01002c682c",
+          "literal_index": 6061
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo",
+        "ApplyToPlayer"
+      ],
+      "runtime_scope": "player_combat_or_passive",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c6574"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Start with a random equipment"
+          }
+        },
+        {
+          "method": "ApplyToPlayer",
+          "operation": "create_random_equipment",
+          "source_addresses": [
+            "0x01002c6de8",
+            "0x01002c6df4"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "Player.CreateEquipment",
+          "arguments": {
+            "equipment_source": "CardFinder.RandomEquipment"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3e24",
+      "internal_name": "Rich",
+      "display_name": "Rich",
+      "effect": "Gain 30 gold",
+      "tier": 2,
+      "repeatable": true,
+      "requirements": [],
+      "requirement_names": [],
+      "literal_indices": {
+        "internal_name": 3463,
+        "display_name": 3463,
+        "effect": 6091
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4e90",
+          "literal_index": 3463
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c57a0"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.GainGold",
+          "arguments": {
+            "x": 30
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3ec0",
+      "internal_name": "Action1",
+      "display_name": "Quick",
+      "effect": "Gain 1 action",
+      "tier": 2,
+      "repeatable": true,
+      "requirements": [],
+      "requirement_names": [],
+      "literal_indices": {
+        "internal_name": 6023,
+        "display_name": 6092,
+        "effect": 6093
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4df0",
+          "literal_index": 6023
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c556c"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.GainActions",
+          "arguments": {
+            "x": 1
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3f54",
+      "internal_name": "EquipSlot",
+      "display_name": "Equipped",
+      "effect": "Gain one equipment slot",
+      "tier": 2,
+      "repeatable": true,
+      "requirements": [],
+      "requirement_names": [],
+      "literal_indices": {
+        "internal_name": 6065,
+        "display_name": 6059,
+        "effect": 6094
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c5444",
+          "literal_index": 6065
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c668c"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.GainEquipSlot"
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c3ff8",
+      "internal_name": "Polymorph",
+      "display_name": "Polymorph",
+      "effect": "Learn the Polymorph dungeon ability which replaces a monster (cooldown 5)",
+      "tier": 2,
+      "repeatable": false,
+      "requirements": [
+        3
+      ],
+      "requirement_names": [
+        "DEATH4"
+      ],
+      "literal_indices": {
+        "internal_name": 5623,
+        "display_name": 5623,
+        "effect": 6095
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c514c",
+          "literal_index": 5623
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_dungeon_action",
+          "source_addresses": [
+            "0x01002c603c"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddAction",
+          "arguments": {
+            "action_class": "DungeonActionPolymorph"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c409c",
+      "internal_name": "Pious",
+      "display_name": "Pious",
+      "effect": "Add the Wisdom, Ward, and Prayer of Wrath cards to your deck",
+      "tier": 2,
+      "repeatable": false,
+      "requirements": [
+        37
+      ],
+      "requirement_names": [
+        "WINPRIEST2"
+      ],
+      "literal_indices": {
+        "internal_name": 3780,
+        "display_name": 3780,
+        "effect": 6096
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c50ac",
+          "literal_index": 3780
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_cards_to_deck",
+          "source_addresses": [
+            "0x01002c5e80",
+            "0x01002c5eac",
+            "0x01002c5ed8"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddCard",
+          "arguments": {
+            "cards": [
+              "Wisdom",
+              "Ward",
+              "PrayerOfWrath"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c4148",
+      "internal_name": "Roguelike",
+      "display_name": "Sneaky",
+      "effect": "Add the Backstab, Jab, and Alacrity cards to your deck",
+      "tier": 2,
+      "repeatable": false,
+      "requirements": [
+        35
+      ],
+      "requirement_names": [
+        "WINTHIEF2"
+      ],
+      "literal_indices": {
+        "internal_name": 6034,
+        "display_name": 6097,
+        "effect": 6098
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c5034",
+          "literal_index": 6034
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_cards_to_deck",
+          "source_addresses": [
+            "0x01002c5d54",
+            "0x01002c5d80",
+            "0x01002c5dac"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddCard",
+          "arguments": {
+            "cards": [
+              "Backstab",
+              "Jab",
+              "Alacrity"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c41ec",
+      "internal_name": "Sorcerous",
+      "display_name": "Sorcerous",
+      "effect": "Add the Mana Surge, Fireball, and Charm cards to your deck",
+      "tier": 2,
+      "repeatable": false,
+      "requirements": [
+        33
+      ],
+      "requirement_names": [
+        "WINWIZARD2"
+      ],
+      "literal_indices": {
+        "internal_name": 6032,
+        "display_name": 6032,
+        "effect": 6099
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4f94",
+          "literal_index": 6032
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_cards_to_deck",
+          "source_addresses": [
+            "0x01002c5c14",
+            "0x01002c5c40",
+            "0x01002c5c6c"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddCard",
+          "arguments": {
+            "cards": [
+              "ManaSurge",
+              "Fireball",
+              "Charm"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c4290",
+      "internal_name": "Warlike",
+      "display_name": "Warlike",
+      "effect": "Add the Slash, Shield, and Crush cards to your deck",
+      "tier": 2,
+      "repeatable": false,
+      "requirements": [
+        36
+      ],
+      "requirement_names": [
+        "WINWARRIOR2"
+      ],
+      "literal_indices": {
+        "internal_name": 6033,
+        "display_name": 6033,
+        "effect": 6100
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4fe4",
+          "literal_index": 6033
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_cards_to_deck",
+          "source_addresses": [
+            "0x01002c5cb4",
+            "0x01002c5ce0",
+            "0x01002c5d0c"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddCard",
+          "arguments": {
+            "cards": [
+              "Shield",
+              "Slash",
+              "Crush"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c433c",
+      "internal_name": "CopyTalent",
+      "display_name": "Copy",
+      "effect": "Choose a card from your deck and gain another copy of it",
+      "tier": 2,
+      "repeatable": true,
+      "requirements": [
+        8
+      ],
+      "requirement_names": [
+        "CARDSPERTURN1"
+      ],
+      "literal_indices": {
+        "internal_name": 5658,
+        "display_name": 5594,
+        "effect": 6101
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4ecc",
+          "literal_index": 5658
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "deck_targeted_talent_action",
+          "source_addresses": [
+            "0x01002c5878"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonTalentHandler.HandleDeckTargetted",
+          "arguments": {
+            "mode": "copy_talent_card",
+            "action_class": "DungeonActionTalentDeckTargetted",
+            "config_method": "DungeonActionTalentDeckTargetted.BuildFromTalent",
+            "perform_method": "DungeonActionTalentDeckTargetted.Perform",
+            "title": "Choose a card to copy",
+            "confirm_name": "Copy",
+            "selection": {
+              "source": "deck",
+              "min_cards": 1,
+              "max_cards": 1,
+              "multi_cards": false,
+              "should_cull": false,
+              "all_cards": false
+            },
+            "perform_operations": [
+              {
+                "method": "DungeonPlayer.AddCard",
+                "card": "selected_card.internalName"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c43e8",
+      "internal_name": "LevelUp",
+      "display_name": "Ding!",
+      "effect": "Level up (max level 10)",
+      "tier": 2,
+      "repeatable": true,
+      "requirements": [
+        73
+      ],
+      "requirement_names": [
+        "LEVELUP"
+      ],
+      "literal_indices": {
+        "internal_name": 3460,
+        "display_name": 3789,
+        "effect": 6102
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c5458",
+          "literal_index": 3460
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c66d0"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.LevelUp"
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c4494",
+      "internal_name": "ClearMind",
+      "display_name": "Clear Mind",
+      "effect": "Reduce the cooldown of your dungeon abilities by 1",
+      "tier": 2,
+      "repeatable": false,
+      "requirements": [
+        146
+      ],
+      "requirement_names": [
+        "WINBARD"
+      ],
+      "literal_indices": {
+        "internal_name": 5589,
+        "display_name": 6103,
+        "effect": 6104
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c53f4",
+          "literal_index": 5589
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_power",
+          "source_addresses": [
+            "0x01002c65bc"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddPower",
+          "arguments": {
+            "power_text": "Your dungeon cooldowns are shorter"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c4530",
+      "internal_name": "Health1",
+      "display_name": "Healthy",
+      "effect": "Gain 5 health",
+      "tier": 1,
+      "repeatable": true,
+      "requirements": [],
+      "requirement_names": [],
+      "literal_indices": {
+        "internal_name": 6022,
+        "display_name": 6105,
+        "effect": 6106
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4dc8",
+          "literal_index": 6022
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c54bc"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.GainMaxHealth",
+          "arguments": {
+            "x": 5
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c45cc",
+      "internal_name": "Mana1",
+      "display_name": "Magical",
+      "effect": "Gain 2 mana",
+      "tier": 1,
+      "repeatable": true,
+      "requirements": [],
+      "requirement_names": [],
+      "literal_indices": {
+        "internal_name": 3399,
+        "display_name": 6107,
+        "effect": 6108
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4ddc",
+          "literal_index": 3399
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c5514"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.GainMana",
+          "arguments": {
+            "x": 2
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c4668",
+      "internal_name": "Upgrade1",
+      "display_name": "Training",
+      "effect": "Choose a card from your deck that can be leveled up and level it",
+      "tier": 1,
+      "repeatable": true,
+      "requirements": [],
+      "requirement_names": [],
+      "literal_indices": {
+        "internal_name": 5655,
+        "display_name": 6109,
+        "effect": 6110
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4e2c",
+          "literal_index": 5655
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "deck_targeted_talent_action",
+          "source_addresses": [
+            "0x01002c5624"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonTalentHandler.HandleDeckTargetted",
+          "arguments": {
+            "mode": "upgrade_card",
+            "action_class": "DungeonActionTalentDeckTargetted",
+            "config_method": "DungeonActionTalentDeckTargetted.BuildFromTalent",
+            "perform_method": "DungeonActionTalentDeckTargetted.Perform",
+            "title": "Choose a card to upgrade",
+            "confirm_name": "Upgrade",
+            "selection": {
+              "source": "deck",
+              "min_cards": 1,
+              "max_cards": 1,
+              "multi_cards": false,
+              "should_cull": true,
+              "all_cards": false,
+              "filter": "Card.Upgradable"
+            },
+            "perform_operations": [
+              {
+                "method": "DungeonPlayer.LevelUp",
+                "card": "selected_card"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c4714",
+      "internal_name": "Flee",
+      "display_name": "Cowardly",
+      "effect": "Gain the Flee Ability allowing you to run away from combat",
+      "tier": 1,
+      "repeatable": false,
+      "requirements": [
+        1
+      ],
+      "requirement_names": [
+        "DEATH2"
+      ],
+      "literal_indices": {
+        "internal_name": 4618,
+        "display_name": 6111,
+        "effect": 6112
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4e04",
+          "literal_index": 4618
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_combat_ability",
+          "source_addresses": [
+            "0x01002c55e0"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddCombatAbility",
+          "arguments": {
+            "ability": "CombatAbilityFlee"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c47c0",
+      "internal_name": "Hammer",
+      "display_name": "Crumble",
+      "effect": "All the walls on this dungeon floor are removed",
+      "tier": 1,
+      "repeatable": false,
+      "requirements": [
+        99
+      ],
+      "requirement_names": [
+        "DELETE1"
+      ],
+      "literal_indices": {
+        "internal_name": 6029,
+        "display_name": 4528,
+        "effect": 6113
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4f1c",
+          "literal_index": 6029
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c59dc"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonBoard.DestroyAllWalls"
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c486c",
+      "internal_name": "FindMonster",
+      "display_name": "Sixth Sense",
+      "effect": "All monsters are revealed on all floors",
+      "tier": 1,
+      "repeatable": false,
+      "requirements": [
+        2
+      ],
+      "requirement_names": [
+        "DEATH3"
+      ],
+      "literal_indices": {
+        "internal_name": 5557,
+        "display_name": 6114,
+        "effect": 6115
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4f58",
+          "literal_index": 5557
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "call",
+          "source_addresses": [
+            "0x01002c5af8"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonBoard.RevealMonsters"
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c4910",
+      "internal_name": "Teleport",
+      "display_name": "Teleport",
+      "effect": "Gain the Teleport dungeon ability (cooldown 1)",
+      "tier": 1,
+      "repeatable": false,
+      "requirements": [
+        23
+      ],
+      "requirement_names": [
+        "WINWIZARD"
+      ],
+      "literal_indices": {
+        "internal_name": 5662,
+        "display_name": 5662,
+        "effect": 6116
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4f30",
+          "literal_index": 5662
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_dungeon_action",
+          "source_addresses": [
+            "0x01002c5a54"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddAction",
+          "arguments": {
+            "action_class": "DungeonActionTeleport"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c49b4",
+      "internal_name": "Smash",
+      "display_name": "Smash",
+      "effect": "Gain the Smash dungeon ability (cooldown 2)",
+      "tier": 1,
+      "repeatable": false,
+      "requirements": [
+        26
+      ],
+      "requirement_names": [
+        "WINWARRIOR"
+      ],
+      "literal_indices": {
+        "internal_name": 4486,
+        "display_name": 4486,
+        "effect": 6117
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4f80",
+          "literal_index": 4486
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_dungeon_action",
+          "source_addresses": [
+            "0x01002c5bcc"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddAction",
+          "arguments": {
+            "action_class": "DungeonActionSmash"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c4a60",
+      "internal_name": "HealAbility",
+      "display_name": "Heal",
+      "effect": "Gain the Heal dungeon ability (cooldown 5)",
+      "tier": 1,
+      "repeatable": false,
+      "requirements": [
+        27
+      ],
+      "requirement_names": [
+        "WINPRIEST"
+      ],
+      "literal_indices": {
+        "internal_name": 6030,
+        "display_name": 4523,
+        "effect": 6118
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4f44",
+          "literal_index": 6030
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_dungeon_action",
+          "source_addresses": [
+            "0x01002c5ab0"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddAction",
+          "arguments": {
+            "action_class": "DungeonActionHeal"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c4b04",
+      "internal_name": "Preparation",
+      "display_name": "Preparation",
+      "effect": "Gain the ability to reset the cooldown on your other dungeon abilities (cooldown 5)",
+      "tier": 1,
+      "repeatable": false,
+      "requirements": [
+        25
+      ],
+      "requirement_names": [
+        "WINTHIEF"
+      ],
+      "literal_indices": {
+        "internal_name": 4574,
+        "display_name": 4574,
+        "effect": 6119
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4ee0",
+          "literal_index": 4574
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_dungeon_action",
+          "source_addresses": [
+            "0x01002c58d0"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddAction",
+          "arguments": {
+            "action_class": "DungeonActionPreparation"
+          }
+        }
+      ]
+    },
+    {
+      "source_address": "0x01002c4ba8",
+      "internal_name": "Portent",
+      "display_name": "Portent",
+      "effect": "Gain the Portent dungeon ability (no cooldown)",
+      "tier": 1,
+      "repeatable": false,
+      "requirements": [
+        147
+      ],
+      "requirement_names": [
+        "WINPROFESSOR"
+      ],
+      "literal_indices": {
+        "internal_name": 5625,
+        "display_name": 5625,
+        "effect": 6120
+      },
+      "handler_refs": [
+        {
+          "method": "ApplyTo",
+          "address": "0x01002c4ef4",
+          "literal_index": 5625
+        }
+      ],
+      "handler_methods": [
+        "ApplyTo"
+      ],
+      "runtime_scope": "dungeon_or_immediate",
+      "handler_effects": [
+        {
+          "method": "ApplyTo",
+          "operation": "add_dungeon_action",
+          "source_addresses": [
+            "0x01002c592c"
+          ],
+          "confidence": "resolved_handler_trace",
+          "target": "DungeonPlayer.AddAction",
+          "arguments": {
+            "action_class": "DungeonActionPortent"
+          }
+        }
+      ]
+    }
+  ]
+}
