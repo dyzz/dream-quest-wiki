@@ -25,7 +25,7 @@ npm run build
 https://dyzz.github.io/dream-quest-wiki/
 ```
 
-GitHub Actions 使用：
+GitHub Actions 会从 `main` 构建，并把静态产物发布到 `gh-pages` 分支。构建命令是：
 
 ```bash
 VITEPRESS_BASE=/dream-quest-wiki/ npm run build:github
