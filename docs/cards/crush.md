@@ -38,6 +38,8 @@ description: "摧毁 1 张装备牌。如果如此，造成 3 点攻击伤害。
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

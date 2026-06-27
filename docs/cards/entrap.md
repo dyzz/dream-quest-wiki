@@ -29,11 +29,13 @@ description: "对手手牌上限减少 1。对手弃掉 1 张牌。"
     </div>
     <div class="dq-action-row">
 <a class="dq-button dq-button-secondary" href="/cards/misdirection">上一张</a>
-<a class="dq-button dq-button-secondary" href="/cards/jasras-tome">下一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/skewer">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
+
+
 
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>

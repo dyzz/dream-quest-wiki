@@ -38,6 +38,8 @@ description: "完全回复生命。此牌使用后会从游戏和你的牌库中
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

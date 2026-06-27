@@ -35,6 +35,8 @@ description: "你单次受到超过 3 点的伤害会被降至 3 点。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

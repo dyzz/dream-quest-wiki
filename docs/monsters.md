@@ -88,6 +88,11 @@ onMounted(() => {
   <span><strong>50</strong><em>有特殊机制</em></span>
 </section>
 
+<section class="dq-callout">
+  <strong>等级快照已接入</strong>
+  <span>每个怪物页会显示该怪物各等级的 HP、蓝、最低等级卡组和后续增量关键牌；完整 329 行快照和 TSV 下载在 <a href="/mechanics/monster-level-snapshots">怪物等级快照</a>。</span>
+</section>
+
 <section class="dq-card-filter dq-monster-filter" data-monster-filter>
   <div class="dq-filter-bar">
     <label class="dq-filter-field dq-filter-field-search">

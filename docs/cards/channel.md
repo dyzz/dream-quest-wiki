@@ -38,6 +38,8 @@ description: "你本回合施放的下一个法术效果翻倍。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

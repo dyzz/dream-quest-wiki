@@ -35,6 +35,8 @@ description: "直到本场战斗结束，你的每个物理伤害来源额外造
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

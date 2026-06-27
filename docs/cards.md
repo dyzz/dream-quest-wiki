@@ -529,28 +529,28 @@ onMounted(() => {
     <span>造成 6 点攻击伤害。回复 6 点生命。</span>
   </span>
 </a>
-<a class="dq-card-tile dq-card-tile-small" href="/cards/pierce1" data-card-tile data-card-type="攻击" data-card-status="normal" data-card-tier="5" data-card-search="穿刺（1） Pierce (1) 穿刺（1） Pierce1 Pierce1 攻击 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 5 阶 Deal 6 &lt;piercing&gt; damage. 造成 6 点&lt;穿透&gt;伤害。 盗贼 4 牧师 2 战士 10 法师 1">
-  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Pierce1__726.png" alt="穿刺（1）" loading="lazy"></span></span>
+<a class="dq-card-tile dq-card-tile-small" href="/cards/pierce1" data-card-tile data-card-type="攻击" data-card-status="normal" data-card-tier="5" data-card-search="穿透（1） Pierce (1) 穿透（1） Pierce1 Pierce1 攻击 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 5 阶 Deal 6 &lt;piercing&gt; damage. 造成 6 点&lt;穿透&gt;伤害。 盗贼 4 牧师 2 战士 10 法师 1">
+  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Pierce1__726.png" alt="穿透（1）" loading="lazy"></span></span>
   <span class="dq-card-copy">
-    <strong>穿刺（1）</strong>
+    <strong>穿透（1）</strong>
     <small>Pierce (1) · 攻击 · 5 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></span>
     <span>造成 6 点<span class="dq-term">穿透</span>伤害。</span>
   </span>
 </a>
-<a class="dq-card-tile dq-card-tile-small" href="/cards/pierce2" data-card-tile data-card-type="攻击" data-card-status="normal" data-card-tier="6" data-card-search="穿刺（2） Pierce (2) 穿刺（2） Pierce2 Pierce2 攻击 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 6 阶 Deal 8 &lt;piercing&gt; damage. 造成 8 点&lt;穿透&gt;伤害。 盗贼 4 牧师 2 战士 4 法师 2">
-  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Pierce2__643.png" alt="穿刺（2）" loading="lazy"></span></span>
+<a class="dq-card-tile dq-card-tile-small" href="/cards/pierce2" data-card-tile data-card-type="攻击" data-card-status="normal" data-card-tier="6" data-card-search="穿透（2） Pierce (2) 穿透（2） Pierce2 Pierce2 攻击 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 6 阶 Deal 8 &lt;piercing&gt; damage. 造成 8 点&lt;穿透&gt;伤害。 盗贼 4 牧师 2 战士 4 法师 2">
+  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Pierce2__643.png" alt="穿透（2）" loading="lazy"></span></span>
   <span class="dq-card-copy">
-    <strong>穿刺（2）</strong>
+    <strong>穿透（2）</strong>
     <small>Pierce (2) · 攻击 · 6 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></span>
     <span>造成 8 点<span class="dq-term">穿透</span>伤害。</span>
   </span>
 </a>
-<a class="dq-card-tile dq-card-tile-small" href="/cards/pierce3" data-card-tile data-card-type="攻击" data-card-status="normal" data-card-tier="7" data-card-search="穿刺（3） Pierce (3) 穿刺（3） Pierce3 Pierce3 攻击 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 7 阶 Deal 10 &lt;piercing&gt; damage. 造成 10 点&lt;穿透&gt;伤害。 盗贼 4 牧师 2 战士 4 法师 2">
-  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Pierce3__877.png" alt="穿刺（3）" loading="lazy"></span></span>
+<a class="dq-card-tile dq-card-tile-small" href="/cards/pierce3" data-card-tile data-card-type="攻击" data-card-status="normal" data-card-tier="7" data-card-search="穿透（3） Pierce (3) 穿透（3） Pierce3 Pierce3 攻击 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 7 阶 Deal 10 &lt;piercing&gt; damage. 造成 10 点&lt;穿透&gt;伤害。 盗贼 4 牧师 2 战士 4 法师 2">
+  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Pierce3__877.png" alt="穿透（3）" loading="lazy"></span></span>
   <span class="dq-card-copy">
-    <strong>穿刺（3）</strong>
+    <strong>穿透（3）</strong>
     <small>Pierce (3) · 攻击 · 7 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></span>
     <span>造成 10 点<span class="dq-term">穿透</span>伤害。</span>
@@ -860,15 +860,6 @@ onMounted(() => {
     <span>对手受到 1 点<span class="dq-term">穿透</span>伤害 每有你牌库中的牌。</span>
   </span>
 </a>
-<a class="dq-card-tile dq-card-tile-small" href="/cards/ward" data-card-tile data-card-type="法术" data-card-status="normal" data-card-tier="4" data-card-search="护盾守卫 Ward 护盾守卫 Ward Ward 法术 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 4 阶 Prevent the next 8 damage that would be dealt to you. 防止你将受到的接下来 8 点伤害。 盗贼 1 牧师 10 战士 1 法师 3">
-  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="护盾守卫" loading="lazy"></span></span>
-  <span class="dq-card-copy">
-    <strong>护盾守卫</strong>
-    <small>Ward · 法术 · 4 阶</small>
-    <span class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></span>
-    <span>防止你将受到的接下来 8 点伤害。</span>
-  </span>
-</a>
 <a class="dq-card-tile dq-card-tile-small" href="/cards/discharge" data-card-tile data-card-type="法术" data-card-status="monster" data-card-tier="6" data-card-search="放电 Discharge 放电 Discharge Discharge 法术 怪物限定 怪物限定来源：鬼火 基础牌组。 6 阶 Deal 1 @air damage for each mana you have left after casting Discharge. Lose physical immunity until your next turn. 施放 放电 后，你每剩余 1 点法力就造成 1 点电系伤害。失去物理免疫直到你的下个回合。 never 盗贼 0 牧师 0 战士 0 法师 0">
   <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Discharge__734.png" alt="放电" loading="lazy"></span></span>
   <span class="dq-card-copy">
@@ -1094,6 +1085,15 @@ onMounted(() => {
     <span>对手获得 <span class="dq-term">中毒 6</span>。</span>
   </span>
 </a>
+<a class="dq-card-tile dq-card-tile-small" href="/cards/ward" data-card-tile data-card-type="法术" data-card-status="normal" data-card-tier="4" data-card-search="防护 Ward 防护 Ward Ward 法术 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 4 阶 Prevent the next 8 damage that would be dealt to you. 防止你将受到的接下来 8 点伤害。 盗贼 1 牧师 10 战士 1 法师 3">
+  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="lazy"></span></span>
+  <span class="dq-card-copy">
+    <strong>防护</strong>
+    <small>Ward · 法术 · 4 阶</small>
+    <span class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></span>
+    <span>防止你将受到的接下来 8 点伤害。</span>
+  </span>
+</a>
 <a class="dq-card-tile dq-card-tile-small" href="/cards/invisibility" data-card-tile data-card-type="法术" data-card-status="unlock" data-card-tier="6" data-card-search="隐形 Invisibility 隐形 Invisibility Invisibility 法术 成就解锁 需要解锁：CATS2。解锁后可进入奖励和商店的 CardFinder 候选池。 6 阶 Gain 20% dodge for the rest of the fight. 直到本场战斗结束，获得 20% 闪避。 CATS2 盗贼 2 牧师 8 战士 1 法师 5">
   <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Invisibility__938.png" alt="隐形" loading="lazy"></span></span>
   <span class="dq-card-copy">
@@ -1308,6 +1308,15 @@ onMounted(() => {
     <span>对手失去一半生命，向下取整，最多失去 60 点。</span>
   </span>
 </a>
+<a class="dq-card-tile dq-card-tile-small" href="/cards/dice" data-card-tile data-card-type="行动牌" data-card-status="normal" data-card-tier="7" data-card-search="切丁 Dice 切丁 Dice Dice 行动牌 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 7 阶 Deal 2 @atk damage for each action card in play. 造成 2 点攻击伤害 每有行动牌 在场。 盗贼 0 牧师 0 战士 0 法师 0">
+  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Dice__637.png" alt="切丁" loading="lazy"></span></span>
+  <span class="dq-card-copy">
+    <strong>切丁</strong>
+    <small>Dice · 行动牌 · 7 阶</small>
+    <span class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></span>
+    <span>造成 2 点攻击伤害 每有行动牌 在场。</span>
+  </span>
+</a>
 <a class="dq-card-tile dq-card-tile-small" href="/cards/slice" data-card-tile data-card-type="行动牌" data-card-status="normal" data-card-tier="2" data-card-search="切割 Slice 切割 Slice Slice 行动牌 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 2 阶 Deal 1 @atk damage. Draw a card. 造成 1 点攻击伤害。抽 1 张牌。 盗贼 0 牧师 0 战士 0 法师 0">
   <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Slice__280.png" alt="切割" loading="lazy"></span></span>
   <span class="dq-card-copy">
@@ -1324,15 +1333,6 @@ onMounted(() => {
     <small>Jab · 行动牌 · 5 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></span>
     <span>造成 1 点攻击伤害。抽 1 张牌。获得 1 行动点。</span>
-  </span>
-</a>
-<a class="dq-card-tile dq-card-tile-small" href="/cards/gore" data-card-tile data-card-type="行动牌" data-card-status="monster" data-card-tier="2" data-card-search="刺穿 Gore 刺穿 Gore Gore 行动牌 怪物限定 怪物限定来源：独角兽 基础牌组、独角兽 优先起手。 2 阶 Deal 5 @atk damage. 造成 5 点攻击伤害。">
-  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Gore__748.png" alt="刺穿" loading="lazy"></span></span>
-  <span class="dq-card-copy">
-    <strong>刺穿</strong>
-    <small>Gore · 行动牌 · 2 阶</small>
-    <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：独角兽 基础牌组、独角兽 优先起手。">怪物限定</span></span>
-    <span>造成 5 点攻击伤害。</span>
   </span>
 </a>
 <a class="dq-card-tile dq-card-tile-small" href="/cards/blade-flurry" data-card-tile data-card-type="行动牌" data-card-status="normal" data-card-tier="10" data-card-search="剑刃乱舞 Blade Flurry 剑刃乱舞 BladeFlurry BladeFlurry 行动牌 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 10 阶 You deal double damage this turn. 你本回合造成双倍伤害。 盗贼 10 牧师 1 战士 10 法师 1">
@@ -1414,6 +1414,15 @@ onMounted(() => {
     <small>Vampire Bite (2) · 行动牌 · 3 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：亡魂 基础牌组。">怪物限定</span></span>
     <span>造成 3 点攻击伤害。回复 3 点生命。</span>
+  </span>
+</a>
+<a class="dq-card-tile dq-card-tile-small" href="/cards/circle" data-card-tile data-card-type="行动牌" data-card-status="normal" data-card-tier="3" data-card-search="周旋 Circle 周旋 Circle Circle 行动牌 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 3 阶 Draw a card and gain 1 @tim ^. At the end of your turn, draw a card and gain 1 @tim ^. 抽 1 张牌并获得 1 行动点。在你的回合结束时，抽 1 张牌并获得 1 行动点。 盗贼 3 牧师 1 战士 3 法师 1">
+  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Circle__89.png" alt="周旋" loading="lazy"></span></span>
+  <span class="dq-card-copy">
+    <strong>周旋</strong>
+    <small>Circle · 行动牌 · 3 阶</small>
+    <span class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></span>
+    <span>抽 1 张牌并获得 1 行动点。在你的回合结束时，抽 1 张牌并获得 1 行动点。</span>
   </span>
 </a>
 <a class="dq-card-tile dq-card-tile-small" href="/cards/recycle" data-card-tile data-card-type="行动牌" data-card-status="unlock" data-card-tier="6" data-card-search="回收 Recycle 回收 Recycle Recycle 行动牌 成就解锁 需要解锁：CARDS2。解锁后可进入奖励和商店的 CardFinder 候选池。 6 阶 Discard all other cards in play. Draw a card. Exile Recycle for the rest of the fight. 弃掉场上所有其他牌。抽 1 张牌。直到本场战斗结束，放逐 回收。 CARDS2 盗贼 10 牧师 2 战士 10 法师 2">
@@ -1740,15 +1749,6 @@ onMounted(() => {
     <span>你的法力设为最大值。此牌使用后会从游戏和你的牌库中永久移除。</span>
   </span>
 </a>
-<a class="dq-card-tile dq-card-tile-small" href="/cards/circle" data-card-tile data-card-type="行动牌" data-card-status="normal" data-card-tier="3" data-card-search="法阵 Circle 法阵 Circle Circle 行动牌 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 3 阶 Draw a card and gain 1 @tim ^. At the end of your turn, draw a card and gain 1 @tim ^. 抽 1 张牌并获得 1 行动点。在你的回合结束时，抽 1 张牌并获得 1 行动点。 盗贼 3 牧师 1 战士 3 法师 1">
-  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Circle__89.png" alt="法阵" loading="lazy"></span></span>
-  <span class="dq-card-copy">
-    <strong>法阵</strong>
-    <small>Circle · 行动牌 · 3 阶</small>
-    <span class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></span>
-    <span>抽 1 张牌并获得 1 行动点。在你的回合结束时，抽 1 张牌并获得 1 行动点。</span>
-  </span>
-</a>
 <a class="dq-card-tile dq-card-tile-small" href="/cards/bleed" data-card-tile data-card-type="行动牌" data-card-status="normal" data-card-tier="6" data-card-search="流血 Bleed 流血 Bleed Bleed 行动牌 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 6 阶 Draw a card. Gain 1 @tim ^. Your opponent becomes &lt;Poisoned 1&gt; ^. 抽 1 张牌。获得 1 行动点。对手获得 &lt;中毒 1&gt;。 盗贼 6 牧师 2 战士 6 法师 2">
   <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Bleed__414.png" alt="流血" loading="lazy"></span></span>
   <span class="dq-card-copy">
@@ -1830,13 +1830,13 @@ onMounted(() => {
     <span>弃掉一张牌 从 你的手牌。如果如此，造成 10 点攻击伤害。</span>
   </span>
 </a>
-<a class="dq-card-tile dq-card-tile-small" href="/cards/soul-crush" data-card-tile data-card-type="行动牌" data-card-status="monster" data-card-tier="6" data-card-search="灵魂碾压 Soul Crush 灵魂碾压 SoulCrush SoulCrush 行动牌 怪物限定 怪物限定来源：怨魂 基础牌组。 6 阶 Deal 10 damage. Your opponent discards 2 cards. This has no effect on players with damage reduction, physical resistance, dodge, or a ward. 造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或护盾守卫，则此牌无效果。">
+<a class="dq-card-tile dq-card-tile-small" href="/cards/soul-crush" data-card-tile data-card-type="行动牌" data-card-status="monster" data-card-tier="6" data-card-search="灵魂碾压 Soul Crush 灵魂碾压 SoulCrush SoulCrush 行动牌 怪物限定 怪物限定来源：怨魂 基础牌组。 6 阶 Deal 10 damage. Your opponent discards 2 cards. This has no effect on players with damage reduction, physical resistance, dodge, or a ward. 造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或防护，则此牌无效果。">
   <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/SoulCrush__844.png" alt="灵魂碾压" loading="lazy"></span></span>
   <span class="dq-card-copy">
     <strong>灵魂碾压</strong>
     <small>Soul Crush · 行动牌 · 6 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：怨魂 基础牌组。">怪物限定</span></span>
-    <span>造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或护盾守卫，则此牌无效果。</span>
+    <span>造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或防护，则此牌无效果。</span>
   </span>
 </a>
 <a class="dq-card-tile dq-card-tile-small" href="/cards/infernal-contract" data-card-tile data-card-type="行动牌" data-card-status="monster" data-card-tier="8" data-card-search="炼狱契约 Infernal Contract 炼狱契约 InfernalContract InfernalContract 行动牌 怪物限定 未解析到普通玩家来源；按怪物或战斗内部限定牌展示。 8 阶 Your opponent discards their hand and gains curses equal to the number of cards discarded this way. 对手弃掉其手牌，并获得等同于以此弃掉牌数的诅咒牌。">
@@ -1920,10 +1920,10 @@ onMounted(() => {
     <span>防止你将受到的接下来 8 点伤害</span>
   </span>
 </a>
-<a class="dq-card-tile dq-card-tile-small" href="/cards/stone" data-card-tile data-card-type="行动牌" data-card-status="monster" data-card-tier="4" data-card-search="石化 Stone 石化 Stone Stone 行动牌 怪物限定 怪物限定来源：美杜莎 基础牌组、美杜莎 优先起手、美杜莎 关键行为。 4 阶 Shuffle 2 curse cards (which do nothing) into your opponent's deck. Your opponent discards a card. 将 2 张无效果诅咒牌洗入对手牌库。对手弃掉 1 张牌。">
-  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石化" loading="lazy"></span></span>
+<a class="dq-card-tile dq-card-tile-small" href="/cards/stone" data-card-tile data-card-type="行动牌" data-card-status="monster" data-card-tier="4" data-card-search="石块 Stone 石块 Stone Stone 行动牌 怪物限定 怪物限定来源：美杜莎 基础牌组、美杜莎 优先起手、美杜莎 关键行为。 4 阶 Shuffle 2 curse cards (which do nothing) into your opponent's deck. Your opponent discards a card. 将 2 张无效果诅咒牌洗入对手牌库。对手弃掉 1 张牌。">
+  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="lazy"></span></span>
   <span class="dq-card-copy">
-    <strong>石化</strong>
+    <strong>石块</strong>
     <small>Stone · 行动牌 · 4 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：美杜莎 基础牌组、美杜莎 优先起手、美杜莎 关键行为。">怪物限定</span></span>
     <span>将 2 张无效果诅咒牌洗入对手牌库。对手弃掉 1 张牌。</span>
@@ -1954,15 +1954,6 @@ onMounted(() => {
     <small>Crush Everything · 行动牌 · 5 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：Lord of the Dream 最终战机制。">怪物限定</span></span>
     <span>摧毁对手所有装备。放逐 此 牌。</span>
-  </span>
-</a>
-<a class="dq-card-tile dq-card-tile-small" href="/cards/skewer" data-card-tile data-card-type="行动牌" data-card-status="normal" data-card-tier="9" data-card-search="穿刺 Skewer 穿刺 Skewer Skewer 行动牌 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 9 阶 Draw a card. Gain 1 @tim ^. Your opponent is &lt;Weakened 1&gt; this turn. 抽 1 张牌。获得 1 行动点。对手获得 &lt;虚弱 1&gt; 本回合。 盗贼 3 牧师 1 战士 3 法师 1">
-  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Skewer__60.png" alt="穿刺" loading="lazy"></span></span>
-  <span class="dq-card-copy">
-    <strong>穿刺</strong>
-    <small>Skewer · 行动牌 · 9 阶</small>
-    <span class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></span>
-    <span>抽 1 张牌。获得 1 行动点。对手获得 <span class="dq-term">虚弱 1</span> 本回合。</span>
   </span>
 </a>
 <a class="dq-card-tile dq-card-tile-small" href="/cards/piercing-stab" data-card-tile data-card-type="行动牌" data-card-status="normal" data-card-tier="7" data-card-search="穿透刺击 Piercing Stab 穿透刺击 PiercingStab PiercingStab 行动牌 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 7 阶 Your next source of damage this turn is &lt;piercing&gt; ^. Draw a card. 你本回合的下一次伤害变为&lt;穿透&gt;。抽 1 张牌。 盗贼 8 牧师 1 战士 5 法师 1">
@@ -2190,6 +2181,15 @@ onMounted(() => {
     <span>对手获得 <span class="dq-term">中毒 2</span>。</span>
   </span>
 </a>
+<a class="dq-card-tile dq-card-tile-small" href="/cards/gore" data-card-tile data-card-type="行动牌" data-card-status="monster" data-card-tier="2" data-card-search="角刺 Gore 角刺 Gore Gore 行动牌 怪物限定 怪物限定来源：独角兽 基础牌组、独角兽 优先起手。 2 阶 Deal 5 @atk damage. 造成 5 点攻击伤害。">
+  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Gore__748.png" alt="角刺" loading="lazy"></span></span>
+  <span class="dq-card-copy">
+    <strong>角刺</strong>
+    <small>Gore · 行动牌 · 2 阶</small>
+    <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：独角兽 基础牌组、独角兽 优先起手。">怪物限定</span></span>
+    <span>造成 5 点攻击伤害。</span>
+  </span>
+</a>
 <a class="dq-card-tile dq-card-tile-small" href="/cards/misdirection" data-card-tile data-card-type="行动牌" data-card-status="normal" data-card-tier="5" data-card-search="误导 Misdirection 误导 Misdirection Misdirection 行动牌 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 5 阶 Your opponent discards all attack cards in their hand. 对手弃掉手牌中的所有攻击牌。 never 盗贼 1 牧师 3 战士 1 法师 3">
   <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Misdirection__188.png" alt="误导" loading="lazy"></span></span>
   <span class="dq-card-copy">
@@ -2206,6 +2206,15 @@ onMounted(() => {
     <small>Entrap · 行动牌 · 6 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：海怪 基础牌组、海怪 优先起手。">怪物限定</span></span>
     <span>对手手牌上限减少 1。对手弃掉 1 张牌。</span>
+  </span>
+</a>
+<a class="dq-card-tile dq-card-tile-small" href="/cards/skewer" data-card-tile data-card-type="行动牌" data-card-status="normal" data-card-tier="9" data-card-search="贯刺 Skewer 贯刺 Skewer Skewer 行动牌 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 9 阶 Draw a card. Gain 1 @tim ^. Your opponent is &lt;Weakened 1&gt; this turn. 抽 1 张牌。获得 1 行动点。对手获得 &lt;虚弱 1&gt; 本回合。 盗贼 3 牧师 1 战士 3 法师 1">
+  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Skewer__60.png" alt="贯刺" loading="lazy"></span></span>
+  <span class="dq-card-copy">
+    <strong>贯刺</strong>
+    <small>Skewer · 行动牌 · 9 阶</small>
+    <span class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></span>
+    <span>抽 1 张牌。获得 1 行动点。对手获得 <span class="dq-term">虚弱 1</span> 本回合。</span>
   </span>
 </a>
 <a class="dq-card-tile dq-card-tile-small" href="/cards/dance-puppets" data-card-tile data-card-type="行动牌" data-card-status="monster" data-card-tier="8" data-card-search="跳舞吧，傀儡！ Dance, Puppets! 跳舞吧，傀儡！ DancePuppets DancePuppets 行动牌 怪物限定 未解析到普通玩家来源；按怪物或战斗内部限定牌展示。 8 阶 Your opponent becomes a puppet until your next turn. While a puppet, they may not end their turn early or discard cards freely and cards they play hit themselves instead of you. 对手直到你的下个回合变为傀儡。傀儡不能提前结束回合或自由弃牌，且其打出的牌会命中自己而不是你。">
@@ -2404,15 +2413,6 @@ onMounted(() => {
     <small>Bone Shield (2) · 行动牌 · 3 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：骷髅 优先起手。">怪物限定</span></span>
     <span>防止你将受到的接下来 6 点伤害。</span>
-  </span>
-</a>
-<a class="dq-card-tile dq-card-tile-small" href="/cards/dice" data-card-tile data-card-type="行动牌" data-card-status="normal" data-card-tier="7" data-card-search="骰子 Dice 骰子 Dice Dice 行动牌 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 7 阶 Deal 2 @atk damage for each action card in play. 造成 2 点攻击伤害 每有行动牌 在场。 盗贼 0 牧师 0 战士 0 法师 0">
-  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Dice__637.png" alt="骰子" loading="lazy"></span></span>
-  <span class="dq-card-copy">
-    <strong>骰子</strong>
-    <small>Dice · 行动牌 · 7 阶</small>
-    <span class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></span>
-    <span>造成 2 点攻击伤害 每有行动牌 在场。</span>
   </span>
 </a>
 <a class="dq-card-tile dq-card-tile-small" href="/cards/charm" data-card-tile data-card-type="行动牌" data-card-status="normal" data-card-tier="5" data-card-search="魅惑 Charm 魅惑 Charm Charm 行动牌 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 5 阶 Look at your opponent's hand. Choose a card from it. They discard that card. 查看对手手牌。从中选择 1 张牌。对手弃掉那张牌。 盗贼 2 牧师 10 战士 2 法师 10">
@@ -3183,10 +3183,10 @@ onMounted(() => {
     <span>获得 5 点法力。抽 1 张随机<span class="dq-term">临时</span>非装备牌。</span>
   </span>
 </a>
-<a class="dq-card-tile dq-card-tile-small" href="/cards/vile-charge" data-card-tile data-card-type="魔力" data-card-status="normal" data-card-tier="2" data-card-search="石化充能 Stone Charge 石化充能 VileCharge VileCharge 魔力 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 2 阶 Gain 3 mana. Prevent the next 3 damage that would be dealt to you. 获得 3 点法力。防止你将受到的接下来 3 点伤害。 盗贼 1 牧师 1 战士 1 法师 1">
-  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/VileCharge__69.png" alt="石化充能" loading="lazy"></span></span>
+<a class="dq-card-tile dq-card-tile-small" href="/cards/vile-charge" data-card-tile data-card-type="魔力" data-card-status="normal" data-card-tier="2" data-card-search="石之充能 Stone Charge 石之充能 VileCharge VileCharge 魔力 普通 普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。 2 阶 Gain 3 mana. Prevent the next 3 damage that would be dealt to you. 获得 3 点法力。防止你将受到的接下来 3 点伤害。 盗贼 1 牧师 1 战士 1 法师 1">
+  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/VileCharge__69.png" alt="石之充能" loading="lazy"></span></span>
   <span class="dq-card-copy">
-    <strong>石化充能</strong>
+    <strong>石之充能</strong>
     <small>Stone Charge · 魔力 · 2 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></span>
     <span>获得 3 点法力。防止你将受到的接下来 3 点伤害。</span>
@@ -3386,20 +3386,20 @@ onMounted(() => {
     <span>没有规则文本。</span>
   </span>
 </a>
-<a class="dq-card-tile dq-card-tile-small" href="/cards/penalty-ward-final" data-card-tile data-card-type="其它" data-card-status="monster" data-card-tier="0" data-card-search="最终护盾惩罚 Penalty Ward Final 最终护盾惩罚 PenaltyWardFinal PenaltyWardFinal 其它 怪物限定 怪物限定来源：Lord of the Dream 最终战机制。 0 阶 没有规则文本。">
-  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/PenaltyWardFinal__54.png" alt="最终护盾惩罚" loading="lazy"></span></span>
-  <span class="dq-card-copy">
-    <strong>最终护盾惩罚</strong>
-    <small>Penalty Ward Final · 其它 · 0 阶</small>
-    <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：Lord of the Dream 最终战机制。">怪物限定</span></span>
-    <span>没有规则文本。</span>
-  </span>
-</a>
 <a class="dq-card-tile dq-card-tile-small" href="/cards/penalty-curses-final" data-card-tile data-card-type="其它" data-card-status="monster" data-card-tier="0" data-card-search="最终诅咒惩罚 Penalty Curses Final 最终诅咒惩罚 PenaltyCursesFinal PenaltyCursesFinal 其它 怪物限定 怪物限定来源：Lord of the Dream 最终战机制。 0 阶 没有规则文本。">
   <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/PenaltyCursesFinal__978.png" alt="最终诅咒惩罚" loading="lazy"></span></span>
   <span class="dq-card-copy">
     <strong>最终诅咒惩罚</strong>
     <small>Penalty Curses Final · 其它 · 0 阶</small>
+    <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：Lord of the Dream 最终战机制。">怪物限定</span></span>
+    <span>没有规则文本。</span>
+  </span>
+</a>
+<a class="dq-card-tile dq-card-tile-small" href="/cards/penalty-ward-final" data-card-tile data-card-type="其它" data-card-status="monster" data-card-tier="0" data-card-search="最终防护惩罚 Penalty Ward Final 最终防护惩罚 PenaltyWardFinal PenaltyWardFinal 其它 怪物限定 怪物限定来源：Lord of the Dream 最终战机制。 0 阶 没有规则文本。">
+  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/PenaltyWardFinal__54.png" alt="最终防护惩罚" loading="lazy"></span></span>
+  <span class="dq-card-copy">
+    <strong>最终防护惩罚</strong>
+    <small>Penalty Ward Final · 其它 · 0 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：Lord of the Dream 最终战机制。">怪物限定</span></span>
     <span>没有规则文本。</span>
   </span>
@@ -3430,15 +3430,6 @@ onMounted(() => {
     <strong>手牌增加惩罚</strong>
     <small>Penalty Plus Card · 其它 · 0 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="未解析到普通玩家来源；按怪物或战斗内部限定牌展示。">怪物限定</span></span>
-    <span>没有规则文本。</span>
-  </span>
-</a>
-<a class="dq-card-tile dq-card-tile-small" href="/cards/penalty-ward30" data-card-tile data-card-type="其它" data-card-status="monster" data-card-tier="0" data-card-search="护盾惩罚（30） Penalty Ward30 护盾惩罚（30） PenaltyWard30 PenaltyWard30 其它 怪物限定 怪物限定来源：Lord of the Dream 最终战机制。 0 阶 没有规则文本。">
-  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/PenaltyWard30__543.png" alt="护盾惩罚（30）" loading="lazy"></span></span>
-  <span class="dq-card-copy">
-    <strong>护盾惩罚（30）</strong>
-    <small>Penalty Ward30 · 其它 · 0 阶</small>
-    <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：Lord of the Dream 最终战机制。">怪物限定</span></span>
     <span>没有规则文本。</span>
   </span>
 </a>
@@ -3557,6 +3548,15 @@ onMounted(() => {
     <strong>诅咒惩罚</strong>
     <small>Penalty Curses · 其它 · 0 阶</small>
     <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="未解析到普通玩家来源；按怪物或战斗内部限定牌展示。">怪物限定</span></span>
+    <span>没有规则文本。</span>
+  </span>
+</a>
+<a class="dq-card-tile dq-card-tile-small" href="/cards/penalty-ward30" data-card-tile data-card-type="其它" data-card-status="monster" data-card-tier="0" data-card-search="防护惩罚（30） Penalty Ward30 防护惩罚（30） PenaltyWard30 PenaltyWard30 其它 怪物限定 怪物限定来源：Lord of the Dream 最终战机制。 0 阶 没有规则文本。">
+  <span class="dq-card-thumb"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/PenaltyWard30__543.png" alt="防护惩罚（30）" loading="lazy"></span></span>
+  <span class="dq-card-copy">
+    <strong>防护惩罚（30）</strong>
+    <small>Penalty Ward30 · 其它 · 0 阶</small>
+    <span class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：Lord of the Dream 最终战机制。">怪物限定</span></span>
     <span>没有规则文本。</span>
   </span>
 </a>

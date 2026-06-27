@@ -28,12 +28,14 @@ description: "没有规则文本。"
 </div>
     </div>
     <div class="dq-action-row">
-<a class="dq-button dq-button-secondary" href="/cards/penalty-ward-final">上一张</a>
-<a class="dq-button dq-button-secondary" href="/cards/meditation">下一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/penalty-damage-final">上一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/penalty-ward-final">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
+
+
 
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>

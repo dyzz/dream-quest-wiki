@@ -38,6 +38,8 @@ description: "获得 4 点法力。抽取 火球、冰霜箭、电击 或 酸液
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

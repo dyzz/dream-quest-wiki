@@ -38,6 +38,8 @@ description: "对手受到 1 点<穿透>伤害 每有你牌库中的牌。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

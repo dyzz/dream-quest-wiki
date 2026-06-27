@@ -27,7 +27,7 @@ description: "随机职业会从已解锁、且可获得成就的职业里选择
       <tr><td>实装状态</td><td><span class="dq-status-badge dq-status-special" title="代码里有职业实现，但更像选择入口或特殊职业，而不是普通独立职业路线。">特殊入口</span></td></tr>
       <tr><td>职业能力</td><td>随机职业会从已解锁、且可获得成就的职业里选择一个。<p class="dq-original">原文：Your adventurer will be from a class chosen at random from among your unlocked professions that can earn achievements.</p></td></tr>
       <tr><td>起始资源</td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0 / 手牌 2 / 金币 0</td></tr>
-      <tr><td>升级生命奖励</td><td>由实际抽中的职业决定。</td></tr>
+      <tr><td>自动升级 HP</td><td>由实际抽中的职业决定；实际值还会叠加难度和 FLOOR1 修正。</td></tr>
       <tr><td>职业权重 ID</td><td>2、15</td></tr>
     </tbody>
   </table>

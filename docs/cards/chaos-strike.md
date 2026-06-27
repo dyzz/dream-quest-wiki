@@ -38,6 +38,8 @@ description: "造成 1，2，或 3 点攻击伤害，随机决定。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

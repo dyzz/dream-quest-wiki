@@ -31,7 +31,7 @@ description: "面向玩家的 Dream Quest 卡牌、职业和机制指南。"
   <a href="/buildings"><strong>地牢建筑</strong><span>14 个建筑和地牢事件，覆盖宝箱、商店、酒馆和特殊事件。</span></a>
   <a href="/talents"><strong>天赋图鉴</strong><span>43 个地牢天赋，按阶级、要求和效果查询。</span></a>
   <a href="/achievements"><strong>成就图鉴</strong><span>109 条成就，按解锁类型查看奖励。</span></a>
-  <a href="/mechanics/"><strong>机制参考</strong><span>查看随机数、地牢生成、卡牌出现权重、负面效果和机制索引。</span></a>
+  <a href="/mechanics/"><strong>机制参考</strong><span>查看职业开局、怪物等级快照、随机数、地牢生成、卡牌出现权重和负面效果。</span></a>
 </section>
 
 ## 推荐入口

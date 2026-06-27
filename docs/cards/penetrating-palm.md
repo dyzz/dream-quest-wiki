@@ -38,6 +38,8 @@ description: "本回合，你造成的伤害变为<穿透>。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

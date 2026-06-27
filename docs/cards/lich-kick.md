@@ -38,6 +38,8 @@ description: "摧毁场上所有 命匣。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

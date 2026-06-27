@@ -393,6 +393,277 @@ description: "普通怪物，出现在 地牢、水域、火山、森林、墓�
 </section>
 
 <section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这些行来自怪物等级快照 TSV。最低等级显示完整最终卡组；后续等级只显示相比上一等级新增的关键牌。</p>
+  <div class="dq-table-scroll">
+<table class="dq-data-table dq-snapshot-table">
+  <thead><tr><th>怪物 / 等级数据</th><th>卡组增量</th></tr></thead>
+  <tbody>
+<tr id="snapshot-mage-1">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/mage">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/mage__1017.png" alt="法师" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>法师</strong><small>Mage</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>1</em></span><span><b>HP</b><em>3</em></span><span><b>MP</b><em>3</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">最低等级最终卡组</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/flame-charge" title="火焰充能">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/FlameCharge__686.png" alt="火焰充能" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>火焰充能</strong><small>x2 · Flame Charge</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/FlameCharge__686.png" alt="火焰充能" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>火焰充能</strong><small>x2 · Flame Charge</small><em>获得 3 点法力。造成 3 点火焰伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/frost-charge" title="冰霜充能">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/FrostCharge__202.png" alt="冰霜充能" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>冰霜充能</strong><small>x2 · Frost Charge</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/FrostCharge__202.png" alt="冰霜充能" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>冰霜充能</strong><small>x2 · Frost Charge</small><em>获得 3 点法力。对手获得 &lt;寒冷 1&gt; 直到对手下个回合结束。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/fireball" title="火球">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Fireball__167.png" alt="火球" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>火球</strong><small>x1 · Fireball</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Fireball__167.png" alt="火球" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>火球</strong><small>x1 · Fireball</small><em>造成 8 点火焰伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/frost-bolt" title="冰霜箭">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/FrostBolt__326.png" alt="冰霜箭" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>冰霜箭</strong><small>x1 · Frost Bolt</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/FrostBolt__326.png" alt="冰霜箭" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>冰霜箭</strong><small>x1 · Frost Bolt</small><em>造成 4 点冰霜伤害，翻倍 如果对手拥有 &lt;寒冷&gt;。对手获得 &lt;寒冷 1&gt; 直到对手下个回合结束。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack1" title="攻击（1）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（1）</strong><small>x7 · Attack (1)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（1）</strong><small>x7 · Attack (1)</small><em>造成 1 点攻击伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-mage-2">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/mage">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/mage__1017.png" alt="法师" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>法师</strong><small>Mage</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>2</em></span><span><b>HP</b><em>5</em></span><span><b>MP</b><em>6</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/mana-surge" title="法力激涌">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSurge__756.png" alt="法力激涌" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>法力激涌</strong><small>x1 · Mana Surge</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSurge__756.png" alt="法力激涌" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>法力激涌</strong><small>x1 · Mana Surge</small><em>获得 10 点法力。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-mage-3">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/mage">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/mage__1017.png" alt="法师" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>法师</strong><small>Mage</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>3</em></span><span><b>HP</b><em>7</em></span><span><b>MP</b><em>9</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/blur" title="模糊">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Blur__528.png" alt="模糊" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>模糊</strong><small>x1 · Blur</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Blur__528.png" alt="模糊" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>模糊</strong><small>x1 · Blur</small><em>你获得物理抗性 直到你的下个回合。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/staff" title="法杖">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Staff__550.png" alt="法杖" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>法杖</strong><small>x1 · Staff</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Staff__550.png" alt="法杖" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>法杖</strong><small>x1 · Staff</small><em>每当你获得法力时，每获得 2 点法力就造成 1 点攻击伤害，向下取整。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-mage-4">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/mage">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/mage__1017.png" alt="法师" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>法师</strong><small>Mage</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>4</em></span><span><b>HP</b><em>11</em></span><span><b>MP</b><em>12</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/fire-shape" title="火焰形态">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/FireShape__103.png" alt="火焰形态" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>火焰形态</strong><small>x1 · Fire Shape</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/FireShape__103.png" alt="火焰形态" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>火焰形态</strong><small>x1 · Fire Shape</small><em>直到本场战斗结束，每当对手打出攻击牌时，对手受到 2 点火焰伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/frost-bolt" title="冰霜箭">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/FrostBolt__326.png" alt="冰霜箭" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>冰霜箭</strong><small>x1 · Frost Bolt</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/FrostBolt__326.png" alt="冰霜箭" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>冰霜箭</strong><small>x1 · Frost Bolt</small><em>造成 4 点冰霜伤害，翻倍 如果对手拥有 &lt;寒冷&gt;。对手获得 &lt;寒冷 1&gt; 直到对手下个回合结束。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/blur" title="模糊">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Blur__528.png" alt="模糊" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>模糊</strong><small>x1 · Blur</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Blur__528.png" alt="模糊" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>模糊</strong><small>x1 · Blur</small><em>你获得物理抗性 直到你的下个回合。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-mage-5">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/mage">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/mage__1017.png" alt="法师" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>法师</strong><small>Mage</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>5</em></span><span><b>HP</b><em>15</em></span><span><b>MP</b><em>15</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/meteor" title="流星">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Meteor__884.png" alt="流星" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>流星</strong><small>x1 · Meteor</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Meteor__884.png" alt="流星" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>流星</strong><small>x1 · Meteor</small><em>造成 20 点火焰伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/blizzard" title="暴风雪">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Blizzard__718.png" alt="暴风雪" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>暴风雪</strong><small>x1 · Blizzard</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Blizzard__718.png" alt="暴风雪" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>暴风雪</strong><small>x1 · Blizzard</small><em>造成 10 点冰霜伤害，翻倍 如果对手拥有 &lt;寒冷&gt;。对手获得 &lt;寒冷 2&gt; 直到对手下个回合结束。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-mage-6">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/mage">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/mage__1017.png" alt="法师" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>法师</strong><small>Mage</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>6</em></span><span><b>HP</b><em>22</em></span><span><b>MP</b><em>18</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/mana-surge" title="法力激涌">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSurge__756.png" alt="法力激涌" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>法力激涌</strong><small>x1 · Mana Surge</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSurge__756.png" alt="法力激涌" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>法力激涌</strong><small>x1 · Mana Surge</small><em>获得 10 点法力。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/inspiration" title="灵感">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Inspiration__980.png" alt="灵感" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>灵感</strong><small>x1 · Inspiration</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Inspiration__980.png" alt="灵感" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>灵感</strong><small>x1 · Inspiration</small><em>获得 5 点法力。从牌库抽取下一张法术牌。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-mage-7">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/mage">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/mage__1017.png" alt="法师" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>法师</strong><small>Mage</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>7</em></span><span><b>HP</b><em>30</em></span><span><b>MP</b><em>21</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/blizzard" title="暴风雪">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Blizzard__718.png" alt="暴风雪" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>暴风雪</strong><small>x1 · Blizzard</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Blizzard__718.png" alt="暴风雪" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>暴风雪</strong><small>x1 · Blizzard</small><em>造成 10 点冰霜伤害，翻倍 如果对手拥有 &lt;寒冷&gt;。对手获得 &lt;寒冷 2&gt; 直到对手下个回合结束。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-mage-8">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/mage">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/mage__1017.png" alt="法师" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>法师</strong><small>Mage</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>8</em></span><span><b>HP</b><em>41</em></span><span><b>MP</b><em>24</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/jasras-tome" title="贾斯拉的秘典">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/JasrasTome__235.png" alt="贾斯拉的秘典" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>贾斯拉的秘典</strong><small>x1 · Jasra's Tome</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/JasrasTome__235.png" alt="贾斯拉的秘典" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>贾斯拉的秘典</strong><small>x1 · Jasra's Tome</small><em>在你的回合开始时，从牌库抽取下一张法术牌。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/freeze" title="冻结">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Freeze__318.png" alt="冻结" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>冻结</strong><small>x1 · Freeze</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Freeze__318.png" alt="冻结" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>冻结</strong><small>x1 · Freeze</small><em>造成 15 点冰霜伤害，翻倍 如果对手拥有 &lt;寒冷&gt;。对手获得 &lt;寒冷 3&gt; 直到对手下个回合结束并&lt;寒冷 1&gt; 直到本场战斗结束。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-mage-9">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/mage">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/mage__1017.png" alt="法师" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>法师</strong><small>Mage</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>9</em></span><span><b>HP</b><em>52</em></span><span><b>MP</b><em>27</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/mana-swell" title="法力膨胀">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSwell__625.png" alt="法力膨胀" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>法力膨胀</strong><small>x1 · Mana Swell</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSwell__625.png" alt="法力膨胀" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>法力膨胀</strong><small>x1 · Mana Swell</small><em>获得 5 点法力。本回合你下一次施放法术时，额外施放该法术的第二份复制。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/jasras-emerald" title="贾斯拉的翡翠">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/JasrasEmerald__242.png" alt="贾斯拉的翡翠" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>贾斯拉的翡翠</strong><small>x1 · Jasra's Emerald</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/JasrasEmerald__242.png" alt="贾斯拉的翡翠" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>贾斯拉的翡翠</strong><small>x1 · Jasra's Emerald</small><em>当你打出一张法术牌，抽 1 张牌。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-mage-10">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/mage">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/mage__1017.png" alt="法师" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>法师</strong><small>Mage</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>10</em></span><span><b>HP</b><em>63</em></span><span><b>MP</b><em>30</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/conflagration" title="大火">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Conflagration__930.png" alt="大火" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>大火</strong><small>x1 · Conflagration</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Conflagration__930.png" alt="大火" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>大火</strong><small>x1 · Conflagration</small><em>造成 30 点火焰伤害。在你的下个回合开始时，再次造成 30 点火焰伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+  </tbody>
+</table>
+</div>
+  <p><a href="/assets/data/monster-level-snapshots-incremental.html#snapshot-mage-1">查看全量怪物等级快照</a></p>
+</section>
+
+<section class="dq-section-block">
   <h2>卡牌</h2>
   <div class="dq-monster-card-summary">
   <span>基础牌组 6 张</span>

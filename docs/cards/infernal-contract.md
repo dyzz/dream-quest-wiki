@@ -35,6 +35,8 @@ description: "对手弃掉其手牌，并获得等同于以此弃掉牌数的诅
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

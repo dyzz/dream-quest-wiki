@@ -118,6 +118,119 @@ description: "普通怪物，出现在 森林、山脉。等级范围 4-7 级。
 </section>
 
 <section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这些行来自怪物等级快照 TSV。最低等级显示完整最终卡组；后续等级只显示相比上一等级新增的关键牌。</p>
+  <div class="dq-table-scroll">
+<table class="dq-data-table dq-snapshot-table">
+  <thead><tr><th>怪物 / 等级数据</th><th>卡组增量</th></tr></thead>
+  <tbody>
+<tr id="snapshot-ussuri-hunter-4">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/ussuri-hunter">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/UssuriHunter__189.png" alt="乌苏里猎手" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>乌苏里猎手</strong><small>UssuriHunter</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>4</em></span><span><b>HP</b><em>15</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>2</em></span><span><b>手牌</b><em>3</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">最低等级最终卡组</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/claw" title="爪击">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Claw__1028.png" alt="爪击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>爪击</strong><small>x3 · Claw</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Claw__1028.png" alt="爪击" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>爪击</strong><small>x3 · Claw</small><em>造成 2 点攻击伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/shred" title="撕碎">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>撕碎</strong><small>x1 · Shred</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>撕碎</strong><small>x1 · Shred</small><em>造成 2 点攻击伤害。造成 2 点攻击伤害 每有爪击 场上的牌。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/pounce" title="扑击">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>扑击</strong><small>x1 · Pounce</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>扑击</strong><small>x1 · Pounce</small><em>抽 3 张牌，然后直到本场战斗结束，从你的牌库中移除 扑击。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack1" title="攻击（1）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（1）</strong><small>x4 · Attack (1)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（1）</strong><small>x4 · Attack (1)</small><em>造成 1 点攻击伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack2" title="攻击（2）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（2）</strong><small>x11 · Attack (2)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（2）</strong><small>x11 · Attack (2)</small><em>造成 2 点攻击伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-ussuri-hunter-5">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/ussuri-hunter">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/UssuriHunter__189.png" alt="乌苏里猎手" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>乌苏里猎手</strong><small>UssuriHunter</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>5</em></span><span><b>HP</b><em>20</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>2</em></span><span><b>手牌</b><em>3</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/pounce" title="扑击">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>扑击</strong><small>x1 · Pounce</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Pounce__890.png" alt="扑击" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>扑击</strong><small>x1 · Pounce</small><em>抽 3 张牌，然后直到本场战斗结束，从你的牌库中移除 扑击。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-ussuri-hunter-6">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/ussuri-hunter">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/UssuriHunter__189.png" alt="乌苏里猎手" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>乌苏里猎手</strong><small>UssuriHunter</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>6</em></span><span><b>HP</b><em>30</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>2</em></span><span><b>手牌</b><em>3</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/shred" title="撕碎">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>撕碎</strong><small>x1 · Shred</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shred__87.png" alt="撕碎" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>撕碎</strong><small>x1 · Shred</small><em>造成 2 点攻击伤害。造成 2 点攻击伤害 每有爪击 场上的牌。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-ussuri-hunter-7">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/ussuri-hunter">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/UssuriHunter__189.png" alt="乌苏里猎手" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>乌苏里猎手</strong><small>UssuriHunter</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>7</em></span><span><b>HP</b><em>40</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>2</em></span><span><b>手牌</b><em>3</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/claw" title="爪击">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Claw__1028.png" alt="爪击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>爪击</strong><small>x1 · Claw</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Claw__1028.png" alt="爪击" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>爪击</strong><small>x1 · Claw</small><em>造成 2 点攻击伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+  </tbody>
+</table>
+</div>
+  <p><a href="/assets/data/monster-level-snapshots-incremental.html#snapshot-ussuri-hunter-4">查看全量怪物等级快照</a></p>
+</section>
+
+<section class="dq-section-block">
   <h2>卡牌</h2>
   <div class="dq-monster-card-summary">
   <span>基础牌组 5 张</span>

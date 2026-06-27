@@ -38,6 +38,8 @@ description: "对手失去一半生命，向下取整，最多失去 60 点。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

@@ -35,6 +35,8 @@ description: "对手手牌中每有 1 张诅咒牌，就受到 5 点伤害。抽
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

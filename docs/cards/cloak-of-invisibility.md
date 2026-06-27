@@ -35,6 +35,8 @@ description: "防止对手每回合打出的第一张牌产生任何效果。此
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

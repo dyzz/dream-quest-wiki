@@ -132,6 +132,135 @@ description: "普通怪物，出现在 山脉、火山。等级范围 7-10 级�
 </section>
 
 <section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这些行来自怪物等级快照 TSV。最低等级显示完整最终卡组；后续等级只显示相比上一等级新增的关键牌。</p>
+  <div class="dq-table-scroll">
+<table class="dq-data-table dq-snapshot-table">
+  <thead><tr><th>怪物 / 等级数据</th><th>卡组增量</th></tr></thead>
+  <tbody>
+<tr id="snapshot-storm-giant-7">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/storm-giant">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/StormGiant__211.png" alt="风暴巨人" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>风暴巨人</strong><small>StormGiant</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>7</em></span><span><b>HP</b><em>60</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">最低等级最终卡组</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/slam" title="重摔">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Slam__363.png" alt="重摔" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>重摔</strong><small>x1 · Slam</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Slam__363.png" alt="重摔" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>重摔</strong><small>x1 · Slam</small><em>造成等同于 1/5 的 你的 当前 生命，向上取整 (最多 15 伤害) 的伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/storm-blade" title="风暴之刃">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/StormBlade__419.png" alt="风暴之刃" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>风暴之刃</strong><small>x1 · Storm Blade</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/StormBlade__419.png" alt="风暴之刃" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>风暴之刃</strong><small>x1 · Storm Blade</small><em>每当你打出 1 个 攻击牌，造成 1 点电系伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/resilience" title="韧性">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Resilience__620.png" alt="韧性" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>韧性</strong><small>x2 · Resilience</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Resilience__620.png" alt="韧性" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>韧性</strong><small>x2 · Resilience</small><em>直到你的下个回合，你单次受到超过 3 点的伤害会被降至 3 点。抽 1 张牌。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/celestial-plate" title="天界板甲">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/CelestialPlate__74.png" alt="天界板甲" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>天界板甲</strong><small>x1 · Celestial Plate</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/CelestialPlate__74.png" alt="天界板甲" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>天界板甲</strong><small>x1 · Celestial Plate</small><em>获得&lt;减伤 1&gt;。回复 2 点生命 在每个回合开始时。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack2" title="攻击（2）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（2）</strong><small>x9 · Attack (2)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（2）</strong><small>x9 · Attack (2)</small><em>造成 2 点攻击伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack3" title="攻击（3）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/sharedassets0/Attack3__36.png" alt="攻击（3）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（3）</strong><small>x9 · Attack (3)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/sharedassets0/Attack3__36.png" alt="攻击（3）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（3）</strong><small>x9 · Attack (3)</small><em>造成 3 点攻击伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-storm-giant-8">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/storm-giant">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/StormGiant__211.png" alt="风暴巨人" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>风暴巨人</strong><small>StormGiant</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>8</em></span><span><b>HP</b><em>82</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/lightning-strike" title="闪电打击">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/LightningStrike__185.png" alt="闪电打击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>闪电打击</strong><small>x1 · Lightning Strike</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/LightningStrike__185.png" alt="闪电打击" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>闪电打击</strong><small>x1 · Lightning Strike</small><em>造成 6 点电系伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-storm-giant-9">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/storm-giant">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/StormGiant__211.png" alt="风暴巨人" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>风暴巨人</strong><small>StormGiant</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>9</em></span><span><b>HP</b><em>105</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/slam" title="重摔">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Slam__363.png" alt="重摔" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>重摔</strong><small>x1 · Slam</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Slam__363.png" alt="重摔" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>重摔</strong><small>x1 · Slam</small><em>造成等同于 1/5 的 你的 当前 生命，向上取整 (最多 15 伤害) 的伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/lightning-strike" title="闪电打击">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/LightningStrike__185.png" alt="闪电打击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>闪电打击</strong><small>x1 · Lightning Strike</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/LightningStrike__185.png" alt="闪电打击" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>闪电打击</strong><small>x1 · Lightning Strike</small><em>造成 6 点电系伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-storm-giant-10">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/storm-giant">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/StormGiant__211.png" alt="风暴巨人" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>风暴巨人</strong><small>StormGiant</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>10</em></span><span><b>HP</b><em>127</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/lightning-strike" title="闪电打击">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/LightningStrike__185.png" alt="闪电打击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>闪电打击</strong><small>x1 · Lightning Strike</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/LightningStrike__185.png" alt="闪电打击" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>闪电打击</strong><small>x1 · Lightning Strike</small><em>造成 6 点电系伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+  </tbody>
+</table>
+</div>
+  <p><a href="/assets/data/monster-level-snapshots-incremental.html#snapshot-storm-giant-7">查看全量怪物等级快照</a></p>
+</section>
+
+<section class="dq-section-block">
   <h2>卡牌</h2>
   <div class="dq-monster-card-summary">
   <span>基础牌组 5 张</span>

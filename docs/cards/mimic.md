@@ -38,6 +38,8 @@ description: "选择 场上的 1 张行动牌并复制其效果。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

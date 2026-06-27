@@ -38,6 +38,8 @@ description: "直到你的下个回合，你每受到 1 点伤害就获得 1 点
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

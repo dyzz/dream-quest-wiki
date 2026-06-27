@@ -38,6 +38,8 @@ description: "对手受到 10 点攻击伤害，你受到 4 点攻击伤害。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

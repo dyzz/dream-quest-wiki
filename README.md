@@ -17,6 +17,22 @@ npm run build
 
 构建会先执行 `npm run sync`，从 `source/` 里的解析数据重新生成 VitePress 页面，再输出到 `docs/.vitepress/dist`。
 
+## GitHub Pages
+
+仓库可发布到 GitHub Pages 项目页：
+
+```text
+https://dyzz.github.io/dream-quest-wiki/
+```
+
+GitHub Actions 使用：
+
+```bash
+VITEPRESS_BASE=/dream-quest-wiki/ npm run build:github
+```
+
+`build:github` 会先执行常规构建，再把生成产物里面原本面向根域名的 `/cards`、`/assets/...` 等站内路径改写成 `/dream-quest-wiki/...`。本地预览和 EdgeOne 部署仍使用普通 `npm run build`。
+
 ## 目录说明
 
 - `docs/`：VitePress 文档、主题配置和当前生成出的 Markdown 页面。
@@ -26,3 +42,7 @@ npm run build
 - `vercel.json`：Vercel 部署配置。
 
 生成产物、登录缓存、`node_modules`、Playwright 记录和平台构建缓存不入库。
+
+## 声明
+
+这是非官方中文玩家资料站，用于机制研究和资料整理。Dream Quest 及相关素材版权归原作者所有。

@@ -1,16 +1,16 @@
 ---
-title: "护盾守卫"
+title: "防护"
 description: "防止你将受到的接下来 8 点伤害。"
 ---
 
 
 <section class="dq-card-hero">
 <div class="dq-card-art-panel">
-<span class="dq-game-card dq-game-card-hero"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="护盾守卫" loading="lazy"></span>
+<span class="dq-game-card dq-game-card-hero"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="lazy"></span>
 </div>
   <div class="dq-card-info-panel">
     <p class="dq-kicker">法术 · 4 阶</p>
-    <h1>护盾守卫</h1>
+    <h1>防护</h1>
     <span class="dq-original">原名：Ward</span>
     <div class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></div>
     <p class="dq-rules dq-card-rules-fixed">防止你将受到的接下来 8 点伤害。</p>
@@ -31,17 +31,19 @@ description: "防止你将受到的接下来 8 点伤害。"
 </div>
     </div>
     <div class="dq-action-row">
-<a class="dq-button dq-button-secondary" href="/cards/armor">上一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/evasion">上一张</a>
 <a class="dq-button dq-button-secondary" href="/cards/penalty-ward30">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">
-<span title="wiki 中使用的统一中文名称。"><strong>中文名</strong><em>护盾守卫</em></span>
+<span title="wiki 中使用的统一中文名称。"><strong>中文名</strong><em>防护</em></span>
 <span title="游戏原始显示名；没有显示名时使用内部类名拆分。"><strong>英文名</strong><em>Ward</em></span>
 <span title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。"><strong>卡牌状态</strong><em>普通</em></span>
 <span title="对卡牌状态的具体解释，帮助区分普通玩家牌、职业特色牌、成就牌和怪物专用牌。"><strong>状态说明</strong><em>普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。</em></span>

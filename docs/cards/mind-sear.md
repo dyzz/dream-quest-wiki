@@ -38,6 +38,8 @@ description: "选择 1 项：攻击: 造成 5 点<穿透>伤害或卡牌: 抽 2 
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

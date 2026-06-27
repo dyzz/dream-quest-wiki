@@ -7,6 +7,7 @@ output/
 
 docs/.vitepress/cache/
 docs/.vitepress/dist/
+docs/public/assets/data/
 docs/public/assets/extracted/
 public/assets/extracted/
 

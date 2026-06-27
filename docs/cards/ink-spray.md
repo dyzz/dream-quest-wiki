@@ -35,6 +35,8 @@ description: "触发：对手打出一张牌，且场上至少还有 3 张其他
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

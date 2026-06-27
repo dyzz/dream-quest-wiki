@@ -231,6 +231,146 @@ description: "普通怪物，出现在 墓穴、森林。等级范围 5-10 级�
 </section>
 
 <section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这些行来自怪物等级快照 TSV。最低等级显示完整最终卡组；后续等级只显示相比上一等级新增的关键牌。</p>
+  <div class="dq-table-scroll">
+<table class="dq-data-table dq-snapshot-table">
+  <thead><tr><th>怪物 / 等级数据</th><th>卡组增量</th></tr></thead>
+  <tbody>
+<tr id="snapshot-earth-elemental-5">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/earth-elemental">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/EarthElemental__974.png" alt="毒性元素" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>毒性元素</strong><small>EarthElemental</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>5</em></span><span><b>HP</b><em>20</em></span><span><b>MP</b><em>5</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">最低等级最终卡组</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/infect1" title="感染（1）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Infect1__754.png" alt="感染（1）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>感染（1）</strong><small>x6 · Infect (1)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Infect1__754.png" alt="感染（1）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>感染（1）</strong><small>x6 · Infect (1)</small><em>对手获得 &lt;中毒 1&gt;。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/earth-shape" title="毒性形态">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/EarthShape__305.png" alt="毒性形态" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>毒性形态</strong><small>x2 · Earth Shape</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/EarthShape__305.png" alt="毒性形态" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>毒性形态</strong><small>x2 · Earth Shape</small><em>获得&lt;减伤 2&gt; 直到你的下个回合。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/mana-surge" title="法力激涌">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSurge__756.png" alt="法力激涌" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>法力激涌</strong><small>x2 · Mana Surge</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSurge__756.png" alt="法力激涌" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>法力激涌</strong><small>x2 · Mana Surge</small><em>获得 10 点法力。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack2" title="攻击（2）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（2）</strong><small>x10 · Attack (2)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（2）</strong><small>x10 · Attack (2)</small><em>造成 2 点攻击伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-earth-elemental-6">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/earth-elemental">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/EarthElemental__974.png" alt="毒性元素" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>毒性元素</strong><small>EarthElemental</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>6</em></span><span><b>HP</b><em>30</em></span><span><b>MP</b><em>5</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-muted-chip">无新增关键牌</span>
+</div></td>
+</tr>
+<tr id="snapshot-earth-elemental-7">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/earth-elemental">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/EarthElemental__974.png" alt="毒性元素" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>毒性元素</strong><small>EarthElemental</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>7</em></span><span><b>HP</b><em>40</em></span><span><b>MP</b><em>5</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/infect3" title="感染（3）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Infect3__612.png" alt="感染（3）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>感染（3）</strong><small>x2 · Infect (3)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Infect3__612.png" alt="感染（3）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>感染（3）</strong><small>x2 · Infect (3)</small><em>对手获得 &lt;中毒 3&gt;。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/infect2" title="感染（2）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Infect2__650.png" alt="感染（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>感染（2）</strong><small>x3 · Infect (2)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Infect2__650.png" alt="感染（2）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>感染（2）</strong><small>x3 · Infect (2)</small><em>对手获得 &lt;中毒 2&gt;。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-earth-elemental-8">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/earth-elemental">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/EarthElemental__974.png" alt="毒性元素" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>毒性元素</strong><small>EarthElemental</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>8</em></span><span><b>HP</b><em>55</em></span><span><b>MP</b><em>5</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/infect3" title="感染（3）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Infect3__612.png" alt="感染（3）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>感染（3）</strong><small>x3 · Infect (3)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Infect3__612.png" alt="感染（3）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>感染（3）</strong><small>x3 · Infect (3)</small><em>对手获得 &lt;中毒 3&gt;。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-earth-elemental-9">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/earth-elemental">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/EarthElemental__974.png" alt="毒性元素" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>毒性元素</strong><small>EarthElemental</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>9</em></span><span><b>HP</b><em>70</em></span><span><b>MP</b><em>5</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/stoneskin" title="石肤">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stoneskin__294.png" alt="石肤" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>石肤</strong><small>x1 · Stoneskin</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stoneskin__294.png" alt="石肤" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>石肤</strong><small>x1 · Stoneskin</small><em>获得&lt;减伤 2&gt; 直到你的下个回合。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-earth-elemental-10">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/earth-elemental">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/EarthElemental__974.png" alt="毒性元素" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>毒性元素</strong><small>EarthElemental</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>10</em></span><span><b>HP</b><em>85</em></span><span><b>MP</b><em>5</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/solidify" title="固化">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Solidify__301.png" alt="固化" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>固化</strong><small>x1 · Solidify</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Solidify__301.png" alt="固化" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>固化</strong><small>x1 · Solidify</small><em>对手弃掉 3 张牌并失去 3 行动点。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+  </tbody>
+</table>
+</div>
+  <p><a href="/assets/data/monster-level-snapshots-incremental.html#snapshot-earth-elemental-5">查看全量怪物等级快照</a></p>
+</section>
+
+<section class="dq-section-block">
   <h2>卡牌</h2>
   <div class="dq-monster-card-summary">
   <span>基础牌组 10 张</span>

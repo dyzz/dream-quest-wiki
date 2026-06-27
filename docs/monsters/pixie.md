@@ -135,6 +135,111 @@ description: "普通怪物，出现在 森林、地牢、山脉。等级范围 1
 </section>
 
 <section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这些行来自怪物等级快照 TSV。最低等级显示完整最终卡组；后续等级只显示相比上一等级新增的关键牌。</p>
+  <div class="dq-table-scroll">
+<table class="dq-data-table dq-snapshot-table">
+  <thead><tr><th>怪物 / 等级数据</th><th>卡组增量</th></tr></thead>
+  <tbody>
+<tr id="snapshot-pixie-1">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/pixie">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Pixie__602.png" alt="小妖精" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>小妖精</strong><small>Pixie</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>1</em></span><span><b>HP</b><em>3</em></span><span><b>MP</b><em>3</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">最低等级最终卡组</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/explosion" title="爆炸">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Explosion__982.png" alt="爆炸" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>爆炸</strong><small>x1 · Explosion</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Explosion__982.png" alt="爆炸" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>爆炸</strong><small>x1 · Explosion</small><em>造成 10 点火焰伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/fireball" title="火球">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Fireball__167.png" alt="火球" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>火球</strong><small>x2 · Fireball</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Fireball__167.png" alt="火球" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>火球</strong><small>x2 · Fireball</small><em>造成 8 点火焰伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack1" title="攻击（1）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（1）</strong><small>x5 · Attack (1)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（1）</strong><small>x5 · Attack (1)</small><em>造成 1 点攻击伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-pixie-2">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/pixie">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Pixie__602.png" alt="小妖精" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>小妖精</strong><small>Pixie</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>2</em></span><span><b>HP</b><em>5</em></span><span><b>MP</b><em>3</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/fireball" title="火球">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Fireball__167.png" alt="火球" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>火球</strong><small>x1 · Fireball</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Fireball__167.png" alt="火球" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>火球</strong><small>x1 · Fireball</small><em>造成 8 点火焰伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-pixie-3">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/pixie">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Pixie__602.png" alt="小妖精" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>小妖精</strong><small>Pixie</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>3</em></span><span><b>HP</b><em>7</em></span><span><b>MP</b><em>3</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/fireball" title="火球">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Fireball__167.png" alt="火球" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>火球</strong><small>x1 · Fireball</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Fireball__167.png" alt="火球" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>火球</strong><small>x1 · Fireball</small><em>造成 8 点火焰伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/haste" title="急速">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Haste__597.png" alt="急速" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>急速</strong><small>x1 · Haste</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Haste__597.png" alt="急速" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>急速</strong><small>x1 · Haste</small><em>抽 2 张牌。此外，你有 10% 概率获得一个额外回合。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-pixie-4">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/pixie">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Pixie__602.png" alt="小妖精" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>小妖精</strong><small>Pixie</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>4</em></span><span><b>HP</b><em>11</em></span><span><b>MP</b><em>3</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/haste" title="急速">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Haste__597.png" alt="急速" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>急速</strong><small>x1 · Haste</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Haste__597.png" alt="急速" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>急速</strong><small>x1 · Haste</small><em>抽 2 张牌。此外，你有 10% 概率获得一个额外回合。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+  </tbody>
+</table>
+</div>
+  <p><a href="/assets/data/monster-level-snapshots-incremental.html#snapshot-pixie-1">查看全量怪物等级快照</a></p>
+</section>
+
+<section class="dq-section-block">
   <h2>卡牌</h2>
   <div class="dq-monster-card-summary">
   <span>基础牌组 3 张</span>

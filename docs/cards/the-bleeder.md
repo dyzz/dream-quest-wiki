@@ -35,6 +35,8 @@ description: "当你打出 1 个 攻击牌，对手获得 <虚弱 1>。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

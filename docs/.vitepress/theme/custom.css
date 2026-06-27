@@ -51,6 +51,181 @@ body {
   width: min(100%, 420px);
 }
 
+.dq-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.dq-table-scroll table {
+  min-width: 920px;
+}
+
+.dq-long-cell {
+  min-width: 340px;
+}
+
+.vp-doc .dq-table-scroll table.dq-snapshot-table {
+  display: table;
+  min-width: 860px;
+  overflow: visible;
+}
+
+.dq-snapshot-table .dq-long-cell {
+  min-width: 520px;
+}
+
+.dq-snapshot-monster-cell {
+  min-width: 280px;
+}
+
+.dq-snapshot-monster {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  color: var(--dq-ink);
+  text-decoration: none !important;
+}
+
+.dq-snapshot-monster-thumb {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--dq-line);
+  border-radius: 8px;
+  background: var(--dq-paper);
+}
+
+.dq-snapshot-monster-thumb img {
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  object-fit: contain;
+}
+
+.dq-snapshot-monster-thumb-empty {
+  border-style: dashed;
+}
+
+.dq-snapshot-monster-copy strong,
+.dq-snapshot-monster-copy small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.dq-snapshot-monster-copy small {
+  margin-top: 3px;
+  color: var(--dq-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.dq-snapshot-stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.dq-snapshot-stat-row span {
+  display: inline-flex;
+  min-height: 23px;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--dq-line);
+  border-radius: 6px;
+  background: var(--dq-paper);
+}
+
+.dq-snapshot-stat-row b,
+.dq-snapshot-stat-row em {
+  padding: 2px 6px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.dq-snapshot-stat-row b {
+  color: var(--dq-muted);
+}
+
+.dq-snapshot-stat-row em {
+  background: var(--dq-panel);
+  color: var(--dq-ink);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.dq-snapshot-frame-shell {
+  overflow: hidden;
+  border: 1px solid var(--dq-line);
+  border-radius: 8px;
+  background: var(--dq-paper);
+}
+
+.dq-snapshot-frame {
+  display: block;
+  width: 100%;
+  height: min(78vh, 820px);
+  min-height: 560px;
+  border: 0;
+  background: var(--dq-paper);
+}
+
+.dq-snapshot-index-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.dq-link-grid a.dq-snapshot-index-card {
+  grid-template-columns: 64px minmax(0, 1fr);
+  min-height: 92px;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+}
+
+.dq-snapshot-index-thumb {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--dq-line);
+  border-radius: 8px;
+  background: var(--dq-paper);
+}
+
+.dq-snapshot-index-thumb img {
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.dq-snapshot-index-thumb-empty {
+  border-style: dashed;
+}
+
+.dq-snapshot-index-copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.dq-snapshot-index-copy strong,
+.dq-snapshot-index-copy small {
+  overflow-wrap: anywhere;
+}
+
+.dq-snapshot-index-copy small {
+  color: var(--dq-muted);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
 .vp-doc h1,
 .vp-doc h2,
 .vp-doc h3,
@@ -1000,6 +1175,93 @@ a.dq-term:hover {
   margin: 8px 0 0;
 }
 
+.dq-rewards-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(260px, auto);
+}
+
+.dq-reward-hero-icons {
+  display: grid;
+  grid-template-columns: repeat(5, 58px);
+  gap: 10px;
+  align-items: center;
+  justify-content: end;
+}
+
+.dq-reward-icon {
+  display: inline-grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid var(--dq-line);
+  border-radius: 8px;
+  background: var(--dq-paper);
+  box-shadow: 0 8px 18px rgba(58, 38, 24, 0.08);
+}
+
+.dq-reward-icon img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.dq-reward-flow-grid {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.dq-reward-flow-grid > div {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.dq-reward-rule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin: 20px 0 24px;
+}
+
+.dq-reward-rule-grid > div {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid var(--dq-line);
+  border-radius: 8px;
+  background: var(--dq-panel);
+}
+
+.dq-reward-rule-grid p {
+  margin: 0;
+  color: var(--dq-muted);
+  line-height: 1.65;
+}
+
+.dq-reward-heading {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-width: 190px;
+}
+
+.dq-reward-heading strong,
+.dq-reward-heading small {
+  display: block;
+}
+
+.dq-reward-heading strong {
+  color: var(--dq-accent);
+  line-height: 1.3;
+}
+
+.dq-reward-heading small {
+  margin-top: 3px;
+  color: var(--dq-muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
 .dq-key-value-list {
   display: grid;
   gap: 10px;
@@ -1689,6 +1951,163 @@ a.dq-term:hover {
   border-style: dashed;
 }
 
+.dq-counted-card-chip {
+  max-width: 190px;
+}
+
+.dq-snapshot-table .dq-card-chip {
+  grid-template-columns: 48px minmax(0, 1fr);
+  max-width: 190px;
+  padding: 4px 8px 4px 4px;
+}
+
+.dq-snapshot-table .dq-card-chip-thumb {
+  width: 48px;
+}
+
+.dq-snapshot-table .dq-game-card {
+  aspect-ratio: 8 / 5.7;
+  border-radius: 8px;
+}
+
+.dq-snapshot-table .dq-game-card img {
+  object-fit: fill;
+}
+
+.dq-snapshot-card-row {
+  display: flex;
+  max-width: 100%;
+  gap: 6px;
+}
+
+.dq-snapshot-key-card {
+  display: grid;
+  gap: 7px;
+}
+
+.dq-snapshot-key-label {
+  width: max-content;
+  padding: 3px 7px;
+  border: 1px solid var(--dq-line);
+  border-radius: 6px;
+  background: var(--dq-paper);
+  color: var(--dq-muted);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.dq-counted-card-chip {
+  z-index: 1;
+}
+
+.dq-counted-card-chip:hover,
+.dq-counted-card-chip:focus-visible {
+  z-index: 10002;
+}
+
+.dq-snapshot-card-preview {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 8px);
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 10px;
+  width: min(300px, 78vw);
+  padding: 10px;
+  border: 1px solid rgba(70, 42, 26, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 251, 243, 0.98);
+  box-shadow: 0 18px 40px rgba(54, 32, 20, 0.22);
+  color: var(--dq-ink);
+  opacity: 0;
+  pointer-events: none;
+  text-align: left;
+  transform: translateY(6px);
+  transition:
+    opacity 0.14s ease,
+    transform 0.14s ease,
+    visibility 0.14s ease;
+  visibility: hidden;
+}
+
+.dq-counted-card-chip:hover .dq-snapshot-card-preview,
+.dq-counted-card-chip:focus-visible .dq-snapshot-card-preview {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.dq-snapshot-card-preview-art .dq-game-card {
+  aspect-ratio: 8 / 5.7;
+  box-shadow: none;
+}
+
+.dq-snapshot-card-preview-art .dq-game-card img {
+  object-fit: fill;
+}
+
+.dq-snapshot-card-preview-copy {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+  min-width: 0;
+}
+
+.dq-snapshot-card-preview-copy strong,
+.dq-snapshot-card-preview-copy small,
+.dq-snapshot-card-preview-copy em {
+  overflow-wrap: anywhere;
+}
+
+.dq-snapshot-card-preview-copy strong {
+  color: var(--dq-ink);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.dq-snapshot-card-preview-copy small {
+  color: var(--dq-muted);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.dq-snapshot-card-preview-copy em {
+  color: var(--dq-muted);
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.35;
+}
+
+.dq-upgrade-summary-table .dq-tag-row {
+  margin-top: 0;
+}
+
+.dq-upgrade-chip-list {
+  display: grid;
+  gap: 7px;
+}
+
+.dq-upgrade-reward-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.dq-upgrade-reward-line em {
+  min-width: 48px;
+  padding: 3px 7px;
+  border: 1px solid var(--dq-line);
+  border-radius: 6px;
+  background: var(--dq-paper);
+  color: var(--dq-muted);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+  text-align: center;
+}
+
 .dq-card-hover-preview {
   position: absolute;
   left: 50%;
@@ -1920,6 +2339,30 @@ a.dq-term:hover {
 
   .dq-card-hero {
     min-height: 0;
+  }
+
+  .dq-rewards-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .dq-reward-hero-icons {
+    grid-template-columns: repeat(5, 48px);
+    justify-content: start;
+  }
+
+  .dq-reward-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .dq-reward-icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .dq-reward-heading {
+    grid-template-columns: 46px minmax(0, 1fr);
+    min-width: 160px;
   }
 
   .dq-filter-bar {

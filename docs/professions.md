@@ -13,6 +13,11 @@ description: "Dream Quest 职业机制、起始牌组、升级奖励和卡牌出
   <span class="dq-count">14 个可选职业 · 1 个特殊入口</span>
 </section>
 
+<section class="dq-callout">
+  <strong>开局数据已单列</strong>
+  <span>职业页会显示基础开局和全成就档案；全职业 HP、蓝、金币、手牌数、行动点、起始牌组和难度差异集中在 <a href="/mechanics/start-profile-and-difficulty">职业初始与难度</a>。</span>
+</section>
+
 <h2>玩家可选职业</h2>
 <section class="dq-profession-grid">
 <a class="dq-profession-tile" href="/professions/assassin">

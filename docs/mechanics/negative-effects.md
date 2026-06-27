@@ -458,13 +458,13 @@ description: "Dream Quest 卡牌和怪物能施加给玩家的负面效果。"
   </span>
 </a>
 <a class="dq-profession-card-link dq-effect-card-entry" href="/cards/skewer">
-  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Skewer__60.png" alt="穿刺" loading="eager"></span></span>
-  <strong>穿刺</strong>
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Skewer__60.png" alt="贯刺" loading="eager"></span></span>
+  <strong>贯刺</strong>
   <span class="dq-profession-card-meta">Skewer · 行动牌 · 9 阶</span>
   <span class="dq-card-hover-preview" aria-hidden="true">
-    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Skewer__60.png" alt="穿刺" loading="lazy"></span></span>
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Skewer__60.png" alt="贯刺" loading="lazy"></span></span>
     <span class="dq-card-hover-copy">
-      <strong>穿刺</strong>
+      <strong>贯刺</strong>
       <small>Skewer · 行动牌 · 9 阶 · 1 行动点 / 0 法力</small>
       <em>抽 1 张牌。获得 1 行动点。对手获得 &lt;虚弱 1&gt; 本回合。</em>
     </span>
@@ -525,13 +525,13 @@ description: "Dream Quest 卡牌和怪物能施加给玩家的负面效果。"
   </span>
 </a>
 <a class="dq-profession-card-link dq-effect-card-entry" href="/cards/stone">
-  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石化" loading="eager"></span></span>
-  <strong>石化</strong>
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="eager"></span></span>
+  <strong>石块</strong>
   <span class="dq-profession-card-meta">Stone · 行动牌 · 4 阶</span>
   <span class="dq-card-hover-preview" aria-hidden="true">
-    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石化" loading="lazy"></span></span>
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="lazy"></span></span>
     <span class="dq-card-hover-copy">
-      <strong>石化</strong>
+      <strong>石块</strong>
       <small>Stone · 行动牌 · 4 阶 · 1 行动点 / 0 法力</small>
       <em>将 2 张无效果诅咒牌洗入对手牌库。对手弃掉 1 张牌。</em>
     </span>
@@ -897,13 +897,13 @@ description: "Dream Quest 卡牌和怪物能施加给玩家的负面效果。"
   </span>
 </a>
 <a class="dq-profession-card-link dq-effect-card-entry" href="/cards/stone">
-  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石化" loading="eager"></span></span>
-  <strong>石化</strong>
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="eager"></span></span>
+  <strong>石块</strong>
   <span class="dq-profession-card-meta">Stone · 行动牌 · 4 阶</span>
   <span class="dq-card-hover-preview" aria-hidden="true">
-    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石化" loading="lazy"></span></span>
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="lazy"></span></span>
     <span class="dq-card-hover-copy">
-      <strong>石化</strong>
+      <strong>石块</strong>
       <small>Stone · 行动牌 · 4 阶 · 1 行动点 / 0 法力</small>
       <em>将 2 张无效果诅咒牌洗入对手牌库。对手弃掉 1 张牌。</em>
     </span>

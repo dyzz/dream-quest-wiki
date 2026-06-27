@@ -38,6 +38,8 @@ description: "防止你将受到的接下来 4 点伤害。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

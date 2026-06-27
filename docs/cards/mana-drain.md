@@ -38,6 +38,8 @@ description: "对手失去 5 点法力。你获得等同于其以此失去数量
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

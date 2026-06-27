@@ -31,12 +31,14 @@ description: "造成 20 点火焰伤害。"
 </div>
     </div>
     <div class="dq-action-row">
-<a class="dq-button dq-button-secondary" href="/cards/circle">上一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/staff">上一张</a>
 <a class="dq-button dq-button-secondary" href="/cards/bleed">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
+
+
 
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>

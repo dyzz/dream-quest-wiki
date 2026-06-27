@@ -38,6 +38,8 @@ description: "抽取 狼、龟 或 鹰 中的 1 张。该牌为<临时>。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

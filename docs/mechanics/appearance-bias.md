@@ -44,20 +44,20 @@ description: "解释 Dream Quest 卡牌权重和职业权重 ID 的关系。"
 <table class="dq-data-table">
   <thead><tr><th>职业</th><th>开局资源</th><th>升级成长选项</th><th>固定奖励节点</th></tr></thead>
   <tbody>
-<tr><td><a href="/professions/assassin">刺客</a></td><td>生命 15 / 法力 1 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、金币、卡牌奖励、升级牌</td><td>3 级 行动点增加</td></tr>
-<tr><td><a href="/professions/bard">吟游诗人</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、金币、卡牌奖励、升级牌</td><td>无额外固定节点</td></tr>
-<tr><td><a href="/professions/paladin">圣骑士</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、装备槽增加、卡牌奖励、升级牌、删除牌</td><td>3 级 法力增加</td></tr>
-<tr><td><a href="/professions/druid">德鲁伊</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、卡牌奖励、升级牌、删除牌</td><td>通用 1 张低阶卡</td></tr>
-<tr><td><a href="/professions/warrior">战士</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +3、法力增加、行动点增加、装备槽增加、卡牌奖励、升级牌、删除牌</td><td>5 级 装备槽增加</td></tr>
-<tr><td><a href="/professions/professor">教授</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、装备槽增加、删除牌</td><td>3 级 行动点增加</td></tr>
-<tr><td><a href="/professions/monk">武僧</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、卡牌奖励、删除牌</td><td>3 级 行动点增加</td></tr>
-<tr><td><a href="/professions/samurai">武士</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、装备槽增加、卡牌奖励、升级牌、删除牌</td><td>无额外固定节点</td></tr>
-<tr><td><a href="/professions/necromancer">死灵法师</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +1、法力增加、卡牌奖励、删除牌</td><td>5 级 法力成长</td></tr>
-<tr><td><a href="/professions/wizard">法师</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、卡牌奖励、升级牌、删除牌</td><td>5 级 法力成长、6 级 法力激涌</td></tr>
-<tr><td><a href="/professions/ranger">游侠</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +3、法力增加、行动点增加、装备槽增加、卡牌奖励、升级牌</td><td>3 级 行动点增加、5 级 装备槽增加</td></tr>
-<tr><td><a href="/professions/priest">牧师</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、卡牌奖励、升级牌、删除牌</td><td>5 级 灵感</td></tr>
-<tr><td><a href="/professions/thief">盗贼</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、金币、卡牌奖励、升级牌、删除牌</td><td>3 级 行动点增加</td></tr>
-<tr><td><a href="/professions/dragon">龙</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加 / HP +2、法力增加、行动点增加、装备槽增加、卡牌奖励、删除牌</td><td>3 级 龙之智慧、5 级 龙之点心、7 级 龙之智慧</td></tr>
+<tr><td><a href="/professions/assassin">刺客</a></td><td>生命 15 / 法力 1 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、行动点增加、金币、卡牌奖励、升级牌</td><td>3 级 行动点增加</td></tr>
+<tr><td><a href="/professions/bard">吟游诗人</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、行动点增加、金币、卡牌奖励、升级牌</td><td>无额外固定节点</td></tr>
+<tr><td><a href="/professions/paladin">圣骑士</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、行动点增加、装备槽增加、卡牌奖励、升级牌、删除牌</td><td>3 级 法力增加</td></tr>
+<tr><td><a href="/professions/druid">德鲁伊</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、行动点增加、卡牌奖励、升级牌、删除牌</td><td>通用 1 张低阶卡</td></tr>
+<tr><td><a href="/professions/warrior">战士</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、行动点增加、装备槽增加、卡牌奖励、升级牌、删除牌</td><td>5 级 装备槽增加</td></tr>
+<tr><td><a href="/professions/professor">教授</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、行动点增加、装备槽增加、删除牌</td><td>3 级 行动点增加</td></tr>
+<tr><td><a href="/professions/monk">武僧</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、行动点增加、卡牌奖励、删除牌</td><td>3 级 行动点增加</td></tr>
+<tr><td><a href="/professions/samurai">武士</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、行动点增加、装备槽增加、卡牌奖励、升级牌、删除牌</td><td>无额外固定节点</td></tr>
+<tr><td><a href="/professions/necromancer">死灵法师</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、卡牌奖励、删除牌</td><td>5 级 法力成长</td></tr>
+<tr><td><a href="/professions/wizard">法师</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、卡牌奖励、升级牌、删除牌</td><td>5 级 法力成长、6 级 法力激涌</td></tr>
+<tr><td><a href="/professions/ranger">游侠</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、行动点增加、装备槽增加、卡牌奖励、升级牌</td><td>3 级 行动点增加、5 级 装备槽增加</td></tr>
+<tr><td><a href="/professions/priest">牧师</a></td><td>生命 15 / 法力 2 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、行动点增加、卡牌奖励、升级牌、删除牌</td><td>5 级 灵感</td></tr>
+<tr><td><a href="/professions/thief">盗贼</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、行动点增加、金币、卡牌奖励、升级牌、删除牌</td><td>3 级 行动点增加</td></tr>
+<tr><td><a href="/professions/dragon">龙</a></td><td>生命 15 / 法力 0 / 行动点 1 / 装备槽 0</td><td>生命增加（奖励项）、法力增加、行动点增加、装备槽增加、卡牌奖励、删除牌</td><td>3 级 龙之智慧、5 级 龙之点心、7 级 龙之智慧</td></tr>
   </tbody>
 </table>
 

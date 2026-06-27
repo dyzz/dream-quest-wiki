@@ -35,6 +35,8 @@ description: "造成 3 点火焰伤害。对手每有 1 层燃烧，额外造成
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

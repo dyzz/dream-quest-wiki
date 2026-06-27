@@ -32,11 +32,13 @@ description: "回复 4 点生命。<过量治疗> 变为护盾。"
     </div>
     <div class="dq-action-row">
 <a class="dq-button dq-button-secondary" href="/cards/shield">上一张</a>
-<a class="dq-button dq-button-secondary" href="/cards/stone">下一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/vile-charge">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
+
+
 
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>

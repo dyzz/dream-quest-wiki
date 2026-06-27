@@ -38,6 +38,8 @@ description: "直到你的下个回合，每当对手对你造成伤害时，你
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

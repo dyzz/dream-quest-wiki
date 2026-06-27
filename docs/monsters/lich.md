@@ -336,6 +336,191 @@ description: "Boss，出现在 墓穴。等级范围 7-10 级。基础牌组 11 
 </section>
 
 <section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这些行来自怪物等级快照 TSV。最低等级显示完整最终卡组；后续等级只显示相比上一等级新增的关键牌。</p>
+  <div class="dq-table-scroll">
+<table class="dq-data-table dq-snapshot-table">
+  <thead><tr><th>怪物 / 等级数据</th><th>卡组增量</th></tr></thead>
+  <tbody>
+<tr id="snapshot-lich-7">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/lich">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Lich__1030.png" alt="巫妖" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>巫妖</strong><small>Lich</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>7</em></span><span><b>HP</b><em>80</em></span><span><b>MP</b><em>5</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">最低等级最终卡组</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/phylactery" title="命匣">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Phylactery__330.png" alt="命匣" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>命匣</strong><small>x1 · Phylactery</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Phylactery__330.png" alt="命匣" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>命匣</strong><small>x1 · Phylactery</small><em>当 命匣 在场时，如果巫妖将要死亡，改为将其生命设为 1。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/mana-surge" title="法力激涌">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSurge__756.png" alt="法力激涌" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>法力激涌</strong><small>x2 · Mana Surge</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSurge__756.png" alt="法力激涌" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>法力激涌</strong><small>x2 · Mana Surge</small><em>获得 10 点法力。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/shrink" title="缩小">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shrink__243.png" alt="缩小" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>缩小</strong><small>x1 · Shrink</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Shrink__243.png" alt="缩小" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>缩小</strong><small>x1 · Shrink</small><em>对手失去一半生命，向下取整，最多失去 60 点。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/fireball" title="火球">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Fireball__167.png" alt="火球" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>火球</strong><small>x3 · Fireball</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Fireball__167.png" alt="火球" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>火球</strong><small>x3 · Fireball</small><em>造成 8 点火焰伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/wisdom" title="智慧">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Wisdom__574.png" alt="智慧" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>智慧</strong><small>x2 · Wisdom</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Wisdom__574.png" alt="智慧" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>智慧</strong><small>x2 · Wisdom</small><em>获得 3 点法力。抽 1 张牌。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/staff" title="法杖">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Staff__550.png" alt="法杖" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>法杖</strong><small>x1 · Staff</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Staff__550.png" alt="法杖" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>法杖</strong><small>x1 · Staff</small><em>每当你获得法力时，每获得 2 点法力就造成 1 点攻击伤害，向下取整。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/dark-mending" title="黑暗修补">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/DarkMending__362.png" alt="黑暗修补" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>黑暗修补</strong><small>x1 · Dark Mending</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/DarkMending__362.png" alt="黑暗修补" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>黑暗修补</strong><small>x1 · Dark Mending</small><em>完全回复生命，然后 造成等同于以此回复生命值一半的&lt;穿透&gt;伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/soulfire" title="灵魂火">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Soulfire__1024.png" alt="灵魂火" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>灵魂火</strong><small>x1 · Soulfire</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Soulfire__1024.png" alt="灵魂火" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>灵魂火</strong><small>x1 · Soulfire</small><em>对手受到 10 点&lt;穿透&gt;伤害。在你的回合开始时，如果 灵魂火 在你的弃牌堆中，将其返回你的手牌。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack2" title="攻击（2）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（2）</strong><small>x7 · Attack (2)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（2）</strong><small>x7 · Attack (2)</small><em>造成 2 点攻击伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack3" title="攻击（3）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/sharedassets0/Attack3__36.png" alt="攻击（3）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（3）</strong><small>x6 · Attack (3)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/sharedassets0/Attack3__36.png" alt="攻击（3）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（3）</strong><small>x6 · Attack (3)</small><em>造成 3 点攻击伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-lich-8">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/lich">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Lich__1030.png" alt="巫妖" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>巫妖</strong><small>Lich</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>8</em></span><span><b>HP</b><em>110</em></span><span><b>MP</b><em>5</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/mana-surge" title="法力激涌">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSurge__756.png" alt="法力激涌" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>法力激涌</strong><small>x1 · Mana Surge</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSurge__756.png" alt="法力激涌" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>法力激涌</strong><small>x1 · Mana Surge</small><em>获得 10 点法力。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/meteor" title="流星">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Meteor__884.png" alt="流星" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>流星</strong><small>x1 · Meteor</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Meteor__884.png" alt="流星" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>流星</strong><small>x1 · Meteor</small><em>造成 20 点火焰伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-lich-9">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/lich">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Lich__1030.png" alt="巫妖" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>巫妖</strong><small>Lich</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>9</em></span><span><b>HP</b><em>140</em></span><span><b>MP</b><em>5</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/fire-shape" title="火焰形态">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/FireShape__103.png" alt="火焰形态" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>火焰形态</strong><small>x1 · Fire Shape</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/FireShape__103.png" alt="火焰形态" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>火焰形态</strong><small>x1 · Fire Shape</small><em>直到本场战斗结束，每当对手打出攻击牌时，对手受到 2 点火焰伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/soulfire" title="灵魂火">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Soulfire__1024.png" alt="灵魂火" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>灵魂火</strong><small>x1 · Soulfire</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Soulfire__1024.png" alt="灵魂火" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>灵魂火</strong><small>x1 · Soulfire</small><em>对手受到 10 点&lt;穿透&gt;伤害。在你的回合开始时，如果 灵魂火 在你的弃牌堆中，将其返回你的手牌。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-lich-10">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/lich">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Lich__1030.png" alt="巫妖" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>巫妖</strong><small>Lich</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>10</em></span><span><b>HP</b><em>170</em></span><span><b>MP</b><em>5</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/mana-surge" title="法力激涌">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSurge__756.png" alt="法力激涌" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>法力激涌</strong><small>x1 · Mana Surge</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/ManaSurge__756.png" alt="法力激涌" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>法力激涌</strong><small>x1 · Mana Surge</small><em>获得 10 点法力。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/conflagration" title="大火">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Conflagration__930.png" alt="大火" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>大火</strong><small>x1 · Conflagration</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Conflagration__930.png" alt="大火" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>大火</strong><small>x1 · Conflagration</small><em>造成 30 点火焰伤害。在你的下个回合开始时，再次造成 30 点火焰伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/inspiration" title="灵感">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Inspiration__980.png" alt="灵感" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>灵感</strong><small>x1 · Inspiration</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Inspiration__980.png" alt="灵感" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>灵感</strong><small>x1 · Inspiration</small><em>获得 5 点法力。从牌库抽取下一张法术牌。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+  </tbody>
+</table>
+</div>
+  <p><a href="/assets/data/monster-level-snapshots-incremental.html#snapshot-lich-7">查看全量怪物等级快照</a></p>
+</section>
+
+<section class="dq-section-block">
   <h2>卡牌</h2>
   <div class="dq-monster-card-summary">
   <span>基础牌组 11 张</span>

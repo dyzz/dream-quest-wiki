@@ -130,6 +130,115 @@ description: "普通怪物，出现在 森林、地牢、墓穴。等级范围 5
 </section>
 
 <section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这些行来自怪物等级快照 TSV。最低等级显示完整最终卡组；后续等级只显示相比上一等级新增的关键牌。</p>
+  <div class="dq-table-scroll">
+<table class="dq-data-table dq-snapshot-table">
+  <thead><tr><th>怪物 / 等级数据</th><th>卡组增量</th></tr></thead>
+  <tbody>
+<tr id="snapshot-ghost-5">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/ghost">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Ghost__382.png" alt="幽灵" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>幽灵</strong><small>Ghost</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>5</em></span><span><b>HP</b><em>20</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">最低等级最终卡组</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/hide" title="隐藏">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Hide__619.png" alt="隐藏" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>隐藏</strong><small>x2 · Hide</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Hide__619.png" alt="隐藏" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>隐藏</strong><small>x2 · Hide</small><em>抽 1 张牌。直到你的下个回合，防止对手打出的下一张牌产生任何效果。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack2" title="攻击（2）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（2）</strong><small>x12 · Attack (2)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（2）</strong><small>x12 · Attack (2)</small><em>造成 2 点攻击伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-ghost-6">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/ghost">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Ghost__382.png" alt="幽灵" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>幽灵</strong><small>Ghost</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>6</em></span><span><b>HP</b><em>30</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-muted-chip">无新增关键牌</span>
+</div></td>
+</tr>
+<tr id="snapshot-ghost-7">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/ghost">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Ghost__382.png" alt="幽灵" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>幽灵</strong><small>Ghost</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>7</em></span><span><b>HP</b><em>40</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/exhaustion" title="疲惫">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Exhaustion__325.png" alt="疲惫" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>疲惫</strong><small>x1 · Exhaustion</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Exhaustion__325.png" alt="疲惫" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>疲惫</strong><small>x1 · Exhaustion</small><em>触发：对手打出一张牌，且场上至少还有 3 张其他牌时。效果：该牌无效果。该回合结束。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-ghost-8">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/ghost">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Ghost__382.png" alt="幽灵" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>幽灵</strong><small>Ghost</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>8</em></span><span><b>HP</b><em>55</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-muted-chip">无新增关键牌</span>
+</div></td>
+</tr>
+<tr id="snapshot-ghost-9">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/ghost">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Ghost__382.png" alt="幽灵" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>幽灵</strong><small>Ghost</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>9</em></span><span><b>HP</b><em>70</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/cloak-of-invisibility" title="隐形斗篷">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/CloakOfInvisibility__311.png" alt="隐形斗篷" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>隐形斗篷</strong><small>x1 · Cloak of Invisibility</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/CloakOfInvisibility__311.png" alt="隐形斗篷" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>隐形斗篷</strong><small>x1 · Cloak of Invisibility</small><em>防止对手每回合打出的第一张牌产生任何效果。此效果可以叠加。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-ghost-10">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/ghost">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Ghost__382.png" alt="幽灵" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>幽灵</strong><small>Ghost</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>10</em></span><span><b>HP</b><em>85</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/anticipate" title="预判">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Anticipate__163.png" alt="预判" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>预判</strong><small>x1 · Anticipate</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Anticipate__163.png" alt="预判" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>预判</strong><small>x1 · Anticipate</small><em>查看对手手牌，从中选择 1 张牌加入你的手牌；该牌弃掉时会进入对手弃牌堆。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+  </tbody>
+</table>
+</div>
+  <p><a href="/assets/data/monster-level-snapshots-incremental.html#snapshot-ghost-5">查看全量怪物等级快照</a></p>
+</section>
+
+<section class="dq-section-block">
   <h2>卡牌</h2>
   <div class="dq-monster-card-summary">
   <span>基础牌组 2 张</span>

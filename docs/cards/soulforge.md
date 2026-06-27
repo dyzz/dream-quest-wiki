@@ -35,6 +35,8 @@ description: "当你用可升级牌击败对手时，该牌升级。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

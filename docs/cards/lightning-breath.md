@@ -35,6 +35,8 @@ description: "造成 5 点电系伤害。对手失去 2 行动点。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

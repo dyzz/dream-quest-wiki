@@ -38,6 +38,8 @@ description: "获得 3 点法力。抽 下一次 法力 你牌库中的牌。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

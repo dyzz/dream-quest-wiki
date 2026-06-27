@@ -98,12 +98,12 @@ description: "普通怪物，出现在 森林、山脉。等级范围 4-7 级。
     </span>
   </span>
 </a> 替换为 <a class="dq-card-chip" href="/cards/ward">
-  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="护盾守卫" loading="eager"></span></span>
-  <span class="dq-card-chip-copy"><strong>护盾守卫</strong><small>Ward</small></span>
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>防护</strong><small>Ward</small></span>
   <span class="dq-card-hover-preview" aria-hidden="true">
-    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="护盾守卫" loading="lazy"></span></span>
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="lazy"></span></span>
     <span class="dq-card-hover-copy">
-      <strong>护盾守卫</strong>
+      <strong>防护</strong>
       <small>Ward · 法术 · 4 阶 · 0 行动点 / 3 法力</small>
       <em>防止你将受到的接下来 8 点伤害。</em>
     </span>
@@ -134,6 +134,120 @@ description: "普通怪物，出现在 森林、山脉。等级范围 4-7 级。
 </section>
 
 <section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这些行来自怪物等级快照 TSV。最低等级显示完整最终卡组；后续等级只显示相比上一等级新增的关键牌。</p>
+  <div class="dq-table-scroll">
+<table class="dq-data-table dq-snapshot-table">
+  <thead><tr><th>怪物 / 等级数据</th><th>卡组增量</th></tr></thead>
+  <tbody>
+<tr id="snapshot-siren-4">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/siren">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Siren__598.png" alt="塞壬" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>塞壬</strong><small>Siren</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>4</em></span><span><b>HP</b><em>15</em></span><span><b>MP</b><em>6</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">最低等级最终卡组</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/beckon" title="召唤">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Beckon__63.png" alt="召唤" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>召唤</strong><small>x2 · Beckon</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Beckon__63.png" alt="召唤" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>召唤</strong><small>x2 · Beckon</small><em>放逐 2 牌 随机 从 对手手牌。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/salve" title="治疗药膏">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Salve__399.png" alt="治疗药膏" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>治疗药膏</strong><small>x2 · Salve</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Salve__399.png" alt="治疗药膏" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>治疗药膏</strong><small>x2 · Salve</small><em>获得 3 点法力并3 生命。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/ward" title="防护">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>防护</strong><small>x1 · Ward</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>防护</strong><small>x1 · Ward</small><em>防止你将受到的接下来 8 点伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/heal" title="治疗">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Heal__1048.png" alt="治疗" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>治疗</strong><small>x1 · Heal</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Heal__1048.png" alt="治疗" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>治疗</strong><small>x1 · Heal</small><em>回复 5 点生命。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack1" title="攻击（1）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（1）</strong><small>x4 · Attack (1)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（1）</strong><small>x4 · Attack (1)</small><em>造成 1 点攻击伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack2" title="攻击（2）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（2）</strong><small>x9 · Attack (2)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（2）</strong><small>x9 · Attack (2)</small><em>造成 2 点攻击伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-siren-5">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/siren">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Siren__598.png" alt="塞壬" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>塞壬</strong><small>Siren</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>5</em></span><span><b>HP</b><em>20</em></span><span><b>MP</b><em>6</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-muted-chip">无新增关键牌</span>
+</div></td>
+</tr>
+<tr id="snapshot-siren-6">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/siren">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Siren__598.png" alt="塞壬" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>塞壬</strong><small>Siren</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>6</em></span><span><b>HP</b><em>30</em></span><span><b>MP</b><em>6</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/ward" title="防护">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>防护</strong><small>x1 · Ward</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>防护</strong><small>x1 · Ward</small><em>防止你将受到的接下来 8 点伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-siren-7">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/siren">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Siren__598.png" alt="塞壬" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>塞壬</strong><small>Siren</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>7</em></span><span><b>HP</b><em>40</em></span><span><b>MP</b><em>6</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/bless" title="祝福">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Bless__316.png" alt="祝福" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>祝福</strong><small>x1 · Bless</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Bless__316.png" alt="祝福" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>祝福</strong><small>x1 · Bless</small><em>回复 15 点生命。&lt;过量治疗&gt; 变为护盾。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+  </tbody>
+</table>
+</div>
+  <p><a href="/assets/data/monster-level-snapshots-incremental.html#snapshot-siren-4">查看全量怪物等级快照</a></p>
+</section>
+
+<section class="dq-section-block">
   <h2>卡牌</h2>
   <div class="dq-monster-card-summary">
   <span>基础牌组 6 张</span>
@@ -147,12 +261,12 @@ description: "普通怪物，出现在 森林、山脉。等级范围 4-7 级。
   <td>法术</td>
   <td>2</td>
   <td><a class="dq-card-chip" href="/cards/ward">
-  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="护盾守卫" loading="eager"></span></span>
-  <span class="dq-card-chip-copy"><strong>护盾守卫</strong><small>Ward</small></span>
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>防护</strong><small>Ward</small></span>
   <span class="dq-card-hover-preview" aria-hidden="true">
-    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="护盾守卫" loading="lazy"></span></span>
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="lazy"></span></span>
     <span class="dq-card-hover-copy">
-      <strong>护盾守卫</strong>
+      <strong>防护</strong>
       <small>Ward · 法术 · 4 阶 · 0 行动点 / 3 法力</small>
       <em>防止你将受到的接下来 8 点伤害。</em>
     </span>
@@ -233,13 +347,13 @@ description: "普通怪物，出现在 森林、山脉。等级范围 4-7 级。
   </span>
 </a>
 <a class="dq-profession-card-link dq-profession-card-entry" href="/cards/ward">
-  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="护盾守卫" loading="eager"></span></span>
-  <strong>护盾守卫</strong>
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="eager"></span></span>
+  <strong>防护</strong>
   <span class="dq-profession-card-meta">Ward · 基础牌组 x1 / 关键行为 / 等级变化 / 机制引用 / 等级加入 / 机制参数</span>
   <span class="dq-card-hover-preview" aria-hidden="true">
-    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="护盾守卫" loading="lazy"></span></span>
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="lazy"></span></span>
     <span class="dq-card-hover-copy">
-      <strong>护盾守卫</strong>
+      <strong>防护</strong>
       <small>Ward · 法术 · 4 阶 · 0 行动点 / 3 法力</small>
       <em>防止你将受到的接下来 8 点伤害。</em>
     </span>

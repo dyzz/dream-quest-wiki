@@ -38,6 +38,8 @@ description: "获得 5 点法力。抽 1 张随机<临时>非装备牌。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

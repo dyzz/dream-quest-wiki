@@ -28,12 +28,14 @@ description: "触发：对手结束回合时。效果：场上每有 1 张行动
 </div>
     </div>
     <div class="dq-action-row">
-<a class="dq-button dq-button-secondary" href="/cards/penalty-ward30">上一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/armor">上一张</a>
 <a class="dq-button dq-button-secondary" href="/cards/strike">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
+
+
 
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>

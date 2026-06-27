@@ -35,6 +35,8 @@ description: "对手选择其手牌中的 1 张牌，并直到本场战斗结束
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

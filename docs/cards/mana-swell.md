@@ -38,6 +38,8 @@ description: "获得 5 点法力。本回合你下一次施放法术时，额外
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

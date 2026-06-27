@@ -1,6 +1,6 @@
 ---
 title: "三个愿望（2）"
-description: "给对手三个选项，由对手选择其中一个。"
+description: "强化 Three Wishes：随机展示 3 个更强惩罚候选，由玩家选择 1 个结算；伤害、中毒和扣行动点惩罚更高。"
 ---
 
 
@@ -33,6 +33,140 @@ description: "给对手三个选项，由对手选择其中一个。"
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
+</section>
+
+<section class="dq-wide-panel dq-card-mechanic-panel">
+  <h2>强化 Three Wishes 具体效果</h2>
+  <p class="dq-note">这张牌打出时不会直接执行固定效果，而是先按当前战斗状态生成候选池，再随机展示 3 个互不重复的选项；玩家只选择其中 1 个结算。</p>
+  <p class="dq-note">6+ 级灯神会把基础版替换为强化版，7+ 级还会额外加入 1 张强化版。</p>
+  <table class="dq-data-table dq-wish-penalty-table">
+  <thead><tr><th>候选惩罚</th><th>进入候选池条件</th><th>实际效果</th></tr></thead>
+  <tbody>
+<tr>
+  <td><a class="dq-card-chip" href="/cards/penalty-curses">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/PenaltyCurses__360.png" alt="诅咒惩罚" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>诅咒惩罚</strong><small>Penalty Curses</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/PenaltyCurses__360.png" alt="诅咒惩罚" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>诅咒惩罚</strong>
+      <small>Penalty Curses · 其它 · 0 阶 · 0 行动点 / 0 法力</small>
+      <em>没有规则文本。</em>
+    </span>
+  </span>
+</a></td>
+  <td>固定候选</td>
+  <td>向玩家牌库加入 4 张 <a class="dq-card-chip" href="/cards/curse">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Curse__692.png" alt="诅咒" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>诅咒</strong><small>Curse</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Curse__692.png" alt="诅咒" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>诅咒</strong>
+      <small>Curse · 其它 · 0 阶 · 0 行动点 / 0 法力</small>
+      <em>没有规则文本。</em>
+    </span>
+  </span>
+</a> 并洗牌；玩家有精神免疫时不生效。</td>
+</tr>
+<tr>
+  <td><a class="dq-card-chip" href="/cards/penalty-plus-card">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/PenaltyPlusCard__1029.png" alt="手牌增加惩罚" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>手牌增加惩罚</strong><small>Penalty Plus Card</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/PenaltyPlusCard__1029.png" alt="手牌增加惩罚" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>手牌增加惩罚</strong>
+      <small>Penalty Plus Card · 其它 · 0 阶 · 0 行动点 / 0 法力</small>
+      <em>没有规则文本。</em>
+    </span>
+  </span>
+</a></td>
+  <td>固定候选</td>
+  <td>使灯神最大手牌 +1。</td>
+</tr>
+<tr>
+  <td><a class="dq-card-chip" href="/cards/penalty-damage2">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/PenaltyDamage2__369.png" alt="伤害惩罚（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>伤害惩罚（2）</strong><small>Penalty Damage2</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/PenaltyDamage2__369.png" alt="伤害惩罚（2）" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>伤害惩罚（2）</strong>
+      <small>Penalty Damage2 · 其它 · 0 阶 · 0 行动点 / 0 法力</small>
+      <em>没有规则文本。</em>
+    </span>
+  </span>
+</a></td>
+  <td>玩家生命 &lt;= 20</td>
+  <td>对玩家造成 12 点电系伤害。</td>
+</tr>
+<tr>
+  <td><a class="dq-card-chip" href="/cards/penalty-heal">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/PenaltyHeal__268.png" alt="治疗惩罚" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>治疗惩罚</strong><small>Penalty Heal</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/PenaltyHeal__268.png" alt="治疗惩罚" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>治疗惩罚</strong>
+      <small>Penalty Heal · 其它 · 0 阶 · 0 行动点 / 0 法力</small>
+      <em>没有规则文本。</em>
+    </span>
+  </span>
+</a></td>
+  <td>灯神已损失至少 7 点生命</td>
+  <td>灯神回复 10 点生命。</td>
+</tr>
+<tr>
+  <td><a class="dq-card-chip" href="/cards/penalty-minus-action2">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/PenaltyMinusAction2__225.png" alt="行动点减少惩罚（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>行动点减少惩罚（2）</strong><small>Penalty Minus Action2</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/PenaltyMinusAction2__225.png" alt="行动点减少惩罚（2）" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>行动点减少惩罚（2）</strong>
+      <small>Penalty Minus Action2 · 其它 · 0 阶 · 0 行动点 / 0 法力</small>
+      <em>没有规则文本。</em>
+    </span>
+  </span>
+</a></td>
+  <td>玩家最大行动点 &gt;= 1</td>
+  <td>玩家最大行动点 -2。</td>
+</tr>
+<tr>
+  <td><a class="dq-card-chip" href="/cards/penalty-minus-card">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/PenaltyMinusCard__703.png" alt="手牌减少惩罚" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>手牌减少惩罚</strong><small>Penalty Minus Card</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/PenaltyMinusCard__703.png" alt="手牌减少惩罚" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>手牌减少惩罚</strong>
+      <small>Penalty Minus Card · 其它 · 0 阶 · 0 行动点 / 0 法力</small>
+      <em>没有规则文本。</em>
+    </span>
+  </span>
+</a></td>
+  <td>玩家有可扣减的最大手牌</td>
+  <td>玩家最大手牌 -1。</td>
+</tr>
+<tr>
+  <td><a class="dq-card-chip" href="/cards/penalty-poison2">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/PenaltyPoison2__501.png" alt="中毒惩罚（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>中毒惩罚（2）</strong><small>Penalty Poison2</small></span>
+  <span class="dq-card-hover-preview" aria-hidden="true">
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/PenaltyPoison2__501.png" alt="中毒惩罚（2）" loading="lazy"></span></span>
+    <span class="dq-card-hover-copy">
+      <strong>中毒惩罚（2）</strong>
+      <small>Penalty Poison2 · 其它 · 0 阶 · 0 行动点 / 0 法力</small>
+      <em>没有规则文本。</em>
+    </span>
+  </span>
+</a></td>
+  <td>候选池少于 3 项，或玩家生命 &lt;= 30</td>
+  <td>玩家获得 6 层中毒。</td>
+</tr>
+  </tbody>
+</table>
 </section>
 
 <section class="dq-wide-panel">

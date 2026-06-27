@@ -38,6 +38,8 @@ description: "如果对手生命不超过 5 点，则其死亡。若以此方式
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

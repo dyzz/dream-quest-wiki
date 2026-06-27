@@ -35,6 +35,8 @@ description: "在你的回合开始时，抽 1 张牌并获得 1 行动点。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

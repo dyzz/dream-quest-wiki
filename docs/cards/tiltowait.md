@@ -38,6 +38,8 @@ description: "造成 20 点<穿透>伤害。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">
@@ -56,7 +58,7 @@ description: "造成 20 点<穿透>伤害。"
 <span title="同一轮地牢里这张牌允许出现的次数上限。"><strong>最大出现次数</strong><em>0</em></span>
 <span title="是否在通用卡牌列表里，可供奖励生成逻辑选择。"><strong>卡池可出现</strong><em>是</em></span>
 <span title="解锁、成就或特殊条件要求；无则代表没有额外要求。"><strong>需求</strong><em>never</em></span>
-<span title="某些机制会让牌衰变成另一张牌，这里显示目标牌名。"><strong>衰变为</strong><em>穿刺（3） / Pierce3</em></span>
+<span title="某些机制会让牌衰变成另一张牌，这里显示目标牌名。"><strong>衰变为</strong><em>穿透（3） / Pierce3</em></span>
 <span title="AI 评估打牌顺序时使用的排序值。"><strong>AI 打出顺序</strong><em>50</em></span>
 <span title="AI 决定是否保留这张牌时使用的权重。"><strong>AI 保留值</strong><em>100</em></span>
 <span title="元素相关修正数据；无则没有显式元素亲和。"><strong>元素亲和</strong><em>无</em></span>

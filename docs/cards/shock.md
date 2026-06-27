@@ -38,6 +38,8 @@ description: "造成 4 点电系伤害。从牌库抽取下一张法术牌。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

@@ -1,16 +1,16 @@
 ---
-title: "刺穿"
+title: "角刺"
 description: "造成 5 点攻击伤害。"
 ---
 
 
 <section class="dq-card-hero">
 <div class="dq-card-art-panel">
-<span class="dq-game-card dq-game-card-hero"><img src="/assets/extracted/textures/by_container/resources/Gore__748.png" alt="刺穿" loading="lazy"></span>
+<span class="dq-game-card dq-game-card-hero"><img src="/assets/extracted/textures/by_container/resources/Gore__748.png" alt="角刺" loading="lazy"></span>
 </div>
   <div class="dq-card-info-panel">
     <p class="dq-kicker">行动牌 · 2 阶</p>
-    <h1>刺穿</h1>
+    <h1>角刺</h1>
     <span class="dq-original">原名：Gore</span>
     <div class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：独角兽 基础牌组、独角兽 优先起手。">怪物限定</span></div>
     <p class="dq-rules dq-card-rules-fixed">造成 5 点攻击伤害。</p>
@@ -28,17 +28,19 @@ description: "造成 5 点攻击伤害。"
 </div>
     </div>
     <div class="dq-action-row">
-<a class="dq-button dq-button-secondary" href="/cards/jab">上一张</a>
-<a class="dq-button dq-button-secondary" href="/cards/blade-flurry">下一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/additional-equip-slot">上一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/curse">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">
-<span title="wiki 中使用的统一中文名称。"><strong>中文名</strong><em>刺穿</em></span>
+<span title="wiki 中使用的统一中文名称。"><strong>中文名</strong><em>角刺</em></span>
 <span title="游戏原始显示名；没有显示名时使用内部类名拆分。"><strong>英文名</strong><em>Gore</em></span>
 <span title="怪物限定来源：独角兽 基础牌组、独角兽 优先起手。"><strong>卡牌状态</strong><em>怪物限定</em></span>
 <span title="对卡牌状态的具体解释，帮助区分普通玩家牌、职业特色牌、成就牌和怪物专用牌。"><strong>状态说明</strong><em>怪物限定来源：独角兽 基础牌组、独角兽 优先起手。</em></span>

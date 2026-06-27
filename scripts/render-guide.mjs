@@ -194,6 +194,298 @@ const PROFESSION_STATUS = {
     detail: "有职业类、贴图、文本和初始化数据，但不在玩家可选职业池。"
   }
 };
+const UNIMPLEMENTED_DUNGEON_ACTION_CLASS_NAMES = [
+  "DungeonActionAlchemy",
+  "DungeonActionCopySacrifice",
+  "DungeonActionDream",
+  "DungeonActionFindMonster",
+  "DungeonActionLevelUp",
+  "DungeonActionMurder",
+  "DungeonActionOracleOld",
+  "DungeonActionSacrifice",
+  "DungeonActionSave",
+  "DungeonActionSing",
+  "DungeonActionStudy",
+  "DungeonActionSwap",
+  "DungeonActionUpgrade"
+];
+const UNIMPLEMENTED_DUNGEON_ACTION_NOTES = {
+  DungeonActionAlchemy: {
+    label: "炼金",
+    status: "未发现入口",
+    effect: "向玩家牌组加入一张治疗药水。",
+    note: "有按钮文本和加牌效果，但没有找到职业或天赋入口。"
+  },
+  DungeonActionCopySacrifice: {
+    label: "黑暗契约",
+    status: "未发现入口",
+    effect: "选择并复制一张牌，同时失去最大生命。",
+    note: "效果链完整，但没有找到玩家可获得入口。"
+  },
+  DungeonActionDream: {
+    label: "梦境学习",
+    status: "未发现入口",
+    effect: "从可选牌中学习 1 张并加入牌组。",
+    note: "存在 Dream / Learn 文案，但没有找到玩家可获得入口。"
+  },
+  DungeonActionFindMonster: {
+    label: "扎营",
+    status: "已确认职业入口",
+    effect: "在相邻空格生成一个与玩家等级相当的怪物。",
+    note: "Professor 3 级升级主奖励会授予；不归入未实装。"
+  },
+  DungeonActionLevelUp: {
+    label: "直接升级",
+    status: "系统候选",
+    effect: "直接触发玩家升级流程。",
+    note: "更像调试或奖励流程动作，不是常规玩家技能。"
+  },
+  DungeonActionMurder: {
+    label: "谋杀",
+    status: "已确认职业入口",
+    effect: "击杀一个非首领怪物，获得经验但不获得金币。",
+    note: "Assassin 6 级升级主奖励会授予；不归入未实装。"
+  },
+  DungeonActionOracleOld: {
+    label: "旧版神谕",
+    status: "旧实现",
+    effect: "揭示目标附近的地图格。",
+    note: "当前 Priest / Random 使用新版 Oracle；这里保留为旧实现。"
+  },
+  DungeonActionSacrifice: {
+    label: "献祭",
+    status: "未发现入口",
+    effect: "失去最大生命并获得法力。",
+    note: "有完整效果，但没有找到玩家可获得入口。"
+  },
+  DungeonActionSave: {
+    label: "保存",
+    status: "系统候选",
+    effect: "保存当前地牢进度。",
+    note: "系统流程动作，不是常规玩家技能。"
+  },
+  DungeonActionSing: {
+    label: "歌曲动作",
+    status: "已确认职业入口",
+    effect: "演奏已学习歌曲，触发对应 Song 效果。",
+    note: "Bard 学到的歌曲通过 Sing 使用；不归入未实装。"
+  },
+  DungeonActionStudy: {
+    label: "学习",
+    status: "未发现入口",
+    effect: "选择一张牌并加入牌组。",
+    note: "这是 Study Guide 方向的地图行动，不是 Professor 的 Research。"
+  },
+  DungeonActionSwap: {
+    label: "交换牌组",
+    status: "未发现入口",
+    effect: "交换玩家当前牌组。",
+    note: "没有找到玩家可获得入口。"
+  },
+  DungeonActionUpgrade: {
+    label: "武士道升级",
+    status: "疑似旧实现",
+    effect: "选择一张可升级的牌并升级。",
+    note: "按钮文本含 Bushido；当前 Samurai 是被动满血结算，这里疑似旧实现。"
+  }
+};
+const SYSTEM_DUNGEON_ACTION_NOTES = {
+  DungeonActionDeckTargetted: {
+    label: "牌组选择器",
+    effect: "打开牌组选择界面，让玩家选择目标牌。",
+    note: "通用选择器，不是可获得技能。"
+  },
+  DungeonActionDynamicDeckTargetted: {
+    label: "动态牌组选择器",
+    effect: "按当前奖励流程选择牌，并执行删除或升级。",
+    note: "通用选择器，不是可获得技能。"
+  },
+  DungeonActionLevelUpDeckTargetted: {
+    label: "升级选牌器",
+    effect: "升级时选择要升级或删除的牌。",
+    note: "升级流程组件，不是可获得技能。"
+  },
+  DungeonActionTalentDeckTargetted: {
+    label: "天赋选牌器",
+    effect: "按天赋需求选择牌，用于升级、删除、复制或获取。",
+    note: "天赋流程组件，不是可获得技能。"
+  },
+  DungeonActionTileTargetted: {
+    label: "地图格选择器",
+    effect: "让玩家在地图上选择目标格。",
+    note: "地图目标选择器，不是可获得技能。"
+  },
+  DungeonActionUberTeleport: {
+    label: "强制传送",
+    effect: "执行特殊传送初始化。",
+    note: "内部传送流程，不是常规玩家技能。"
+  }
+};
+const SYSTEM_DUNGEON_ACTION_CLASS_NAMES = [
+  "DungeonActionDeckTargetted",
+  "DungeonActionDynamicDeckTargetted",
+  "DungeonActionLevelUpDeckTargetted",
+  "DungeonActionTalentDeckTargetted",
+  "DungeonActionTileTargetted",
+  "DungeonActionUberTeleport"
+];
+const UNIMPLEMENTED_COMBAT_ABILITY_CLASS_NAMES = [
+  "CombatAbilityChannel",
+  "CombatAbilityCharm",
+  "CombatAbilityDivineFavor",
+  "CombatAbilityDoubleEquip",
+  "CombatAbilityFlurry",
+  "CombatAbilityQuickness",
+  "CombatAbilityRecall",
+  "CombatAbilityRend",
+  "CombatAbilityScrounge",
+  "CombatAbilitySerpentStrike",
+  "CombatAbilitySoulLeech",
+  "CombatAbilitySpellFury",
+  "CombatAbilityVenom"
+];
+const UNIMPLEMENTED_COMBAT_ABILITY_NOTES = {
+  CombatAbilityChannel: {
+    label: "引导",
+    effect: "消耗行动并获得法力。",
+    note: "和 Assassin 被动同名主题，但当前没有作为可点击战斗能力入口。"
+  },
+  CombatAbilityCharm: {
+    label: "魅惑",
+    effect: "弃掉对手手牌，并按弃牌数量抽牌。",
+    note: "没有职业或天赋入口；可能属于未接入能力。"
+  },
+  CombatAbilityDivineFavor: {
+    label: "神恩",
+    effect: "完全回复生命并获得法力，同时让对手弃掉手牌和装备。",
+    note: "没有职业或天赋入口；可能属于未接入能力。"
+  },
+  CombatAbilityDoubleEquip: {
+    label: "复制装备",
+    effect: "为场上装备创建临时复制。",
+    note: "没有职业或天赋入口；可能属于未接入能力。"
+  },
+  CombatAbilityFlurry: {
+    label: "连击",
+    effect: "获得大量行动点。",
+    note: "没有职业或天赋入口；可能属于未接入能力。"
+  },
+  CombatAbilityQuickness: {
+    label: "迅捷",
+    effect: "抽牌并获得行动点。",
+    note: "显示名恢复为 Shadow Step；没有职业或天赋入口。"
+  },
+  CombatAbilityRecall: {
+    label: "回想",
+    effect: "抽取牌库中的下一张法术牌。",
+    note: "没有职业或天赋入口；可能属于未接入能力。"
+  },
+  CombatAbilityRend: {
+    label: "撕裂",
+    effect: "本回合物理伤害追加额外伤害。",
+    note: "没有职业或天赋入口；可能属于未接入能力。"
+  },
+  CombatAbilityScrounge: {
+    label: "搜刮",
+    effect: "把对手牌库置入弃牌堆。",
+    note: "没有职业或天赋入口；不要和 Professor 的 Research 混用。"
+  },
+  CombatAbilitySerpentStrike: {
+    label: "蛇击",
+    effect: "抽牌后弃牌。",
+    note: "显示名恢复为 Refocus；没有职业或天赋入口。"
+  },
+  CombatAbilitySoulLeech: {
+    label: "灵魂汲取",
+    effect: "造成穿透伤害并治疗；击杀时永久增加生命。",
+    note: "显示文本与 Research 串联，需要保留复核标记。"
+  },
+  CombatAbilitySpellFury: {
+    label: "法术狂怒",
+    effect: "抽取牌库中的全部法术牌。",
+    note: "显示名恢复为 Devastate，但不同于 Wizard 的 6 级 Devastate。"
+  },
+  CombatAbilityVenom: {
+    label: "毒液",
+    effect: "施加中毒，并让毒伤绕过多数防御。",
+    note: "没有职业或天赋入口；可能属于未接入能力。"
+  }
+};
+const ALL_ACHIEVEMENTS_PROFILE_OVERLAY = {
+  health: 4,
+  mana: 2,
+  gold: 20
+};
+const PROFESSION_ALL_ACHIEVEMENTS_DECK_OVERRIDES = {
+  thief: ["Attack1", "Attack1", "Attack1", "Attack1", "Attack2", "Attack2", "Slice", "Slice", "Backstab"]
+};
+const START_PROFILE_DIFFICULTY_ORDER = ["kitten", "grizzly", "velociraptor"];
+const START_PROFILE_DIFFICULTY_MODIFIERS = {
+  kitten: {
+    label: "Kitten",
+    healthBonus: 5,
+    extraAttack1: 0,
+    achievement: "不能获得成就点",
+    source: "原版实测：全成就 Thief 在 Kitten 为 HP 24。"
+  },
+  grizzly: {
+    label: "Grizzly Bear",
+    healthBonus: 0,
+    extraAttack1: 1,
+    achievement: "默认成就点",
+    source: "默认难度；起始牌组追加 Attack1 x1。"
+  },
+  velociraptor: {
+    label: "Velociraptor",
+    healthBonus: 0,
+    extraAttack1: 2,
+    achievement: "双倍成就点",
+    source: "高难度；起始牌组追加 Attack1 x2。"
+  }
+};
+const START_PROFILE_DIFFICULTY_ROWS = [
+  ["Kitten", "起始 HP +5；起始牌组不额外追加 Attack1", "升级 HP 奖励 +1", "每层额外 HealingPool x1、TreasureChest x1；不能获得成就点。"],
+  ["Grizzly Bear", "起始 HP 不加成；起始牌组追加 Attack1 x1", "升级 HP 奖励 +1", "每层额外 HealthPack x1。"],
+  ["Velociraptor", "起始 HP 不加成；起始牌组追加 Attack1 x2", "未看到升级 HP 奖励修正", "当前未看到普通奖励补充分支；原版 UI 标注更难，并给双倍成就点。"]
+];
+const START_PROFILE_LEVEL_UP_HEALTH_ROWS = [
+  ["职业基础", "ProfessionBase.LevelUpHealth(targetLevel)", "多数职业 +2；Warrior / Ranger +3；Necromancer +1。"],
+  ["难度修正", "Dungeon.difficulty 与难度静态表比较", "Kitten +1，Grizzly Bear +1，Velociraptor +0。"],
+  ["档案/成就修正", "用户属性 FLOOR1 / id 71", "若当前档案已有 FLOOR1，则再 +1。"],
+  ["结算方式", "DungeonPlayer.GainMaxHealth(total)", "增加最大生命，也增加当前生命；升级收尾还会把当前生命设为最大生命。"]
+];
+const START_PROFILE_DIFFICULTY_SCOPE_ROWS = [
+  ["起始 HP / 牌组", "职业 initializer、档案覆盖、原版难度实测", "职业 initializer 先给基础值；全成就档案再覆盖资源/Thief 牌组；实际开局最后按难度修正 HP，并按难度追加 Attack1。"],
+  ["起始蓝 / 金币 / 手牌 / 行动", "职业 initializer 与 starting-profile smoke", "当前按职业和档案覆盖决定；未看到难度额外分支。"],
+  ["升级 HP", "DungeonPlayer.ActualLevelUp", "Kitten / Grizzly Bear 各 +1；Velociraptor 当前未看到 HP 修正。"],
+  ["地图奖励 / 建筑", "DungeonBoard.GenerateRewards", "Kitten 加 HealingPool 与 TreasureChest；Grizzly Bear 加 HealthPack；Velociraptor 当前未看到普通奖励补充分支。"],
+  ["怪物击杀金币 / 经验 / 宝箱", "Monster.Defeated、Monster.GoldValue、Monster.ExpValue", "当前未看到难度分支；按怪物等级、金币/经验倍率和掉落修正结算。有 storedChest 的普通金币怪击杀时 10% 触发宝箱替代金币。"],
+  ["成就与成就点", "难度 UI 文本与成就入口", "Kitten 禁用成就/成就点；Velociraptor 给双倍成就点；Grizzly Bear 为默认。"]
+];
+const MONSTER_KILL_GOLD_ROWS = [
+  [1, 3],
+  [2, 6],
+  [3, 9],
+  [4, 10],
+  [5, 11],
+  [6, 12],
+  [7, 14],
+  [8, 17],
+  [9, 20],
+  [10, 25]
+];
+const PLAYER_EXP_THRESHOLD_ROWS = [
+  [1, 0],
+  [2, 2],
+  [3, 4],
+  [4, 7],
+  [5, 12],
+  [6, 20],
+  [7, 25],
+  [8, 30],
+  [9, 35],
+  [10, 45]
+];
 const CARD_STATUS_OVERRIDES = {
   "wild-strike1": {
     status: "monster",
@@ -1864,7 +2156,7 @@ const SKILL_NAME_CN = {
   CombatAbilityBurningLight: { cn: "燃烧之光", en: "Burning Light" },
   CombatAbilityChannel: { cn: "引导", en: "Channel" },
   CombatAbilityClingingLight: { cn: "附着之光", en: "Clinging Light" },
-  CombatAbilityCriticalShot: { cn: "致命射击", en: "Critical Strike" },
+  CombatAbilityCriticalShot: { cn: "致命一击", en: "Critical Strike" },
   CombatAbilityDesperatePrayer: { cn: "绝望祈祷", en: "Desperate Prayer" },
   CombatAbilityDevastate: { cn: "毁灭", en: "Devastate" },
   CombatAbilityDistract: { cn: "干扰", en: "Distract" },
@@ -1880,7 +2172,7 @@ const SKILL_NAME_CN = {
   CombatAbilityTotalFocus: { cn: "完全专注", en: "Total Focus" },
   CombatAbilityTutor: { cn: "发展", en: "Development" },
   CombatAbilityVanish: { cn: "消失", en: "Vanish" },
-  CombatAbilityWholeBody: { cn: "圣涌", en: "Holy Surge" },
+  CombatAbilityWholeBody: { cn: "神圣涌动", en: "Holy Surge" },
   CombatAbilityWildPower: { cn: "狂野力量", en: "Wild Power" },
   DungeonActionDevour: { cn: "吞噬", en: "Devour" },
   DungeonActionFindMonster: { cn: "扎营", en: "Make Camp" },
@@ -2335,7 +2627,7 @@ const EXACT_RULE_TRANSLATION_ENTRIES = [
   ],
   [
     "Deal 10 damage. Your opponent discards 2 cards. This has no effect on players with damage reduction, physical resistance, dodge, or a ward.",
-    "造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或护盾守卫，则此牌无效果。"
+    "造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或防护，则此牌无效果。"
   ],
   [
     "Play this card only if your opponent has at most 5 health. Win the fight. Gain 1 mana permanently.",
@@ -2465,6 +2757,29 @@ function assetKeyVariants(value) {
 
 function readJson(file) {
   return readFile(file, "utf8").then((raw) => JSON.parse(raw));
+}
+
+async function readTextIfExists(file) {
+  try {
+    return await readFile(file, "utf8");
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      return "";
+    }
+    throw error;
+  }
+}
+
+function parseTsv(raw) {
+  const lines = String(raw || "").trim().split(/\r?\n/).filter(Boolean);
+  if (lines.length < 2) {
+    return [];
+  }
+  const headers = lines[0].split("\t");
+  return lines.slice(1).map((line) => {
+    const cells = line.split("\t");
+    return Object.fromEntries(headers.map((header, index) => [header, cells[index] ?? ""]));
+  });
 }
 
 function compactText(value, max = 140) {
@@ -3494,6 +3809,159 @@ function groupCounts(items) {
   return [...counts.entries()];
 }
 
+function splitCsvList(value) {
+  return String(value || "")
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function parseMonsterSnapshotRows(raw) {
+  return parseTsv(raw).map((row) => ({
+    ...row,
+    level: Number(row.level),
+    health: Number(row.health),
+    mana: Number(row.mana),
+    actions: Number(row.actions),
+    draw: Number(row.draw),
+    boss: String(row.boss).toLowerCase() === "true"
+  }));
+}
+
+function monsterSnapshotRecordKey(monster) {
+  return slugify(monster?.internal_name || monster?.class_name || monster?.display_name);
+}
+
+function monsterSnapshotRowKey(row) {
+  return slugify(row?.monster || row?.display_name);
+}
+
+function buildMonsterSnapshotMap(rows = []) {
+  const map = new Map();
+  for (const row of rows) {
+    const key = monsterSnapshotRowKey(row);
+    if (!key) {
+      continue;
+    }
+    if (!map.has(key)) {
+      map.set(key, []);
+    }
+    map.get(key).push(row);
+  }
+  for (const list of map.values()) {
+    list.sort((a, b) => Number(a.level) - Number(b.level));
+  }
+  return map;
+}
+
+function monsterSnapshotAnchor(row) {
+  return `snapshot-${monsterSnapshotRowKey(row)}-${escapeHtml(row.level)}`;
+}
+
+function monsterSnapshotRowId(row) {
+  return `${monsterSnapshotRowKey(row)}:${Number(row.level)}`;
+}
+
+function buildPreviousMonsterSnapshotMap(rows = []) {
+  const previousById = new Map();
+  for (const list of buildMonsterSnapshotMap(rows).values()) {
+    for (let index = 0; index < list.length; index += 1) {
+      previousById.set(monsterSnapshotRowId(list[index]), list[index - 1] || null);
+    }
+  }
+  return previousById;
+}
+
+function isGeneratedAttackCard(token) {
+  return /^attack[1-4]$/i.test(normalizeCardToken(token));
+}
+
+function monsterSnapshotKeyDeckTokens(row) {
+  return splitCsvList(row.final_deck).filter((token) => !isGeneratedAttackCard(token));
+}
+
+function monsterSnapshotDeckDelta(row, previousRow) {
+  if (!previousRow) {
+    return {
+      label: "最低等级最终卡组",
+      tokens: splitCsvList(row.final_deck),
+      empty: "无"
+    };
+  }
+  const currentTokens = monsterSnapshotKeyDeckTokens(row);
+  const previousCounts = new Map(groupCounts(monsterSnapshotKeyDeckTokens(previousRow)));
+  const tokens = [];
+  for (const [token, count] of groupCounts(currentTokens)) {
+    const delta = count - (previousCounts.get(token) || 0);
+    for (let index = 0; index < delta; index += 1) {
+      tokens.push(token);
+    }
+  }
+  return {
+    label: "本等级新增牌",
+    tokens,
+    empty: "无新增关键牌"
+  };
+}
+
+function formatCardCountText(tokens, options = {}) {
+  const { limit = Infinity, empty = "无" } = options;
+  const counts = groupCounts(tokens).sort((a, b) => Number(b[1]) - Number(a[1]) || String(a[0]).localeCompare(String(b[0])));
+  if (!counts.length) {
+    return empty;
+  }
+  const shown = counts.slice(0, limit).map(([token, count]) => `${count}x ${translatedCardTokenText(token)}`);
+  if (counts.length > limit) {
+    shown.push(`另 ${counts.length - limit} 种`);
+  }
+  return shown.join(", ");
+}
+
+function profileDeckForProfession(profession, profile = "fresh") {
+  if (profile === "all-achievements") {
+    const override = PROFESSION_ALL_ACHIEVEMENTS_DECK_OVERRIDES[profession.id];
+    if (override) {
+      return override;
+    }
+  }
+  return profession.initializer?.deck || [];
+}
+
+function professionStartProfile(profession, profile = "fresh") {
+  const base = profession.initializer?.stats || {};
+  if (profile !== "all-achievements") {
+    return { ...base, deck: profileDeckForProfession(profession, profile) };
+  }
+  return {
+    ...base,
+    health: Number(base.health ?? 0) + ALL_ACHIEVEMENTS_PROFILE_OVERLAY.health,
+    mana: Number(base.mana ?? 0) + ALL_ACHIEVEMENTS_PROFILE_OVERLAY.mana,
+    gold: ALL_ACHIEVEMENTS_PROFILE_OVERLAY.gold,
+    deck: profileDeckForProfession(profession, profile)
+  };
+}
+
+function startProfileWithDifficulty(profession, profile = "fresh", difficultyKey = "grizzly") {
+  const base = professionStartProfile(profession, profile);
+  const modifier = START_PROFILE_DIFFICULTY_MODIFIERS[difficultyKey] || START_PROFILE_DIFFICULTY_MODIFIERS.grizzly;
+  return {
+    ...base,
+    health: Number(base.health ?? 0) + modifier.healthBonus,
+    deck: [...(base.deck || []), ...Array.from({ length: modifier.extraAttack1 }, () => "Attack1")]
+  };
+}
+
+function startProfileDifficultyDeltaText(difficultyKey) {
+  const modifier = START_PROFILE_DIFFICULTY_MODIFIERS[difficultyKey] || START_PROFILE_DIFFICULTY_MODIFIERS.grizzly;
+  const hp = modifier.healthBonus ? `HP +${modifier.healthBonus}` : "HP +0";
+  const deck = modifier.extraAttack1 ? `Attack1 x${modifier.extraAttack1}` : "不追加 Attack1";
+  return `${hp}；${deck}`;
+}
+
+function profileResourceText(profile) {
+  return `HP ${profile.health ?? 0} / 蓝 ${profile.mana ?? 0} / 手牌 ${profile.cards ?? 0} / 行动 ${profile.actions ?? 0} / 金币 ${profile.gold ?? 0}`;
+}
+
 function makeAssetLookup(assetCatalog) {
   const entries = assetCatalog.entries || [];
   const byKey = new Map();
@@ -3640,11 +4108,7 @@ function rewardWeightRule(profession) {
 
 function levelRewardOptions(profession) {
   const options = PROFESSION_LEVEL_OPTIONS[profession.id] || ["生命增加", "卡牌奖励"];
-  const healthGain = PROFESSION_LEVEL_HEALTH_GAIN[profession.id];
-  if (healthGain == null) {
-    return options;
-  }
-  return options.map((item) => (item === "生命增加" ? `生命增加 / HP +${healthGain}` : item));
+  return options.map((item) => (item === "生命增加" ? "生命增加（奖励项）" : item));
 }
 
 function renderLevelOptionTags(profession) {
@@ -3673,7 +4137,7 @@ function renderProfessionParsedData(profession, abilityCn) {
       <tr><td>实装状态</td><td>${renderProfessionStatusBadge(profession)}</td></tr>
       <tr><td>职业能力</td><td>${formatRuleHtml(abilityCn, true, true)}${profession.ability_text ? `<p class="dq-original">原文：${escapeHtml(profession.ability_text)}</p>` : ""}</td></tr>
       <tr><td>起始资源</td><td>${escapeHtml(resourceSummary(stats))} / 手牌 ${escapeHtml(stats.cards ?? 0)} / 金币 ${escapeHtml(stats.gold ?? 0)}</td></tr>
-      <tr><td>升级生命奖励</td><td>${healthGain == null ? "由实际抽中的职业决定。" : `选择生命奖励时最大生命 +${healthGain}。`}</td></tr>
+      <tr><td>自动升级 HP</td><td>${healthGain == null ? "由实际抽中的职业决定；实际值还会叠加难度和 FLOOR1 修正。" : `职业基础最大生命 +${healthGain}；实际值还会叠加难度和 FLOOR1 修正。`}</td></tr>
       <tr><td>职业权重 ID</td><td>${escapeHtml((profession.initializer?.class_biases || []).join("、") || "无")}</td></tr>
     </tbody>
   </table>
@@ -4001,6 +4465,93 @@ ${rows
 </table>`;
 }
 
+function renderStartProfileUpgradeTable(records, cardById, context = {}) {
+  const combatAbilities = context.combatAbilities || [];
+  const dungeonActions = context.dungeonActions || [];
+  const assetLookup = context.assetLookup || { image: () => "" };
+  return `<div class="dq-table-scroll">
+<table class="dq-data-table dq-upgrade-summary-table">
+  <thead><tr><th>职业</th><th>自动 HP 成长</th><th>升级选项池</th><th>升级主奖励节点</th><th>固定奖励节点</th></tr></thead>
+  <tbody>
+${records
+  .map((record) => {
+    const profession = record.profession;
+    const healthGain = PROFESSION_LEVEL_HEALTH_GAIN[profession.id];
+    return `<tr>
+  <td><a href="${record.href}">${escapeHtml(profession.display_name || profession.id)}</a><br><small>${escapeHtml(originalDisplayName(profession))}</small></td>
+  <td>${healthGain == null ? "取决于实际抽中的职业" : `职业基础 +${escapeHtml(healthGain)}`}</td>
+  <td>${renderLevelOptionTags(profession)}</td>
+  <td class="dq-long-cell">${renderUpgradePrimarySummary(profession, combatAbilities, dungeonActions, assetLookup)}</td>
+  <td class="dq-long-cell">${renderUpgradeFixedSummary(profession, cardById)}</td>
+</tr>`;
+  })
+  .join("\n")}
+  </tbody>
+</table>
+</div>`;
+}
+
+function renderDifficultyStartProfileExamples(records, cardById) {
+  const thiefRecord = records.find((record) => record.profession?.id === "thief");
+  if (!thiefRecord) {
+    return `<p class="dq-note">未找到 Thief 记录，无法生成难度开局校验示例。</p>`;
+  }
+  const profiles = [
+    ["fresh", "基础开局"],
+    ["all-achievements", "全成就档案"]
+  ];
+  const rows = [];
+  for (const [profileKey, profileLabel] of profiles) {
+    for (const difficultyKey of START_PROFILE_DIFFICULTY_ORDER) {
+      const modifier = START_PROFILE_DIFFICULTY_MODIFIERS[difficultyKey];
+      const start = startProfileWithDifficulty(thiefRecord.profession, profileKey, difficultyKey);
+      rows.push(`<tr>
+  <td>${escapeHtml(profileLabel)}</td>
+  <td>${escapeHtml(modifier.label)}</td>
+  <td>${escapeHtml(startProfileDifficultyDeltaText(difficultyKey))}</td>
+  <td>${escapeHtml(start.health ?? 0)}</td>
+  <td class="dq-long-cell">${renderCountedMonsterCardRow(start.deck, cardById, { className: "dq-start-profile-card-row" })}</td>
+</tr>`);
+    }
+  }
+  return `<div class="dq-table-scroll">
+<table class="dq-data-table dq-start-difficulty-table">
+  <thead><tr><th>档案</th><th>难度</th><th>难度追加</th><th>Thief HP</th><th>Thief 起始牌组</th></tr></thead>
+  <tbody>
+${rows.join("\n")}
+  </tbody>
+</table>
+</div>`;
+}
+
+function renderUpgradePrimarySummary(profession, combatAbilities, dungeonActions, assetLookup) {
+  const rows = PROFESSION_PRIMARY_REWARDS[profession.id] || [];
+  if (!rows.length) {
+    return `<span class="dq-muted-chip">${profession.id === "random" ? "取决于实际抽中的职业" : "无单独主奖励节点"}</span>`;
+  }
+  const combatLookup = makeSkillLookup(combatAbilities);
+  const dungeonLookup = makeSkillLookup(dungeonActions);
+  return `<div class="dq-upgrade-chip-list">${rows
+    .map((row) => {
+      const item = resolvePrimaryReward(row, combatLookup, dungeonLookup, assetLookup);
+      return `<span class="dq-upgrade-reward-line"><em>${escapeHtml(rewardLevelText(row.level))}</em>${renderPrimaryRewardName(item)}</span>`;
+    })
+    .join("\n")}</div>`;
+}
+
+function renderUpgradeFixedSummary(profession, cardById) {
+  const rows = PROFESSION_FIXED_REWARDS[profession.id] || [];
+  if (!rows.length) {
+    return `<span class="dq-muted-chip">无额外固定奖励</span>`;
+  }
+  return `<div class="dq-upgrade-chip-list">${rows
+    .map(
+      (reward) =>
+        `<span class="dq-upgrade-reward-line"><em>${escapeHtml(rewardLevelText(reward.level))}</em>${renderFixedRewardName(reward, cardById)}</span>`
+    )
+    .join("\n")}</div>`;
+}
+
 function dragonSpellLink([id, label]) {
   return `<a href="/cards/${slugify(id)}">${escapeHtml(label)}</a>`;
 }
@@ -4136,7 +4687,7 @@ function renderSongTable(songs) {
     })
     .join("\n");
   return `<h3>Song 歌曲表</h3>
-<p class="dq-note">Bard 学到的歌曲会通过 Sing 使用。这里保留英文名，同时给出中文效果。</p>
+<p class="dq-note">Bard 学到的歌曲会通过 Sing 使用。歌曲名按游戏显示名展示，内部 ID 仅保留为检索线索；这里同时给出中文效果。</p>
 <table class="dq-data-table dq-song-table">
   <thead><tr><th>歌曲</th><th>效果</th></tr></thead>
   <tbody>
@@ -4150,7 +4701,7 @@ function renderProfessionLevelRewards(profession, cardById, combatAbilities, dun
   const healthGain = PROFESSION_LEVEL_HEALTH_GAIN[profession.id];
   return `<section class="dq-section-block">
   <h2>升级与固定奖励</h2>
-  <p class="dq-note">职业升级会先处理特定等级主奖励；其中 3 级和 6 级常解锁战斗技能、地牢技能或专属强化。只有进入随机卡奖励时，才会从 LowCards / MidCards / HighCards 的职业卡表中抽取。</p>
+  <p class="dq-note">职业升级会自动结算 HP、蓝和金币成长，再处理等级奖励面板；其中 3 级和 6 级常解锁战斗技能、地牢技能或专属强化。只有进入随机卡奖励时，才会从 LowCards / MidCards / HighCards 的职业卡表中抽取。</p>
   <div class="dq-reward-summary">
     <div>
       <strong>升级选项池</strong>
@@ -4158,7 +4709,7 @@ function renderProfessionLevelRewards(profession, cardById, combatAbilities, dun
     </div>
     <div>
       <strong>HP 成长</strong>
-      <p>${healthGain == null ? "Random 职业取决于实际抽中的职业。" : `选择生命奖励时，最大生命增加 ${healthGain} 点。`}</p>
+      <p>${healthGain == null ? "Random 职业取决于实际抽中的职业；实际值还会叠加难度和 FLOOR1 修正。" : `升级时自动最大生命 +${healthGain}；实际值还会叠加难度和 FLOOR1 修正。`}</p>
     </div>
     <div>
       <strong>CardFinder 基础权重</strong>
@@ -4816,6 +5367,13 @@ export async function buildGuidePages({ repoRoot, docsRoot }) {
   const monsterBridgeById = buildMonsterBridgeMap(monsterDeckBridge);
   annotateCardStatusSources(catalogCardRecords, professionRecords, monsterRecords, monsterBridgeById);
   const cardOperationMap = buildCardOperationMap(cardEffectCalls);
+  const mechanicsSourceRoot = path.join(repoRoot, "docs", "mechanics");
+  const [startProfileAuditRaw, monsterSnapshotTsvRaw] = await Promise.all([
+    readTextIfExists(path.join(mechanicsSourceRoot, "start-profile-and-monster-level-audit.md")),
+    readTextIfExists(path.join(mechanicsSourceRoot, "monster-level-hp-deck-snapshots.tsv"))
+  ]);
+  const monsterSnapshotRows = parseMonsterSnapshotRows(monsterSnapshotTsvRaw);
+  const monsterSnapshotsById = buildMonsterSnapshotMap(monsterSnapshotRows);
 
   await mkdir(path.join(docsRoot, "cards"), { recursive: true });
   await mkdir(path.join(docsRoot, "professions"), { recursive: true });
@@ -4824,6 +5382,24 @@ export async function buildGuidePages({ repoRoot, docsRoot }) {
   await mkdir(path.join(docsRoot, "mechanics", "lord"), { recursive: true });
   await mkdir(path.join(docsRoot, "buildings"), { recursive: true });
   await mkdir(path.join(docsRoot, "talents"), { recursive: true });
+  await mkdir(path.join(docsRoot, "public", "assets", "data"), { recursive: true });
+  if (monsterSnapshotTsvRaw) {
+    await writeFile(
+      path.join(docsRoot, "public", "assets", "data", "monster-level-hp-deck-snapshots.tsv"),
+      monsterSnapshotTsvRaw,
+      "utf8"
+    );
+    await writeFile(
+      path.join(docsRoot, "public", "assets", "data", "monster-level-snapshots-incremental.html"),
+      renderMonsterSnapshotStandaloneTable(monsterRecords, monsterSnapshotRows, cardById),
+      "utf8"
+    );
+    await rm(path.join(docsRoot, "public", "assets", "data", "monster-level-snapshots-table.html"), { force: true });
+  } else {
+    await rm(path.join(docsRoot, "public", "assets", "data", "monster-level-hp-deck-snapshots.tsv"), { force: true });
+    await rm(path.join(docsRoot, "public", "assets", "data", "monster-level-snapshots-table.html"), { force: true });
+    await rm(path.join(docsRoot, "public", "assets", "data", "monster-level-snapshots-incremental.html"), { force: true });
+  }
   for (const record of cardRecords) {
     if (!catalogSlugs.has(record.slug)) {
       await rm(path.join(docsRoot, "cards", `${record.slug}.md`), { force: true });
@@ -4848,7 +5424,31 @@ export async function buildGuidePages({ repoRoot, docsRoot }) {
     "utf8"
   );
   await writeFile(path.join(docsRoot, "mechanics", "index.md"), renderMechanicsIndex(), "utf8");
-  await writeFile(path.join(docsRoot, "monsters.md"), renderMonstersOverview(monsterRecords, monsterCatalog.summary, monsterBridgeById, assetLookup), "utf8");
+  await writeFile(
+    path.join(docsRoot, "mechanics", "start-profile-and-difficulty.md"),
+    renderStartProfileAuditGuide(professionRecords, cardById, startProfileAuditRaw, {
+      combatAbilities,
+      dungeonActions,
+      assetLookup
+    }),
+    "utf8"
+  );
+  await writeFile(
+    path.join(docsRoot, "mechanics", "monster-level-snapshots.md"),
+    renderMonsterLevelSnapshotGuide(monsterRecords, monsterSnapshotRows, cardById),
+    "utf8"
+  );
+  await writeFile(
+    path.join(docsRoot, "mechanics", "unimplemented-skills.md"),
+    renderUnimplementedSkillsGuide({
+      combatAbilities,
+      dungeonActions,
+      talents: talentsData.talents || [],
+      assetLookup
+    }),
+    "utf8"
+  );
+  await writeFile(path.join(docsRoot, "monsters.md"), renderMonstersOverview(monsterRecords, monsterCatalog.summary, monsterBridgeById, assetLookup, monsterSnapshotRows), "utf8");
   await writeFile(path.join(docsRoot, "buildings.md"), renderBuildingsOverview(buildingRecords), "utf8");
   await writeFile(path.join(docsRoot, "talents.md"), renderTalentsOverview(talentRecords), "utf8");
   await writeFile(
@@ -4921,14 +5521,14 @@ export async function buildGuidePages({ repoRoot, docsRoot }) {
   );
   await writeFile(
     path.join(docsRoot, "mechanics", "rewards-and-shops.md"),
-    renderRewardsAndShopsGuide(dungeonGeneration),
+    renderRewardsAndShopsGuide(dungeonGeneration, assetLookup),
     "utf8"
   );
 
   for (const record of catalogCardRecords) {
     await writeFile(
       path.join(docsRoot, "cards", `${record.slug}.md`),
-      renderCardPage(record, catalogCardRecords, biasIdToProfessions),
+      renderCardPage(record, catalogCardRecords, biasIdToProfessions, cardById),
       "utf8"
     );
   }
@@ -4972,7 +5572,8 @@ export async function buildGuidePages({ repoRoot, docsRoot }) {
       renderMonsterPage({
         record,
         cardById,
-        bridge: monsterBridgeForRecord(record, monsterBridgeById)
+        bridge: monsterBridgeForRecord(record, monsterBridgeById),
+        snapshots: monsterSnapshotsById.get(monsterSnapshotRecordKey(record.monster)) || []
       }),
       "utf8"
     );
@@ -5029,7 +5630,7 @@ function renderHome(cardRecords, professionRecords, monsterRecords = [], buildin
   <a href="/buildings"><strong>地牢建筑</strong><span>${buildingRecords.length} 个建筑和地牢事件，覆盖宝箱、商店、酒馆和特殊事件。</span></a>
   <a href="/talents"><strong>天赋图鉴</strong><span>${talentRecords.length} 个地牢天赋，按阶级、要求和效果查询。</span></a>
   <a href="/achievements"><strong>成就图鉴</strong><span>${achievementRecords.length} 条成就，按解锁类型查看奖励。</span></a>
-  <a href="/mechanics/"><strong>机制参考</strong><span>查看随机数、地牢生成、卡牌出现权重、负面效果和机制索引。</span></a>
+  <a href="/mechanics/"><strong>机制参考</strong><span>查看职业开局、怪物等级快照、随机数、地牢生成、卡牌出现权重和负面效果。</span></a>
 </section>
 
 ## 推荐入口
@@ -6306,6 +6907,167 @@ function renderDungeonRewardAllocationSummary(dungeonGeneration) {
 </table>`;
 }
 
+function rewardGuideImage(assetLookup, area, id, preferred = "") {
+  return assetLookup?.image(area, id, preferred) || "";
+}
+
+function rewardGuideImages(assetLookup) {
+  return {
+    monster: rewardGuideImage(assetLookup, "dungeon_talent_icon", "findmonster"),
+    exp: rewardGuideImage(assetLookup, "dungeon_talent_icon", "levelup"),
+    gold: rewardGuideImage(assetLookup, "dungeon_talent_icon", "rich"),
+    chest: rewardGuideImage(assetLookup, "dungeon_actor", "treasurechest", "/big/"),
+    card: rewardGuideImage(assetLookup, "dungeon_talent_icon", "card1"),
+    shop: rewardGuideImage(assetLookup, "dungeon_actor", "shop", "/big/"),
+    health: rewardGuideImage(assetLookup, "dungeon_actor", "healthpack", "/big/"),
+    service: rewardGuideImage(assetLookup, "dungeon_actor", "blacksmith", "/big/"),
+    randomReward: rewardGuideImage(assetLookup, "dungeon_actor", "treasurechest", "/big/")
+  };
+}
+
+function rewardIcon(image, label, className = "") {
+  const img = image ? `<img src="${image}" alt="${escapeHtml(label)}" loading="lazy">` : "";
+  const classes = ["dq-reward-icon", className].filter(Boolean).join(" ");
+  return `<span class="${classes}" title="${escapeHtml(label)}">${img}</span>`;
+}
+
+function rewardIconHeading(image, title, subtitle) {
+  return `<span class="dq-reward-heading">
+    ${rewardIcon(image, title)}
+    <span><strong>${escapeHtml(title)}</strong><small>${escapeHtml(subtitle)}</small></span>
+  </span>`;
+}
+
+function renderRewardsPageHero(images) {
+  return `<section class="dq-page-hero dq-rewards-hero">
+  <div>
+    <p class="dq-kicker">Rewards</p>
+    <h1>奖励、宝箱与商店</h1>
+    <p class="dq-lede">这页把两类奖励拆开看：地图上生成的奖励建筑，以及战斗胜利后从怪物身上结算的经验、金币和宝箱。</p>
+  </div>
+  <div class="dq-reward-hero-icons" aria-hidden="true">
+    ${rewardIcon(images.monster, "怪物")}
+    ${rewardIcon(images.exp, "经验")}
+    ${rewardIcon(images.gold, "金币")}
+    ${rewardIcon(images.chest, "宝箱")}
+    ${rewardIcon(images.card, "卡牌")}
+  </div>
+</section>`;
+}
+
+function renderDungeonRewardFlow(images) {
+  return `<section class="dq-flow-grid dq-reward-flow-grid">
+  <div>
+    ${rewardIcon(images.shop, "商店")}
+    <strong>1. 固定商店</strong>
+    <span>每层先放入 3 个 Shop，作为基础经济入口。</span>
+  </div>
+  <div>
+    ${rewardIcon(images.health, "治疗")}
+    <strong>2. 治疗分支</strong>
+    <span>再决定是 HealingPool 加少量 HealthPack，还是直接生成更多 HealthPack。</span>
+  </div>
+  <div>
+    ${rewardIcon(images.service, "服务建筑")}
+    <strong>3. 服务建筑</strong>
+    <span>Monastery、Blacksmith、SmoothieShack 三选一。</span>
+  </div>
+  <div>
+    ${rewardIcon(images.randomReward, "普通奖励")}
+    <strong>4. 普通奖励</strong>
+    <span>最后追加 RandomRange(2, 4) 个 GenerateRewardName 结果。</span>
+  </div>
+</section>`;
+}
+
+function renderMonsterKillRuleCards(images) {
+  return `<div class="dq-reward-rule-grid">
+  <div>
+    ${rewardIconHeading(images.exp, "经验", "Experience")}
+    <p>普通怪物的基础经验等于怪物等级。等级会先夹到 1-10，再乘以怪物自己的 expMult。</p>
+  </div>
+  <div>
+    ${rewardIconHeading(images.gold, "金币", "Gold")}
+    <p>先按等级得到金币均值，再经过 ModifyGoldDrops。实际掉落按均值上下小幅波动，最低为 1 金币。</p>
+  </div>
+  <div>
+    ${rewardIconHeading(images.chest, "宝箱替代金币", "Chest Roll")}
+    <p>怪物身上已有 storedChest 且 goldMult 为 1.0 时，击杀有 10% 用宝箱替代普通金币。</p>
+  </div>
+  <div>
+    ${rewardIconHeading(images.card, "怪物宝箱内容", "Loot")}
+    <p>怪物宝箱固定 1 件，调用 GenerateLoot(1)。这一件走 CardFinder 抽卡，不使用普通宝箱的 1/2/3 件数量表。</p>
+  </div>
+</div>`;
+}
+
+function renderMonsterKillRewardGuide(assetLookup) {
+  const images = rewardGuideImages(assetLookup);
+  return `<section class="dq-section-block">
+  <h2>怪物击杀奖励</h2>
+  <p class="dq-note">这是战斗胜利后从怪物身上结算的奖励，不是地图上的 TreasureChest / Shop / Blacksmith 等地牢奖励建筑。当前恢复代码里，难度不会直接改怪物击杀金币或经验。</p>
+  <div class="dq-callout">
+    <strong>一句话规则</strong>
+    <span>杀怪一定结算经验；然后结算金币，或在满足条件时用怪物身上的宝箱替代金币。宝箱不是额外加一次金币奖励。</span>
+  </div>
+  <section class="dq-flow-grid dq-reward-flow-grid dq-monster-kill-flow">
+    <div>
+      ${rewardIcon(images.monster, "怪物等级")}
+      <strong>1. 等级写入奖励字段</strong>
+      <span>Monster.LevelTo 把等级夹到 1-10，并写入基础经验和金币均值。</span>
+    </div>
+    <div>
+      ${rewardIcon(images.exp, "经验")}
+      <strong>2. 先记录经验</strong>
+      <span>Monster.Defeated 调 ProcessKill；普通战斗会延迟到战斗结束后触发升级检查。</span>
+    </div>
+    <div>
+      ${rewardIcon(images.chest, "宝箱")}
+      <strong>3. 判断是否出宝箱</strong>
+      <span>有 storedChest、goldMult 为 1.0，且 RandomFloat 小于 0.1 时，显示 a treasure chest!。</span>
+    </div>
+    <div>
+      ${rewardIcon(images.gold, "金币")}
+      <strong>4. 否则掉金币</strong>
+      <span>普通金币按 RandomNormal(mean, mean * 0.1) 抽样并取整，低于 1 时按 1 结算。</span>
+    </div>
+  </section>
+  ${renderMonsterKillRuleCards(images)}
+  <table class="dq-data-table">
+    <thead><tr><th>项目</th><th>规则</th></tr></thead>
+    <tbody>
+      <tr><td>${rewardIconHeading(images.exp, "经验", "EXP")}</td><td>Monster.LevelTo 保存 exp = int(ExpValue(level) * expMult)。普通怪物的 ExpValue(level) 就是等级值，所以 1-10 级分别给 1-10 经验。</td></tr>
+      <tr><td>${rewardIconHeading(images.gold, "金币均值", "Gold Mean")}</td><td>先保存 gold = int(GoldValue(level) * goldMult)，击杀时再经过 DungeonPlayer.ModifyGoldDrops 修正。Miserly Minuet 等效果会在这里影响均值。</td></tr>
+      <tr><td>${rewardIconHeading(images.gold, "金币随机", "Gold Roll")}</td><td>实际金币用 Game.RandomNormal(mean, mean * 0.1) 抽样并取整；低于 1 时按 1 金币结算。</td></tr>
+      <tr><td>${rewardIconHeading(images.chest, "宝箱替代金币", "10% Roll")}</td><td>Monster.Defeated 先掷 RandomFloat；若小于 0.1，且怪物身上已有 storedChest，且 goldMult 为 1.0，则显示“a treasure chest!”并用宝箱替代普通金币。经验仍照常获得。</td></tr>
+      <tr><td>${rewardIconHeading(images.card, "怪物宝箱内容", "GenerateLoot(1)")}</td><td>GenerateMonsterChest 调用 TreasureChest.GenerateLoot(1)，因此固定 1 件，第一件走 CardFinder 抽卡；它不是普通宝箱的 1/2/3 件掉落表。</td></tr>
+    </tbody>
+  </table>
+
+  <h3>金币和经验表</h3>
+  <p class="dq-note">表里的金币是均值；最终金币还会走随机波动和 ModifyGoldDrops。宝箱触发时，这次普通金币会被宝箱替代。</p>
+  <div class="dq-table-scroll">
+  <table class="dq-data-table">
+    <thead><tr><th>怪物等级</th><th>${rewardIconHeading(images.exp, "经验", "EXP")}</th><th>${rewardIconHeading(images.gold, "金币均值", "Gold")}</th></tr></thead>
+    <tbody>
+${MONSTER_KILL_GOLD_ROWS.map(([level, gold]) => `<tr><td>${level}</td><td>${level}</td><td>${gold}</td></tr>`).join("\n")}
+    </tbody>
+  </table>
+  </div>
+
+  <h3>玩家升级经验</h3>
+  <p class="dq-note">普通战斗在 Monster.Defeated 中先记录经验；随后 Dungeon.WinFight / SaveDungeon 之后再调用 GainExp(0)，触发延迟升级检查。</p>
+  <div class="dq-table-scroll">
+  <table class="dq-data-table">
+    <thead><tr><th>目标玩家等级</th><th>${rewardIconHeading(images.exp, "所需经验", "Required EXP")}</th></tr></thead>
+    <tbody>
+${PLAYER_EXP_THRESHOLD_ROWS.map(([level, exp]) => `<tr><td>${level}</td><td>${exp}</td></tr>`).join("\n")}
+    </tbody>
+  </table>
+  </div>
+</section>`;
+}
+
 function dungeonTerrainImagePath(file) {
   return `/assets/extracted/textures/by_container/resources/${file}`;
 }
@@ -6884,30 +7646,30 @@ function renderTerrainCreatureTile(item) {
 </${tag}>`;
 }
 
-function renderRewardsAndShopsGuide(dungeonGeneration) {
+function renderRewardsAndShopsGuide(dungeonGeneration, assetLookup) {
+  const images = rewardGuideImages(assetLookup);
   return `${renderFrontmatter("奖励、宝箱与商店", "Dream Quest 宝箱、商店和奖励卡生成规则。")}
-# 奖励、宝箱与商店
+${renderRewardsPageHero(images)}
 
 ## 每层奖励列表
 
-<section class="dq-mechanic-list">
-  <p>GenerateRewards 固定先加入 3 个 Shop。</p>
-  <p>随后走治疗分支：要么加入 1 个 HealingPool 和 depth + RandomRange(1, 2) 个 HealthPack；要么加入 depth * 2 + RandomRange(2, 4) 个 HealthPack。</p>
-  <p>然后从 Monastery、Blacksmith、SmoothieShack 中随机加入 1 个服务奖励。</p>
-  <p>最后再加入 RandomRange(2, 4) 个 GenerateRewardName 生成的普通奖励名。</p>
-</section>
+<p class="dq-note">这里说的是地牢地图上生成的奖励点。它们和“怪物击杀奖励”是两条不同流程：地图奖励先生成、再摆放；击杀奖励在战斗胜利后结算。</p>
+
+${renderDungeonRewardFlow(images)}
 
 ${renderRewardNameProbabilityTable(dungeonGeneration)}
+
+${renderMonsterKillRewardGuide(assetLookup)}
 
 ## 成就和难度后处理
 
 <table class="dq-data-table">
   <thead><tr><th>条件</th><th>额外奖励</th><th>说明</th></tr></thead>
   <tbody>
-    <tr><td>DRAGON1</td><td>TreasureChest x1</td><td>成就奖励：每层额外发现一个宝箱。</td></tr>
-    <tr><td>STEPS1</td><td>HealthPack x1</td><td>成就奖励：每层额外发现一个治疗包。</td></tr>
-    <tr><td>Grizzly Bear</td><td>HealthPack x1</td><td>默认难度后处理。</td></tr>
-    <tr><td>Kitten</td><td>HealingPool x1、TreasureChest x1</td><td>低难度补偿，但不能获得成就点。</td></tr>
+    <tr><td>DRAGON1</td><td>${rewardIconHeading(images.chest, "TreasureChest x1", "每层额外宝箱")}</td><td>成就奖励：每层额外发现一个宝箱。</td></tr>
+    <tr><td>STEPS1</td><td>${rewardIconHeading(images.health, "HealthPack x1", "每层额外治疗包")}</td><td>成就奖励：每层额外发现一个治疗包。</td></tr>
+    <tr><td>Grizzly Bear</td><td>${rewardIconHeading(images.health, "HealthPack x1", "默认难度补充")}</td><td>默认难度后处理。</td></tr>
+    <tr><td>Kitten</td><td>${rewardIconHeading(images.health, "HealingPool x1", "加 TreasureChest x1")}</td><td>低难度补偿：额外 HealingPool 和 TreasureChest，但不能获得成就点。</td></tr>
   </tbody>
 </table>
 
@@ -6916,10 +7678,10 @@ ${renderRewardNameProbabilityTable(dungeonGeneration)}
 <table class="dq-data-table">
   <thead><tr><th>步骤</th><th>规则</th></tr></thead>
   <tbody>
-    <tr><td>件数</td><td>1 件约 85%，2 件约 13%，3 件约 2%。</td></tr>
-    <tr><td>第一件</td><td>必定调用 CardFinder 抽卡。</td></tr>
-    <tr><td>后续件</td><td>45% 转金币，55% 再抽卡。</td></tr>
-    <tr><td>顺序</td><td>最终 loot 会被 Utility.Shuffle 洗牌。</td></tr>
+    <tr><td>${rewardIconHeading(images.chest, "件数", "Item Count")}</td><td>普通宝箱先决定数量：1 件约 85%，2 件约 13%，3 件约 2%。</td></tr>
+    <tr><td>${rewardIconHeading(images.card, "第一件", "First Item")}</td><td>第一件必定调用 CardFinder 抽卡。</td></tr>
+    <tr><td>${rewardIconHeading(images.gold, "后续件", "Extra Items")}</td><td>第二、三件各自判断：45% 转金币，55% 再抽卡。</td></tr>
+    <tr><td>顺序</td><td>生成完全部 loot 后，用 Utility.Shuffle 洗牌。</td></tr>
   </tbody>
 </table>
 
@@ -6928,8 +7690,8 @@ ${renderRewardNameProbabilityTable(dungeonGeneration)}
 <table class="dq-data-table">
   <thead><tr><th>项目</th><th>规则</th></tr></thead>
   <tbody>
-    <tr><td>商品档位</td><td>固定构造 1、3、5 三个商品档位。</td></tr>
-    <tr><td>抽卡入口</td><td>每个档位调用 CardFinder，minAffinity 为 0。</td></tr>
+    <tr><td>${rewardIconHeading(images.shop, "商品档位", "Slots")}</td><td>商店固定构造 1、3、5 三个商品档位。</td></tr>
+    <tr><td>${rewardIconHeading(images.card, "抽卡入口", "CardFinder")}</td><td>每个档位调用 CardFinder，minAffinity 为 0。</td></tr>
     <tr><td>重复处理</td><td>重复商品会重抽；商品列表最后洗牌。</td></tr>
     <tr><td>价格特殊</td><td>Master Thief 天赋会让商店物品免费。</td></tr>
   </tbody>
@@ -6937,7 +7699,7 @@ ${renderRewardNameProbabilityTable(dungeonGeneration)}
 `;
 }
 
-function renderMonstersOverview(monsterRecords, summary = {}, monsterBridgeById = new Map(), assetLookup) {
+function renderMonstersOverview(monsterRecords, summary = {}, monsterBridgeById = new Map(), assetLookup, snapshotRows = []) {
   const locations = [...new Set(monsterRecords.flatMap((record) => monsterLocations(record.monster)))].sort();
   const tagOptions = [
     { value: "behavior", label: "有特殊机制", extra: 1 },
@@ -6976,6 +7738,11 @@ ${renderMonsterFilterScript()}
   <span><strong>${deckCount + 1}</strong><em>有基础牌组</em></span>
   <span><strong>${levelUpCount}</strong><em>有等级变化</em></span>
   <span><strong>${behaviorCount + 1}</strong><em>有特殊机制</em></span>
+</section>
+
+<section class="dq-callout">
+  <strong>等级快照已接入</strong>
+  <span>每个怪物页会显示该怪物各等级的 HP、蓝、最低等级卡组和后续增量关键牌；完整 ${escapeHtml(snapshotRows.length)} 行快照和 TSV 下载在 <a href="/mechanics/monster-level-snapshots">怪物等级快照</a>。</span>
 </section>
 
 <section class="dq-card-filter dq-monster-filter" data-monster-filter>
@@ -7141,7 +7908,7 @@ function renderMonsterTile(record, bridge) {
 </a>`;
 }
 
-function renderMonsterPage({ record, cardById, bridge }) {
+function renderMonsterPage({ record, cardById, bridge, snapshots = [] }) {
   const monster = record.monster;
   const title = monster.display_name || monster.class_name || monster.internal_name;
   const data = monster.monster_data || {};
@@ -7182,6 +7949,8 @@ ${renderGenieWishSection(monster, cardById)}
   <h2>等级变化</h2>
   ${renderMonsterLevelRules(monster, cardById)}
 </section>
+
+${renderMonsterSnapshotSection(record, snapshots, cardById)}
 
 <section class="dq-section-block">
   <h2>卡牌</h2>
@@ -8409,7 +9178,7 @@ const MONSTER_CORE_MECHANICS = {
     "物理免疫；[[Discharge]] 按当前法力造成伤害。"
   ],
   wraith: [
-    "如果手牌中有 [[SoulCrush]]，AI 会优先打出它；该牌造成 10 点伤害并弃 2 张牌，但目标有减伤、物理抗性、闪避或护盾守卫时无效。"
+    "如果手牌中有 [[SoulCrush]]，AI 会优先打出它；该牌造成 10 点伤害并弃 2 张牌，但目标有减伤、物理抗性、闪避或防护时无效。"
   ],
   wyvern: [
     "牌组集中在高毒性叠层，缺少额外防御机制。"
@@ -8431,7 +9200,7 @@ const GENIE_WISH_BASE_ROWS = [
   {
     card: "PenaltyPlusCard",
     condition: "固定候选",
-    effect: "使 Genie 最大手牌 +1。"
+    effect: "使灯神最大手牌 +1。"
   },
   {
     card: "PenaltyDamage",
@@ -8440,8 +9209,8 @@ const GENIE_WISH_BASE_ROWS = [
   },
   {
     card: "PenaltyHeal",
-    condition: "Genie 已损失至少 7 点生命",
-    effect: "Genie 回复 10 点生命。"
+    condition: "灯神已损失至少 7 点生命",
+    effect: "灯神回复 10 点生命。"
   },
   {
     card: "PenaltyMana",
@@ -8474,7 +9243,7 @@ const GENIE_WISH_UPGRADED_ROWS = [
   {
     card: "PenaltyPlusCard",
     condition: "固定候选",
-    effect: "使 Genie 最大手牌 +1。"
+    effect: "使灯神最大手牌 +1。"
   },
   {
     card: "PenaltyDamage2",
@@ -8483,8 +9252,8 @@ const GENIE_WISH_UPGRADED_ROWS = [
   },
   {
     card: "PenaltyHeal",
-    condition: "Genie 已损失至少 7 点生命",
-    effect: "Genie 回复 10 点生命。"
+    condition: "灯神已损失至少 7 点生命",
+    effect: "灯神回复 10 点生命。"
   },
   {
     card: "PenaltyMinusAction2",
@@ -8510,7 +9279,7 @@ function renderGenieWishSection(monster, cardById) {
   return `<section class="dq-section-block dq-genie-wish-section">
   <h2>Three Wishes 机制</h2>
   <div class="dq-mechanic-list">
-    <p>${renderMonsterInlineCard("BadWishes", cardById)} 是 Genie 基础牌组里的 Three Wishes：1 行动点、0 法力、3 阶。</p>
+    <p>${renderMonsterInlineCard("BadWishes", cardById)} 是灯神基础牌组里的 Three Wishes：1 行动点、0 法力、3 阶。</p>
     <p>${renderMonsterInlineCard("BadWishes2", cardById)} 是 6+ 级后使用的强化 Three Wishes：仍是 1 行动点、0 法力，但候选条件和惩罚数值更高。</p>
     <p>这张牌不是固定执行一个效果。它先按当前战斗状态生成候选惩罚池，再从候选池中随机取 3 个互不重复的惩罚，交给玩家选择其中 1 个结算。</p>
   </div>
@@ -8520,7 +9289,7 @@ function renderGenieWishSection(monster, cardById) {
     <thead><tr><th>步骤</th><th>解析到的行为</th></tr></thead>
     <tbody>
       <tr><td>1</td><td>先放入两个固定候选：${renderMonsterInlineCard("PenaltyCurses", cardById)} 和 ${renderMonsterInlineCard("PenaltyPlusCard", cardById)}。</td></tr>
-      <tr><td>2</td><td>根据玩家生命、玩家法力、玩家最大行动点、玩家最大手牌，以及 Genie 是否已经受伤，追加条件候选。</td></tr>
+      <tr><td>2</td><td>根据玩家生命、玩家法力、玩家最大行动点、玩家最大手牌，以及灯神是否已经受伤，追加条件候选。</td></tr>
       <tr><td>3</td><td>若候选项不足 3 个，或玩家生命低于对应阈值，会补入中毒惩罚。</td></tr>
       <tr><td>4</td><td>最终随机抽出 3 个不同候选，生成选择动作；玩家只需要在这 3 个选项里选 1 个。</td></tr>
     </tbody>
@@ -9404,6 +10173,44 @@ function renderMonsterInlineCard(token, cardById) {
 </span>`;
 }
 
+function renderCountedMonsterCardChip(token, count, cardById) {
+  const record = cardRecordFromToken(cardById, token);
+  if (record) {
+    const card = record.card || {};
+    const meta = [`x${count}`, originalDisplayName(card)].filter(Boolean).join(" · ");
+    return `<a class="dq-card-chip dq-counted-card-chip" href="${record.href}" title="${escapeHtml(card.display_name || token)}">
+  <span class="dq-card-chip-thumb">${renderCardFrame(record, "deck")}</span>
+  <span class="dq-card-chip-copy"><strong>${escapeHtml(card.display_name || token)}</strong><small>${escapeHtml(meta)}</small></span>
+  ${renderSnapshotCardHoverPreview(record, count)}
+</a>`;
+  }
+  const label = translatedCardTokenText(token) || token || "-";
+  return `<span class="dq-card-chip dq-counted-card-chip dq-card-chip-missing">
+  <span class="dq-card-chip-thumb">${renderMissingCardFrame(token)}</span>
+  <span class="dq-card-chip-copy"><strong>${escapeHtml(label)}</strong><small>x${escapeHtml(count)}</small></span>
+</span>`;
+}
+
+function renderSnapshotCardHoverPreview(record, count) {
+  const card = record.card || {};
+  const rule = compactText(translateRuleText(card.text?.rules), 80);
+  return `<span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art">${renderCardFrame(record, "deck")}</span>
+  <span class="dq-snapshot-card-preview-copy"><strong>${escapeHtml(card.display_name || card.class_name || record.slug)}</strong><small>${escapeHtml(`x${count} · ${originalDisplayName(card)}`)}</small>${rule ? `<em>${escapeHtml(rule)}</em>` : ""}</span>
+</span>`;
+}
+
+function renderCountedMonsterCardRow(tokens, cardById, options = {}) {
+  const { empty = "无", className = "" } = options;
+  const counts = groupCounts(tokens);
+  if (!counts.length) {
+    return `<span class="dq-muted-chip">${escapeHtml(empty)}</span>`;
+  }
+  return `<span class="dq-card-chip-row dq-snapshot-card-row ${escapeHtml(className)}">${counts
+    .map(([token, count]) => renderCountedMonsterCardChip(token, count, cardById))
+    .join("\n")}</span>`;
+}
+
 function renderMonsterCardUsageEntry(entry) {
   const meta = entry.tags.join(" / ");
   if (entry.record) {
@@ -9437,7 +10244,7 @@ function groupCardsByLabel(cardRecords) {
     .sort((a, b) => CARD_TYPE_ORDER.indexOf(a.label) - CARD_TYPE_ORDER.indexOf(b.label));
 }
 
-function renderCardPage(record, allRecords, biasIdToProfessions) {
+function renderCardPage(record, allRecords, biasIdToProfessions, cardById = new Map()) {
   const card = record.card;
   const stats = card.costs_and_stats || {};
   const index = allRecords.findIndex((candidate) => candidate.slug === record.slug);
@@ -9451,7 +10258,7 @@ function renderCardPage(record, allRecords, biasIdToProfessions) {
     .filter(Boolean)
     .join("\n");
 
-  return `${renderFrontmatter(card.display_name || card.class_name, compactText(translateRuleText(card.text?.rules), 150))}
+  return `${renderFrontmatter(card.display_name || card.class_name, cardPageDescription(record))}
 <section class="dq-card-hero">
 <div class="dq-card-art-panel">
 ${renderCardFrame(record, "hero")}
@@ -9475,11 +10282,62 @@ ${navLinks}
   </div>
 </section>
 
+${renderCardSpecificMechanics(record, cardById)}
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     ${renderMetaGrid(cardMetadataItems(card))}
 </section>
 `;
+}
+
+function cardPageDescription(record) {
+  const id = record.card?.class_name || record.card?.internal_name || "";
+  if (id === "BadWishes") {
+    return "基础 Three Wishes：随机展示 3 个惩罚候选，由玩家选择 1 个结算；候选包括加诅咒、灯神加手牌、伤害、治疗、清空法力、扣行动点、扣手牌和中毒。";
+  }
+  if (id === "BadWishes2") {
+    return "强化 Three Wishes：随机展示 3 个更强惩罚候选，由玩家选择 1 个结算；伤害、中毒和扣行动点惩罚更高。";
+  }
+  if (id === "DeckOfWonder") {
+    return "回合开始时从已解锁的非装备卡候选池等概率生成 1 张临时牌；候选池不按楼层或奖励阶级筛选。";
+  }
+  return compactText(translateRuleText(record.card?.text?.rules), 150);
+}
+
+function renderCardSpecificMechanics(record, cardById) {
+  const id = record.card?.class_name || record.card?.internal_name || "";
+  if (id === "DeckOfWonder") {
+    return renderDeckOfWonderMechanics();
+  }
+  if (id !== "BadWishes" && id !== "BadWishes2") {
+    return "";
+  }
+  const upgraded = id === "BadWishes2";
+  const rows = upgraded ? GENIE_WISH_UPGRADED_ROWS : GENIE_WISH_BASE_ROWS;
+  return `<section class="dq-wide-panel dq-card-mechanic-panel">
+  <h2>${upgraded ? "强化 Three Wishes 具体效果" : "基础 Three Wishes 具体效果"}</h2>
+  <p class="dq-note">这张牌打出时不会直接执行固定效果，而是先按当前战斗状态生成候选池，再随机展示 3 个互不重复的选项；玩家只选择其中 1 个结算。</p>
+  <p class="dq-note">${upgraded ? "6+ 级灯神会把基础版替换为强化版，7+ 级还会额外加入 1 张强化版。" : "基础灯神牌组中有 2 张基础版 Three Wishes，且它们也是优先起手牌。"}</p>
+  ${renderGenieWishPenaltyTable(rows, cardById)}
+</section>`;
+}
+
+function renderDeckOfWonderMechanics() {
+  return `<section class="dq-wide-panel dq-card-mechanic-panel">
+  <h2>Deck of Wonder 实际抽牌流程</h2>
+  <p class="dq-note">这张装备不是从你现有牌库里抽牌。它在你的回合开始时生成一张新牌放入手牌，然后把那张牌标记为临时牌。</p>
+  <table>
+    <thead><tr><th>步骤</th><th>实际规则</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>先执行装备卡通用的回合开始流程；如果战斗已经有胜者，就不再生成卡。</td></tr>
+      <tr><td>2</td><td>调用随机非装备卡入口，从已解锁、非奖励、非装备、非动态金币价格的候选卡中选 1 张。</td></tr>
+      <tr><td>3</td><td>候选池内使用等概率随机下标，不套用宝箱、商店或地图奖励的职业权重。</td></tr>
+      <tr><td>4</td><td>用生成牌接口把选中的卡直接放入手牌，再标记为临时；临时牌离开本场战斗后不会长期保留。</td></tr>
+    </tbody>
+  </table>
+  <p class="dq-note">关键边界：它不走奖励生成的 <a href="/mechanics/rewards-and-shops">阶级、亲和度和职业权重</a> 路线。候选池和等概率抽样本身不读取楼层或 tier；但不同楼层此前发生的随机事件可能已经推进 RNG 状态，所以实战中最终抽到哪张仍可能间接不同。</p>
+</section>`;
 }
 
 function renderProfessionsOverview(professionRecords) {
@@ -9496,6 +10354,11 @@ function renderProfessionsOverview(professionRecords) {
     <p class="dq-lede">玩家可选职业由技能机制、起始资源、升级奖励和卡牌出现权重共同决定。先看职业节奏，再进入单独页面查看细节。</p>
   </div>
   <span class="dq-count">${playableRecords.length} 个可选职业 · ${specialRecords.length} 个特殊入口</span>
+</section>
+
+<section class="dq-callout">
+  <strong>开局数据已单列</strong>
+  <span>职业页会显示基础开局和全成就档案；全职业 HP、蓝、金币、手牌数、行动点、起始牌组和难度差异集中在 <a href="/mechanics/start-profile-and-difficulty">职业初始与难度</a>。</span>
 </section>
 
 <h2>玩家可选职业</h2>
@@ -9680,6 +10543,8 @@ ${renderStatPills(stats)}
 
 ${renderProfessionParsedData(p, abilityCn)}
 
+${renderProfessionStartProfileSummary(p)}
+
 ${renderProfessionMechanics(p, songs)}
 
 ${renderProfessionLevelRewards(p, cardById, combatAbilities, dungeonActions, assetLookup)}
@@ -9712,9 +10577,9 @@ ${renderProfessionLevelRewards(p, cardById, combatAbilities, dungeonActions, ass
 
 ${renderProfessionCardInfoSection(p, cardRecords || [])}
 
-${combat.length ? `## 战斗技能详情\n\n<section class="dq-skill-grid">\n${combat.map((skill) => renderSkillTile(skill, skillImage(assetLookup, skill))).join("\n")}\n</section>` : ""}
+${combat.length ? `## 战斗技能详情\n\n<p class="dq-note">这里合并显示职业初始战斗能力和升级主奖励解锁的战斗能力；具体解锁等级以上方“升级主奖励”为准。</p>\n\n<section class="dq-skill-grid">\n${combat.map((skill) => renderSkillTile(skill, skillImage(assetLookup, skill))).join("\n")}\n</section>` : ""}
 
-${dungeon.length ? `## 地牢行动详情\n\n<section class="dq-skill-grid">\n${dungeon.map((skill) => renderSkillTile(skill, skillImage(assetLookup, skill))).join("\n")}\n</section>` : ""}
+${dungeon.length ? `## 地牢行动详情\n\n<p class="dq-note">这里合并显示开局自带、职业核心机制和升级主奖励解锁的地牢行动；具体解锁等级以上方“升级主奖励”为准。</p>\n\n<section class="dq-skill-grid">\n${dungeon.map((skill) => renderSkillTile(skill, skillImage(assetLookup, skill))).join("\n")}\n</section>` : ""}
 
 <section class="dq-action-row">
   <a class="dq-button" href="/professions">回到职业图鉴</a>
@@ -9746,20 +10611,778 @@ function collectSkillsForProfession(profession, skills, prefix) {
     .sort((a, b) => (a.display_name || a.id || "").localeCompare(b.display_name || b.id || ""));
 }
 
+function renderStartProfileAuditGuide(professionRecords, cardById, auditRaw = "", context = {}) {
+  const rows = professionRecords
+    .slice()
+    .sort((a, b) => (a.profession.display_name || "").localeCompare(b.profession.display_name || ""));
+  const auditDate = auditRaw.match(/^Date:\s*(.+)$/m)?.[1] || "2026-05-31";
+  return `${renderFrontmatter("职业初始与难度", "职业初始 HP、蓝、金币、手牌数、起始牌组，升级加成，以及难度和全成就差异。")}
+<section class="dq-page-hero">
+  <div>
+    <p class="dq-kicker">Start Profiles</p>
+    <h1>职业初始与难度</h1>
+    <p class="dq-lede">这里把开局最容易混在一起的四件事拆开：职业基础初始化、升级时自动成长、全成就档案叠加，以及难度对升级 HP 和地牢奖励的后处理。</p>
+  </div>
+  <span class="dq-count">${rows.length} 个职业 · ${escapeHtml(auditDate)}</span>
+</section>
+
+<section class="dq-callout">
+  <strong>先看结论</strong>
+  <span>职业 initializer 只给基础开局；全成就档案再叠加 HP +4、蓝 +2、金币 20，并对 Thief 使用已验证牌组覆盖。实际进入游戏时还要套难度：Kitten 起始 HP +5，Grizzly Bear 追加 Attack1 x1，Velociraptor 追加 Attack1 x2。用全成就 Thief 校验就是 Kitten HP 24，Grizzly Bear / Velociraptor HP 19。升级 HP 会自动增加最大生命和当前生命，并继续叠加难度与 FLOOR1 修正。</span>
+</section>
+
+<section class="dq-section-block">
+  <h2>难度差异</h2>
+  <table class="dq-data-table">
+    <thead><tr><th>难度</th><th>起始职业数据</th><th>升级 HP 修正</th><th>地牢奖励后处理</th></tr></thead>
+    <tbody>
+${START_PROFILE_DIFFICULTY_ROWS.map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("\n")}
+    </tbody>
+  </table>
+</section>
+
+<section class="dq-section-block">
+  <h2>难度开局校验</h2>
+  <p class="dq-note">下面先用 Thief 展示实际开局怎么套难度。其它职业同样先取职业基础或全成就档案，再按同一难度规则修正 HP 和追加 Attack1。</p>
+  ${renderDifficultyStartProfileExamples(rows, cardById)}
+</section>
+
+<section class="dq-section-block">
+  <h2>难度影响范围</h2>
+  <table class="dq-data-table">
+    <thead><tr><th>系统</th><th>核对入口</th><th>结论</th></tr></thead>
+    <tbody>
+${START_PROFILE_DIFFICULTY_SCOPE_ROWS.map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("\n")}
+    </tbody>
+  </table>
+</section>
+
+<section class="dq-section-block">
+  <h2>升级 HP 结算</h2>
+  <p class="dq-note">升级 HP 不是单纯的职业表数值。原版流程会先算职业基础 HP，再叠加难度和用户属性修正，最后调用 GainMaxHealth，因此最大生命和当前生命都会增加；升级收尾还会满血。</p>
+  <table class="dq-data-table">
+    <thead><tr><th>来源</th><th>代码入口</th><th>规则</th></tr></thead>
+    <tbody>
+${START_PROFILE_LEVEL_UP_HEALTH_ROWS.map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("\n")}
+    </tbody>
+  </table>
+</section>
+
+<section class="dq-section-block">
+  <h2>升级加成</h2>
+  <p class="dq-note">这张表不是开局属性，而是玩家升级时自动结算的职业基础 HP、可进入的奖励选项池、职业主奖励节点和 FixedBonus 固定节点。Random 仍取决于实际抽中的职业。</p>
+  ${renderStartProfileUpgradeTable(rows, cardById, context)}
+</section>
+
+<section class="dq-section-block">
+  <h2>基础开局</h2>
+  <p class="dq-note">这张表是职业 initializer 的基础开局，尚未套用 Kitten / Grizzly Bear / Velociraptor 的开局修正。</p>
+  ${renderStartProfileTable(rows, "fresh", cardById)}
+</section>
+
+<section class="dq-section-block">
+  <h2>全成就档案</h2>
+  <p class="dq-note">除已验证的 Thief 牌组覆盖外，其它职业当前保留基础起始牌组，只叠加全局资源：HP +4、蓝 +2、金币设为 20；这张表也尚未套用难度修正。</p>
+  ${renderStartProfileTable(rows, "all-achievements", cardById)}
+</section>
+
+<section class="dq-action-row">
+  <a class="dq-button" href="/professions">查看职业图鉴</a>
+  <a class="dq-button dq-button-secondary" href="/mechanics/rewards-and-shops">查看奖励和难度后处理</a>
+</section>
+`;
+}
+
+function renderStartProfileTable(records, profile, cardById) {
+  return `<div class="dq-table-scroll">
+<table class="dq-data-table dq-profile-table">
+  <thead><tr><th>职业</th><th>HP</th><th>蓝</th><th>手牌</th><th>行动</th><th>金币</th><th>起始牌组</th></tr></thead>
+  <tbody>
+${records
+  .map((record) => {
+    const profession = record.profession;
+    const start = professionStartProfile(profession, profile);
+    const deck = formatCardCountText(start.deck, { empty: "无" });
+    return `<tr>
+  <td><a href="${record.href}">${escapeHtml(profession.display_name || profession.id)}</a><br><small>${escapeHtml(originalDisplayName(profession))}</small></td>
+  <td>${escapeHtml(start.health ?? 0)}</td>
+  <td>${escapeHtml(start.mana ?? 0)}</td>
+  <td>${escapeHtml(start.cards ?? 0)}</td>
+  <td>${escapeHtml(start.actions ?? 0)}</td>
+  <td>${escapeHtml(start.gold ?? 0)}</td>
+  <td class="dq-long-cell">${escapeHtml(deck)}</td>
+</tr>`;
+  })
+  .join("\n")}
+  </tbody>
+</table>
+</div>`;
+}
+
+function renderProfessionStartProfileSummary(profession) {
+  const fresh = professionStartProfile(profession, "fresh");
+  const achieved = professionStartProfile(profession, "all-achievements");
+  const deckChanged = formatCardCountText(fresh.deck) !== formatCardCountText(achieved.deck);
+  return `<section class="dq-section-block">
+  <h2>开局档案</h2>
+  <table class="dq-data-table">
+    <thead><tr><th>档案</th><th>资源</th><th>起始牌组</th></tr></thead>
+    <tbody>
+      <tr><td>基础开局</td><td>${escapeHtml(profileResourceText(fresh))}</td><td>${escapeHtml(formatCardCountText(fresh.deck))}</td></tr>
+      <tr><td>全成就</td><td>${escapeHtml(profileResourceText(achieved))}</td><td>${escapeHtml(formatCardCountText(achieved.deck))}</td></tr>
+    </tbody>
+  </table>
+  <p class="dq-note">这两行是职业基础和档案覆盖，实际开局还要套难度：Kitten 起始 HP +5，Grizzly Bear 追加 Attack1 x1，Velociraptor 追加 Attack1 x2；Kitten / Grizzly Bear 升级 HP 还会额外 +1。${deckChanged ? "此职业存在已验证的全成就牌组覆盖。" : "此职业当前未恢复到职业专属全成就牌组覆盖。"}</p>
+  <p><a href="/mechanics/start-profile-and-difficulty">查看全职业开局与难度表</a></p>
+</section>`;
+}
+
+function renderMonsterLevelSnapshotGuide(monsterRecords, snapshotRows, cardById) {
+  const monsterCount = new Set(snapshotRows.map((row) => monsterSnapshotRowKey(row))).size;
+  const levels = snapshotRows.map((row) => Number(row.level)).filter(Number.isFinite);
+  const minLevel = levels.length ? Math.min(...levels) : "-";
+  const maxLevel = levels.length ? Math.max(...levels) : "-";
+  return `${renderFrontmatter("怪物等级快照", "各怪物不同等级的 HP、MP、行动、手牌，以及最低等级最终卡组和后续增量卡牌。")}
+<section class="dq-page-hero">
+  <div>
+    <p class="dq-kicker">Monster Snapshots</p>
+    <h1>怪物等级快照</h1>
+    <p class="dq-lede">按恢复出的 MonsterData 等级范围展开每个怪物。最低等级行显示最终卡组；后续等级行只显示相比上一等级新增的关键牌。所有卡牌条目都带图片和悬浮提示。</p>
+  </div>
+  <span class="dq-count">${monsterCount} 个怪物 · ${snapshotRows.length} 行</span>
+</section>
+
+<section class="dq-type-grid">
+  <span><strong>${monsterCount}</strong><em>覆盖怪物</em></span>
+  <span><strong>${snapshotRows.length}</strong><em>等级行</em></span>
+  <span><strong>${escapeHtml(minLevel)}-${escapeHtml(maxLevel)}</strong><em>等级范围</em></span>
+  <span><strong>TSV</strong><em><a href="/assets/data/monster-level-hp-deck-snapshots.tsv">下载原表</a></em></span>
+</section>
+
+<section class="dq-callout">
+  <strong>读表方式</strong>
+  <span>怪物列内压缩展示等级、HP、MP、行动和手牌。卡组列使用增量方式：最低等级保留完整最终卡组；后续等级只显示新增关键牌，并排除 DiluteDeck 生成的 Attack1-4。</span>
+</section>
+
+${renderMonsterSnapshotIndex(monsterRecords, snapshotRows)}
+
+<section class="dq-section-block">
+  <h2>全量快照</h2>
+  ${renderMonsterSnapshotFrame()}
+</section>
+`;
+}
+
+function renderMonsterSnapshotFrame() {
+  return `<div id="monster-snapshot-frame" class="dq-snapshot-frame-shell">
+  <iframe class="dq-snapshot-frame" name="monster-snapshot-frame" src="/assets/data/monster-level-snapshots-incremental.html" title="全量怪物等级快照" data-monster-snapshot-frame></iframe>
+</div>
+<p class="dq-note"><a href="/assets/data/monster-level-snapshots-incremental.html" target="_blank" rel="noopener" data-monster-snapshot-open>打开独立全量表</a>。表内按增量展示：最低等级显示最终卡组，后续等级只显示新增关键牌。</p>`;
+}
+
+function renderMonsterSnapshotIndex(monsterRecords, snapshotRows) {
+  const byMonster = buildMonsterSnapshotMap(snapshotRows);
+  const recordByKey = new Map(monsterRecords.map((record) => [monsterSnapshotRecordKey(record.monster), record]));
+  const links = [...byMonster.entries()].map(([key, rows]) => {
+    const record = recordByKey.get(key);
+    const first = rows[0];
+    const title = record?.monster.display_name || first.display_name || first.monster;
+    const levelText = `${rows[0].level}-${rows[rows.length - 1].level}`;
+    const anchor = monsterSnapshotAnchor(first);
+    const image = record?.image
+      ? `<span class="dq-snapshot-index-thumb"><img src="${record.image}" alt="${escapeHtml(title)}" loading="lazy"></span>`
+      : `<span class="dq-snapshot-index-thumb dq-snapshot-index-thumb-empty"></span>`;
+    return `<a class="dq-snapshot-index-card" href="/assets/data/monster-level-snapshots-incremental.html#${anchor}" target="monster-snapshot-frame" data-monster-snapshot-target="${escapeHtml(anchor)}">
+  ${image}
+  <span class="dq-snapshot-index-copy"><strong>${escapeHtml(title)}</strong><small>${escapeHtml(first.monster)} · ${escapeHtml(levelText)} 级 · ${rows.length} 行</small></span>
+</a>`;
+  });
+  return `<section class="dq-link-grid dq-link-grid-four dq-snapshot-index-grid">
+${links.join("\n")}
+</section>`;
+}
+
+function renderMonsterSnapshotStandaloneTable(monsterRecords, snapshotRows, cardById) {
+  const tableHtml = renderMonsterSnapshotTable(snapshotRows, monsterRecords, cardById, { includeMonster: true }).replaceAll(
+    "<a ",
+    '<a target="_parent" '
+  );
+  return `<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>怪物等级快照全量表</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --dq-paper: #f7f2e8;
+      --dq-panel: #fffaf1;
+      --dq-ink: #3f322b;
+      --dq-muted: #77685f;
+      --dq-line: rgba(70, 42, 26, 0.18);
+      --dq-accent: #883e23;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--dq-paper);
+      color: var(--dq-ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+    }
+    a { color: var(--dq-accent); }
+    .dq-table-scroll {
+      width: 100%;
+      overflow: auto;
+      padding: 0 0 12px;
+    }
+    .dq-data-table {
+      width: 100%;
+      min-width: 860px;
+      border-collapse: collapse;
+      background: var(--dq-panel);
+    }
+    .dq-data-table th,
+    .dq-data-table td {
+      padding: 10px 12px;
+      border: 1px solid var(--dq-line);
+      text-align: left;
+      vertical-align: top;
+    }
+    .dq-data-table th {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: #efe0c6;
+      color: var(--dq-accent);
+      font-size: 13px;
+    }
+    .dq-long-cell { min-width: 520px; }
+    .dq-snapshot-monster-cell { min-width: 280px; }
+    .dq-snapshot-monster {
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+      color: var(--dq-ink);
+      text-decoration: none;
+    }
+    .dq-snapshot-monster-thumb {
+      display: grid;
+      width: 58px;
+      height: 58px;
+      place-items: center;
+      overflow: hidden;
+      border: 1px solid var(--dq-line);
+      border-radius: 8px;
+      background: var(--dq-paper);
+    }
+    .dq-snapshot-monster-thumb img {
+      width: 100%;
+      height: 100%;
+      padding: 4px;
+      object-fit: contain;
+    }
+    .dq-snapshot-monster-copy strong,
+    .dq-snapshot-monster-copy small {
+      display: block;
+      overflow-wrap: anywhere;
+    }
+    .dq-snapshot-monster-copy small {
+      margin-top: 3px;
+      color: var(--dq-muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .dq-snapshot-stat-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 8px;
+    }
+    .dq-snapshot-stat-row span {
+      display: inline-flex;
+      min-height: 23px;
+      align-items: center;
+      overflow: hidden;
+      border: 1px solid var(--dq-line);
+      border-radius: 6px;
+      background: var(--dq-paper);
+    }
+    .dq-snapshot-stat-row b,
+    .dq-snapshot-stat-row em {
+      padding: 2px 6px;
+      font-size: 11px;
+      line-height: 1.2;
+    }
+    .dq-snapshot-stat-row b {
+      color: var(--dq-muted);
+    }
+    .dq-snapshot-stat-row em {
+      background: var(--dq-panel);
+      color: var(--dq-ink);
+      font-style: normal;
+      font-weight: 900;
+    }
+    .dq-card-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+    .dq-card-chip {
+      position: relative;
+      z-index: 1;
+      display: inline-grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 8px;
+      align-items: center;
+      min-height: 48px;
+      max-width: 190px;
+      padding: 4px 8px 4px 4px;
+      border: 1px solid var(--dq-line);
+      border-radius: 8px;
+      background: var(--dq-panel);
+      color: var(--dq-ink);
+      text-decoration: none;
+    }
+    .dq-card-chip:hover,
+    .dq-card-chip:focus-visible {
+      border-color: rgba(136, 62, 35, 0.48);
+      box-shadow: 0 10px 24px rgba(54, 32, 20, 0.12);
+      z-index: 10002;
+    }
+    .dq-card-chip-thumb {
+      display: block;
+      width: 48px;
+    }
+    .dq-game-card {
+      display: block;
+      width: 100%;
+      aspect-ratio: 8 / 5.7;
+      overflow: hidden;
+      border: 1px solid rgba(70, 42, 26, 0.16);
+      border-radius: 8px;
+      background: #fff;
+    }
+    .dq-game-card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+    .dq-card-no-art {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      place-items: center;
+      padding: 4px;
+      color: var(--dq-muted);
+      font-size: 10px;
+      font-weight: 800;
+      text-align: center;
+    }
+    .dq-card-chip-copy {
+      min-width: 0;
+    }
+    .dq-card-chip-copy strong,
+    .dq-card-chip-copy small {
+      display: block;
+      overflow-wrap: anywhere;
+    }
+    .dq-card-chip-copy strong {
+      color: var(--dq-ink);
+      font-size: 12px;
+      line-height: 1.2;
+    }
+    .dq-card-chip-copy small {
+      margin-top: 3px;
+      color: var(--dq-muted);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .dq-card-chip-missing { border-style: dashed; }
+    .dq-snapshot-card-preview {
+      position: absolute;
+      left: 0;
+      bottom: calc(100% + 8px);
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 10px;
+      width: min(300px, 78vw);
+      padding: 10px;
+      border: 1px solid rgba(70, 42, 26, 0.22);
+      border-radius: 8px;
+      background: rgba(255, 251, 243, 0.98);
+      box-shadow: 0 18px 40px rgba(54, 32, 20, 0.22);
+      color: var(--dq-ink);
+      opacity: 0;
+      pointer-events: none;
+      text-align: left;
+      transform: translateY(6px);
+      transition:
+        opacity 0.14s ease,
+        transform 0.14s ease,
+        visibility 0.14s ease;
+      visibility: hidden;
+    }
+    .dq-card-chip:hover .dq-snapshot-card-preview,
+    .dq-card-chip:focus-visible .dq-snapshot-card-preview {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+    .dq-snapshot-card-preview-art .dq-game-card {
+      box-shadow: none;
+    }
+    .dq-snapshot-card-preview-copy {
+      display: grid;
+      gap: 4px;
+      align-content: start;
+      min-width: 0;
+    }
+    .dq-snapshot-card-preview-copy strong,
+    .dq-snapshot-card-preview-copy small,
+    .dq-snapshot-card-preview-copy em {
+      display: block;
+      overflow-wrap: anywhere;
+    }
+    .dq-snapshot-card-preview-copy strong {
+      color: var(--dq-ink);
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    .dq-snapshot-card-preview-copy small {
+      color: var(--dq-muted);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+    .dq-snapshot-card-preview-copy em {
+      color: var(--dq-muted);
+      font-size: 12px;
+      font-style: normal;
+      line-height: 1.35;
+    }
+    .dq-snapshot-key-card {
+      display: grid;
+      gap: 7px;
+    }
+    .dq-snapshot-key-label,
+    .dq-muted-chip {
+      width: max-content;
+      max-width: 100%;
+      padding: 3px 7px;
+      border: 1px solid var(--dq-line);
+      border-radius: 6px;
+      background: var(--dq-paper);
+      color: var(--dq-muted);
+      font-size: 11px;
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+${tableHtml}
+</body>
+</html>`;
+}
+
+function renderMonsterSnapshotMonsterCell(record, row) {
+  const title = record?.monster.display_name || row.display_name || row.monster;
+  const href = record?.href || `/monsters/${monsterSnapshotRowKey(row)}`;
+  const image = record?.image
+    ? `<span class="dq-snapshot-monster-thumb"><img src="${record.image}" alt="${escapeHtml(title)}" loading="lazy"></span>`
+    : `<span class="dq-snapshot-monster-thumb dq-snapshot-monster-thumb-empty"></span>`;
+  return `<td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="${href}">
+  ${image}
+  <span class="dq-snapshot-monster-copy"><strong>${escapeHtml(title)}</strong><small>${escapeHtml(row.monster)}</small>${renderMonsterSnapshotStatBadges(row)}</span>
+</a></td>`;
+}
+
+function renderMonsterSnapshotStatBadges(row) {
+  const items = [
+    ["等级", row.level],
+    ["HP", row.health],
+    ["MP", row.mana],
+    ["行动", row.actions],
+    ["手牌", row.draw]
+  ];
+  return `<span class="dq-snapshot-stat-row">${items
+    .map(([label, value]) => `<span><b>${escapeHtml(label)}</b><em>${escapeHtml(value)}</em></span>`)
+    .join("")}</span>`;
+}
+
+function renderMonsterSnapshotDeckCell(row, previousRow, cardById) {
+  const delta = monsterSnapshotDeckDelta(row, previousRow);
+  return `<div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">${escapeHtml(delta.label)}</span>
+  ${renderCountedMonsterCardRow(delta.tokens, cardById, { empty: delta.empty, className: "dq-snapshot-key-cards" })}
+</div>`;
+}
+
+function renderMonsterSnapshotTable(snapshotRows, monsterRecords, cardById, options = {}) {
+  if (!snapshotRows.length) {
+    return `<p class="dq-note">没有找到怪物等级快照 TSV 数据。</p>`;
+  }
+  const { includeMonster = false } = options;
+  const recordByKey = new Map(monsterRecords.map((record) => [monsterSnapshotRecordKey(record.monster), record]));
+  const previousById = buildPreviousMonsterSnapshotMap(snapshotRows);
+  return `<div class="dq-table-scroll">
+<table class="dq-data-table dq-snapshot-table">
+  <thead><tr>${includeMonster ? "<th>怪物 / 等级数据</th>" : "<th>等级数据</th>"}<th>卡组增量</th></tr></thead>
+  <tbody>
+${snapshotRows
+  .map((row) => {
+    const record = recordByKey.get(monsterSnapshotRowKey(row));
+    const previousRow = previousById.get(monsterSnapshotRowId(row));
+    const monsterCell = includeMonster
+      ? renderMonsterSnapshotMonsterCell(record, row)
+      : `<td class="dq-snapshot-monster-cell">${renderMonsterSnapshotStatBadges(row)}</td>`;
+    return `<tr id="${monsterSnapshotAnchor(row)}">
+  ${monsterCell}
+  <td class="dq-long-cell dq-snapshot-deck-cell">${renderMonsterSnapshotDeckCell(row, previousRow, cardById)}</td>
+</tr>`;
+  })
+  .join("\n")}
+  </tbody>
+</table>
+</div>`;
+}
+
+function renderMonsterSnapshotSection(record, snapshots, cardById) {
+  if (!snapshots?.length) {
+    return `<section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这个怪物没有进入当前等级快照表。</p>
+</section>`;
+  }
+  return `<section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这些行来自怪物等级快照 TSV。最低等级显示完整最终卡组；后续等级只显示相比上一等级新增的关键牌。</p>
+  ${renderMonsterSnapshotTable(snapshots, [record], cardById, { includeMonster: true })}
+  <p><a href="/assets/data/monster-level-snapshots-incremental.html#${monsterSnapshotAnchor(snapshots[0])}">查看全量怪物等级快照</a></p>
+</section>`;
+}
+
+function skillLiteralText(skill) {
+  const display = (skill.display_literals || []).map((entry) => entry.text).filter(Boolean);
+  const refs = (skill.literal_refs || []).map((entry) => entry.text).filter(Boolean);
+  const unique = [...new Set([...display, ...refs])];
+  return unique.length ? unique.join(" / ") : (skill.id || skill.class_name || "-");
+}
+
+function skillEffectOperations(skill) {
+  return [
+    ...new Set(
+      (skill.runtime_rule?.steps || [])
+        .filter((step) => step.category === "effect")
+        .map((step) => step.operation || step.effect)
+        .filter(Boolean)
+    )
+  ];
+}
+
+function actionTalentEntries(talents = []) {
+  const entries = new Map();
+  for (const talent of talents) {
+    for (const effect of talent.handler_effects || []) {
+      const actionClass = effect.arguments?.action_class;
+      if (effect.target === "DungeonPlayer.AddAction" && actionClass) {
+        if (!entries.has(actionClass)) {
+          entries.set(actionClass, []);
+        }
+        entries.get(actionClass).push(talent.display_name || talent.internal_name || actionClass);
+      }
+    }
+  }
+  return entries;
+}
+
+function combatAbilityTalentEntries(talents = []) {
+  const entries = new Map();
+  for (const talent of talents) {
+    for (const effect of talent.handler_effects || []) {
+      const abilityClass = effect.arguments?.ability || effect.arguments?.ability_class || effect.arguments?.combat_ability_class;
+      if (effect.target === "DungeonPlayer.AddCombatAbility" && abilityClass) {
+        if (!entries.has(abilityClass)) {
+          entries.set(abilityClass, []);
+        }
+        entries.get(abilityClass).push(talent.display_name || talent.internal_name || abilityClass);
+      }
+    }
+  }
+  return entries;
+}
+
+function primaryRewardActionEntries() {
+  const entries = new Map();
+  for (const [professionId, rows] of Object.entries(PROFESSION_PRIMARY_REWARDS)) {
+    for (const row of rows || []) {
+      const reward = SPECIAL_PRIMARY_REWARDS[row.reward];
+      if (reward?.kind === "dungeon" && reward.className) {
+        if (!entries.has(reward.className)) {
+          entries.set(reward.className, []);
+        }
+        entries.get(reward.className).push(`${PROFESSION_NAME_CN[professionId] || professionId} ${row.level} 级主奖励`);
+      }
+    }
+  }
+  entries.set("DungeonActionSing", ["吟游诗人职业歌曲动作"]);
+  return entries;
+}
+
+function formatSkillEntryLinks(entries = []) {
+  return entries.length ? entries.map((entry) => escapeHtml(entry)).join("、") : "无";
+}
+
+function renderUnimplementedSkillCell(assetLookup, skill, className, label) {
+  const image = assetLookup ? skillImage(assetLookup, skill, className) : "";
+  const small = skill?.id || String(className || "").replace(/^CombatAbility|^DungeonAction/, "") || className;
+  const tooltip = `${label || small || className}${small && small !== label ? ` / ${small}` : ""}`;
+  const imageHtml = image ? `<img src="${image}" alt="${escapeHtml(label || small || className)}" title="${escapeHtml(tooltip)}" loading="lazy">` : "";
+  const classNameText = imageHtml ? "dq-inline-skill" : "dq-inline-skill dq-inline-skill-text";
+  return `<span class="${classNameText}" title="${escapeHtml(tooltip)}">${imageHtml}<span><strong>${escapeHtml(label || small || className)}</strong><small>${escapeHtml(small || className)}</small></span></span>`;
+}
+
+function renderUnimplementedDungeonActionRows(dungeonActions = [], talents = [], assetLookup = null) {
+  const actionByClass = new Map(dungeonActions.map((action) => [action.class_name, action]));
+  const talentEntries = actionTalentEntries(talents);
+  const primaryEntries = primaryRewardActionEntries();
+  return UNIMPLEMENTED_DUNGEON_ACTION_CLASS_NAMES.map((className) => {
+    const action = actionByClass.get(className) || { class_name: className };
+    const note = UNIMPLEMENTED_DUNGEON_ACTION_NOTES[className] || {};
+    const professionRefs = (action.profession_references || []).map((ref) => ref.profession_class).filter(Boolean);
+    const talentRefs = talentEntries.get(className) || [];
+    const primaryRefs = primaryEntries.get(className) || [];
+    const entryRefs = [...professionRefs, ...talentRefs, ...primaryRefs];
+    if (entryRefs.length) {
+      return "";
+    }
+    return `<tr>
+  <td>${renderUnimplementedSkillCell(assetLookup, action, className, note.label || action.id || className)}</td>
+  <td>${escapeHtml(action.cooldown ?? "-")}</td>
+  <td class="dq-long-cell">${escapeHtml(note.effect || "已有执行效果，但当前未整理出玩家向中文描述。")}</td>
+  <td><span class="dq-status-pill dq-status-monster">${escapeHtml(note.status || "未发现入口")}</span></td>
+  <td class="dq-long-cell">${escapeHtml(note.note || "")}</td>
+</tr>`;
+  }).filter(Boolean).join("\n");
+}
+
+function renderSystemDungeonActionRows(dungeonActions = [], assetLookup = null) {
+  const actionByClass = new Map(dungeonActions.map((action) => [action.class_name, action]));
+  return SYSTEM_DUNGEON_ACTION_CLASS_NAMES.map((className) => {
+    const action = actionByClass.get(className) || { class_name: className };
+    const note = SYSTEM_DUNGEON_ACTION_NOTES[className] || {};
+    return `<tr>
+  <td>${renderUnimplementedSkillCell(assetLookup, action, className, note.label || action.id || className)}</td>
+  <td>${escapeHtml(action.cooldown ?? "-")}</td>
+  <td class="dq-long-cell">${escapeHtml(note.effect || "内部流程组件。")}</td>
+  <td class="dq-long-cell">${escapeHtml(note.note || "通用流程组件；保留在审计页，但不作为玩家可获得技能统计。")}</td>
+</tr>`;
+  }).join("\n");
+}
+
+function renderUnimplementedCombatAbilityRows(combatAbilities = [], talents = [], assetLookup = null) {
+  const abilityByClass = new Map(combatAbilities.map((ability) => [ability.class_name, ability]));
+  const talentEntries = combatAbilityTalentEntries(talents);
+  return UNIMPLEMENTED_COMBAT_ABILITY_CLASS_NAMES.map((className) => {
+    const ability = abilityByClass.get(className) || { class_name: className };
+    const professionRefs = (ability.profession_references || []).map((ref) => ref.profession_class).filter(Boolean);
+    const talentRefs = talentEntries.get(className) || [];
+    const note = UNIMPLEMENTED_COMBAT_ABILITY_NOTES[className] || {};
+    return `<tr>
+  <td>${renderUnimplementedSkillCell(assetLookup, ability, className, note.label || ability.id || className)}</td>
+  <td>${escapeHtml(ability.cooldown ?? "-")}</td>
+  <td class="dq-long-cell">${escapeHtml(note.effect || "已有执行效果，但当前未整理出玩家向中文描述。")}</td>
+  <td>${formatSkillEntryLinks([...professionRefs, ...talentRefs])}</td>
+  <td class="dq-long-cell">${escapeHtml(note.note || "没有职业或天赋入口；仍需和卡牌、怪物、Boss 逻辑交叉核对。")}</td>
+</tr>`;
+  }).join("\n");
+}
+
+function renderUnimplementedSkillsGuide({ combatAbilities = [], dungeonActions = [], talents = [], assetLookup = null } = {}) {
+  const dungeonActionRows = renderUnimplementedDungeonActionRows(dungeonActions, talents, assetLookup);
+  const dungeonActionCount = (dungeonActionRows.match(/<tr>/g) || []).length;
+  return `${renderFrontmatter("未实装技能", "代码中存在但没有恢复到玩家入口的地牢动作和战斗能力。")}
+<section class="dq-page-hero">
+  <div>
+    <p class="dq-kicker">Unimplemented Skills</p>
+    <h1>未实装技能</h1>
+    <p class="dq-lede">这里集中放置类似“梦境学习”的技能：名称、文案或效果存在，但当前恢复数据里没有职业、天赋或其它玩家可获得入口。</p>
+  </div>
+  <span class="dq-count">${dungeonActionCount} 个地牢动作 · ${UNIMPLEMENTED_COMBAT_ABILITY_CLASS_NAMES.length} 个战斗能力候选</span>
+</section>
+
+<section class="dq-callout">
+  <strong>判定口径</strong>
+  <span>未实装不是指代码为空，而是没有在职业开局、职业地牢动作、职业升级主奖励或天赋授予这几条玩家入口里找到可达引用。卡牌、怪物和 Boss 专用逻辑可能另有入口，战斗能力候选需要继续交叉核对。</span>
+</section>
+
+<section class="dq-section-block">
+  <h2>未实装地牢动作</h2>
+  <p class="dq-note">这组和“梦境学习”同类：有动作名称和游戏效果，但没有职业或天赋入口。</p>
+  <div class="dq-table-scroll">
+    <table class="dq-data-table">
+      <thead><tr><th>动作</th><th>冷却</th><th>效果</th><th>状态</th><th>说明</th></tr></thead>
+      <tbody>
+${dungeonActionRows}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="dq-section-block">
+  <h2>不计入玩家技能的系统动作</h2>
+  <p class="dq-note">这些也没有玩家入口，但更像基类、选择器或内部流程组件，所以不和 Dream 一起统计为未实装技能。</p>
+  <div class="dq-table-scroll">
+    <table class="dq-data-table">
+      <thead><tr><th>动作</th><th>冷却</th><th>用途</th><th>处理方式</th></tr></thead>
+      <tbody>
+${renderSystemDungeonActionRows(dungeonActions, assetLookup)}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="dq-section-block">
+  <h2>未归属战斗能力候选</h2>
+  <p class="dq-note">这些战斗能力当前没有职业引用或天赋授予入口。它们可能来自卡牌、怪物或 Boss 的战斗逻辑，因此先放在候选区。</p>
+  <div class="dq-table-scroll">
+    <table class="dq-data-table">
+      <thead><tr><th>能力</th><th>冷却</th><th>效果</th><th>职业/天赋入口</th><th>说明</th></tr></thead>
+      <tbody>
+${renderUnimplementedCombatAbilityRows(combatAbilities, talents, assetLookup)}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="dq-section-block">
+  <h2>已确认有入口的相邻技能</h2>
+  <p>以下技能虽然曾经出现在“无初始职业引用”扫描结果里，但有其它玩家入口，不能归入未实装：Assassin 6 级获得 Murder，Professor 3 级获得 Make Camp，Bard 通过歌曲使用 Sing；Polymorph、Heal、Preparation、Portent、Teleport、Smash 由天赋授予。Flee 也由 Cowardly 天赋授予为 CombatAbilityFlee。</p>
+</section>
+`;
+}
+
 function renderMechanicsIndex() {
   return `${renderFrontmatter("机制参考", "Dream Quest 玩家机制索引。")}
 <section class="dq-page-hero">
   <div>
     <p class="dq-kicker">Mechanics</p>
     <h1>机制参考</h1>
-    <p class="dq-lede">按玩家实际查询路径整理核心规则：随机数、地牢生成、地形生物、Lord 最终战、奖励、卡牌出现权重和负面效果。</p>
+    <p class="dq-lede">按玩家实际查询路径整理核心规则：开局档案、怪物等级快照、随机数、地牢生成、地形生物、Lord 最终战、奖励、卡牌出现权重、负面效果和未实装技能。</p>
   </div>
-  <span class="dq-count">7 个机制专题</span>
+  <span class="dq-count">10 个机制专题</span>
 </section>
 
 <section class="dq-section-block">
   <h2>阅读路径</h2>
   <div class="dq-flow-grid">
+    <div><strong>想核对开局状态</strong><span>先看职业初始与难度。那里列出 HP、蓝、金币、手牌数、行动点、起始牌组，以及全成就档案差异。</span></div>
+    <div><strong>想查怪物等级强度</strong><span>先看怪物等级快照，再进入具体怪物页。快照会列出每个等级的 HP、蓝、行动、手牌、最低等级卡组和后续增量关键牌。</span></div>
     <div><strong>想判断读档后的随机</strong><span>先看随机数机制，再看地牢生成和奖励流程。重点是全局随机、战斗内随机和结果是否已经保存。</span></div>
     <div><strong>想算卡牌出现概率</strong><span>先看卡牌出现权重，再看奖励、宝箱与商店。职业基础权重、职业 ID 和卡牌 metadata 会一起进入权重计算。</span></div>
     <div><strong>想查职业玩法</strong><span>进入具体职业页面。Bard Song、Dragon Devour / Hoard、Priest Desperate Prayer 等职业机制集中放在职业单页。</span></div>
@@ -9768,6 +11391,8 @@ function renderMechanicsIndex() {
 </section>
 
 <section class="dq-link-grid">
+  <a href="/mechanics/start-profile-and-difficulty"><strong>职业初始与难度</strong><span>核对各职业初始 HP、蓝、金币、手牌数、行动点、起始牌组和全成就差异。</span></a>
+  <a href="/mechanics/monster-level-snapshots"><strong>怪物等级快照</strong><span>按怪物和等级查看 HP、蓝、行动、手牌、最低等级卡组和后续增量关键牌。</span></a>
   <a href="/mechanics/rng-save-load"><strong>随机数机制</strong><span>解释种子串、地牢全局随机、战斗起手手牌和基础随机算法。</span></a>
   <a href="/mechanics/dungeon-generation"><strong>地牢生成</strong><span>棋盘、墙、怪物、Boss、奖励建筑和 Bard 酒馆生成。</span></a>
   <a href="/mechanics/terrain-monsters"><strong>地形生物</strong><span>按 Dungeon、Water、Volcano、Forest、Crypt、Mountain 展示普通怪物和 Boss 权重。</span></a>
@@ -9775,6 +11400,7 @@ function renderMechanicsIndex() {
   <a href="/mechanics/rewards-and-shops"><strong>奖励、宝箱与商店</strong><span>每层奖励列表、宝箱件数、商店商品和卡牌奖励选择入口。</span></a>
   <a href="/mechanics/appearance-bias"><strong>卡牌出现权重</strong><span>解释职业基础权重、职业 ID、卡牌权重数据和奖励生成概率。</span></a>
   <a href="/mechanics/negative-effects"><strong>负面效果</strong><span>查看中毒、寒冷、虚弱、诅咒、行动点减少、弃牌、放逐等效果。</span></a>
+  <a href="/mechanics/unimplemented-skills"><strong>未实装技能</strong><span>集中列出 Dream、Alchemy、Study 等有代码痕迹但没有玩家入口的技能。</span></a>
 </section>
 
 <section class="dq-section-block">
@@ -9782,10 +11408,13 @@ function renderMechanicsIndex() {
   <table class="dq-data-table">
     <thead><tr><th>专题</th><th>为什么值得单列</th><th>当前入口</th></tr></thead>
     <tbody>
+      <tr><td>职业开局档案</td><td>难度、全成就、职业 initializer 和起始牌组很容易混在一起；需要单独列出基础开局和全成就开局。</td><td><a href="/mechanics/start-profile-and-difficulty">职业初始与难度</a>、<a href="/professions">职业图鉴</a></td></tr>
+      <tr><td>怪物等级快照</td><td>怪物页面的 level-up 规则不足以直接读出每个等级的最终 HP、蓝和牌组；需要 LevelTo 后的展开表。</td><td><a href="/mechanics/monster-level-snapshots">怪物等级快照</a>、<a href="/monsters">怪物图鉴</a></td></tr>
       <tr><td>最终 Boss / Lord of the Dream</td><td>涉及最终战、BossAttr、王令、贡品、特殊提示和边界卡牌归属；和普通怪物、普通奖励不同。</td><td><a href="/mechanics/lord-of-the-dream">Lord 机制专题</a>、<a href="/monsters/lord-of-the-dream">怪物条目</a></td></tr>
       <tr><td>伤害与防御结算</td><td>攻击、火焰、电系、冰霜、毒性、穿透、护盾、免疫、抗性和减伤经常混在卡牌文本与怪物能力里。</td><td><a href="/mechanics/negative-effects">负面效果</a>、<a href="/cards">卡牌图鉴</a></td></tr>
       <tr><td>卡牌生命周期</td><td>升级、衰变、临时牌、放逐、复制、最大出现次数和 CardList 状态会影响玩家能否长期获得一张牌。</td><td><a href="/cards">卡牌图鉴</a>、<a href="/mechanics/rewards-and-shops">奖励、宝箱与商店</a></td></tr>
       <tr><td>地图视野与移动</td><td>可见格、墙体、隐形、传送、交换位置、绕路和建筑触发会影响 S/L 与职业地城行动的实际价值。</td><td><a href="/mechanics/dungeon-generation">地牢生成</a>、<a href="/buildings">地牢建筑</a></td></tr>
+      <tr><td>未实装技能</td><td>部分 DungeonAction / CombatAbility 有文本和执行效果，但没有职业或天赋入口，需要和可玩内容分开。</td><td><a href="/mechanics/unimplemented-skills">未实装技能</a></td></tr>
       <tr><td>AI 出牌决策</td><td>怪物牌组之外还存在 AI 打出顺序、保留值、禁用牌型和特殊行为。</td><td><a href="/monsters">怪物图鉴</a></td></tr>
     </tbody>
   </table>

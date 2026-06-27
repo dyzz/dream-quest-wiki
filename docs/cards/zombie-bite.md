@@ -35,6 +35,8 @@ description: "对手获得 5 层疾病。在对手回合开始时，对手失去
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

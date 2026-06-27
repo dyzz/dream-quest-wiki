@@ -35,6 +35,8 @@ description: "将对手手牌中 3 张随机非诅咒牌替换为诅咒牌。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

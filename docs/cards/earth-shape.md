@@ -38,6 +38,8 @@ description: "获得<减伤 2> 直到你的下个回合。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

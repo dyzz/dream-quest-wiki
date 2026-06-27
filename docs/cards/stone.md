@@ -1,16 +1,16 @@
 ---
-title: "石化"
+title: "石块"
 description: "将 2 张无效果诅咒牌洗入对手牌库。对手弃掉 1 张牌。"
 ---
 
 
 <section class="dq-card-hero">
 <div class="dq-card-art-panel">
-<span class="dq-game-card dq-game-card-hero"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石化" loading="lazy"></span>
+<span class="dq-game-card dq-game-card-hero"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="lazy"></span>
 </div>
   <div class="dq-card-info-panel">
     <p class="dq-kicker">行动牌 · 4 阶</p>
-    <h1>石化</h1>
+    <h1>石块</h1>
     <span class="dq-original">原名：Stone</span>
     <div class="dq-status-row"><span class="dq-status-badge dq-status-monster" title="怪物限定来源：美杜莎 基础牌组、美杜莎 优先起手、美杜莎 关键行为。">怪物限定</span></div>
     <p class="dq-rules dq-card-rules-fixed">将 2 张无效果诅咒牌洗入对手牌库。对手弃掉 1 张牌。</p>
@@ -28,17 +28,19 @@ description: "将 2 张无效果诅咒牌洗入对手牌库。对手弃掉 1 张
 </div>
     </div>
     <div class="dq-action-row">
-<a class="dq-button dq-button-secondary" href="/cards/orison">上一张</a>
-<a class="dq-button dq-button-secondary" href="/cards/vile-charge">下一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/vile-charge">上一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/stoneskin">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">
-<span title="wiki 中使用的统一中文名称。"><strong>中文名</strong><em>石化</em></span>
+<span title="wiki 中使用的统一中文名称。"><strong>中文名</strong><em>石块</em></span>
 <span title="游戏原始显示名；没有显示名时使用内部类名拆分。"><strong>英文名</strong><em>Stone</em></span>
 <span title="怪物限定来源：美杜莎 基础牌组、美杜莎 优先起手、美杜莎 关键行为。"><strong>卡牌状态</strong><em>怪物限定</em></span>
 <span title="对卡牌状态的具体解释，帮助区分普通玩家牌、职业特色牌、成就牌和怪物专用牌。"><strong>状态说明</strong><em>怪物限定来源：美杜莎 基础牌组、美杜莎 优先起手、美杜莎 关键行为。</em></span>

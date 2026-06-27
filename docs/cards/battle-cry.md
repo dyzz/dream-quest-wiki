@@ -38,6 +38,8 @@ description: "抽 1 张牌 每有攻击牌 在场。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

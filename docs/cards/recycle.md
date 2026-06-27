@@ -38,6 +38,8 @@ description: "弃掉场上所有其他牌。抽 1 张牌。直到本场战斗结
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

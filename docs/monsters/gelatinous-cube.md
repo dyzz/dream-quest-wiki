@@ -146,6 +146,97 @@ description: "Boss，出现在 地牢、水域、墓穴。等级范围 4-7 级�
 </section>
 
 <section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这些行来自怪物等级快照 TSV。最低等级显示完整最终卡组；后续等级只显示相比上一等级新增的关键牌。</p>
+  <div class="dq-table-scroll">
+<table class="dq-data-table dq-snapshot-table">
+  <thead><tr><th>怪物 / 等级数据</th><th>卡组增量</th></tr></thead>
+  <tbody>
+<tr id="snapshot-gelatinous-cube-4">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/gelatinous-cube">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/GelatinousCube__260.png" alt="凝胶方块" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>凝胶方块</strong><small>GelatinousCube</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>4</em></span><span><b>HP</b><em>45</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">最低等级最终卡组</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/slurp" title="吮吸">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Slurp__921.png" alt="吮吸" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>吮吸</strong><small>x3 · Slurp</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Slurp__921.png" alt="吮吸" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>吮吸</strong><small>x3 · Slurp</small><em>触发：对手打出攻击牌、行动牌、魔力牌或法术牌时有 35% 概率。效果：该牌无效果；直到本场战斗结束，放逐该牌；回复 5 点生命。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack1" title="攻击（1）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（1）</strong><small>x3 · Attack (1)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（1）</strong><small>x3 · Attack (1)</small><em>造成 1 点攻击伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack2" title="攻击（2）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（2）</strong><small>x9 · Attack (2)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（2）</strong><small>x9 · Attack (2)</small><em>造成 2 点攻击伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-gelatinous-cube-5">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/gelatinous-cube">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/GelatinousCube__260.png" alt="凝胶方块" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>凝胶方块</strong><small>GelatinousCube</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>5</em></span><span><b>HP</b><em>60</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-muted-chip">无新增关键牌</span>
+</div></td>
+</tr>
+<tr id="snapshot-gelatinous-cube-6">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/gelatinous-cube">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/GelatinousCube__260.png" alt="凝胶方块" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>凝胶方块</strong><small>GelatinousCube</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>6</em></span><span><b>HP</b><em>90</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/resilience" title="韧性">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Resilience__620.png" alt="韧性" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>韧性</strong><small>x1 · Resilience</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Resilience__620.png" alt="韧性" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>韧性</strong><small>x1 · Resilience</small><em>直到你的下个回合，你单次受到超过 3 点的伤害会被降至 3 点。抽 1 张牌。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/engulf" title="吞没">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Engulf__537.png" alt="吞没" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>吞没</strong><small>x1 · Engulf</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Engulf__537.png" alt="吞没" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>吞没</strong><small>x1 · Engulf</small><em>放逐目标装备牌或祈祷牌。回复 5 点生命。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-gelatinous-cube-7">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/gelatinous-cube">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/GelatinousCube__260.png" alt="凝胶方块" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>凝胶方块</strong><small>GelatinousCube</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>7</em></span><span><b>HP</b><em>120</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-muted-chip">无新增关键牌</span>
+</div></td>
+</tr>
+  </tbody>
+</table>
+</div>
+  <p><a href="/assets/data/monster-level-snapshots-incremental.html#snapshot-gelatinous-cube-4">查看全量怪物等级快照</a></p>
+</section>
+
+<section class="dq-section-block">
   <h2>卡牌</h2>
   <div class="dq-monster-card-summary">
   <span>基础牌组 3 张</span>

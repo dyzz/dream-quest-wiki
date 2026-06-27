@@ -38,6 +38,8 @@ description: "查看对手牌库顶的 10 张牌。最多放逐其中 2 张。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

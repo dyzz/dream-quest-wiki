@@ -1,6 +1,6 @@
 ---
 title: "奇迹牌组"
-description: "你的回合开始时，从所有已解锁卡中随机抽 1 张非装备牌。那张牌为<临时>。"
+description: "回合开始时从已解锁的非装备卡候选池等概率生成 1 张临时牌；候选池不按楼层或奖励阶级筛选。"
 ---
 
 
@@ -33,6 +33,21 @@ description: "你的回合开始时，从所有已解锁卡中随机抽 1 张非
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
+</section>
+
+<section class="dq-wide-panel dq-card-mechanic-panel">
+  <h2>Deck of Wonder 实际抽牌流程</h2>
+  <p class="dq-note">这张装备不是从你现有牌库里抽牌。它在你的回合开始时生成一张新牌放入手牌，然后把那张牌标记为临时牌。</p>
+  <table>
+    <thead><tr><th>步骤</th><th>实际规则</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>先执行装备卡通用的回合开始流程；如果战斗已经有胜者，就不再生成卡。</td></tr>
+      <tr><td>2</td><td>调用随机非装备卡入口，从已解锁、非奖励、非装备、非动态金币价格的候选卡中选 1 张。</td></tr>
+      <tr><td>3</td><td>候选池内使用等概率随机下标，不套用宝箱、商店或地图奖励的职业权重。</td></tr>
+      <tr><td>4</td><td>用生成牌接口把选中的卡直接放入手牌，再标记为临时；临时牌离开本场战斗后不会长期保留。</td></tr>
+    </tbody>
+  </table>
+  <p class="dq-note">关键边界：它不走奖励生成的 <a href="/mechanics/rewards-and-shops">阶级、亲和度和职业权重</a> 路线。候选池和等概率抽样本身不读取楼层或 tier；但不同楼层此前发生的随机事件可能已经推进 RNG 状态，所以实战中最终抽到哪张仍可能间接不同。</p>
 </section>
 
 <section class="dq-wide-panel">

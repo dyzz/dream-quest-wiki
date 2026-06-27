@@ -31,12 +31,14 @@ description: "获得<减伤 2> 直到你的下个回合。"
 </div>
     </div>
     <div class="dq-action-row">
-<a class="dq-button dq-button-secondary" href="/cards/vile-charge">上一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/stone">上一张</a>
 <a class="dq-button dq-button-secondary" href="/cards/sundering-strike">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
+
+
 
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>

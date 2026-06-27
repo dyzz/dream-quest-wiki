@@ -35,6 +35,8 @@ description: "每当你打出 1 张名为“攻击”的非临时牌（任意等
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

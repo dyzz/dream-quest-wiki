@@ -38,6 +38,8 @@ description: "放逐一张牌 从 你的手牌。如果如此，造成 10 点攻
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

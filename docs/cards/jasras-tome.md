@@ -28,12 +28,14 @@ description: "在你的回合开始时，从牌库抽取下一张法术牌。"
 </div>
     </div>
     <div class="dq-action-row">
-<a class="dq-button dq-button-secondary" href="/cards/entrap">上一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/skewer">上一张</a>
 <a class="dq-button dq-button-secondary" href="/cards/jasras-emerald">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
+
+
 
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>

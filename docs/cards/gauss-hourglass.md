@@ -28,12 +28,14 @@ description: "如果你的回合结束时场上没有牌，则在补满手牌后
 </div>
     </div>
     <div class="dq-action-row">
-<a class="dq-button dq-button-secondary" href="/cards/dice">上一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/bone-shield2">上一张</a>
 <a class="dq-button dq-button-secondary" href="/cards/charm">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
+
+
 
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>

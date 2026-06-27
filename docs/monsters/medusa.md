@@ -53,12 +53,12 @@ description: "普通怪物，出现在 森林、地牢、山脉。等级范围 4
   <div class="dq-mechanic-list dq-core-mechanics">
 <p>向玩家牌库加入诅咒，并按玩家手牌中的诅咒数量造成伤害。</p>
 <p>起手优先牌：<a class="dq-card-chip" href="/cards/stone">
-  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石化" loading="eager"></span></span>
-  <span class="dq-card-chip-copy"><strong>石化</strong><small>Stone</small></span>
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>石块</strong><small>Stone</small></span>
   <span class="dq-card-hover-preview" aria-hidden="true">
-    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石化" loading="lazy"></span></span>
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="lazy"></span></span>
     <span class="dq-card-hover-copy">
-      <strong>石化</strong>
+      <strong>石块</strong>
       <small>Stone · 行动牌 · 4 阶 · 1 行动点 / 0 法力</small>
       <em>将 2 张无效果诅咒牌洗入对手牌库。对手弃掉 1 张牌。</em>
     </span>
@@ -96,6 +96,97 @@ description: "普通怪物，出现在 森林、地牢、山脉。等级范围 4
 </section>
 
 <section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这些行来自怪物等级快照 TSV。最低等级显示完整最终卡组；后续等级只显示相比上一等级新增的关键牌。</p>
+  <div class="dq-table-scroll">
+<table class="dq-data-table dq-snapshot-table">
+  <thead><tr><th>怪物 / 等级数据</th><th>卡组增量</th></tr></thead>
+  <tbody>
+<tr id="snapshot-medusa-4">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/medusa">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Medusa__837.png" alt="美杜莎" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>美杜莎</strong><small>Medusa</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>4</em></span><span><b>HP</b><em>15</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>2</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">最低等级最终卡组</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/stone" title="石块">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>石块</strong><small>x4 · Stone</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>石块</strong><small>x4 · Stone</small><em>将 2 张无效果诅咒牌洗入对手牌库。对手弃掉 1 张牌。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/gaze" title="凝视">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Gaze__534.png" alt="凝视" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>凝视</strong><small>x2 · Gaze</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Gaze__534.png" alt="凝视" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>凝视</strong><small>x2 · Gaze</small><em>对手手牌中每有 1 张诅咒牌，就受到 5 点伤害。抽 1 张牌。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack1" title="攻击（1）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（1）</strong><small>x4 · Attack (1)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（1）</strong><small>x4 · Attack (1)</small><em>造成 1 点攻击伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack2" title="攻击（2）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（2）</strong><small>x9 · Attack (2)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（2）</strong><small>x9 · Attack (2)</small><em>造成 2 点攻击伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-medusa-5">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/medusa">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Medusa__837.png" alt="美杜莎" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>美杜莎</strong><small>Medusa</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>5</em></span><span><b>HP</b><em>20</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>2</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-muted-chip">无新增关键牌</span>
+</div></td>
+</tr>
+<tr id="snapshot-medusa-6">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/medusa">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Medusa__837.png" alt="美杜莎" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>美杜莎</strong><small>Medusa</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>6</em></span><span><b>HP</b><em>30</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>2</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/stoneskin" title="石肤">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stoneskin__294.png" alt="石肤" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>石肤</strong><small>x1 · Stoneskin</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stoneskin__294.png" alt="石肤" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>石肤</strong><small>x1 · Stoneskin</small><em>获得&lt;减伤 2&gt; 直到你的下个回合。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-medusa-7">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/medusa">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Medusa__837.png" alt="美杜莎" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>美杜莎</strong><small>Medusa</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>7</em></span><span><b>HP</b><em>40</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>2</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-muted-chip">无新增关键牌</span>
+</div></td>
+</tr>
+  </tbody>
+</table>
+</div>
+  <p><a href="/assets/data/monster-level-snapshots-incremental.html#snapshot-medusa-4">查看全量怪物等级快照</a></p>
+</section>
+
+<section class="dq-section-block">
   <h2>卡牌</h2>
   <div class="dq-monster-card-summary">
   <span>基础牌组 6 张</span>
@@ -109,12 +200,12 @@ description: "普通怪物，出现在 森林、地牢、山脉。等级范围 4
   <td>行动牌</td>
   <td>6</td>
   <td><a class="dq-card-chip" href="/cards/stone">
-  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石化" loading="eager"></span></span>
-  <span class="dq-card-chip-copy"><strong>石化</strong><small>Stone</small></span>
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>石块</strong><small>Stone</small></span>
   <span class="dq-card-hover-preview" aria-hidden="true">
-    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石化" loading="lazy"></span></span>
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="lazy"></span></span>
     <span class="dq-card-hover-copy">
-      <strong>石化</strong>
+      <strong>石块</strong>
       <small>Stone · 行动牌 · 4 阶 · 1 行动点 / 0 法力</small>
       <em>将 2 张无效果诅咒牌洗入对手牌库。对手弃掉 1 张牌。</em>
     </span>
@@ -150,13 +241,13 @@ description: "普通怪物，出现在 森林、地牢、山脉。等级范围 4
   </span>
 </a>
 <a class="dq-profession-card-link dq-profession-card-entry" href="/cards/stone">
-  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石化" loading="eager"></span></span>
-  <strong>石化</strong>
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="eager"></span></span>
+  <strong>石块</strong>
   <span class="dq-profession-card-meta">Stone · 基础牌组 x4 / 优先起手 / 关键行为 / 机制引用 / 机制参数</span>
   <span class="dq-card-hover-preview" aria-hidden="true">
-    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石化" loading="lazy"></span></span>
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/Stone__665.png" alt="石块" loading="lazy"></span></span>
     <span class="dq-card-hover-copy">
-      <strong>石化</strong>
+      <strong>石块</strong>
       <small>Stone · 行动牌 · 4 阶 · 1 行动点 / 0 法力</small>
       <em>将 2 张无效果诅咒牌洗入对手牌库。对手弃掉 1 张牌。</em>
     </span>

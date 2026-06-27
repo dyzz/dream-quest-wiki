@@ -38,6 +38,8 @@ description: "获得 3 点法力。对手获得 <寒冷 1> 直到对手下个回
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

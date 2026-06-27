@@ -38,6 +38,8 @@ description: "造成 5 点火焰伤害。此 牌 是 从游戏中移除并你的
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

@@ -38,6 +38,8 @@ description: "造成 1 电系，1 毒性，1 火焰，并 1 点冰霜伤害。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

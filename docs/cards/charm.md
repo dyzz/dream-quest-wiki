@@ -38,6 +38,8 @@ description: "查看对手手牌。从中选择 1 张牌。对手弃掉那张牌
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

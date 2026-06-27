@@ -38,6 +38,8 @@ description: "本回合你下一次造成伤害时，使该伤害翻倍。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

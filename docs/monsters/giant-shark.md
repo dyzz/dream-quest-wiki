@@ -218,6 +218,170 @@ description: "Boss，出现在 水域。等级范围 4-10 级。基础牌组 4 �
 </section>
 
 <section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这些行来自怪物等级快照 TSV。最低等级显示完整最终卡组；后续等级只显示相比上一等级新增的关键牌。</p>
+  <div class="dq-table-scroll">
+<table class="dq-data-table dq-snapshot-table">
+  <thead><tr><th>怪物 / 等级数据</th><th>卡组增量</th></tr></thead>
+  <tbody>
+<tr id="snapshot-giant-shark-4">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/giant-shark">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/GiantShark__781.png" alt="巨鲨" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>巨鲨</strong><small>GiantShark</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>4</em></span><span><b>HP</b><em>33</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">最低等级最终卡组</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/shark-bite" title="鲨咬">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SharkBite__649.png" alt="鲨咬" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>鲨咬</strong><small>x2 · Shark Bite</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SharkBite__649.png" alt="鲨咬" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>鲨咬</strong><small>x2 · Shark Bite</small><em>造成 2 点攻击伤害。对手获得 &lt;虚弱 1&gt; 直到本场战斗结束。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/thrash" title="痛击">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Thrash__1023.png" alt="痛击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>痛击</strong><small>x2 · Thrash</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Thrash__1023.png" alt="痛击" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>痛击</strong><small>x2 · Thrash</small><em>造成 1 点攻击伤害。抽 1 张牌。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack1" title="攻击（1）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（1）</strong><small>x3 · Attack (1)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（1）</strong><small>x3 · Attack (1)</small><em>造成 1 点攻击伤害。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack2" title="攻击（2）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（2）</strong><small>x7 · Attack (2)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（2）</strong><small>x7 · Attack (2)</small><em>造成 2 点攻击伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-giant-shark-5">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/giant-shark">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/GiantShark__781.png" alt="巨鲨" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>巨鲨</strong><small>GiantShark</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>5</em></span><span><b>HP</b><em>45</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/thrash" title="痛击">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Thrash__1023.png" alt="痛击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>痛击</strong><small>x1 · Thrash</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Thrash__1023.png" alt="痛击" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>痛击</strong><small>x1 · Thrash</small><em>造成 1 点攻击伤害。抽 1 张牌。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/execute" title="处决">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Execute__445.png" alt="处决" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>处决</strong><small>x1 · Execute</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Execute__445.png" alt="处决" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>处决</strong><small>x1 · Execute</small><em>只能在对手生命不超过 12 点时打出。赢得这场战斗。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-giant-shark-6">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/giant-shark">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/GiantShark__781.png" alt="巨鲨" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>巨鲨</strong><small>GiantShark</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>6</em></span><span><b>HP</b><em>67</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/thrash" title="痛击">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Thrash__1023.png" alt="痛击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>痛击</strong><small>x1 · Thrash</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Thrash__1023.png" alt="痛击" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>痛击</strong><small>x1 · Thrash</small><em>造成 1 点攻击伤害。抽 1 张牌。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-giant-shark-7">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/giant-shark">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/GiantShark__781.png" alt="巨鲨" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>巨鲨</strong><small>GiantShark</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>7</em></span><span><b>HP</b><em>90</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/shark-bite" title="鲨咬">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SharkBite__649.png" alt="鲨咬" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>鲨咬</strong><small>x1 · Shark Bite</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SharkBite__649.png" alt="鲨咬" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>鲨咬</strong><small>x1 · Shark Bite</small><em>造成 2 点攻击伤害。对手获得 &lt;虚弱 1&gt; 直到本场战斗结束。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-giant-shark-8">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/giant-shark">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/GiantShark__781.png" alt="巨鲨" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>巨鲨</strong><small>GiantShark</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>8</em></span><span><b>HP</b><em>123</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/thrash" title="痛击">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Thrash__1023.png" alt="痛击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>痛击</strong><small>x1 · Thrash</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Thrash__1023.png" alt="痛击" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>痛击</strong><small>x1 · Thrash</small><em>造成 1 点攻击伤害。抽 1 张牌。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-giant-shark-9">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/giant-shark">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/GiantShark__781.png" alt="巨鲨" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>巨鲨</strong><small>GiantShark</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>9</em></span><span><b>HP</b><em>157</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/thrash" title="痛击">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Thrash__1023.png" alt="痛击" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>痛击</strong><small>x1 · Thrash</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Thrash__1023.png" alt="痛击" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>痛击</strong><small>x1 · Thrash</small><em>造成 1 点攻击伤害。抽 1 张牌。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-giant-shark-10">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/giant-shark">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/GiantShark__781.png" alt="巨鲨" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>巨鲨</strong><small>GiantShark</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>10</em></span><span><b>HP</b><em>191</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/shark-bite2" title="鲨咬（2）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SharkBite2__482.png" alt="鲨咬（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>鲨咬（2）</strong><small>x3 · Shark Bite (2)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SharkBite2__482.png" alt="鲨咬（2）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>鲨咬（2）</strong><small>x3 · Shark Bite (2)</small><em>造成 2 点攻击伤害。对手获得 &lt;虚弱 2&gt; 直到本场战斗结束。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+  </tbody>
+</table>
+</div>
+  <p><a href="/assets/data/monster-level-snapshots-incremental.html#snapshot-giant-shark-4">查看全量怪物等级快照</a></p>
+</section>
+
+<section class="dq-section-block">
   <h2>卡牌</h2>
   <div class="dq-monster-card-summary">
   <span>基础牌组 4 张</span>

@@ -35,6 +35,8 @@ description: "造成 2 点电系伤害。抽 1 张牌。获得 1 行动点。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

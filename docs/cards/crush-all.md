@@ -35,6 +35,8 @@ description: "摧毁对手所有装备。放逐 此 牌。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

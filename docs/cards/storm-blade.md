@@ -35,6 +35,8 @@ description: "每当你打出 1 个 攻击牌，造成 1 点电系伤害。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

@@ -35,6 +35,8 @@ description: "在你的回合开始时，如果你的生命至多一半，抽 1 
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

@@ -32,11 +32,13 @@ description: "抽 5 张牌。弃掉你手牌中的所有非攻击牌。"
     </div>
     <div class="dq-action-row">
 <a class="dq-button dq-button-secondary" href="/cards/holy-strike3">上一张</a>
-<a class="dq-button dq-button-secondary" href="/cards/skewer">下一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/pierce1">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
+
+
 
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>

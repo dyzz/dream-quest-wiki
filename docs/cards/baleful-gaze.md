@@ -29,11 +29,13 @@ description: "对手失去一半生命，向下取整，最多失去 60 点。"
     </div>
     <div class="dq-action-row">
 <a class="dq-button dq-button-secondary" href="/cards/phoenix-feather">上一张</a>
-<a class="dq-button dq-button-secondary" href="/cards/slice">下一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/dice">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
+
+
 
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>

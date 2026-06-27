@@ -38,6 +38,8 @@ description: "直到你的下个回合，你单次受到超过 3 点的伤害会
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

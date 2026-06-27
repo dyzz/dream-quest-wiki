@@ -31,12 +31,14 @@ description: "直到本场战斗结束，获得 20% 闪避。"
 </div>
     </div>
     <div class="dq-action-row">
-<a class="dq-button dq-button-secondary" href="/cards/evasion">上一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/penalty-ward30">上一张</a>
 <a class="dq-button dq-button-secondary" href="/cards/cloak-of-invisibility">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
+
+
 
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>

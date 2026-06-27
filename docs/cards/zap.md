@@ -35,6 +35,8 @@ description: "对手 失去 所有 法力并行动点。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

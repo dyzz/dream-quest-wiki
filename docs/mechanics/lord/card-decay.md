@@ -297,6 +297,19 @@ description: "Your cards decay 的触发条件、50% 随机判定、默认衰变
   <strong>法力（1）</strong>
   <small>魔力 · 1 阶</small>
 </a></td><td><span class="dq-decay-chain-empty">-</span></td></tr>
+<tr><td><a class="dq-decay-chain-card" href="/cards/dice">
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Dice__637.png" alt="切丁" loading="lazy"></span></span>
+  <strong>切丁</strong>
+  <small>行动牌 · 7 阶</small>
+</a></td><td><a class="dq-decay-chain-card" href="/cards/backstab">
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Backstab__352.png" alt="背刺" loading="lazy"></span></span>
+  <strong>背刺</strong>
+  <small>攻击 · 3 阶</small>
+</a></td><td><a class="dq-decay-chain-card" href="/cards/attack1">
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="lazy"></span></span>
+  <strong>攻击（1）</strong>
+  <small>攻击 · 1 阶</small>
+</a></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td></tr>
 <tr><td><a class="dq-decay-chain-card" href="/cards/blade-flurry">
   <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/BladeFlurry__298.png" alt="剑刃乱舞" loading="lazy"></span></span>
   <strong>剑刃乱舞</strong>
@@ -420,6 +433,23 @@ description: "Your cards decay 的触发条件、50% 随机判定、默认衰变
   <strong>灼烙</strong>
   <small>法术 · 1 阶</small>
 </a></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td></tr>
+<tr><td><a class="dq-decay-chain-card" href="/cards/circle">
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Circle__89.png" alt="周旋" loading="lazy"></span></span>
+  <strong>周旋</strong>
+  <small>行动牌 · 3 阶</small>
+</a></td><td><a class="dq-decay-chain-card" href="/cards/swiftness">
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Swiftness__668.png" alt="迅捷" loading="lazy"></span></span>
+  <strong>迅捷</strong>
+  <small>行动牌 · 2 阶</small>
+</a></td><td><a class="dq-decay-chain-card" href="/cards/slice">
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Slice__280.png" alt="切割" loading="lazy"></span></span>
+  <strong>切割</strong>
+  <small>行动牌 · 2 阶</small>
+</a></td><td><a class="dq-decay-chain-card" href="/cards/strike">
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Strike__300.png" alt="拍击" loading="lazy"></span></span>
+  <strong>拍击</strong>
+  <small>行动牌 · 1 阶</small>
+</a></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td></tr>
 <tr><td><a class="dq-decay-chain-card" href="/cards/recycle">
   <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Recycle__416.png" alt="回收" loading="lazy"></span></span>
   <strong>回收</strong>
@@ -859,23 +889,6 @@ description: "Your cards decay 的触发条件、50% 随机判定、默认衰变
   <strong>法力（1）</strong>
   <small>魔力 · 1 阶</small>
 </a></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td></tr>
-<tr><td><a class="dq-decay-chain-card" href="/cards/circle">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Circle__89.png" alt="法阵" loading="lazy"></span></span>
-  <strong>法阵</strong>
-  <small>行动牌 · 3 阶</small>
-</a></td><td><a class="dq-decay-chain-card" href="/cards/swiftness">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Swiftness__668.png" alt="迅捷" loading="lazy"></span></span>
-  <strong>迅捷</strong>
-  <small>行动牌 · 2 阶</small>
-</a></td><td><a class="dq-decay-chain-card" href="/cards/slice">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Slice__280.png" alt="切割" loading="lazy"></span></span>
-  <strong>切割</strong>
-  <small>行动牌 · 2 阶</small>
-</a></td><td><a class="dq-decay-chain-card" href="/cards/strike">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Strike__300.png" alt="拍击" loading="lazy"></span></span>
-  <strong>拍击</strong>
-  <small>行动牌 · 1 阶</small>
-</a></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td></tr>
 <tr><td><a class="dq-decay-chain-card" href="/cards/bleed">
   <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Bleed__414.png" alt="流血" loading="lazy"></span></span>
   <strong>流血</strong>
@@ -1146,8 +1159,8 @@ description: "Your cards decay 的触发条件、50% 随机判定、默认衰变
   <small>攻击 · 1 阶</small>
 </a></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td></tr>
 <tr><td><a class="dq-decay-chain-card" href="/cards/vile-charge">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/VileCharge__69.png" alt="石化充能" loading="lazy"></span></span>
-  <strong>石化充能</strong>
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/VileCharge__69.png" alt="石之充能" loading="lazy"></span></span>
+  <strong>石之充能</strong>
   <small>魔力 · 2 阶</small>
 </a></td><td><a class="dq-decay-chain-card" href="/cards/mana3">
   <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Mana3__658.png" alt="法力（3）" loading="lazy"></span></span>
@@ -1230,8 +1243,8 @@ description: "Your cards decay 的触发条件、50% 随机判定、默认衰变
   <strong>祝福</strong>
   <small>法术 · 6 阶</small>
 </a></td><td><a class="dq-decay-chain-card" href="/cards/ward">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="护盾守卫" loading="lazy"></span></span>
-  <strong>护盾守卫</strong>
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="lazy"></span></span>
+  <strong>防护</strong>
   <small>法术 · 4 阶</small>
 </a></td><td><a class="dq-decay-chain-card" href="/cards/heal">
   <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Heal__1048.png" alt="治疗" loading="lazy"></span></span>
@@ -1321,23 +1334,6 @@ description: "Your cards decay 的触发条件、50% 随机判定、默认衰变
   <strong>法力（1）</strong>
   <small>魔力 · 1 阶</small>
 </a></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td></tr>
-<tr><td><a class="dq-decay-chain-card" href="/cards/skewer">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Skewer__60.png" alt="穿刺" loading="lazy"></span></span>
-  <strong>穿刺</strong>
-  <small>行动牌 · 9 阶</small>
-</a></td><td><a class="dq-decay-chain-card" href="/cards/jab">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Jab__408.png" alt="刺拳" loading="lazy"></span></span>
-  <strong>刺拳</strong>
-  <small>行动牌 · 5 阶</small>
-</a></td><td><a class="dq-decay-chain-card" href="/cards/slice">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Slice__280.png" alt="切割" loading="lazy"></span></span>
-  <strong>切割</strong>
-  <small>行动牌 · 2 阶</small>
-</a></td><td><a class="dq-decay-chain-card" href="/cards/strike">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Strike__300.png" alt="拍击" loading="lazy"></span></span>
-  <strong>拍击</strong>
-  <small>行动牌 · 1 阶</small>
-</a></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td></tr>
 <tr><td><a class="dq-decay-chain-card" href="/cards/piercing-stab">
   <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/PiercingStab__246.png" alt="穿透刺击" loading="lazy"></span></span>
   <strong>穿透刺击</strong>
@@ -1513,16 +1509,16 @@ description: "Your cards decay 的触发条件、50% 随机判定、默认衰变
   <strong>蒂尔托维特</strong>
   <small>行动牌 · 10 阶</small>
 </a></td><td><a class="dq-decay-chain-card" href="/cards/pierce3">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Pierce3__877.png" alt="穿刺（3）" loading="lazy"></span></span>
-  <strong>穿刺（3）</strong>
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Pierce3__877.png" alt="穿透（3）" loading="lazy"></span></span>
+  <strong>穿透（3）</strong>
   <small>攻击 · 7 阶</small>
 </a></td><td><a class="dq-decay-chain-card" href="/cards/pierce2">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Pierce2__643.png" alt="穿刺（2）" loading="lazy"></span></span>
-  <strong>穿刺（2）</strong>
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Pierce2__643.png" alt="穿透（2）" loading="lazy"></span></span>
+  <strong>穿透（2）</strong>
   <small>攻击 · 6 阶</small>
 </a></td><td><a class="dq-decay-chain-card" href="/cards/pierce1">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Pierce1__726.png" alt="穿刺（1）" loading="lazy"></span></span>
-  <strong>穿刺（1）</strong>
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Pierce1__726.png" alt="穿透（1）" loading="lazy"></span></span>
+  <strong>穿透（1）</strong>
   <small>攻击 · 5 阶</small>
 </a></td><td><a class="dq-decay-chain-card" href="/cards/attack3">
   <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/sharedassets0/Attack3__36.png" alt="攻击（3）" loading="lazy"></span></span>
@@ -1585,6 +1581,23 @@ description: "Your cards decay 的触发条件、50% 随机判定、默认衰变
   <strong>拍击</strong>
   <small>行动牌 · 1 阶</small>
 </a></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td></tr>
+<tr><td><a class="dq-decay-chain-card" href="/cards/skewer">
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Skewer__60.png" alt="贯刺" loading="lazy"></span></span>
+  <strong>贯刺</strong>
+  <small>行动牌 · 9 阶</small>
+</a></td><td><a class="dq-decay-chain-card" href="/cards/jab">
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Jab__408.png" alt="刺拳" loading="lazy"></span></span>
+  <strong>刺拳</strong>
+  <small>行动牌 · 5 阶</small>
+</a></td><td><a class="dq-decay-chain-card" href="/cards/slice">
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Slice__280.png" alt="切割" loading="lazy"></span></span>
+  <strong>切割</strong>
+  <small>行动牌 · 2 阶</small>
+</a></td><td><a class="dq-decay-chain-card" href="/cards/strike">
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Strike__300.png" alt="拍击" loading="lazy"></span></span>
+  <strong>拍击</strong>
+  <small>行动牌 · 1 阶</small>
+</a></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td></tr>
 <tr><td><a class="dq-decay-chain-card" href="/cards/jasras-jarring-jolt">
   <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/JasrasJarringJolt__694.png" alt="贾斯拉的震荡电击" loading="lazy"></span></span>
   <strong>贾斯拉的震荡电击</strong>
@@ -1791,8 +1804,8 @@ description: "Your cards decay 的触发条件、50% 随机判定、默认衰变
   <strong>马哈马特</strong>
   <small>法术 · 10 阶</small>
 </a></td><td><a class="dq-decay-chain-card" href="/cards/ward">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="护盾守卫" loading="lazy"></span></span>
-  <strong>护盾守卫</strong>
+  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Ward__297.png" alt="防护" loading="lazy"></span></span>
+  <strong>防护</strong>
   <small>法术 · 4 阶</small>
 </a></td><td><a class="dq-decay-chain-card" href="/cards/heal">
   <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Heal__1048.png" alt="治疗" loading="lazy"></span></span>
@@ -1836,19 +1849,6 @@ description: "Your cards decay 的触发条件、50% 随机判定、默认衰变
   <strong>攻击（1）</strong>
   <small>攻击 · 1 阶</small>
 </a></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td></tr>
-<tr><td><a class="dq-decay-chain-card" href="/cards/dice">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Dice__637.png" alt="骰子" loading="lazy"></span></span>
-  <strong>骰子</strong>
-  <small>行动牌 · 7 阶</small>
-</a></td><td><a class="dq-decay-chain-card" href="/cards/backstab">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Backstab__352.png" alt="背刺" loading="lazy"></span></span>
-  <strong>背刺</strong>
-  <small>攻击 · 3 阶</small>
-</a></td><td><a class="dq-decay-chain-card" href="/cards/attack1">
-  <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Attack1__826.png" alt="攻击（1）" loading="lazy"></span></span>
-  <strong>攻击（1）</strong>
-  <small>攻击 · 1 阶</small>
-</a></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td><td><span class="dq-decay-chain-empty">-</span></td></tr>
 <tr><td><a class="dq-decay-chain-card" href="/cards/eagle">
   <span class="dq-decay-chain-art"><span class="dq-game-card dq-game-card-thumb"><img src="/assets/extracted/textures/by_container/resources/Eagle__389.png" alt="鹰" loading="lazy"></span></span>
   <strong>鹰</strong>

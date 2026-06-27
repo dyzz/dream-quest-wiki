@@ -32,11 +32,13 @@ description: "防止你将受到的接下来 6 点伤害。"
     </div>
     <div class="dq-action-row">
 <a class="dq-button dq-button-secondary" href="/cards/bone-shield">上一张</a>
-<a class="dq-button dq-button-secondary" href="/cards/dice">下一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/gauss-hourglass">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
+
+
 
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>

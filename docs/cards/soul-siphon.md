@@ -38,6 +38,8 @@ description: "只能在对手生命不超过 5 点时打出。赢得这场战斗
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

@@ -38,6 +38,8 @@ description: "如果对手生命不少于一半，造成 5 点攻击伤害并防
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

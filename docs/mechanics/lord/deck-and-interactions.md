@@ -395,26 +395,26 @@ description: "基础牌组生成、随机候选池、起手装备、特殊死亡
   </span>
 </a>
 <a class="dq-profession-card-link dq-effect-card-entry" href="/cards/penalty-ward30">
-  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/PenaltyWard30__543.png" alt="护盾惩罚（30）" loading="eager"></span></span>
-  <strong>护盾惩罚（30）</strong>
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/PenaltyWard30__543.png" alt="防护惩罚（30）" loading="eager"></span></span>
+  <strong>防护惩罚（30）</strong>
   <span class="dq-profession-card-meta">Penalty Ward30 · 其它 · 0 阶 · 0 行动点 / 0 法力</span>
   <span class="dq-card-hover-preview" aria-hidden="true">
-    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/PenaltyWard30__543.png" alt="护盾惩罚（30）" loading="lazy"></span></span>
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/PenaltyWard30__543.png" alt="防护惩罚（30）" loading="lazy"></span></span>
     <span class="dq-card-hover-copy">
-      <strong>护盾惩罚（30）</strong>
+      <strong>防护惩罚（30）</strong>
       <small>Penalty Ward30 · 其它 · 0 阶 · 0 行动点 / 0 法力</small>
       <em>没有规则文本。</em>
     </span>
   </span>
 </a>
 <a class="dq-profession-card-link dq-effect-card-entry" href="/cards/penalty-ward-final">
-  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/PenaltyWardFinal__54.png" alt="最终护盾惩罚" loading="eager"></span></span>
-  <strong>最终护盾惩罚</strong>
+  <span class="dq-deck-card-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/PenaltyWardFinal__54.png" alt="最终防护惩罚" loading="eager"></span></span>
+  <strong>最终防护惩罚</strong>
   <span class="dq-profession-card-meta">Penalty Ward Final · 其它 · 0 阶 · 0 行动点 / 0 法力</span>
   <span class="dq-card-hover-preview" aria-hidden="true">
-    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/PenaltyWardFinal__54.png" alt="最终护盾惩罚" loading="lazy"></span></span>
+    <span class="dq-card-hover-art"><span class="dq-game-card dq-game-card-hover"><img src="/assets/extracted/textures/by_container/resources/PenaltyWardFinal__54.png" alt="最终防护惩罚" loading="lazy"></span></span>
     <span class="dq-card-hover-copy">
-      <strong>最终护盾惩罚</strong>
+      <strong>最终防护惩罚</strong>
       <small>Penalty Ward Final · 其它 · 0 阶 · 0 行动点 / 0 法力</small>
       <em>没有规则文本。</em>
     </span>

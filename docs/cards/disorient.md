@@ -35,6 +35,8 @@ description: "触发：对手打出行动牌时。效果：该牌视为由你打
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

@@ -38,6 +38,8 @@ description: "造成等同于 1/4 的 你的 当前 生命 (向下取整) 的物
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

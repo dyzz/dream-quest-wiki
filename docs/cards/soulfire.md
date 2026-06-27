@@ -38,6 +38,8 @@ description: "对手受到 10 点<穿透>伤害。在你的回合开始时，如
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

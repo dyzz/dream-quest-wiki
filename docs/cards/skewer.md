@@ -1,16 +1,16 @@
 ---
-title: "穿刺"
+title: "贯刺"
 description: "抽 1 张牌。获得 1 行动点。对手获得 <虚弱 1> 本回合。"
 ---
 
 
 <section class="dq-card-hero">
 <div class="dq-card-art-panel">
-<span class="dq-game-card dq-game-card-hero"><img src="/assets/extracted/textures/by_container/resources/Skewer__60.png" alt="穿刺" loading="lazy"></span>
+<span class="dq-game-card dq-game-card-hero"><img src="/assets/extracted/textures/by_container/resources/Skewer__60.png" alt="贯刺" loading="lazy"></span>
 </div>
   <div class="dq-card-info-panel">
     <p class="dq-kicker">行动牌 · 9 阶</p>
-    <h1>穿刺</h1>
+    <h1>贯刺</h1>
     <span class="dq-original">原名：Skewer</span>
     <div class="dq-status-row"><span class="dq-status-badge dq-status-normal" title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。">普通</span></div>
     <p class="dq-rules dq-card-rules-fixed">抽 1 张牌。获得 1 行动点。对手获得 <a class="dq-term" href="/mechanics/negative-effects#weakened">虚弱 1</a> 本回合。</p>
@@ -31,17 +31,19 @@ description: "抽 1 张牌。获得 1 行动点。对手获得 <虚弱 1> 本回
 </div>
     </div>
     <div class="dq-action-row">
-<a class="dq-button dq-button-secondary" href="/cards/wrath-of-god">上一张</a>
-<a class="dq-button dq-button-secondary" href="/cards/pierce1">下一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/entrap">上一张</a>
+<a class="dq-button dq-button-secondary" href="/cards/jasras-tome">下一张</a>
 <a class="dq-button" href="/cards">回到卡牌图鉴</a>
     </div>
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">
-<span title="wiki 中使用的统一中文名称。"><strong>中文名</strong><em>穿刺</em></span>
+<span title="wiki 中使用的统一中文名称。"><strong>中文名</strong><em>贯刺</em></span>
 <span title="游戏原始显示名；没有显示名时使用内部类名拆分。"><strong>英文名</strong><em>Skewer</em></span>
 <span title="普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。"><strong>卡牌状态</strong><em>普通</em></span>
 <span title="对卡牌状态的具体解释，帮助区分普通玩家牌、职业特色牌、成就牌和怪物专用牌。"><strong>状态说明</strong><em>普通玩家牌；可通过无额外成就条件的卡池、商店/装备、起始牌或常规奖励流程获得。</em></span>

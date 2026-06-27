@@ -7,6 +7,7 @@
     "sync": "node scripts/sync-content.mjs",
     "dev": "npm run sync && vitepress dev docs --host 127.0.0.1",
     "build": "npm run sync && vitepress build docs",
+    "build:github": "npm run build && node scripts/rewrite-github-pages-base.mjs",
     "preview": "vitepress preview docs --host 127.0.0.1"
   },
   "devDependencies": {

@@ -35,6 +35,8 @@ description: "对手 失去 5 最多 生命。回复 5 点生命。"
   </div>
 </section>
 
+
+
 <section class="dq-wide-panel">
     <h2>卡牌元数据</h2>
     <div class="dq-meta-grid">

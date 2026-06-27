@@ -58,10 +58,10 @@ description: "普通怪物，出现在 森林、山脉。等级范围 5-7 级。
     <span class="dq-card-hover-copy">
       <strong>灵魂碾压</strong>
       <small>Soul Crush · 行动牌 · 6 阶 · 1 行动点 / 0 法力</small>
-      <em>造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或护盾守卫，则此牌无效果。</em>
+      <em>造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或防护，则此牌无效果。</em>
     </span>
   </span>
-</a>，AI 会优先打出它；该牌造成 10 点伤害并弃 2 张牌，但目标有减伤、物理抗性、闪避或护盾守卫时无效。</p>
+</a>，AI 会优先打出它；该牌造成 10 点伤害并弃 2 张牌，但目标有减伤、物理抗性、闪避或防护时无效。</p>
 </div>
 </section>
 
@@ -82,7 +82,7 @@ description: "普通怪物，出现在 森林、山脉。等级范围 5-7 级。
     <span class="dq-card-hover-copy">
       <strong>灵魂碾压</strong>
       <small>Soul Crush · 行动牌 · 6 阶 · 1 行动点 / 0 法力</small>
-      <em>造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或护盾守卫，则此牌无效果。</em>
+      <em>造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或防护，则此牌无效果。</em>
     </span>
   </span>
 </a></td>
@@ -91,6 +91,71 @@ description: "普通怪物，出现在 森林、山脉。等级范围 5-7 级。
 </tr>
   </tbody>
 </table>
+</section>
+
+<section class="dq-section-block">
+  <h2>HP / 蓝 / 牌组快照</h2>
+  <p class="dq-note">这些行来自怪物等级快照 TSV。最低等级显示完整最终卡组；后续等级只显示相比上一等级新增的关键牌。</p>
+  <div class="dq-table-scroll">
+<table class="dq-data-table dq-snapshot-table">
+  <thead><tr><th>怪物 / 等级数据</th><th>卡组增量</th></tr></thead>
+  <tbody>
+<tr id="snapshot-wraith-5">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/wraith">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Wraith__773.png" alt="怨魂" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>怨魂</strong><small>Wraith</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>5</em></span><span><b>HP</b><em>20</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">最低等级最终卡组</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/soul-crush" title="灵魂碾压">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SoulCrush__844.png" alt="灵魂碾压" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>灵魂碾压</strong><small>x2 · Soul Crush</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SoulCrush__844.png" alt="灵魂碾压" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>灵魂碾压</strong><small>x2 · Soul Crush</small><em>造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或防护，则此牌无效果。</em></span>
+</span>
+</a>
+<a class="dq-card-chip dq-counted-card-chip" href="/cards/attack2" title="攻击（2）">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>攻击（2）</strong><small>x15 · Attack (2)</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/Attack2__526.png" alt="攻击（2）" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>攻击（2）</strong><small>x15 · Attack (2)</small><em>造成 2 点攻击伤害。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-wraith-6">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/wraith">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Wraith__773.png" alt="怨魂" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>怨魂</strong><small>Wraith</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>6</em></span><span><b>HP</b><em>30</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-card-chip-row dq-snapshot-card-row dq-snapshot-key-cards"><a class="dq-card-chip dq-counted-card-chip" href="/cards/soul-crush" title="灵魂碾压">
+  <span class="dq-card-chip-thumb"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SoulCrush__844.png" alt="灵魂碾压" loading="eager"></span></span>
+  <span class="dq-card-chip-copy"><strong>灵魂碾压</strong><small>x1 · Soul Crush</small></span>
+  <span class="dq-snapshot-card-preview" aria-hidden="true">
+  <span class="dq-snapshot-card-preview-art"><span class="dq-game-card dq-game-card-deck"><img src="/assets/extracted/textures/by_container/resources/SoulCrush__844.png" alt="灵魂碾压" loading="eager"></span></span>
+  <span class="dq-snapshot-card-preview-copy"><strong>灵魂碾压</strong><small>x1 · Soul Crush</small><em>造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或防护，则此牌无效果。</em></span>
+</span>
+</a></span>
+</div></td>
+</tr>
+<tr id="snapshot-wraith-7">
+  <td class="dq-snapshot-monster-cell"><a class="dq-snapshot-monster" href="/monsters/wraith">
+  <span class="dq-snapshot-monster-thumb"><img src="/assets/extracted/textures/by_container/resources/Wraith__773.png" alt="怨魂" loading="lazy"></span>
+  <span class="dq-snapshot-monster-copy"><strong>怨魂</strong><small>Wraith</small><span class="dq-snapshot-stat-row"><span><b>等级</b><em>7</em></span><span><b>HP</b><em>40</em></span><span><b>MP</b><em>0</em></span><span><b>行动</b><em>1</em></span><span><b>手牌</b><em>2</em></span></span></span>
+</a></td>
+  <td class="dq-long-cell dq-snapshot-deck-cell"><div class="dq-snapshot-key-card">
+  <span class="dq-snapshot-key-label">本等级新增牌</span>
+  <span class="dq-muted-chip">无新增关键牌</span>
+</div></td>
+</tr>
+  </tbody>
+</table>
+</div>
+  <p><a href="/assets/data/monster-level-snapshots-incremental.html#snapshot-wraith-5">查看全量怪物等级快照</a></p>
 </section>
 
 <section class="dq-section-block">
@@ -114,7 +179,7 @@ description: "普通怪物，出现在 森林、山脉。等级范围 5-7 级。
     <span class="dq-card-hover-copy">
       <strong>灵魂碾压</strong>
       <small>Soul Crush · 行动牌 · 6 阶 · 1 行动点 / 0 法力</small>
-      <em>造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或护盾守卫，则此牌无效果。</em>
+      <em>造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或防护，则此牌无效果。</em>
     </span>
   </span>
 </a></td>
@@ -132,7 +197,7 @@ description: "普通怪物，出现在 森林、山脉。等级范围 5-7 级。
     <span class="dq-card-hover-copy">
       <strong>灵魂碾压</strong>
       <small>Soul Crush · 行动牌 · 6 阶 · 1 行动点 / 0 法力</small>
-      <em>造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或护盾守卫，则此牌无效果。</em>
+      <em>造成 10 点伤害。对手弃掉 2 张牌。若目标拥有减伤、物理抗性、闪避或防护，则此牌无效果。</em>
     </span>
   </span>
 </a>
