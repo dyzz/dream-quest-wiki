@@ -1,0 +1,1 @@
+const t="/assets/extracted/textures/by_container/resources/CombatAbilityClingingLight__952.png",e="/assets/extracted/textures/by_container/resources/CombatAbilityWholeBody__1037.png";export{t as _,e as a};
