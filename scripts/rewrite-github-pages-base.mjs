@@ -19,12 +19,8 @@ const siteRoots = [
 
 const extensions = new Set([".html", ".js", ".css"]);
 const exactRootAttributes = /\b(href|src)=["']\/["']/g;
-const exactRootLinks = [
-  /("link":")\/(")/g,
-  /(\\\"link\\\":\\\")\/(\\\")/g
-];
-const pathPrefixPattern = new RegExp(
-  `(["'=])/(?!${escapeRegExp(normalizedBase.slice(1))})(?:${siteRoots.join("|")})(?=[/#?\\\\"'])`,
+const attributePathPrefixPattern = new RegExp(
+  `(\\b(?:href|src)=["'])/(?!${escapeRegExp(normalizedBase.slice(1))})(${siteRoots.join("|")})(?=[/#?\\\\"'])`,
   "g"
 );
 
@@ -48,10 +44,7 @@ function escapeRegExp(value) {
 
 function rewriteContent(content) {
   let rewritten = content.replace(exactRootAttributes, (match, attr) => `${attr}="${normalizedBase}"`);
-  for (const pattern of exactRootLinks) {
-    rewritten = rewritten.replace(pattern, `$1${normalizedBase}$2`);
-  }
-  return rewritten.replace(pathPrefixPattern, (match, prefix) => `${prefix}${normalizedBase}${match.slice(2)}`);
+  return rewritten.replace(attributePathPrefixPattern, (match, prefix, root) => `${prefix}${normalizedBase}${root}`);
 }
 
 const files = await walk(distRoot);
